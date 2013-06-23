@@ -1,0 +1,19 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#define NSCKitAssert(condition, ...) \
+do \
+{ \
+if (!(condition)) { \
+NSLog(@"(%s), %@", #condition, [NSString stringWithFormat:__VA_ARGS__]); \
+} \
+} while(0)
+
+
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
