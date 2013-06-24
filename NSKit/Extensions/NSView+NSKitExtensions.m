@@ -91,7 +91,7 @@
         animations();
         [NSAnimationContext endGrouping];
         
-        if (completion != NULL)
+        if (completion)
         {
             dispatch_block_t completionBlock = ^
             {

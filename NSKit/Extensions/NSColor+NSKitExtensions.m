@@ -42,11 +42,11 @@
 
 + (NSColor *)colorFromHexRGB:(NSString *)colorString
 {
-	NSColor *result = nil;
+	NSColor *result;
 	unsigned int colorCode = 0;
 	unsigned char redByte, greenByte, blueByte;
 	
-	if (colorString != nil)
+	if (colorString)
 	{
 		NSScanner *scanner = [NSScanner scannerWithString:colorString];
 		(void) [scanner scanHexInt:&colorCode];

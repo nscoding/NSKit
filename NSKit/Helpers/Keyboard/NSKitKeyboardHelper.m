@@ -41,7 +41,7 @@ static unsigned short kDownArrowKey = 125;
 
 + (BOOL)returnKeyIsPressedForEvent:(NSEvent *)event
 {
-    if (event != nil && [event respondsToSelector:@selector(keyCode)] &&
+    if (event && [event respondsToSelector:@selector(keyCode)] &&
         (event.type == NSKeyDown || event.type == NSKeyUp))
     {
         unsigned short keyModified = [[event charactersIgnoringModifiers] characterAtIndex:0];
@@ -62,7 +62,7 @@ static unsigned short kDownArrowKey = 125;
 
 + (BOOL)tabKeyIsPressedForEvent:(NSEvent *)event
 {
-    if (event != nil && [event respondsToSelector:@selector(keyCode)] &&
+    if (event && [event respondsToSelector:@selector(keyCode)] &&
         (event.type == NSKeyDown || event.type == NSKeyUp))
     {
         unsigned short keyModified = [[event charactersIgnoringModifiers] characterAtIndex:0];
@@ -83,7 +83,7 @@ static unsigned short kDownArrowKey = 125;
 {
     BOOL isShiftKeyPressed = NO;
     
-    if (event != nil &&
+    if (event &&
         [event respondsToSelector:@selector(modifierFlags)] &&
         (event.type == NSKeyDown || event.type == NSKeyUp))
     {
@@ -98,7 +98,7 @@ static unsigned short kDownArrowKey = 125;
 {
     BOOL isEscapeKeyPressed = NO;
     
-    if (event != nil && [event respondsToSelector:@selector(keyCode)] &&
+    if (event && [event respondsToSelector:@selector(keyCode)] &&
         (event.type == NSKeyDown || event.type == NSKeyUp))
     {
         unsigned short keyEventCode = [event keyCode];
@@ -117,7 +117,7 @@ static unsigned short kDownArrowKey = 125;
 {
     BOOL leftKeyPressed = NO;
     
-    if (event != nil && [event respondsToSelector:@selector(keyCode)] &&
+    if (event && [event respondsToSelector:@selector(keyCode)] &&
         (event.type == NSKeyDown || event.type == NSKeyUp))
     {
         unsigned short keyModified = [[event charactersIgnoringModifiers] characterAtIndex:0];
@@ -138,7 +138,7 @@ static unsigned short kDownArrowKey = 125;
 {
     BOOL rightKeyPressed = NO;
     
-    if (event != nil && [event respondsToSelector:@selector(keyCode)] &&
+    if (event && [event respondsToSelector:@selector(keyCode)] &&
         (event.type == NSKeyDown || event.type == NSKeyUp))
     {
         unsigned short keyModified = [[event charactersIgnoringModifiers] characterAtIndex:0];
@@ -159,7 +159,7 @@ static unsigned short kDownArrowKey = 125;
 {
     BOOL upKeyPressed = NO;
     
-    if (event != nil && [event respondsToSelector:@selector(keyCode)] &&
+    if (event && [event respondsToSelector:@selector(keyCode)] &&
         (event.type == NSKeyDown || event.type == NSKeyUp))
     {
         unsigned short keyModified = [[event charactersIgnoringModifiers] characterAtIndex:0];
@@ -180,7 +180,7 @@ static unsigned short kDownArrowKey = 125;
 {
     BOOL downKeyPressed = NO;
     
-    if (event != nil && [event respondsToSelector:@selector(keyCode)] &&
+    if (event && [event respondsToSelector:@selector(keyCode)] &&
         (event.type == NSKeyDown || event.type == NSKeyUp))
     {
         unsigned short keyModified = [[event charactersIgnoringModifiers] characterAtIndex:0];
