@@ -31,7 +31,7 @@
 
 @dynamic center;
 
-- (void)center:(NSPoint)center
+- (void)setCenter:(NSPoint)center
 {
     [self setFrameOrigin:NSMakePoint(floorf(center.x - (NSWidth(self.bounds)) / 2),
                                      floorf(center.y - (NSHeight(self.bounds)) / 2))];

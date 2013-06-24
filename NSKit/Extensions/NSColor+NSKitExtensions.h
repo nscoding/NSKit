@@ -37,5 +37,9 @@
 
 - (CGColorRef)nsCGColor;
 
++ (void)adjustRed:(CGFloat *)red
+            green:(CGFloat *)green
+             blue:(CGFloat *)blue
+            color:(NSColor *)color;
 
 @end

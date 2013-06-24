@@ -32,7 +32,7 @@
  * The center is specified within the coordinate system of its
  * superview and is measured in points. Setting this property
  */
-@property (nonatomic, assign) NSPoint center;
+@property (nonatomic, assign, setter = setCenter:) NSPoint center;
 
 /**
  * Sets the alpha value of the view to 0 animated.
