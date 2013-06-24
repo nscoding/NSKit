@@ -38,6 +38,7 @@ static unsigned short kDownArrowKey = 125;
 
 @implementation NSKitKeyboardHelper
 
+
 + (BOOL)returnKeyIsPressedForEvent:(NSEvent *)event
 {
     if (event != nil && [event respondsToSelector:@selector(keyCode)] &&
