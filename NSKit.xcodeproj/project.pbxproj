@@ -483,7 +483,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		CDB2982F1777A4A700889B06 /* Debug */ = {
+		CD025926177906A1006A7C54 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -520,9 +520,62 @@
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = macosx10.8;
 			};
-			name = Debug;
+			name = Development;
 		};
-		CDB298301777A4A700889B06 /* Release */ = {
+		CD025927177906A1006A7C54 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_ANALYZER_OBJC_ATSYNC = YES;
+				CLANG_ANALYZER_OBJC_COLLECTIONS = YES;
+				CLANG_ANALYZER_OBJC_INCOMP_METHOD_TYPES = YES;
+				CLANG_ANALYZER_OBJC_NSCFERROR = YES;
+				CLANG_ANALYZER_OBJC_RETAIN_COUNT = YES;
+				CLANG_ANALYZER_OBJC_UNUSED_IVARS = YES;
+				CLANG_LINK_OBJC_RUNTIME = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_CW_ASM_SYNTAX = YES;
+				GCC_ENABLE_BUILTIN_FUNCTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSKit/NSKit-Prefix.pch";
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
+				INFOPLIST_FILE = "NSKit/NSKit-Info.plist";
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.8;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Development;
+		};
+		CD025928177906A1006A7C54 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NSKit.framework/Versions/A/NSKit";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSKit/NSKit-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "NSKitTests/NSKitTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Development;
+		};
+		CD025929177906A8006A7C54 /* App Store */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -553,11 +606,12 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = macosx10.8;
 			};
-			name = Release;
+			name = "App Store";
 		};
-		CDB298321777A4A700889B06 /* Debug */ = {
+		CD02592A177906A8006A7C54 /* App Store */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ANALYZER_OBJC_ATSYNC = YES;
 				CLANG_ANALYZER_OBJC_COLLECTIONS = YES;
 				CLANG_ANALYZER_OBJC_INCOMP_METHOD_TYPES = YES;
@@ -576,64 +630,16 @@
 				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = YES;
 				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
 				INFOPLIST_FILE = "NSKit/NSKit-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx10.8;
+				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = framework;
 			};
-			name = Debug;
+			name = "App Store";
 		};
-		CDB298331777A4A700889B06 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_OBJC_ATSYNC = YES;
-				CLANG_ANALYZER_OBJC_COLLECTIONS = YES;
-				CLANG_ANALYZER_OBJC_INCOMP_METHOD_TYPES = YES;
-				CLANG_ANALYZER_OBJC_NSCFERROR = YES;
-				CLANG_ANALYZER_OBJC_RETAIN_COUNT = YES;
-				CLANG_ANALYZER_OBJC_UNUSED_IVARS = YES;
-				CLANG_LINK_OBJC_RUNTIME = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_VERSION = A;
-				GCC_CW_ASM_SYNTAX = YES;
-				GCC_ENABLE_BUILTIN_FUNCTIONS = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "NSKit/NSKit-Prefix.pch";
-				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = YES;
-				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
-				INFOPLIST_FILE = "NSKit/NSKit-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.8;
-				WRAPPER_EXTENSION = framework;
-			};
-			name = Release;
-		};
-		CDB298351777A4A700889B06 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NSKit.framework/Versions/A/NSKit";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "NSKit/NSKit-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "NSKitTests/NSKitTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		CDB298361777A4A700889B06 /* Release */ = {
+		CD02592B177906A8006A7C54 /* App Store */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NSKit.framework/Versions/A/NSKit";
@@ -649,7 +655,7 @@
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
-			name = Release;
+			name = "App Store";
 		};
 /* End XCBuildConfiguration section */
 
@@ -657,29 +663,29 @@
 		CDB298031777A4A700889B06 /* Build configuration list for PBXProject "NSKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CDB2982F1777A4A700889B06 /* Debug */,
-				CDB298301777A4A700889B06 /* Release */,
+				CD025926177906A1006A7C54 /* Development */,
+				CD025929177906A8006A7C54 /* App Store */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Development;
 		};
 		CDB298311777A4A700889B06 /* Build configuration list for PBXNativeTarget "NSKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CDB298321777A4A700889B06 /* Debug */,
-				CDB298331777A4A700889B06 /* Release */,
+				CD025927177906A1006A7C54 /* Development */,
+				CD02592A177906A8006A7C54 /* App Store */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Development;
 		};
 		CDB298341777A4A700889B06 /* Build configuration list for PBXNativeTarget "NSKitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CDB298351777A4A700889B06 /* Debug */,
-				CDB298361777A4A700889B06 /* Release */,
+				CD025928177906A1006A7C54 /* Development */,
+				CD02592B177906A8006A7C54 /* App Store */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Development;
 		};
 /* End XCConfigurationList section */
 	};
