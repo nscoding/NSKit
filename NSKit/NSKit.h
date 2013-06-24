@@ -24,7 +24,7 @@
 // THE SOFTWARE.
 
 
-#import <Foundation/Foundation.h>
+extern BOOL AtLeastLion; // set at launch
 
 @interface NSKit : NSObject
 

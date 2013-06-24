@@ -26,6 +26,8 @@
 
 #import "NSKit.h"
 
+BOOL AtLeastLion = NO;
+
 @implementation NSKit
 
 @end

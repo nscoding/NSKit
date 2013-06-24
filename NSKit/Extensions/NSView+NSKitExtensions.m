@@ -29,7 +29,6 @@
 
 @implementation NSView (NSKitExtensions)
 
-
 @dynamic center;
 
 - (void)center:(NSPoint)center
@@ -73,21 +72,35 @@
                  completion:(void (^)(BOOL finished))completion
 {
     NSCKitAssert(animations, @"Animations parameter must not be NULL");
-
-    [NSAnimationContext beginGrouping];
-    [[NSAnimationContext currentContext] setDuration:duration];
-    animations();
-    [NSAnimationContext endGrouping];
     
-    if (completion != NULL)
+    if (AtLeastLion)
     {
-        dispatch_block_t completionBlock = ^
+        [NSAnimationContext runAnimationGroup:^(NSAnimationContext *context)
+        {
+            animations();
+        }
+        completionHandler:^
         {
             completion(YES);
-        };
+        }];
+    }
+    else
+    {
+        [NSAnimationContext beginGrouping];
+        [[NSAnimationContext currentContext] setDuration:duration];
+        animations();
+        [NSAnimationContext endGrouping];
         
-        dispatch_time_t popTime = dispatch_time( DISPATCH_TIME_NOW, (double)duration * NSEC_PER_SEC);
-        dispatch_after(popTime, dispatch_get_main_queue(), completionBlock);
+        if (completion != NULL)
+        {
+            dispatch_block_t completionBlock = ^
+            {
+                completion(YES);
+            };
+            
+            dispatch_time_t popTime = dispatch_time( DISPATCH_TIME_NOW, (double)duration * NSEC_PER_SEC);
+            dispatch_after(popTime, dispatch_get_main_queue(), completionBlock);
+        }
     }
 }
 

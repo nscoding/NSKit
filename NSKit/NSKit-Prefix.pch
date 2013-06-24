@@ -4,6 +4,13 @@
 //  The contents of this file are implicitly included at the beginning of every source file.
 //
 
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
+
+#import "NSKit.h"
+
 #define NSCKitAssert(condition, ...) \
 do \
 { \
@@ -12,8 +19,3 @@ NSLog(@"(%s), %@", #condition, [NSString stringWithFormat:__VA_ARGS__]); \
 } \
 } while(0)
 
-
-
-#ifdef __OBJC__
-    #import <Cocoa/Cocoa.h>
-#endif
