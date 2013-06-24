@@ -25,9 +25,10 @@
 		CD02589F1778D1AA006A7C54 /* NSImage+NSKitExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = CD02589D1778D1AA006A7C54 /* NSImage+NSKitExtensions.m */; };
 		CD0258AF1778D981006A7C54 /* NSUserDefaults+NSKitExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0258AD1778D981006A7C54 /* NSUserDefaults+NSKitExtensions.h */; };
 		CD0258B01778D981006A7C54 /* NSUserDefaults+NSKitExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0258AE1778D981006A7C54 /* NSUserDefaults+NSKitExtensions.m */; };
+		CD0258B71778E945006A7C54 /* NSKitUtilities_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0258B61778E945006A7C54 /* NSKitUtilities_Test.m */; };
 		CDB2980D1777A4A700889B06 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB2980C1777A4A700889B06 /* Cocoa.framework */; };
 		CDB2981B1777A4A700889B06 /* NSKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB2981A1777A4A700889B06 /* NSKit.m */; };
-		CDB298221777A4A700889B06 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB298211777A4A700889B06 /* XCTest.framework */; };
+		CDB298221777A4A700889B06 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB298211777A4A700889B06 /* XCTest.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		CDB298231777A4A700889B06 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB2980C1777A4A700889B06 /* Cocoa.framework */; };
 		CDB298261777A4A700889B06 /* NSKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB298091777A4A700889B06 /* NSKit.framework */; };
 		CDB2982C1777A4A700889B06 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CDB2982A1777A4A700889B06 /* InfoPlist.strings */; };
@@ -74,6 +75,7 @@
 		CD02589D1778D1AA006A7C54 /* NSImage+NSKitExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+NSKitExtensions.m"; sourceTree = "<group>"; };
 		CD0258AD1778D981006A7C54 /* NSUserDefaults+NSKitExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+NSKitExtensions.h"; sourceTree = "<group>"; };
 		CD0258AE1778D981006A7C54 /* NSUserDefaults+NSKitExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+NSKitExtensions.m"; sourceTree = "<group>"; };
+		CD0258B61778E945006A7C54 /* NSKitUtilities_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSKitUtilities_Test.m; sourceTree = "<group>"; };
 		CDB298091777A4A700889B06 /* NSKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NSKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDB2980C1777A4A700889B06 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		CDB2980F1777A4A700889B06 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -146,6 +148,14 @@
 			path = Keyboard;
 			sourceTree = "<group>";
 		};
+		CD0258B41778E945006A7C54 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				CD0258B61778E945006A7C54 /* NSKitUtilities_Test.m */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		CDB297FF1777A4A700889B06 = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				CDB2982D1777A4A700889B06 /* NSKitTests.m */,
+				CD0258B41778E945006A7C54 /* Utilities */,
 				CDB298281777A4A700889B06 /* Supporting Files */,
 			);
 			path = NSKitTests;
@@ -431,6 +442,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD0258B71778E945006A7C54 /* NSKitUtilities_Test.m in Sources */,
 				CDB2982E1777A4A700889B06 /* NSKitTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
