@@ -11,6 +11,10 @@
 		CD0258651777C42D006A7C54 /* NSKitQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0258611777C42D006A7C54 /* NSKitQueue.m */; };
 		CD0258661777C42D006A7C54 /* NSKitStack.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0258621777C42D006A7C54 /* NSKitStack.h */; };
 		CD0258671777C42D006A7C54 /* NSKitStack.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0258631777C42D006A7C54 /* NSKitStack.m */; };
+		CD0258731777C5F5006A7C54 /* NSKitKeyboardHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0258711777C5F5006A7C54 /* NSKitKeyboardHelper.h */; };
+		CD0258741777C5F5006A7C54 /* NSKitKeyboardHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0258721777C5F5006A7C54 /* NSKitKeyboardHelper.m */; };
+		CD0258771777C7A3006A7C54 /* NSKitMemoryHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0258751777C7A3006A7C54 /* NSKitMemoryHelper.h */; };
+		CD0258781777C7A3006A7C54 /* NSKitMemoryHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0258761777C7A3006A7C54 /* NSKitMemoryHelper.m */; };
 		CDB2980D1777A4A700889B06 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB2980C1777A4A700889B06 /* Cocoa.framework */; };
 		CDB2981B1777A4A700889B06 /* NSKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB2981A1777A4A700889B06 /* NSKit.m */; };
 		CDB298221777A4A700889B06 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB298211777A4A700889B06 /* XCTest.framework */; };
@@ -46,6 +50,10 @@
 		CD0258611777C42D006A7C54 /* NSKitQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSKitQueue.m; sourceTree = "<group>"; };
 		CD0258621777C42D006A7C54 /* NSKitStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSKitStack.h; sourceTree = "<group>"; };
 		CD0258631777C42D006A7C54 /* NSKitStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSKitStack.m; sourceTree = "<group>"; };
+		CD0258711777C5F5006A7C54 /* NSKitKeyboardHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSKitKeyboardHelper.h; sourceTree = "<group>"; };
+		CD0258721777C5F5006A7C54 /* NSKitKeyboardHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSKitKeyboardHelper.m; sourceTree = "<group>"; };
+		CD0258751777C7A3006A7C54 /* NSKitMemoryHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSKitMemoryHelper.h; sourceTree = "<group>"; };
+		CD0258761777C7A3006A7C54 /* NSKitMemoryHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSKitMemoryHelper.m; sourceTree = "<group>"; };
 		CDB298091777A4A700889B06 /* NSKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NSKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDB2980C1777A4A700889B06 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		CDB2980F1777A4A700889B06 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -107,6 +115,15 @@
 				CD0258631777C42D006A7C54 /* NSKitStack.m */,
 			);
 			path = "Data Structures";
+			sourceTree = "<group>";
+		};
+		CD0258701777C5F5006A7C54 /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				CD0258711777C5F5006A7C54 /* NSKitKeyboardHelper.h */,
+				CD0258721777C5F5006A7C54 /* NSKitKeyboardHelper.m */,
+			);
+			path = Keyboard;
 			sourceTree = "<group>";
 		};
 		CDB297FF1777A4A700889B06 = {
@@ -208,6 +225,7 @@
 			children = (
 				CDB298581777BEC900889B06 /* Debug */,
 				CDB2984F1777B5EF00889B06 /* Email */,
+				CD0258701777C5F5006A7C54 /* Keyboard */,
 				CDB298521777B76600889B06 /* Utilities */,
 			);
 			path = Helpers;
@@ -236,6 +254,8 @@
 			children = (
 				CDB298591777BF0500889B06 /* NSKitPerformanceTimer.h */,
 				CDB2985A1777BF0500889B06 /* NSKitPerformanceTimer.m */,
+				CD0258751777C7A3006A7C54 /* NSKitMemoryHelper.h */,
+				CD0258761777C7A3006A7C54 /* NSKitMemoryHelper.m */,
 			);
 			path = Debug;
 			sourceTree = "<group>";
@@ -249,6 +269,7 @@
 			files = (
 				CDB298461777AFC900889B06 /* NSView+NSKitExtensions.h in Headers */,
 				CDB2986A1777C2EF00889B06 /* NSKitPerformanceTimer.h in Headers */,
+				CD0258771777C7A3006A7C54 /* NSKitMemoryHelper.h in Headers */,
 				CDB298571777BAB100889B06 /* NSKitEmailHelper.h in Headers */,
 				CDB2985D1777C05700889B06 /* NSArray+NSKitExtensions.h in Headers */,
 				CD0258641777C42D006A7C54 /* NSKitQueue.h in Headers */,
@@ -256,6 +277,7 @@
 				CDB2986B1777C2FC00889B06 /* NSMutableArray+NSKitExtensions.h in Headers */,
 				CD0258661777C42D006A7C54 /* NSKitStack.h in Headers */,
 				CDB298551777B7A000889B06 /* NSKitUtilities.h in Headers */,
+				CD0258731777C5F5006A7C54 /* NSKitKeyboardHelper.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,7 +376,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDB298561777B7A000889B06 /* NSKitUtilities.m in Sources */,
+				CD0258781777C7A3006A7C54 /* NSKitMemoryHelper.m in Sources */,
 				CDB298411777ACAB00889B06 /* NSWindow+NSKitExtensions.m in Sources */,
+				CD0258741777C5F5006A7C54 /* NSKitKeyboardHelper.m in Sources */,
 				CDB2985E1777C05700889B06 /* NSArray+NSKitExtensions.m in Sources */,
 				CD0258671777C42D006A7C54 /* NSKitStack.m in Sources */,
 				CDB298441777AFAD00889B06 /* NSView+NSKitExtensions.m in Sources */,
@@ -466,13 +490,19 @@
 		CDB298321777A4A700889B06 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_LINK_OBJC_RUNTIME = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
+				GCC_CW_ASM_SYNTAX = YES;
+				GCC_ENABLE_BUILTIN_FUNCTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSKit/NSKit-Prefix.pch";
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
 				INFOPLIST_FILE = "NSKit/NSKit-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx10.8;
 				WRAPPER_EXTENSION = framework;
@@ -482,13 +512,19 @@
 		CDB298331777A4A700889B06 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_LINK_OBJC_RUNTIME = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
+				GCC_CW_ASM_SYNTAX = YES;
+				GCC_ENABLE_BUILTIN_FUNCTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSKit/NSKit-Prefix.pch";
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
 				INFOPLIST_FILE = "NSKit/NSKit-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx10.8;
 				WRAPPER_EXTENSION = framework;
