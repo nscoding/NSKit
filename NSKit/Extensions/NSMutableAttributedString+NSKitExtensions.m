@@ -56,6 +56,7 @@
 
 - (void)setFont:(NSFont *)font inRange:(NSRange)range
 {
+    NSCKitAssert(font, @"Font cannot be nil");
     [self addAttribute:NSFontAttributeName value:font range:range];
 }
 
@@ -64,6 +65,7 @@
 {
     NSMutableParagraphStyle *style = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
     [style setLineBreakMode:breakMode];
+  
     [self addAttribute:NSParagraphStyleAttributeName value:style range:NSMakeRange(0, self.length)];
 }
 
@@ -84,6 +86,7 @@
     NSMutableParagraphStyle *style = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
     [style setLineBreakMode:breakMode];
     [style setAlignment:alignment];
+ 
     [self addAttribute:NSParagraphStyleAttributeName value:style range:NSMakeRange(0, self.length)];
 }
 
@@ -96,14 +99,7 @@
     [style setLineBreakMode:breakMode];
     [style setLineSpacing:height];
     [style setAlignment:alignment];
-    [self addAttribute:NSParagraphStyleAttributeName value:style range:NSMakeRange(0, self.length)];
-}
-
-
-- (void)setMinimunLineHeight:(CGFloat)height
-{
-    NSMutableParagraphStyle *style = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
-    [style setMinimumLineHeight:height];
+    
     [self addAttribute:NSParagraphStyleAttributeName value:style range:NSMakeRange(0, self.length)];
 }
 
