@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD0258641777C42D006A7C54 /* NSKitQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0258601777C42D006A7C54 /* NSKitQueue.h */; };
+		CD0258651777C42D006A7C54 /* NSKitQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0258611777C42D006A7C54 /* NSKitQueue.m */; };
+		CD0258661777C42D006A7C54 /* NSKitStack.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0258621777C42D006A7C54 /* NSKitStack.h */; };
+		CD0258671777C42D006A7C54 /* NSKitStack.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0258631777C42D006A7C54 /* NSKitStack.m */; };
 		CDB2980D1777A4A700889B06 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB2980C1777A4A700889B06 /* Cocoa.framework */; };
 		CDB2981B1777A4A700889B06 /* NSKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB2981A1777A4A700889B06 /* NSKit.m */; };
 		CDB298221777A4A700889B06 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB298211777A4A700889B06 /* XCTest.framework */; };
@@ -23,10 +27,6 @@
 		CDB298571777BAB100889B06 /* NSKitEmailHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = CDB298501777B60A00889B06 /* NSKitEmailHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CDB2985D1777C05700889B06 /* NSArray+NSKitExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = CDB2985B1777C05700889B06 /* NSArray+NSKitExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CDB2985E1777C05700889B06 /* NSArray+NSKitExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB2985C1777C05700889B06 /* NSArray+NSKitExtensions.m */; };
-		CDB298641777C1CD00889B06 /* NSKitStack.h in Headers */ = {isa = PBXBuildFile; fileRef = CDB298621777C1CD00889B06 /* NSKitStack.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CDB298651777C1CD00889B06 /* NSKitStack.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB298631777C1CD00889B06 /* NSKitStack.m */; };
-		CDB298681777C1DC00889B06 /* NSKitQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = CDB298661777C1DC00889B06 /* NSKitQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CDB298691777C1DC00889B06 /* NSKitQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB298671777C1DC00889B06 /* NSKitQueue.m */; };
 		CDB2986A1777C2EF00889B06 /* NSKitPerformanceTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = CDB298591777BF0500889B06 /* NSKitPerformanceTimer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CDB2986B1777C2FC00889B06 /* NSMutableArray+NSKitExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = CDB2985F1777C13300889B06 /* NSMutableArray+NSKitExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -42,6 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CD0258601777C42D006A7C54 /* NSKitQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSKitQueue.h; sourceTree = "<group>"; };
+		CD0258611777C42D006A7C54 /* NSKitQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSKitQueue.m; sourceTree = "<group>"; };
+		CD0258621777C42D006A7C54 /* NSKitStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSKitStack.h; sourceTree = "<group>"; };
+		CD0258631777C42D006A7C54 /* NSKitStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSKitStack.m; sourceTree = "<group>"; };
 		CDB298091777A4A700889B06 /* NSKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NSKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDB2980C1777A4A700889B06 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		CDB2980F1777A4A700889B06 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -70,10 +74,6 @@
 		CDB2985C1777C05700889B06 /* NSArray+NSKitExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+NSKitExtensions.m"; sourceTree = "<group>"; };
 		CDB2985F1777C13300889B06 /* NSMutableArray+NSKitExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+NSKitExtensions.h"; sourceTree = "<group>"; };
 		CDB298601777C13300889B06 /* NSMutableArray+NSKitExtensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+NSKitExtensions.m"; sourceTree = "<group>"; };
-		CDB298621777C1CD00889B06 /* NSKitStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSKitStack.h; sourceTree = "<group>"; };
-		CDB298631777C1CD00889B06 /* NSKitStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSKitStack.m; sourceTree = "<group>"; };
-		CDB298661777C1DC00889B06 /* NSKitQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSKitQueue.h; sourceTree = "<group>"; };
-		CDB298671777C1DC00889B06 /* NSKitQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSKitQueue.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +98,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD02585F1777C42D006A7C54 /* Data Structures */ = {
+			isa = PBXGroup;
+			children = (
+				CD0258601777C42D006A7C54 /* NSKitQueue.h */,
+				CD0258611777C42D006A7C54 /* NSKitQueue.m */,
+				CD0258621777C42D006A7C54 /* NSKitStack.h */,
+				CD0258631777C42D006A7C54 /* NSKitStack.m */,
+			);
+			path = "Data Structures";
+			sourceTree = "<group>";
+		};
 		CDB297FF1777A4A700889B06 = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +151,7 @@
 		CDB298121777A4A700889B06 /* NSKit */ = {
 			isa = PBXGroup;
 			children = (
+				CD02585F1777C42D006A7C54 /* Data Structures */,
 				CDB2984E1777B5EF00889B06 /* Helpers */,
 				CDB2983D1777AC7F00889B06 /* Extensions */,
 				CDB298191777A4A700889B06 /* NSKit.h */,
@@ -194,7 +206,6 @@
 		CDB2984E1777B5EF00889B06 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				CDB298611777C1AC00889B06 /* Data Structures */,
 				CDB298581777BEC900889B06 /* Debug */,
 				CDB2984F1777B5EF00889B06 /* Email */,
 				CDB298521777B76600889B06 /* Utilities */,
@@ -229,17 +240,6 @@
 			path = Debug;
 			sourceTree = "<group>";
 		};
-		CDB298611777C1AC00889B06 /* Data Structures */ = {
-			isa = PBXGroup;
-			children = (
-				CDB298621777C1CD00889B06 /* NSKitStack.h */,
-				CDB298631777C1CD00889B06 /* NSKitStack.m */,
-				CDB298661777C1DC00889B06 /* NSKitQueue.h */,
-				CDB298671777C1DC00889B06 /* NSKitQueue.m */,
-			);
-			path = "Data Structures";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -251,10 +251,10 @@
 				CDB2986A1777C2EF00889B06 /* NSKitPerformanceTimer.h in Headers */,
 				CDB298571777BAB100889B06 /* NSKitEmailHelper.h in Headers */,
 				CDB2985D1777C05700889B06 /* NSArray+NSKitExtensions.h in Headers */,
-				CDB298641777C1CD00889B06 /* NSKitStack.h in Headers */,
+				CD0258641777C42D006A7C54 /* NSKitQueue.h in Headers */,
 				CDB298401777ACAB00889B06 /* NSWindow+NSKitExtensions.h in Headers */,
 				CDB2986B1777C2FC00889B06 /* NSMutableArray+NSKitExtensions.h in Headers */,
-				CDB298681777C1DC00889B06 /* NSKitQueue.h in Headers */,
+				CD0258661777C42D006A7C54 /* NSKitStack.h in Headers */,
 				CDB298551777B7A000889B06 /* NSKitUtilities.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -355,10 +355,10 @@
 			files = (
 				CDB298561777B7A000889B06 /* NSKitUtilities.m in Sources */,
 				CDB298411777ACAB00889B06 /* NSWindow+NSKitExtensions.m in Sources */,
-				CDB298691777C1DC00889B06 /* NSKitQueue.m in Sources */,
 				CDB2985E1777C05700889B06 /* NSArray+NSKitExtensions.m in Sources */,
+				CD0258671777C42D006A7C54 /* NSKitStack.m in Sources */,
 				CDB298441777AFAD00889B06 /* NSView+NSKitExtensions.m in Sources */,
-				CDB298651777C1CD00889B06 /* NSKitStack.m in Sources */,
+				CD0258651777C42D006A7C54 /* NSKitQueue.m in Sources */,
 				CDB2981B1777A4A700889B06 /* NSKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
