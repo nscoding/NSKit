@@ -11,9 +11,9 @@
 		CD0258651777C42D006A7C54 /* NSKitQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0258611777C42D006A7C54 /* NSKitQueue.m */; };
 		CD0258661777C42D006A7C54 /* NSKitStack.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0258621777C42D006A7C54 /* NSKitStack.h */; };
 		CD0258671777C42D006A7C54 /* NSKitStack.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0258631777C42D006A7C54 /* NSKitStack.m */; };
-		CD0258731777C5F5006A7C54 /* NSKitKeyboardHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0258711777C5F5006A7C54 /* NSKitKeyboardHelper.h */; };
+		CD0258731777C5F5006A7C54 /* NSKitKeyboardHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0258711777C5F5006A7C54 /* NSKitKeyboardHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD0258741777C5F5006A7C54 /* NSKitKeyboardHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0258721777C5F5006A7C54 /* NSKitKeyboardHelper.m */; };
-		CD0258771777C7A3006A7C54 /* NSKitMemoryHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0258751777C7A3006A7C54 /* NSKitMemoryHelper.h */; };
+		CD0258771777C7A3006A7C54 /* NSKitMemoryHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0258751777C7A3006A7C54 /* NSKitMemoryHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD0258781777C7A3006A7C54 /* NSKitMemoryHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0258761777C7A3006A7C54 /* NSKitMemoryHelper.m */; };
 		CDB2980D1777A4A700889B06 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB2980C1777A4A700889B06 /* Cocoa.framework */; };
 		CDB2981B1777A4A700889B06 /* NSKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB2981A1777A4A700889B06 /* NSKit.m */; };
