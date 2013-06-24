@@ -1,5 +1,5 @@
 //
-//  NSKitUtilities.h
+//  NSMutableAttributedString+NSKitExtensions.h
 //  NSKit
 //
 //  Created by Patrick Chamelo on 6/24/13.
@@ -24,75 +24,22 @@
 // THE SOFTWARE.
 
 
-@interface NSKitUtilities : NSObject
+@interface NSMutableAttributedString (NSKitExtensions)
 
-/**
- * Checks whether the email is valid or not.
- *
- * @param email
- * The email of the user.
- *
- * @return YES if the email is valid; otherwise, NO.
- *
- */
-+ (BOOL)isValidEmail:(NSString *)email;
+- (void)setColor:(NSColor *)color;
+- (void)setColor:(NSColor *)color inRange:(NSRange)range;
+- (void)setBackgroundColor:(NSColor *)color;
 
+- (void)setFont:(NSFont *)font;
+- (void)setFont:(NSFont *)font inRange:(NSRange)range;
 
-/**
- * Receives a rect and floors, x, y, width and height.
- *
- * @param NSRect
- * The NSRect to floor.
- *
- * @return NSRect the floored rect.
- *
- */
-+ (NSRect)flooredRect:(NSRect)rect;
+- (void)setLineBreak:(NSLineBreakMode)breakMode;
+- (void)setAlignment:(NSTextAlignment)alignment;
+- (void)setShadowWithColor:(NSColor *)color withOffset:(NSSize)offset;
 
-
-/**
- * Receives a rect and floors the origin of the rect, (x and y)
- *
- * @param NSRect
- * The NSRect to floor the origin.
- *
- * @return NSRect the floored origin rect.
- *
- */
-+ (NSRect)flooredOriginRect:(NSRect)rect;
-
-
-/**
- * Receives a rect and ceils, x, y, width and height.
- *
- * @param NSRect
- * The NSRect to ceil.
- *
- * @return NSRect the ceiled rect.
- *
- */
-+ (NSRect)ceiledRect:(NSRect)rect;
-
-
-/**
- * Receives a rect and ceils the origin of the rect, (x and y)
- *
- * @param NSRect
- * The NSRect to floor the origin.
- *
- * @return NSRect the floored origin rect.
- *
- */
-+ (NSRect)ceiledOriginRect:(NSRect)rect;
-
-
-/**
- * Returns the screen where the mouse is located
- *
- * @return NSScreen where the mouse is located.
- *
- */
-+ (NSScreen *)screenForMouseLocation;
-
-
+- (void)setLineBreak:(NSLineBreakMode)breakMode
+        andAlignment:(NSTextAlignment)alignment;
+- (void)setLineBreak:(NSLineBreakMode)breakMode
+          LineHeight:(CGFloat)height
+        andAlignment:(NSTextAlignment)alignment;
 @end

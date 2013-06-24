@@ -26,6 +26,9 @@
 
 @interface NSArray (NSKitExtensions)
 
+/**
+ * Reverses the order of the items in the array
+ */
 - (NSArray *)reversedArray;
 
 @end

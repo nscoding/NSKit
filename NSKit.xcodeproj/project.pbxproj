@@ -15,6 +15,10 @@
 		CD0258741777C5F5006A7C54 /* NSKitKeyboardHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0258721777C5F5006A7C54 /* NSKitKeyboardHelper.m */; };
 		CD0258771777C7A3006A7C54 /* NSKitMemoryHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0258751777C7A3006A7C54 /* NSKitMemoryHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD0258781777C7A3006A7C54 /* NSKitMemoryHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0258761777C7A3006A7C54 /* NSKitMemoryHelper.m */; };
+		CD0258881778C88E006A7C54 /* NSTextStorage+NSKitExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0258861778C88E006A7C54 /* NSTextStorage+NSKitExtensions.h */; };
+		CD0258891778C88E006A7C54 /* NSTextStorage+NSKitExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0258871778C88E006A7C54 /* NSTextStorage+NSKitExtensions.m */; };
+		CD02588C1778CB0A006A7C54 /* NSMutableAttributedString+NSKitExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = CD02588A1778CB0A006A7C54 /* NSMutableAttributedString+NSKitExtensions.h */; };
+		CD02588D1778CB0A006A7C54 /* NSMutableAttributedString+NSKitExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = CD02588B1778CB0A006A7C54 /* NSMutableAttributedString+NSKitExtensions.m */; };
 		CDB2980D1777A4A700889B06 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB2980C1777A4A700889B06 /* Cocoa.framework */; };
 		CDB2981B1777A4A700889B06 /* NSKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB2981A1777A4A700889B06 /* NSKit.m */; };
 		CDB298221777A4A700889B06 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB298211777A4A700889B06 /* XCTest.framework */; };
@@ -54,6 +58,10 @@
 		CD0258721777C5F5006A7C54 /* NSKitKeyboardHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSKitKeyboardHelper.m; sourceTree = "<group>"; };
 		CD0258751777C7A3006A7C54 /* NSKitMemoryHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSKitMemoryHelper.h; sourceTree = "<group>"; };
 		CD0258761777C7A3006A7C54 /* NSKitMemoryHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSKitMemoryHelper.m; sourceTree = "<group>"; };
+		CD0258861778C88E006A7C54 /* NSTextStorage+NSKitExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTextStorage+NSKitExtensions.h"; sourceTree = "<group>"; };
+		CD0258871778C88E006A7C54 /* NSTextStorage+NSKitExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTextStorage+NSKitExtensions.m"; sourceTree = "<group>"; };
+		CD02588A1778CB0A006A7C54 /* NSMutableAttributedString+NSKitExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+NSKitExtensions.h"; sourceTree = "<group>"; };
+		CD02588B1778CB0A006A7C54 /* NSMutableAttributedString+NSKitExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+NSKitExtensions.m"; sourceTree = "<group>"; };
 		CDB298091777A4A700889B06 /* NSKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NSKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDB2980C1777A4A700889B06 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		CDB2980F1777A4A700889B06 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -208,14 +216,18 @@
 		CDB2983D1777AC7F00889B06 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				CDB298421777AFA900889B06 /* NSView+NSKitExtensions.h */,
-				CDB298431777AFA900889B06 /* NSView+NSKitExtensions.m */,
-				CDB2983E1777ACAB00889B06 /* NSWindow+NSKitExtensions.h */,
-				CDB2983F1777ACAB00889B06 /* NSWindow+NSKitExtensions.m */,
 				CDB2985B1777C05700889B06 /* NSArray+NSKitExtensions.h */,
 				CDB2985C1777C05700889B06 /* NSArray+NSKitExtensions.m */,
 				CDB2985F1777C13300889B06 /* NSMutableArray+NSKitExtensions.h */,
 				CDB298601777C13300889B06 /* NSMutableArray+NSKitExtensions.m */,
+				CD02588A1778CB0A006A7C54 /* NSMutableAttributedString+NSKitExtensions.h */,
+				CD02588B1778CB0A006A7C54 /* NSMutableAttributedString+NSKitExtensions.m */,
+				CD0258861778C88E006A7C54 /* NSTextStorage+NSKitExtensions.h */,
+				CD0258871778C88E006A7C54 /* NSTextStorage+NSKitExtensions.m */,
+				CDB298421777AFA900889B06 /* NSView+NSKitExtensions.h */,
+				CDB298431777AFA900889B06 /* NSView+NSKitExtensions.m */,
+				CDB2983E1777ACAB00889B06 /* NSWindow+NSKitExtensions.h */,
+				CDB2983F1777ACAB00889B06 /* NSWindow+NSKitExtensions.m */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -271,8 +283,10 @@
 				CDB2986A1777C2EF00889B06 /* NSKitPerformanceTimer.h in Headers */,
 				CD0258771777C7A3006A7C54 /* NSKitMemoryHelper.h in Headers */,
 				CDB298571777BAB100889B06 /* NSKitEmailHelper.h in Headers */,
+				CD0258881778C88E006A7C54 /* NSTextStorage+NSKitExtensions.h in Headers */,
 				CDB2985D1777C05700889B06 /* NSArray+NSKitExtensions.h in Headers */,
 				CD0258641777C42D006A7C54 /* NSKitQueue.h in Headers */,
+				CD02588C1778CB0A006A7C54 /* NSMutableAttributedString+NSKitExtensions.h in Headers */,
 				CDB298401777ACAB00889B06 /* NSWindow+NSKitExtensions.h in Headers */,
 				CDB2986B1777C2FC00889B06 /* NSMutableArray+NSKitExtensions.h in Headers */,
 				CD0258661777C42D006A7C54 /* NSKitStack.h in Headers */,
@@ -382,8 +396,10 @@
 				CDB2985E1777C05700889B06 /* NSArray+NSKitExtensions.m in Sources */,
 				CD0258671777C42D006A7C54 /* NSKitStack.m in Sources */,
 				CDB298441777AFAD00889B06 /* NSView+NSKitExtensions.m in Sources */,
+				CD02588D1778CB0A006A7C54 /* NSMutableAttributedString+NSKitExtensions.m in Sources */,
 				CD0258651777C42D006A7C54 /* NSKitQueue.m in Sources */,
 				CDB2981B1777A4A700889B06 /* NSKit.m in Sources */,
+				CD0258891778C88E006A7C54 /* NSTextStorage+NSKitExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,6 +506,12 @@
 		CDB298321777A4A700889B06 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ANALYZER_OBJC_ATSYNC = YES;
+				CLANG_ANALYZER_OBJC_COLLECTIONS = YES;
+				CLANG_ANALYZER_OBJC_INCOMP_METHOD_TYPES = YES;
+				CLANG_ANALYZER_OBJC_NSCFERROR = YES;
+				CLANG_ANALYZER_OBJC_RETAIN_COUNT = YES;
+				CLANG_ANALYZER_OBJC_UNUSED_IVARS = YES;
 				CLANG_LINK_OBJC_RUNTIME = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -512,6 +534,12 @@
 		CDB298331777A4A700889B06 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ANALYZER_OBJC_ATSYNC = YES;
+				CLANG_ANALYZER_OBJC_COLLECTIONS = YES;
+				CLANG_ANALYZER_OBJC_INCOMP_METHOD_TYPES = YES;
+				CLANG_ANALYZER_OBJC_NSCFERROR = YES;
+				CLANG_ANALYZER_OBJC_RETAIN_COUNT = YES;
+				CLANG_ANALYZER_OBJC_UNUSED_IVARS = YES;
 				CLANG_LINK_OBJC_RUNTIME = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;

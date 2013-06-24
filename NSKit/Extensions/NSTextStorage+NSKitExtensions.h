@@ -1,5 +1,5 @@
 //
-//  NSKitUtilities.h
+//  NSTextStorage+NSKitExtensions.h
 //  NSKit
 //
 //  Created by Patrick Chamelo on 6/24/13.
@@ -24,75 +24,22 @@
 // THE SOFTWARE.
 
 
-@interface NSKitUtilities : NSObject
+/**
+ Holds a reference to a color for the default color of the text.
+ */
+extern NSColor *NSKitTextStorageColor;
 
 /**
- * Checks whether the email is valid or not.
- *
- * @param email
- * The email of the user.
- *
- * @return YES if the email is valid; otherwise, NO.
- *
+ Holds a reference to a color for the link color of the text.
  */
-+ (BOOL)isValidEmail:(NSString *)email;
+extern NSColor *NSKitTextStorageLinkColor;
 
+@interface NSTextStorage (NSKitExtensions)
 
 /**
- * Receives a rect and floors, x, y, width and height.
- *
- * @param NSRect
- * The NSRect to floor.
- *
- * @return NSRect the floored rect.
- *
+ * Scans the text storage for URLs and sets them with underline and a color 
+ * of your choice, you must invoke the method your self.
  */
-+ (NSRect)flooredRect:(NSRect)rect;
-
-
-/**
- * Receives a rect and floors the origin of the rect, (x and y)
- *
- * @param NSRect
- * The NSRect to floor the origin.
- *
- * @return NSRect the floored origin rect.
- *
- */
-+ (NSRect)flooredOriginRect:(NSRect)rect;
-
-
-/**
- * Receives a rect and ceils, x, y, width and height.
- *
- * @param NSRect
- * The NSRect to ceil.
- *
- * @return NSRect the ceiled rect.
- *
- */
-+ (NSRect)ceiledRect:(NSRect)rect;
-
-
-/**
- * Receives a rect and ceils the origin of the rect, (x and y)
- *
- * @param NSRect
- * The NSRect to floor the origin.
- *
- * @return NSRect the floored origin rect.
- *
- */
-+ (NSRect)ceiledOriginRect:(NSRect)rect;
-
-
-/**
- * Returns the screen where the mouse is located
- *
- * @return NSScreen where the mouse is located.
- *
- */
-+ (NSScreen *)screenForMouseLocation;
-
+- (void)scanForLinks;
 
 @end

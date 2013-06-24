@@ -76,4 +76,16 @@
 }
 
 
++ (NSScreen *)screenForMouseLocation
+{
+    NSPoint mouseLoc = [NSEvent mouseLocation];
+    NSEnumerator *screenEnum = [[NSScreen screens] objectEnumerator];
+    NSScreen *screen;
+    
+    while ((screen = [screenEnum nextObject]) && NSMouseInRect(mouseLoc, [screen frame], NO) == NO);
+    
+    return screen;
+}
+
+
 @end
