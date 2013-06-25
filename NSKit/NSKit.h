@@ -26,6 +26,24 @@
 
 extern BOOL AtLeastLion; // set at launch
 
+#import "NSKitQueue.h"
+#import "NSKitStack.h"
+#import "NSKitPerformanceTimer.h"
+#import "NSKitMemoryHelper.h"
+#import "NSKitEmailHelper.h"
+#import "NSKitUtilities.h"
+#import "NSKitKeyboardHelper.h"
+#import "NSArray+NSKitExtensions.h"
+#import "NSMutableArray+NSKitExtensions.h"
+#import "NSMutableAttributedString+NSKitExtensions.h"
+#import "NSTextStorage+NSKitExtensions.h"
+#import "NSView+NSKitExtensions.h"
+#import "NSWindow+NSKitExtensions.h"
+#import "NSColor+NSKitExtensions.h"
+#import "NSImage+NSKitExtensions.h"
+#import "NSUserDefaults+NSKitExtensions.h"
+
+
 @interface NSKit : NSObject
 
 @end
