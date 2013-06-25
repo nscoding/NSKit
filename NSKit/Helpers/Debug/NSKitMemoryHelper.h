@@ -35,7 +35,9 @@ typedef enum
 
 @interface NSKitMemoryHelper : NSObject
 
+#warning documentation missing
 + (NSUInteger)memoryForOption:(NSKitMemoryOption)option;
+
 + (NSString *)stringMemoryForOption:(NSKitMemoryOption)option;
 
 @end

@@ -26,6 +26,8 @@
 
 @interface NSMutableAttributedString (NSKitExtensions)
 
+#warning documentation missing
+
 - (void)setColor:(NSColor *)color;
 - (void)setColor:(NSColor *)color inRange:(NSRange)range;
 - (void)setBackgroundColor:(NSColor *)color;

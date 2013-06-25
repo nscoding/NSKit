@@ -26,6 +26,7 @@
 
 @interface NSColor (NSKitExtensions)
 
+#warning documentation missing
 
 + (NSColor *)randomColor;
 

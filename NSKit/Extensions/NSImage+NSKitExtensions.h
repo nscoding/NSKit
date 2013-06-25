@@ -26,6 +26,7 @@
 
 @interface NSImage (NSKitExtensions)
 
+#warning documentation missing
 
 + (NSImage *)stretchableImageWithLeftWidth:(CGFloat)leftwidth
                                middleWidth:(CGFloat)patternWidth

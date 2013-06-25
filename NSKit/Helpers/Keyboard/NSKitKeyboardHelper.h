@@ -26,6 +26,8 @@
 
 @interface NSKitKeyboardHelper : NSObject
 
+#warning documentation missing
+
 + (BOOL)returnKeyIsPressedForEvent:(NSEvent *)event;
 + (BOOL)tabKeyIsPressedForEvent:(NSEvent *)event;
 + (BOOL)shiftKeyIsPressedForEvent:(NSEvent *)event;
