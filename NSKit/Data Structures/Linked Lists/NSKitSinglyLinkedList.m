@@ -25,35 +25,134 @@
 
 
 #import "NSKitSinglyLinkedList.h"
+#import "NSKitNode.h"
+
+@interface NSKitSinglyLinkedList()
+{
+    NSKitNode *first;
+}
+
+@end
 
 @implementation NSKitSinglyLinkedList
 
 
-- (void)insertObject:(id)object atIndex:(NSUInteger)index
+- (BOOL)insertObject:(id)object
+{
+    return [self insertObject:object
+                      atIndex:self.count];
+}
+
+
+- (BOOL)insertObject:(id)object
+             atIndex:(NSInteger)index
+{
+    NSInteger count = 0;
+
+    if (object)
+    {
+        if (index < 0 || index > self.count)
+        {
+            @throw @"Index out of bounds";
+        }
+
+        if (index == 0)
+        {
+            first = object;
+            return YES;
+        }
+        
+        NSKitNode *nodeToSet = first;
+        while (nodeToSet)
+        {
+            NSKitNode *nextNode = nodeToSet.next;
+            if (nextNode)
+            {
+                nodeToSet = nextNode;
+            }
+            
+            if (count == index)
+            {
+                break;
+            }
+            
+            count++;
+        }
+        
+        nodeToSet.next = object;
+        
+        return YES;
+    }
+    
+    return NO;
+}
+
+
+- (id)deleObjectAtIndex:(NSInteger)index
 {
 
 }
 
 
-- (id)deleObjectAtIndex:(NSUInteger)index
+- (id)deleObject:(id)object
+         atIndex:(NSInteger)index
 {
 
 }
 
 
-- (id)deleObject:(id)object atIndex:(NSUInteger)index
+- (NSInteger)indexOfObject:(id)object
 {
-
+    NSKitNode *nodeToSet = first;
+    NSUInteger count = 0;
+    
+    while (nodeToSet)
+    {
+        if ([nodeToSet isEqualTo:object])
+        {
+            return count;
+        }
+        
+        count++;
+        nodeToSet = nodeToSet.next;
+    }
+    
+    return NSNotFound;
 }
 
-- (NSUInteger)indexOfObject:(id)object
-{
-
-}
 
 - (BOOL)isEmpty
 {
+    if (first == nil)
+    {
+        return YES;
+    }
     
+    return NO;
+}
+
+
+- (NSInteger)count
+{
+    if (first == nil)
+    {
+        return 0;
+    }
+    
+    NSKitNode *node = first;
+    NSInteger count = 0;
+    
+    while (node)
+    {
+        node = node.next;
+
+        if (node)
+        {
+            count++;
+        }
+    }
+    
+    return count;
 }
 
 

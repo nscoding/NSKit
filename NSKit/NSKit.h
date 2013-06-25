@@ -43,7 +43,6 @@ extern BOOL AtLeastLion; // set at launch
 #import "NSImage+NSKitExtensions.h"
 #import "NSUserDefaults+NSKitExtensions.h"
 
-
 @interface NSKit : NSObject
 
 @end

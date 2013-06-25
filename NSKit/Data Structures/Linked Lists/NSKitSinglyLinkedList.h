@@ -26,14 +26,20 @@
 
 @interface NSKitSinglyLinkedList : NSObject
 
-- (void)insertObject:(id)object atIndex:(NSUInteger)index;
 
-- (id)deleObject:(id)object;
+- (BOOL)insertObject:(id)object;
 
-- (id)deleObjectAtIndex:(NSUInteger)index;
+- (BOOL)insertObject:(id)object
+             atIndex:(NSInteger)index;
 
-- (NSUInteger)indexOfObject:(id)object;
+- (id)deleObjectAtIndex:(NSInteger)index;
+
+- (id)deleObject:(id)object
+         atIndex:(NSInteger)index;
+
+- (NSInteger)indexOfObject:(id)object;
 
 - (BOOL)isEmpty;
+
 
 @end
