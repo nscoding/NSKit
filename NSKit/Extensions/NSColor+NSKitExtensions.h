@@ -26,18 +26,70 @@
 
 @interface NSColor (NSKitExtensions)
 
-#warning documentation missing
 
+/**
+ * Creates a random color, usefull for debugging.
+ *
+ * @return NSColor, a random color.
+ *
+ */
 + (NSColor *)randomColor;
 
+
+/**
+ * Coverts a HEX color (e.g. #A3A3A3) from a string.
+ *
+ * @param NSString
+ * The hex value to convert.
+ *
+ * @return NSColor, the converted color.
+ *
+ */
 + (NSColor *)colorFromHexRGB:(NSString *)colorString;
 
-+ (NSString *)hexCodeWithColor:(NSColor*)color;
 
-+ (NSString *)RGBWithColor:(NSColor*)color;
+/**
+ * Hex string from NSColor.
+ *
+ * @param NSColor
+ * The NSColor to covert.
+ *
+ * @return NSString, the hex value.
+ *
+ */
++ (NSString *)hexCodeWithColor:(NSColor *)color;
 
+
+/**
+ * RGB string from NSColor.
+ *
+ * @param NSColor
+ * The NSColor to covert.
+ *
+ * @return NSString, the RGB value.
+ *
+ */
++ (NSString *)RGBWithColor:(NSColor *)color;
+
+
+/**
+ * CGColorRef implmentation for to support < 10.8
+ *
+ * @return CGColorRef
+ *
+ */
 - (CGColorRef)nsCGColor;
 
+
+/**
+ * Adjust the float pointers based on the given color
+ *
+ * @param CGFloat, a CGFloat pointer to be adjusted
+ * @param CGFloat, a CGFloat pointer to be adjusted
+ * @param CGFloat, a CGFloat pointer to be adjusted
+ * @param NSColor, a color reference to populate the float pointers.
+ *
+ */
 + (void)adjustRed:(CGFloat *)red
             green:(CGFloat *)green
              blue:(CGFloat *)blue

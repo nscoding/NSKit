@@ -42,7 +42,7 @@
 
 
 /**
- * Returns the object for a give key.
+ * @return the object for a give key.
  */
 + (id)valueForKey:(NSString *)key;
 

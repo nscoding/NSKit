@@ -65,7 +65,7 @@
 }
 
 
-+ (NSString *)hexCodeWithColor:(NSColor*)color
++ (NSString *)hexCodeWithColor:(NSColor *)color
 {
     CGFloat r, g, b;
     [NSColor adjustRed:&r green:&g blue:&b color:color];
@@ -77,7 +77,7 @@
 }
 
 
-+ (NSString *)RGBWithColor:(NSColor*)color
++ (NSString *)RGBWithColor:(NSColor *)color
 {
     CGFloat r, g, b;
     [NSColor adjustRed:&r green:&g blue:&b color:color];
