@@ -26,16 +26,113 @@
 
 @interface NSKitKeyboardHelper : NSObject
 
-#warning documentation missing
 
+/**
+ * Check if the "Return" key is pressed for a given event.
+ *
+ * @param NSEvent
+ * the event to check the pressed key.
+ *
+ * @return YES if the return key is pressed.
+ *
+ */
 + (BOOL)returnKeyIsPressedForEvent:(NSEvent *)event;
+
+
+/**
+ * Check if the "Tab" key is pressed for a given event.
+ *
+ * @param NSEvent
+ * the event to check the pressed key.
+ *
+ * @return YES if the "Tab" key is pressed.
+ *
+ */
 + (BOOL)tabKeyIsPressedForEvent:(NSEvent *)event;
+
+
+/**
+ * Check if the "Shift" key is pressed for a given event.
+ *
+ * @param NSEvent
+ * the event to check the pressed key.
+ *
+ * @return YES if the "Shift" key is pressed.
+ *
+ */
 + (BOOL)shiftKeyIsPressedForEvent:(NSEvent *)event;
+
+
+/**
+ * Check if the "Escape" key is pressed for a given event.
+ *
+ * @param NSEvent
+ * the event to check the pressed key.
+ *
+ * @return YES if the "Escape" key is pressed.
+ *
+ */
 + (BOOL)escapeKeyIsPressedForEvent:(NSEvent *)event;
+
+
+/**
+ * Check if the "Left" key is pressed for a given event.
+ *
+ * @param NSEvent
+ * the event to check the pressed key.
+ *
+ * @return YES if the "Left" key is pressed.
+ *
+ */
 + (BOOL)leftKeyIsPressedForEvent:(NSEvent *)event;
+
+
+/**
+ * Check if the "Right" key is pressed for a given event.
+ *
+ * @param NSEvent
+ * the event to check the pressed key.
+ *
+ * @return YES if the "Right" key is pressed.
+ *
+ */
 + (BOOL)rightKeyIsPressedForEvent:(NSEvent *)event;
+
+
+/**
+ * Check if the "Up" key is pressed for a given event.
+ *
+ * @param NSEvent
+ * the event to check the pressed key.
+ *
+ * @return YES if the "Up" key is pressed.
+ *
+ */
 + (BOOL)upKeyIsPressedForEvent:(NSEvent *)event;
+
+
+/**
+ * Check if the "Down" key is pressed for a given event.
+ *
+ * @param NSEvent
+ * the event to check the pressed key.
+ *
+ * @return YES if the "Down" key is pressed.
+ *
+ */
 + (BOOL)downKeyIsPressedForEvent:(NSEvent *)event;
+
+
+/**
+ * Check if the "Control" key is pressed for a given event.
+ *
+ * @param NSEvent
+ * the event to check the pressed key.
+ *
+ * @return YES if the "Control" key is pressed.
+ *
+ */
 + (BOOL)controlKeyIsPressedForEvent:(NSEvent *)event;
+
 
 @end
