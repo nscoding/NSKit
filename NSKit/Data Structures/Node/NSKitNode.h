@@ -26,8 +26,6 @@
 
 @interface NSKitNode : NSObject
 
-#warning documentation missing
-
 @property (nonatomic, strong) NSKitNode *next;
 @property (nonatomic, strong) NSKitNode *preview;
 
