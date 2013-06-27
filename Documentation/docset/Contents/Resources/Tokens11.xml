@@ -1,238 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Categories/NSMutableAttributedString+NSKitExtensions.html">
+	<File path="Categories/NSColor+NSKitExtensions.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cat/NSMutableAttributedString(NSKitExtensions)</TokenIdentifier>
-			<Abstract type="html">Extends the NSMutableAttributedString class.</Abstract>
-			<DeclaredIn>NSMutableAttributedString+NSKitExtensions.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cat/NSColor(NSKitExtensions)</TokenIdentifier>
+			<Abstract type="html">Extends the NSColor class</Abstract>
+			<DeclaredIn>NSColor+NSKitExtensions.h</DeclaredIn>
 			
 			<NodeRef refid="11"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSMutableAttributedString(NSKitExtensions)/nskit_setColor:</TokenIdentifier>
-			<Abstract type="html">Set the text color on the attributed string.</Abstract>
-			<DeclaredIn>NSMutableAttributedString+NSKitExtensions.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/intfm/NSColor(NSKitExtensions)/randomColor</TokenIdentifier>
+			<Abstract type="html">Creates a random color, usefull for debugging.</Abstract>
+			<DeclaredIn>NSColor+NSKitExtensions.h</DeclaredIn>			
 			
-			<Declaration>- (void)nskit_setColor:(NSColor *)color</Declaration>
+			<Declaration>+ (NSColor *)randomColor</Declaration>
+			
+			<ReturnValue><Abstract type="html">NSColor, a random color.</Abstract></ReturnValue>
+			<Anchor>//api/name/randomColor</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSColor(NSKitExtensions)/colorFromHexRGB:</TokenIdentifier>
+			<Abstract type="html">Coverts a HEX color (e.g. #A3A3A3) from a string.</Abstract>
+			<DeclaredIn>NSColor+NSKitExtensions.h</DeclaredIn>			
+			
+			<Declaration>+ (NSColor *)colorFromHexRGB:(NSString *)colorString</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>colorString</Name>
+					<Abstract type="html">The hex value to convert.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">NSColor, the converted color.</Abstract></ReturnValue>
+			<Anchor>//api/name/colorFromHexRGB:</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSColor(NSKitExtensions)/hexCodeWithColor:</TokenIdentifier>
+			<Abstract type="html">Hex string from NSColor.</Abstract>
+			<DeclaredIn>NSColor+NSKitExtensions.h</DeclaredIn>			
+			
+			<Declaration>+ (NSString *)hexCodeWithColor:(NSColor *)color</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>color</Name>
-					<Abstract type="html">Set the text color on the whole string.</Abstract>
+					<Abstract type="html">The NSColor to covert.</Abstract>
 				</Parameter>
 			</Parameters>
-			
-			<Anchor>//api/name/nskit_setColor:</Anchor>
+			<ReturnValue><Abstract type="html">NSString, the hex value.</Abstract></ReturnValue>
+			<Anchor>//api/name/hexCodeWithColor:</Anchor>
             <NodeRef refid="11"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSMutableAttributedString(NSKitExtensions)/nskit_setColor:inRange:</TokenIdentifier>
-			<Abstract type="html">Set the text color on the attributed string.</Abstract>
-			<DeclaredIn>NSMutableAttributedString+NSKitExtensions.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/intfm/NSColor(NSKitExtensions)/RGBWithColor:</TokenIdentifier>
+			<Abstract type="html">RGB string from NSColor.</Abstract>
+			<DeclaredIn>NSColor+NSKitExtensions.h</DeclaredIn>			
 			
-			<Declaration>- (void)nskit_setColor:(NSColor *)color inRange:(NSRange)range</Declaration>
+			<Declaration>+ (NSString *)RGBWithColor:(NSColor *)color</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>color</Name>
-					<Abstract type="html">The color to be set on the text.</Abstract>
-				</Parameter><Parameter>
-					<Name>range</Name>
-					<Abstract type="html">Set the text color on a given range.</Abstract>
+					<Abstract type="html">The NSColor to covert.</Abstract>
 				</Parameter>
 			</Parameters>
-			
-			<Anchor>//api/name/nskit_setColor:inRange:</Anchor>
+			<ReturnValue><Abstract type="html">NSString, the RGB value.</Abstract></ReturnValue>
+			<Anchor>//api/name/RGBWithColor:</Anchor>
             <NodeRef refid="11"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSMutableAttributedString(NSKitExtensions)/nskit_setBackgroundColor:</TokenIdentifier>
-			<Abstract type="html">Set the background color on the attributed string.</Abstract>
-			<DeclaredIn>NSMutableAttributedString+NSKitExtensions.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/intfm/NSColor(NSKitExtensions)/nsCGColor</TokenIdentifier>
+			<Abstract type="html">CGColorRef implmentation for to support &lt; 10.8</Abstract>
+			<DeclaredIn>NSColor+NSKitExtensions.h</DeclaredIn>			
 			
-			<Declaration>- (void)nskit_setBackgroundColor:(NSColor *)color</Declaration>
+			<Declaration>- (CGColorRef)nsCGColor</Declaration>
+			
+			<ReturnValue><Abstract type="html">CGColorRef</Abstract></ReturnValue>
+			<Anchor>//api/name/nsCGColor</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSColor(NSKitExtensions)/adjustRed:green:blue:color:</TokenIdentifier>
+			<Abstract type="html">Adjust the float pointers based on the given color</Abstract>
+			<DeclaredIn>NSColor+NSKitExtensions.h</DeclaredIn>			
+			
+			<Declaration>+ (void)adjustRed:(CGFloat *)red green:(CGFloat *)green blue:(CGFloat *)blue color:(NSColor *)color</Declaration>
 			<Parameters>
 				<Parameter>
+					<Name>red</Name>
+					<Abstract type="html">a CGFloat pointer to be adjusted</Abstract>
+				</Parameter><Parameter>
+					<Name>green</Name>
+					<Abstract type="html">a CGFloat pointer to be adjusted</Abstract>
+				</Parameter><Parameter>
+					<Name>blue</Name>
+					<Abstract type="html">a CGFloat pointer to be adjusted</Abstract>
+				</Parameter><Parameter>
 					<Name>color</Name>
-					<Abstract type="html">Set the background color on the whole string.</Abstract>
+					<Abstract type="html">a color reference to populate the float pointers.</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/nskit_setBackgroundColor:</Anchor>
-            <NodeRef refid="11"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSMutableAttributedString(NSKitExtensions)/nskit_setBackgroundColor:inRange:</TokenIdentifier>
-			<Abstract type="html">Set the background color on the attributed string.</Abstract>
-			<DeclaredIn>NSMutableAttributedString+NSKitExtensions.h</DeclaredIn>			
-			
-			<Declaration>- (void)nskit_setBackgroundColor:(NSColor *)color inRange:(NSRange)range</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>color</Name>
-					<Abstract type="html">The background color to be set on the text.</Abstract>
-				</Parameter><Parameter>
-					<Name>range</Name>
-					<Abstract type="html">Set the background color color on a given range.</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/nskit_setBackgroundColor:inRange:</Anchor>
-            <NodeRef refid="11"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSMutableAttributedString(NSKitExtensions)/nskit_setFont:</TokenIdentifier>
-			<Abstract type="html">Set the font on the attributed string.</Abstract>
-			<DeclaredIn>NSMutableAttributedString+NSKitExtensions.h</DeclaredIn>			
-			
-			<Declaration>- (void)nskit_setFont:(NSFont *)font</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>font</Name>
-					<Abstract type="html">Set the Font color on the whole string.</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/nskit_setFont:</Anchor>
-            <NodeRef refid="11"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSMutableAttributedString(NSKitExtensions)/setFont:inRange:</TokenIdentifier>
-			<Abstract type="html">Set the font on the attributed string.</Abstract>
-			<DeclaredIn>NSMutableAttributedString+NSKitExtensions.h</DeclaredIn>			
-			
-			<Declaration>- (void)setFont:(NSFont *)font inRange:(NSRange)range</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>font</Name>
-					<Abstract type="html">The Font to be set on the text.</Abstract>
-				</Parameter><Parameter>
-					<Name>range</Name>
-					<Abstract type="html">Set the Font on a given range.</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/setFont:inRange:</Anchor>
-            <NodeRef refid="11"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSMutableAttributedString(NSKitExtensions)/nskit_setLineHeight:</TokenIdentifier>
-			<Abstract type="html">Set the line spacing on the attributed string.</Abstract>
-			<DeclaredIn>NSMutableAttributedString+NSKitExtensions.h</DeclaredIn>			
-			
-			<Declaration>- (void)nskit_setLineHeight:(CGFloat)height</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>height</Name>
-					<Abstract type="html">The line spacing to be set on the text.</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/nskit_setLineHeight:</Anchor>
-            <NodeRef refid="11"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSMutableAttributedString(NSKitExtensions)/nskit_setLineBreak:</TokenIdentifier>
-			<Abstract type="html">Set the line break on the attributed string.</Abstract>
-			<DeclaredIn>NSMutableAttributedString+NSKitExtensions.h</DeclaredIn>			
-			
-			<Declaration>- (void)nskit_setLineBreak:(NSLineBreakMode)breakMode</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>breakMode</Name>
-					<Abstract type="html">The break mode to be set on the text.</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/nskit_setLineBreak:</Anchor>
-            <NodeRef refid="11"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSMutableAttributedString(NSKitExtensions)/nskit_setAlignment:</TokenIdentifier>
-			<Abstract type="html">Set the text alignment on the attributed string.</Abstract>
-			<DeclaredIn>NSMutableAttributedString+NSKitExtensions.h</DeclaredIn>			
-			
-			<Declaration>- (void)nskit_setAlignment:(NSTextAlignment)alignment</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>alignment</Name>
-					<Abstract type="html">The text alignment mode to be set on the text.</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/nskit_setAlignment:</Anchor>
-            <NodeRef refid="11"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSMutableAttributedString(NSKitExtensions)/nskit_setLineBreak:andAlignment:</TokenIdentifier>
-			<Abstract type="html">Set the text alignment &amp;amp; line break on the attributed string.</Abstract>
-			<DeclaredIn>NSMutableAttributedString+NSKitExtensions.h</DeclaredIn>			
-			
-			<Declaration>- (void)nskit_setLineBreak:(NSLineBreakMode)breakMode andAlignment:(NSTextAlignment)alignment</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>breakMode</Name>
-					<Abstract type="html">The break mode to be set on the text.</Abstract>
-				</Parameter><Parameter>
-					<Name>alignment</Name>
-					<Abstract type="html">The text alignment mode to be set on the text.</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/nskit_setLineBreak:andAlignment:</Anchor>
-            <NodeRef refid="11"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSMutableAttributedString(NSKitExtensions)/nskit_setLineBreak:LineHeight:andAlignment:</TokenIdentifier>
-			<Abstract type="html">Set the text alignment &amp;amp; line break on the attributed string.</Abstract>
-			<DeclaredIn>NSMutableAttributedString+NSKitExtensions.h</DeclaredIn>			
-			
-			<Declaration>- (void)nskit_setLineBreak:(NSLineBreakMode)breakMode LineHeight:(CGFloat)height andAlignment:(NSTextAlignment)alignment</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>breakMode</Name>
-					<Abstract type="html">The break mode to be set on the text.</Abstract>
-				</Parameter><Parameter>
-					<Name>height</Name>
-					<Abstract type="html">The line spacing to be set on the text.</Abstract>
-				</Parameter><Parameter>
-					<Name>alignment</Name>
-					<Abstract type="html">The text alignment mode to be set on the text.</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/nskit_setLineBreak:LineHeight:andAlignment:</Anchor>
-            <NodeRef refid="11"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSMutableAttributedString(NSKitExtensions)/nskit_setShadowWithColor:withOffset:</TokenIdentifier>
-			<Abstract type="html">Set the shadow on the text</Abstract>
-			<DeclaredIn>NSMutableAttributedString+NSKitExtensions.h</DeclaredIn>			
-			
-			<Declaration>- (void)nskit_setShadowWithColor:(NSColor *)color withOffset:(NSSize)offset</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>color</Name>
-					<Abstract type="html">The color of the shadow of the text.</Abstract>
-				</Parameter><Parameter>
-					<Name>offset</Name>
-					<Abstract type="html">The offset of the shadow.</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/nskit_setShadowWithColor:withOffset:</Anchor>
+			<Anchor>//api/name/adjustRed:green:blue:color:</Anchor>
             <NodeRef refid="11"/>
 		</Token>
 		

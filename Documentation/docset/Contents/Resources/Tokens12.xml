@@ -1,26 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Categories/NSTextStorage+NSKitExtensions.html">
+	<File path="Categories/NSImage+NSKitExtensions.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cat/NSTextStorage(NSKitExtensions)</TokenIdentifier>
-			<Abstract type="html">Holds a reference to a color for the link color of the text.</Abstract>
-			<DeclaredIn>NSTextStorage+NSKitExtensions.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cat/NSImage(NSKitExtensions)</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSImage+NSKitExtensions.h</DeclaredIn>
 			
 			<NodeRef refid="12"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSTextStorage(NSKitExtensions)/scanForLinks</TokenIdentifier>
-			<Abstract type="html">Scans the text storage for URLs and sets them with underline and a color
-of your choice, you must invoke the method your self.</Abstract>
-			<DeclaredIn>NSTextStorage+NSKitExtensions.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/intfm/NSImage(NSKitExtensions)/stretchableImageWithLeftWidth:middleWidth:rightWidth:toSize:leftImage:middleImage:rightImage:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSImage+NSKitExtensions.h</DeclaredIn>			
 			
-			<Declaration>- (void)scanForLinks</Declaration>
+			<Declaration>+ (NSImage *)stretchableImageWithLeftWidth:(CGFloat)leftwidth middleWidth:(CGFloat)patternWidth rightWidth:(CGFloat)rightWidth toSize:(NSSize)destinationSize leftImage:(NSImage *)leftImage middleImage:(NSImage *)middleImage rightImage:(NSImage *)rightImage</Declaration>
 			
 			
-			<Anchor>//api/name/scanForLinks</Anchor>
+			<Anchor>//api/name/stretchableImageWithLeftWidth:middleWidth:rightWidth:toSize:leftImage:middleImage:rightImage:</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSImage(NSKitExtensions)/stretchableImageWithLeftWidth:middleWidth:rightWidth:toSize:fromImage:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSImage+NSKitExtensions.h</DeclaredIn>			
+			
+			<Declaration>+ (NSImage *)stretchableImageWithLeftWidth:(CGFloat)leftwidth middleWidth:(CGFloat)patternWidth rightWidth:(CGFloat)rightWidth toSize:(NSSize)destinationSize fromImage:(NSImage *)sourceImage</Declaration>
+			
+			
+			<Anchor>//api/name/stretchableImageWithLeftWidth:middleWidth:rightWidth:toSize:fromImage:</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSImage(NSKitExtensions)/stretchableImageWithTopWidth:middleWidth:bottomWidth:toSize:fromImage:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSImage+NSKitExtensions.h</DeclaredIn>			
+			
+			<Declaration>+ (NSImage *)stretchableImageWithTopWidth:(CGFloat)topheight middleWidth:(CGFloat)patternHeight bottomWidth:(CGFloat)bottomHeight toSize:(NSSize)destinationSize fromImage:(NSImage *)sourceImage</Declaration>
+			
+			
+			<Anchor>//api/name/stretchableImageWithTopWidth:middleWidth:bottomWidth:toSize:fromImage:</Anchor>
             <NodeRef refid="12"/>
 		</Token>
 		

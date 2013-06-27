@@ -1,137 +1,238 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Categories/NSView+NSKitExtensions.html">
+	<File path="Categories/NSMutableAttributedString+NSKitExtensions.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cat/NSView(NSKitExtensions)</TokenIdentifier>
-			<Abstract type="html">Extends the NSView</Abstract>
-			<DeclaredIn>NSView+NSKitExtensions.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cat/NSMutableAttributedString(NSKitExtensions)</TokenIdentifier>
+			<Abstract type="html">Extends the NSMutableAttributedString class.</Abstract>
+			<DeclaredIn>NSMutableAttributedString+NSKitExtensions.h</DeclaredIn>
 			
 			<NodeRef refid="14"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSView(NSKitExtensions)/setCenter:</TokenIdentifier>
-			<Abstract type="html">The center of the frame.
-@discussion
-The center is specified within the coordinate system of its
-superview and is measured in points. Setting this property</Abstract>
-			<DeclaredIn>NSView+NSKitExtensions.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/intfm/NSMutableAttributedString(NSKitExtensions)/nskit_setColor:</TokenIdentifier>
+			<Abstract type="html">Set the text color on the attributed string.</Abstract>
+			<DeclaredIn>NSMutableAttributedString+NSKitExtensions.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, assign, setter=setCenter:) NSPoint center</Declaration>
-			
-			
-			<Anchor>//api/name/center</Anchor>
-            <NodeRef refid="14"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSView(NSKitExtensions)/center</TokenIdentifier>
-			<Abstract type="html">The center of the frame.
-@discussion
-The center is specified within the coordinate system of its
-superview and is measured in points. Setting this property</Abstract>
-			<DeclaredIn>NSView+NSKitExtensions.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, assign, setter=setCenter:) NSPoint center</Declaration>
-			
-			
-			<Anchor>//api/name/center</Anchor>
-            <NodeRef refid="14"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/NSView(NSKitExtensions)/center</TokenIdentifier>
-			<Abstract type="html">The center of the frame.
-@discussion
-The center is specified within the coordinate system of its
-superview and is measured in points. Setting this property</Abstract>
-			<DeclaredIn>NSView+NSKitExtensions.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, assign, setter=setCenter:) NSPoint center</Declaration>
-			
-			
-			<Anchor>//api/name/center</Anchor>
-            <NodeRef refid="14"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSView(NSKitExtensions)/fadeInAnimated</TokenIdentifier>
-			<Abstract type="html">Sets the alpha value of the view to 0 animated.</Abstract>
-			<DeclaredIn>NSView+NSKitExtensions.h</DeclaredIn>			
-			
-			<Declaration>- (void)fadeInAnimated</Declaration>
-			
-			
-			<Anchor>//api/name/fadeInAnimated</Anchor>
-            <NodeRef refid="14"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSView(NSKitExtensions)/fadeOutAnimated</TokenIdentifier>
-			<Abstract type="html">Sets the alpha value of the view to 1 animated.</Abstract>
-			<DeclaredIn>NSView+NSKitExtensions.h</DeclaredIn>			
-			
-			<Declaration>- (void)fadeOutAnimated</Declaration>
-			
-			
-			<Anchor>//api/name/fadeOutAnimated</Anchor>
-            <NodeRef refid="14"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSView(NSKitExtensions)/animateWithDuration:animations:</TokenIdentifier>
-			<Abstract type="html">Animate changes to one or more views using the specified duration.</Abstract>
-			<DeclaredIn>NSView+NSKitExtensions.h</DeclaredIn>			
-			
-			<Declaration>+ (void)animateWithDuration:(NSTimeInterval)duration animations:(void ( ^ ) ( void ))animations</Declaration>
+			<Declaration>- (void)nskit_setColor:(NSColor *)color</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>duration</Name>
-					<Abstract type="html">The total duration of the animations, measured in seconds.
-If you specify a negative value or 0, the changes are made without animating.</Abstract>
-				</Parameter><Parameter>
-					<Name>animations</Name>
-					<Abstract type="html">A block object containing the changes to commit to the views.
-This is where you programmatically change any animatable properties of the
-views in your view hierarchy. This block takes no parameters and has no
-return value. This parameter must not be NULL.</Abstract>
+					<Name>color</Name>
+					<Abstract type="html">Set the text color on the whole string.</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/animateWithDuration:animations:</Anchor>
+			<Anchor>//api/name/nskit_setColor:</Anchor>
             <NodeRef refid="14"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSView(NSKitExtensions)/animateWithDuration:animations:completion:</TokenIdentifier>
-			<Abstract type="html">Animate changes to one or more views using the specified duration.</Abstract>
-			<DeclaredIn>NSView+NSKitExtensions.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/intfm/NSMutableAttributedString(NSKitExtensions)/nskit_setColor:inRange:</TokenIdentifier>
+			<Abstract type="html">Set the text color on the attributed string.</Abstract>
+			<DeclaredIn>NSMutableAttributedString+NSKitExtensions.h</DeclaredIn>			
 			
-			<Declaration>+ (void)animateWithDuration:(NSTimeInterval)duration animations:(void ( ^ ) ( void ))animations completion:(void ( ^ ) ( BOOL finished ))completion</Declaration>
+			<Declaration>- (void)nskit_setColor:(NSColor *)color inRange:(NSRange)range</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>duration</Name>
-					<Abstract type="html">The total duration of the animations, measured in seconds.
-If you specify a negative value or 0, the changes are made without animating.</Abstract>
+					<Name>color</Name>
+					<Abstract type="html">The color to be set on the text.</Abstract>
 				</Parameter><Parameter>
-					<Name>animations</Name>
-					<Abstract type="html">A block object containing the changes to commit to the views.
-This is where you programmatically change any animatable properties of the
-views in your view hierarchy. This block takes no parameters and has no
-return value. This parameter must not be NULL.</Abstract>
-				</Parameter><Parameter>
-					<Name>completion</Name>
-					<Abstract type="html">A block object to be executed when the animation sequence ends. This block
-has no return value and takes a single Boolean argument that indicates whether
-or not the animations actually finished before the completion handler was called.
-If the duration of the animation is 0, this block is performed at the beginning of
-the next run loop cycle. This parameter may be NULL.</Abstract>
+					<Name>range</Name>
+					<Abstract type="html">Set the text color on a given range.</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/animateWithDuration:animations:completion:</Anchor>
+			<Anchor>//api/name/nskit_setColor:inRange:</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSMutableAttributedString(NSKitExtensions)/nskit_setBackgroundColor:</TokenIdentifier>
+			<Abstract type="html">Set the background color on the attributed string.</Abstract>
+			<DeclaredIn>NSMutableAttributedString+NSKitExtensions.h</DeclaredIn>			
+			
+			<Declaration>- (void)nskit_setBackgroundColor:(NSColor *)color</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>color</Name>
+					<Abstract type="html">Set the background color on the whole string.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/nskit_setBackgroundColor:</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSMutableAttributedString(NSKitExtensions)/nskit_setBackgroundColor:inRange:</TokenIdentifier>
+			<Abstract type="html">Set the background color on the attributed string.</Abstract>
+			<DeclaredIn>NSMutableAttributedString+NSKitExtensions.h</DeclaredIn>			
+			
+			<Declaration>- (void)nskit_setBackgroundColor:(NSColor *)color inRange:(NSRange)range</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>color</Name>
+					<Abstract type="html">The background color to be set on the text.</Abstract>
+				</Parameter><Parameter>
+					<Name>range</Name>
+					<Abstract type="html">Set the background color color on a given range.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/nskit_setBackgroundColor:inRange:</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSMutableAttributedString(NSKitExtensions)/nskit_setFont:</TokenIdentifier>
+			<Abstract type="html">Set the font on the attributed string.</Abstract>
+			<DeclaredIn>NSMutableAttributedString+NSKitExtensions.h</DeclaredIn>			
+			
+			<Declaration>- (void)nskit_setFont:(NSFont *)font</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>font</Name>
+					<Abstract type="html">Set the Font color on the whole string.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/nskit_setFont:</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSMutableAttributedString(NSKitExtensions)/setFont:inRange:</TokenIdentifier>
+			<Abstract type="html">Set the font on the attributed string.</Abstract>
+			<DeclaredIn>NSMutableAttributedString+NSKitExtensions.h</DeclaredIn>			
+			
+			<Declaration>- (void)setFont:(NSFont *)font inRange:(NSRange)range</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>font</Name>
+					<Abstract type="html">The Font to be set on the text.</Abstract>
+				</Parameter><Parameter>
+					<Name>range</Name>
+					<Abstract type="html">Set the Font on a given range.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setFont:inRange:</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSMutableAttributedString(NSKitExtensions)/nskit_setLineHeight:</TokenIdentifier>
+			<Abstract type="html">Set the line spacing on the attributed string.</Abstract>
+			<DeclaredIn>NSMutableAttributedString+NSKitExtensions.h</DeclaredIn>			
+			
+			<Declaration>- (void)nskit_setLineHeight:(CGFloat)height</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>height</Name>
+					<Abstract type="html">The line spacing to be set on the text.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/nskit_setLineHeight:</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSMutableAttributedString(NSKitExtensions)/nskit_setLineBreak:</TokenIdentifier>
+			<Abstract type="html">Set the line break on the attributed string.</Abstract>
+			<DeclaredIn>NSMutableAttributedString+NSKitExtensions.h</DeclaredIn>			
+			
+			<Declaration>- (void)nskit_setLineBreak:(NSLineBreakMode)breakMode</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>breakMode</Name>
+					<Abstract type="html">The break mode to be set on the text.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/nskit_setLineBreak:</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSMutableAttributedString(NSKitExtensions)/nskit_setAlignment:</TokenIdentifier>
+			<Abstract type="html">Set the text alignment on the attributed string.</Abstract>
+			<DeclaredIn>NSMutableAttributedString+NSKitExtensions.h</DeclaredIn>			
+			
+			<Declaration>- (void)nskit_setAlignment:(NSTextAlignment)alignment</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>alignment</Name>
+					<Abstract type="html">The text alignment mode to be set on the text.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/nskit_setAlignment:</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSMutableAttributedString(NSKitExtensions)/nskit_setLineBreak:andAlignment:</TokenIdentifier>
+			<Abstract type="html">Set the text alignment &amp;amp; line break on the attributed string.</Abstract>
+			<DeclaredIn>NSMutableAttributedString+NSKitExtensions.h</DeclaredIn>			
+			
+			<Declaration>- (void)nskit_setLineBreak:(NSLineBreakMode)breakMode andAlignment:(NSTextAlignment)alignment</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>breakMode</Name>
+					<Abstract type="html">The break mode to be set on the text.</Abstract>
+				</Parameter><Parameter>
+					<Name>alignment</Name>
+					<Abstract type="html">The text alignment mode to be set on the text.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/nskit_setLineBreak:andAlignment:</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSMutableAttributedString(NSKitExtensions)/nskit_setLineBreak:LineHeight:andAlignment:</TokenIdentifier>
+			<Abstract type="html">Set the text alignment &amp;amp; line break on the attributed string.</Abstract>
+			<DeclaredIn>NSMutableAttributedString+NSKitExtensions.h</DeclaredIn>			
+			
+			<Declaration>- (void)nskit_setLineBreak:(NSLineBreakMode)breakMode LineHeight:(CGFloat)height andAlignment:(NSTextAlignment)alignment</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>breakMode</Name>
+					<Abstract type="html">The break mode to be set on the text.</Abstract>
+				</Parameter><Parameter>
+					<Name>height</Name>
+					<Abstract type="html">The line spacing to be set on the text.</Abstract>
+				</Parameter><Parameter>
+					<Name>alignment</Name>
+					<Abstract type="html">The text alignment mode to be set on the text.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/nskit_setLineBreak:LineHeight:andAlignment:</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSMutableAttributedString(NSKitExtensions)/nskit_setShadowWithColor:withOffset:</TokenIdentifier>
+			<Abstract type="html">Set the shadow on the text</Abstract>
+			<DeclaredIn>NSMutableAttributedString+NSKitExtensions.h</DeclaredIn>			
+			
+			<Declaration>- (void)nskit_setShadowWithColor:(NSColor *)color withOffset:(NSSize)offset</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>color</Name>
+					<Abstract type="html">The color of the shadow of the text.</Abstract>
+				</Parameter><Parameter>
+					<Name>offset</Name>
+					<Abstract type="html">The offset of the shadow.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/nskit_setShadowWithColor:withOffset:</Anchor>
             <NodeRef refid="14"/>
 		</Token>
 		

@@ -1,37 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/NSKitPerformanceTimer.html">
+	<File path="Classes/NSKitNode.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/NSKitPerformanceTimer</TokenIdentifier>
-			<Abstract type="html">Permormance timer helper class</Abstract>
-			<DeclaredIn>NSKitPerformanceTimer.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/NSKitNode</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSKitNode.h</DeclaredIn>
 			
 			<NodeRef refid="4"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitPerformanceTimer/fire</TokenIdentifier>
-			<Abstract type="html">Fire the perfomance timer.</Abstract>
-			<DeclaredIn>NSKitPerformanceTimer.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitNode/setNext:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSKitNode.h</DeclaredIn>			
 			
-			<Declaration>- (void)fire</Declaration>
+			<Declaration>@property (nonatomic, strong) NSKitNode *next</Declaration>
 			
 			
-			<Anchor>//api/name/fire</Anchor>
+			<Anchor>//api/name/next</Anchor>
             <NodeRef refid="4"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitPerformanceTimer/logResult</TokenIdentifier>
-			<Abstract type="html">Logs the time in milliseconds since fire was invoked.</Abstract>
-			<DeclaredIn>NSKitPerformanceTimer.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitNode/next</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSKitNode.h</DeclaredIn>			
 			
-			<Declaration>- (void)logResult</Declaration>
+			<Declaration>@property (nonatomic, strong) NSKitNode *next</Declaration>
 			
 			
-			<Anchor>//api/name/logResult</Anchor>
+			<Anchor>//api/name/next</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/NSKitNode/next</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSKitNode.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong) NSKitNode *next</Declaration>
+			
+			
+			<Anchor>//api/name/next</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitNode/setPreview:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSKitNode.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong) NSKitNode *preview</Declaration>
+			
+			
+			<Anchor>//api/name/preview</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitNode/preview</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSKitNode.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong) NSKitNode *preview</Declaration>
+			
+			
+			<Anchor>//api/name/preview</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/NSKitNode/preview</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSKitNode.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong) NSKitNode *preview</Declaration>
+			
+			
+			<Anchor>//api/name/preview</Anchor>
             <NodeRef refid="4"/>
 		</Token>
 		

@@ -1,55 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Categories/NSWindow+NSKitExtensions.html">
+	<File path="Categories/NSTextStorage+NSKitExtensions.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cat/NSWindow(NSKitExtensions)</TokenIdentifier>
-			<Abstract type="html">Extends the NSWindow class</Abstract>
-			<DeclaredIn>NSWindow+NSKitExtensions.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cat/NSTextStorage(NSKitExtensions)</TokenIdentifier>
+			<Abstract type="html">Holds a reference to a color for the link color of the text.</Abstract>
+			<DeclaredIn>NSTextStorage+NSKitExtensions.h</DeclaredIn>
 			
 			<NodeRef refid="15"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSWindow(NSKitExtensions)/centerHorizontallyAndVerticallyOnScreen:</TokenIdentifier>
-			<Abstract type="html">Moves the window in the center of the given screen.</Abstract>
-			<DeclaredIn>NSWindow+NSKitExtensions.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/intfm/NSTextStorage(NSKitExtensions)/scanForLinks</TokenIdentifier>
+			<Abstract type="html">Scans the text storage for URLs and sets them with underline and a color
+of your choice, you must invoke the method your self.</Abstract>
+			<DeclaredIn>NSTextStorage+NSKitExtensions.h</DeclaredIn>			
 			
-			<Declaration>- (void)centerHorizontallyAndVerticallyOnScreen:(NSScreen *)screen</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>screen</Name>
-					<Abstract type="html">the screen where the window will be centered,
-if screen is nil, the main screen is used.</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/centerHorizontallyAndVerticallyOnScreen:</Anchor>
-            <NodeRef refid="15"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSWindow(NSKitExtensions)/centerHorizontallyAndVertically</TokenIdentifier>
-			<Abstract type="html">Moves the window in the center of the window screen.</Abstract>
-			<DeclaredIn>NSWindow+NSKitExtensions.h</DeclaredIn>			
-			
-			<Declaration>- (void)centerHorizontallyAndVertically</Declaration>
+			<Declaration>- (void)scanForLinks</Declaration>
 			
 			
-			<Anchor>//api/name/centerHorizontallyAndVertically</Anchor>
-            <NodeRef refid="15"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSWindow(NSKitExtensions)/isFullScreen</TokenIdentifier>
-			<Abstract type="html">Check if the window is Fullscreen mode.</Abstract>
-			<DeclaredIn>NSWindow+NSKitExtensions.h</DeclaredIn>			
-			
-			<Declaration>- (BOOL)isFullScreen</Declaration>
-			
-			<ReturnValue><Abstract type="html">YES if the window is in Fullscreen; otherwise, NO.</Abstract></ReturnValue>
-			<Anchor>//api/name/isFullScreen</Anchor>
+			<Anchor>//api/name/scanForLinks</Anchor>
             <NodeRef refid="15"/>
 		</Token>
 		

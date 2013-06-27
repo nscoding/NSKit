@@ -1,110 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/NSKitUtilities.html">
+	<File path="Classes/NSKitSinglyLinkedList.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/NSKitUtilities</TokenIdentifier>
-			<Abstract type="html">Several different helpers</Abstract>
-			<DeclaredIn>NSKitUtilities.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/NSKitSinglyLinkedList</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSKitSinglyLinkedList.h</DeclaredIn>
 			
 			<NodeRef refid="7"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/NSKitUtilities/isValidEmail:</TokenIdentifier>
-			<Abstract type="html">Checks whether the email is valid or not.</Abstract>
-			<DeclaredIn>NSKitUtilities.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitSinglyLinkedList/insertObject:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSKitSinglyLinkedList.h</DeclaredIn>			
 			
-			<Declaration>+ (BOOL)isValidEmail:(NSString *)email</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>email</Name>
-					<Abstract type="html">The Email of the user</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">YES if the email is valid; otherwise, NO.</Abstract></ReturnValue>
-			<Anchor>//api/name/isValidEmail:</Anchor>
+			<Declaration>- (BOOL)insertObject:(id)object</Declaration>
+			
+			
+			<Anchor>//api/name/insertObject:</Anchor>
             <NodeRef refid="7"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/NSKitUtilities/flooredRect:</TokenIdentifier>
-			<Abstract type="html">Receives a rect and floors, x, y, width and height.</Abstract>
-			<DeclaredIn>NSKitUtilities.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitSinglyLinkedList/insertObject:atIndex:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSKitSinglyLinkedList.h</DeclaredIn>			
 			
-			<Declaration>+ (NSRect)flooredRect:(NSRect)rect</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>rect</Name>
-					<Abstract type="html">The NSRect to floor</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">NSRect the floored rect.</Abstract></ReturnValue>
-			<Anchor>//api/name/flooredRect:</Anchor>
+			<Declaration>- (BOOL)insertObject:(id)object atIndex:(NSInteger)index</Declaration>
+			
+			
+			<Anchor>//api/name/insertObject:atIndex:</Anchor>
             <NodeRef refid="7"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/NSKitUtilities/flooredOriginRect:</TokenIdentifier>
-			<Abstract type="html">Receives a rect and floors the origin of the rect, (x and y)</Abstract>
-			<DeclaredIn>NSKitUtilities.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitSinglyLinkedList/deleObjectAtIndex:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSKitSinglyLinkedList.h</DeclaredIn>			
 			
-			<Declaration>+ (NSRect)flooredOriginRect:(NSRect)rect</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>rect</Name>
-					<Abstract type="html">The NSRect to floor the origin.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">NSRect the floored origin rect.</Abstract></ReturnValue>
-			<Anchor>//api/name/flooredOriginRect:</Anchor>
+			<Declaration>- (id)deleObjectAtIndex:(NSInteger)index</Declaration>
+			
+			
+			<Anchor>//api/name/deleObjectAtIndex:</Anchor>
             <NodeRef refid="7"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/NSKitUtilities/ceiledRect:</TokenIdentifier>
-			<Abstract type="html">Receives a rect and ceils, x, y, width and height.</Abstract>
-			<DeclaredIn>NSKitUtilities.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitSinglyLinkedList/deleObject:atIndex:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSKitSinglyLinkedList.h</DeclaredIn>			
 			
-			<Declaration>+ (NSRect)ceiledRect:(NSRect)rect</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>rect</Name>
-					<Abstract type="html">The NSRect to ceil.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">NSRect the ceiled rect.</Abstract></ReturnValue>
-			<Anchor>//api/name/ceiledRect:</Anchor>
+			<Declaration>- (id)deleObject:(id)object atIndex:(NSInteger)index</Declaration>
+			
+			
+			<Anchor>//api/name/deleObject:atIndex:</Anchor>
             <NodeRef refid="7"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/NSKitUtilities/ceiledOriginRect:</TokenIdentifier>
-			<Abstract type="html">Receives a rect and ceils the origin of the rect, (x and y)</Abstract>
-			<DeclaredIn>NSKitUtilities.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitSinglyLinkedList/indexOfObject:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSKitSinglyLinkedList.h</DeclaredIn>			
 			
-			<Declaration>+ (NSRect)ceiledOriginRect:(NSRect)rect</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>rect</Name>
-					<Abstract type="html">The NSRect to floor the origin.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">NSRect the floored origin rect.</Abstract></ReturnValue>
-			<Anchor>//api/name/ceiledOriginRect:</Anchor>
+			<Declaration>- (NSInteger)indexOfObject:(id)object</Declaration>
+			
+			
+			<Anchor>//api/name/indexOfObject:</Anchor>
             <NodeRef refid="7"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/NSKitUtilities/screenForMouseLocation</TokenIdentifier>
-			<Abstract type="html">Returns the screen where the mouse is located</Abstract>
-			<DeclaredIn>NSKitUtilities.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitSinglyLinkedList/isEmpty</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSKitSinglyLinkedList.h</DeclaredIn>			
 			
-			<Declaration>+ (NSScreen *)screenForMouseLocation</Declaration>
+			<Declaration>- (BOOL)isEmpty</Declaration>
 			
-			<ReturnValue><Abstract type="html">NSScreen where the mouse is located.</Abstract></ReturnValue>
-			<Anchor>//api/name/screenForMouseLocation</Anchor>
+			
+			<Anchor>//api/name/isEmpty</Anchor>
             <NodeRef refid="7"/>
 		</Token>
 		

@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Categories/NSMutableArray+NSKitExtensions.html">
+	<File path="Categories/NSArray+NSKitExtensions.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cat/NSMutableArray(NSKitExtensions)</TokenIdentifier>
-			<Abstract type="html">Extends the NSMutableArray class</Abstract>
-			<DeclaredIn>NSMutableArray+NSKitExtensions.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cat/NSArray(NSKitExtensions)</TokenIdentifier>
+			<Abstract type="html">Extends the NSArray class</Abstract>
+			<DeclaredIn>NSArray+NSKitExtensions.h</DeclaredIn>
 			
 			<NodeRef refid="10"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSMutableArray(NSKitExtensions)/reverse</TokenIdentifier>
-			<Abstract type="html">Reverses the order of the items in the array</Abstract>
-			<DeclaredIn>NSMutableArray+NSKitExtensions.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/intfm/NSArray(NSKitExtensions)/reversedArray</TokenIdentifier>
+			<Abstract type="html">an NSArray, reverses the order of the items in the array.</Abstract>
+			<DeclaredIn>NSArray+NSKitExtensions.h</DeclaredIn>			
 			
-			<Declaration>- (void)reverse</Declaration>
+			<Declaration>- (NSArray *)reversedArray</Declaration>
 			
-			
-			<Anchor>//api/name/reverse</Anchor>
+			<ReturnValue><Abstract type="html">an NSArray, reverses the order of the items in the array.</Abstract></ReturnValue>
+			<Anchor>//api/name/reversedArray</Anchor>
             <NodeRef refid="10"/>
 		</Token>
 		

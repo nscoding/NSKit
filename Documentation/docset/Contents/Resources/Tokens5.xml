@@ -1,69 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/NSKitQueue.html">
+	<File path="Classes/NSKitPerformanceTimer.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/NSKitQueue</TokenIdentifier>
-			<Abstract type="html">A basic queue implementation using NSMutableArray</Abstract>
-			<DeclaredIn>NSKitQueue.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/NSKitPerformanceTimer</TokenIdentifier>
+			<Abstract type="html">Permormance timer helper class</Abstract>
+			<DeclaredIn>NSKitPerformanceTimer.h</DeclaredIn>
 			
 			<NodeRef refid="5"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitQueue/add:</TokenIdentifier>
-			<Abstract type="html">Add an element to the queue.</Abstract>
-			<DeclaredIn>NSKitQueue.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitPerformanceTimer/fire</TokenIdentifier>
+			<Abstract type="html">Fire the perfomance timer.</Abstract>
+			<DeclaredIn>NSKitPerformanceTimer.h</DeclaredIn>			
 			
-			<Declaration>- (void)add:(id)objectToAdd</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>objectToAdd</Name>
-					<Abstract type="html">The object to be added to the queue.</Abstract>
-				</Parameter>
-			</Parameters>
+			<Declaration>- (void)fire</Declaration>
 			
-			<Anchor>//api/name/add:</Anchor>
+			
+			<Anchor>//api/name/fire</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitQueue/remove</TokenIdentifier>
-			<Abstract type="html">Delete the front element of the queue.</Abstract>
-			<DeclaredIn>NSKitQueue.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitPerformanceTimer/logResult</TokenIdentifier>
+			<Abstract type="html">Logs the time in milliseconds since fire was invoked.</Abstract>
+			<DeclaredIn>NSKitPerformanceTimer.h</DeclaredIn>			
 			
-			<Declaration>- (id)remove</Declaration>
+			<Declaration>- (void)logResult</Declaration>
 			
-			<ReturnValue><Abstract type="html">id
-the object that was removed from the front.</Abstract></ReturnValue>
-			<Anchor>//api/name/remove</Anchor>
-            <NodeRef refid="5"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitQueue/first</TokenIdentifier>
-			<Abstract type="html">Return the first element of the queue.</Abstract>
-			<DeclaredIn>NSKitQueue.h</DeclaredIn>			
 			
-			<Declaration>- (id)first</Declaration>
-			
-			<ReturnValue><Abstract type="html">id
-the first object in the queue.</Abstract></ReturnValue>
-			<Anchor>//api/name/first</Anchor>
-            <NodeRef refid="5"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitQueue/last</TokenIdentifier>
-			<Abstract type="html">Return the last element of the queue.</Abstract>
-			<DeclaredIn>NSKitQueue.h</DeclaredIn>			
-			
-			<Declaration>- (id)last</Declaration>
-			
-			<ReturnValue><Abstract type="html">id
-the last object in the queue.</Abstract></ReturnValue>
-			<Anchor>//api/name/last</Anchor>
+			<Anchor>//api/name/logResult</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		

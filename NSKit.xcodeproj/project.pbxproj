@@ -471,7 +471,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/appledoc \\\n--project-name \"NSKit\" \\\n--project-company \"nscoding\" \\\n--company-id \"com.nscoding\" \\\n--docset-atom-filename \"NSKit.atom\" \\\n--docset-feed-url \"http://nscoding.github.com/NSKit/%DOCSETATOMFILENAME\" \\\n--docset-package-url \"http://nscoding.github.com/NSKit/%DOCSETPACKAGEFILENAME\" \\\n--docset-fallback-url \"http://nscoding.github.com/NSKit/\" \\\n--output \"${PROJECT_DIR}/Documentation\" \\\n--publish-docset \\\n--logformat xcode \\\n--keep-undocumented-members \\\n--keep-intermediate-files \\\n--no-repeat-first-par \\\n--no-warn-invalid-crossref \\\n--ignore \"*.m\" \\\n--exit-threshold 2 \\\n--index-desc \"${PROJECT_DIR}/README.md\" \\\n\"${PROJECT_DIR}\"";
+			shellScript = "/usr/local/bin/appledoc \\\n--project-name \"NSKit\" \\\n--project-company \"nscoding\" \\\n--company-id \"com.nscoding\" \\\n--docset-atom-filename \"NSKit.atom\" \\\n--docset-feed-url \"http://nscoding.github.com/NSKit/%DOCSETATOMFILENAME\" \\\n--docset-package-url \"http://nscoding.github.com/NSKit/%DOCSETPACKAGEFILENAME\" \\\n--docset-fallback-url \"http://nscoding.github.com/NSKit/\" \\\n--output \"${PROJECT_DIR}/Documentation\" \\\n--publish-docset \\\n--logformat xcode \\\n--keep-undocumented-objects \\\n--keep-undocumented-members \\\n--keep-intermediate-files \\\n--no-repeat-first-par \\\n--no-warn-invalid-crossref \\\n--ignore \"*.m\" \\\n--ignore \"NSKit.h\" \\\n--exit-threshold 2 \\\n--index-desc \"${PROJECT_DIR}/README.md\" \\\n\"${PROJECT_DIR}\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 

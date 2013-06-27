@@ -1,56 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/NSKitStack.html">
+	<File path="Classes/NSKitQueue.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/NSKitStack</TokenIdentifier>
-			<Abstract type="html">A basic stack implementation using NSMutableArray</Abstract>
-			<DeclaredIn>NSKitStack.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/NSKitQueue</TokenIdentifier>
+			<Abstract type="html">A basic queue implementation using NSMutableArray</Abstract>
+			<DeclaredIn>NSKitQueue.h</DeclaredIn>
 			
 			<NodeRef refid="6"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitStack/push:</TokenIdentifier>
-			<Abstract type="html">Add an element to the stack.</Abstract>
-			<DeclaredIn>NSKitStack.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitQueue/add:</TokenIdentifier>
+			<Abstract type="html">Add an element to the queue.</Abstract>
+			<DeclaredIn>NSKitQueue.h</DeclaredIn>			
 			
-			<Declaration>- (void)push:(id)objToPush</Declaration>
+			<Declaration>- (void)add:(id)objectToAdd</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>objToPush</Name>
-					<Abstract type="html">the object to be added to the stack.</Abstract>
+					<Name>objectToAdd</Name>
+					<Abstract type="html">The object to be added to the queue.</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/push:</Anchor>
+			<Anchor>//api/name/add:</Anchor>
             <NodeRef refid="6"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitStack/pop</TokenIdentifier>
-			<Abstract type="html">Delete top element from stack.</Abstract>
-			<DeclaredIn>NSKitStack.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitQueue/remove</TokenIdentifier>
+			<Abstract type="html">Delete the front element of the queue.</Abstract>
+			<DeclaredIn>NSKitQueue.h</DeclaredIn>			
 			
-			<Declaration>- (id)pop</Declaration>
+			<Declaration>- (id)remove</Declaration>
 			
 			<ReturnValue><Abstract type="html">id
-the poped object.</Abstract></ReturnValue>
-			<Anchor>//api/name/pop</Anchor>
+the object that was removed from the front.</Abstract></ReturnValue>
+			<Anchor>//api/name/remove</Anchor>
             <NodeRef refid="6"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitStack/top</TokenIdentifier>
-			<Abstract type="html">Returns top element from stack.</Abstract>
-			<DeclaredIn>NSKitStack.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitQueue/first</TokenIdentifier>
+			<Abstract type="html">Return the first element of the queue.</Abstract>
+			<DeclaredIn>NSKitQueue.h</DeclaredIn>			
 			
-			<Declaration>- (id)top</Declaration>
+			<Declaration>- (id)first</Declaration>
 			
 			<ReturnValue><Abstract type="html">id
-the top object in the stack.</Abstract></ReturnValue>
-			<Anchor>//api/name/top</Anchor>
+the first object in the queue.</Abstract></ReturnValue>
+			<Anchor>//api/name/first</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitQueue/last</TokenIdentifier>
+			<Abstract type="html">Return the last element of the queue.</Abstract>
+			<DeclaredIn>NSKitQueue.h</DeclaredIn>			
+			
+			<Declaration>- (id)last</Declaration>
+			
+			<ReturnValue><Abstract type="html">id
+the last object in the queue.</Abstract></ReturnValue>
+			<Anchor>//api/name/last</Anchor>
             <NodeRef refid="6"/>
 		</Token>
 		

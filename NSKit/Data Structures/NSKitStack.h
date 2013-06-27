@@ -23,7 +23,12 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-/** A basic stack implementation using NSMutableArray*/
+/** A stack is a linear list in which insertions (also called additions) and deletions take place at the same end. This end is called the top. The other end is called the bottom. 
+ 
+ - Stack is a specialized or restricted version of a more general data object linear list.
+ - Every instance of the data object stack is also an instance of the data object linear list. Moreover, all stack operations can be performed as linear list operations.
+ - This specialized version of the stack is created by extending the NSMutableArray.
+ */
 @interface NSKitStack : NSMutableArray
 
 /**

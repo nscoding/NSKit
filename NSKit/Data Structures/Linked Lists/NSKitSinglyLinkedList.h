@@ -26,8 +26,6 @@
 
 @interface NSKitSinglyLinkedList : NSObject
 
-#warning documentation missing
-
 - (BOOL)insertObject:(id)object;
 
 - (BOOL)insertObject:(id)object
