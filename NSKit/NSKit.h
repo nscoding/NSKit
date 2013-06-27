@@ -26,6 +26,8 @@
 
 extern BOOL AtLeastLion; // set at launch
 
+#import "NSKitLinkedListProtocol.h"
+#import "NSKitSinglyLinkedList.h"
 #import "NSKitQueue.h"
 #import "NSKitStack.h"
 #import "NSKitPerformanceTimer.h"

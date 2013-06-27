@@ -23,6 +23,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#import "NSKitLinkedListProtocol.h"
 /**
  * Each element of an instance of a data object is represented as a group of memory locations called cell or node.
  * The elements may be stored in any arbitrary set of memory locations.
@@ -39,7 +40,7 @@
  * @returns YES if the object was successfully added, otherwise NO.
  *
  */
-- (BOOL)insertObject:(id)object;
+- (BOOL)insertObject:(id<NSKitLinkedListProtocol>)object;
 
 
 /**
@@ -51,7 +52,7 @@
  * @returns YES if the object was successfully added, otherwise NO.
  *
  */
-- (BOOL)insertObject:(id)object
+- (BOOL)insertObject:(id <NSKitLinkedListProtocol>)object
              atIndex:(NSInteger)index;
 
 
@@ -87,7 +88,7 @@
  * if nothing was removed nil is returned
  *
  */
-- (id)deleObject:(id)object;
+- (id)deleObject:(id <NSKitLinkedListProtocol>)object;
 
 
 /**
@@ -98,7 +99,7 @@
  * @returns NSInteger If there such object the index is returned, otherwise NSNotFound.
  *
  */
-- (NSInteger)indexOfObject:(id)object;
+- (NSInteger)indexOfObject:(id <NSKitLinkedListProtocol>)object;
 
 
 /**
