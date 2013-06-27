@@ -25,11 +25,10 @@
 
 
 #import "NSKitSinglyLinkedList.h"
-#import "NSKitNode.h"
 
 @interface NSKitSinglyLinkedList()
 {
-    NSKitNode *first;
+     NSObject<NSKitLinkedListProtocol> *first;
 }
 
 @end
@@ -37,10 +36,9 @@
 @implementation NSKitSinglyLinkedList
 
 
-
 - (NSString *)description
 {
-    NSKitNode *node = first;
+    NSObject<NSKitLinkedListProtocol> *node = first;
     NSInteger count = 0;
     
     if (self.count == 0)
@@ -55,11 +53,14 @@
     {
         if (node)
         {
-            [log appendString:[node description]];
+            [log appendString:@" - "];
+            [log appendString:node.description];
+            [log appendString:@" - "];
+            
             count++;
         }
         
-        node = node.next;
+        node = node.nextLink;
     }
     
     [log appendString:@"-------------"];
@@ -68,14 +69,14 @@
 }
 
 
-- (BOOL)insertObject:(id)object
+- (BOOL)insertObject:(id <NSKitLinkedListProtocol>)object
 {
     return [self insertObject:object
                       atIndex:self.count];
 }
 
 
-- (BOOL)insertObject:(id)object
+- (BOOL)insertObject:(id <NSKitLinkedListProtocol>)object
              atIndex:(NSInteger)index
 {
     if (object == nil)
@@ -90,22 +91,22 @@
         return YES;
     }
 
-    NSKitNode *previousNode = [self objectAtIndex:index - 1];
+    NSObject<NSKitLinkedListProtocol> *previousNode = [self objectAtIndex:index - 1];
     if (previousNode)
     {
-        NSKitNode *currentNext = previousNode.next;
-        previousNode.next = object;
-        ((NSKitNode *)object).next = currentNext;
+        NSObject<NSKitLinkedListProtocol> *currentNext = previousNode.nextLink;
+        previousNode.nextLink = object;
+        object.nextLink = currentNext;
         
         return YES;
     }
     
-    NSKitNode *currentNode = [self objectAtIndex:index];
+    NSObject<NSKitLinkedListProtocol> *currentNode = [self objectAtIndex:index];
     if (currentNode && currentNode == first)
     {
-        NSKitNode *current = first;
+        NSObject<NSKitLinkedListProtocol> *current = first;
         first = object;
-        ((NSKitNode *)object).next = current;
+        object.nextLink = current;
         return YES;
     }
 
@@ -115,7 +116,7 @@
 
 - (id)objectAtIndex:(NSInteger)index
 {
-    NSKitNode *objectToReturn = first;
+    NSObject<NSKitLinkedListProtocol> *objectToReturn = first;
     NSInteger count = 0;
     
     while (objectToReturn)
@@ -126,7 +127,7 @@
         }
         
         count++;
-        objectToReturn = objectToReturn.next;
+        objectToReturn = objectToReturn.nextLink;
     }
     
     return nil;
@@ -135,20 +136,20 @@
 
 - (id)deleObjectAtIndex:(NSInteger)index
 {
-    NSKitNode *nodeToDelete = [self objectAtIndex:index];
-    NSKitNode *previousNode = [self objectAtIndex:index - 1];
-    previousNode.next = nodeToDelete.next;
+    NSObject<NSKitLinkedListProtocol> *nodeToDelete = [self objectAtIndex:index];
+    NSObject<NSKitLinkedListProtocol> *previousNode = [self objectAtIndex:index - 1];
+    previousNode.nextLink = nodeToDelete.nextLink;
     
     if (index == 0)
     {
-        first = nodeToDelete.next;
+        first = nodeToDelete.nextLink;
     }
     
     return nodeToDelete;
 }
 
 
-- (id)deleObject:(id)object
+- (id)deleObject:(id <NSKitLinkedListProtocol>)object
 {
     NSInteger index = [self indexOfObject:object];
 
@@ -163,7 +164,7 @@
 
 - (NSInteger)indexOfObject:(id)object
 {
-    NSKitNode *nodeToSet = first;
+    NSObject<NSKitLinkedListProtocol> *nodeToSet = first;
     NSUInteger count = 0;
     
     while (nodeToSet)
@@ -174,7 +175,7 @@
         }
         
         count++;
-        nodeToSet = nodeToSet.next;
+        nodeToSet = nodeToSet.nextLink;
     }
     
     return NSNotFound;
@@ -194,13 +195,13 @@
         return 0;
     }
     
-    NSKitNode *node = first;
+    NSObject<NSKitLinkedListProtocol> *node = first;
     NSUInteger count = 0;
     
     while (node)
     {
         count++;
-        node = node.next;
+        node = node.nextLink;
     }
     
     return count;

@@ -9,7 +9,20 @@
 #import <XCTest/XCTest.h>
 
 #import "NSKitSinglyLinkedList.h"
-#import "NSKitNode.h"
+#import "NSKitLinkedListProtocol.h"
+
+
+@interface NSKitNode : NSObject <NSKitLinkedListProtocol>
+
+/** link to the next node, used in NSKitSinglyLinkedList */
+@property (nonatomic, strong) NSObject<NSKitLinkedListProtocol> *nextLink;
+
+@end
+
+@implementation NSKitNode
+
+@end
+
 
 @interface NSKitSinglyLinkedList_Test : XCTestCase
 

@@ -1,106 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Categories/NSImage+NSKitExtensions.html">
+	<File path="Categories/NSMutableArray+NSKitExtensions.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cat/NSImage(NSKitExtensions)</TokenIdentifier>
-			<Abstract type="html">Extends the NSArray class</Abstract>
-			<DeclaredIn>NSImage+NSKitExtensions.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cat/NSMutableArray(NSKitExtensions)</TokenIdentifier>
+			<Abstract type="html">Extends the NSMutableArray class</Abstract>
+			<DeclaredIn>NSMutableArray+NSKitExtensions.h</DeclaredIn>
 			
 			<NodeRef refid="12"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSImage(NSKitExtensions)/stretchableImageWithLeftWidth:middleWidth:rightWidth:toSize:leftImage:middleImage:rightImage:</TokenIdentifier>
-			<Abstract type="html">Create a stretchable image from 3 different images.</Abstract>
-			<DeclaredIn>NSImage+NSKitExtensions.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/intfm/NSMutableArray(NSKitExtensions)/reverse</TokenIdentifier>
+			<Abstract type="html">Reverses the order of the items in the mutable array.</Abstract>
+			<DeclaredIn>NSMutableArray+NSKitExtensions.h</DeclaredIn>			
 			
-			<Declaration>+ (NSImage *)stretchableImageWithLeftWidth:(CGFloat)leftWidth middleWidth:(CGFloat)patternWidth rightWidth:(CGFloat)rightWidth toSize:(NSSize)destinationSize leftImage:(NSImage *)leftImage middleImage:(NSImage *)middleImage rightImage:(NSImage *)rightImage</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>leftWidth</Name>
-					<Abstract type="html">The width in pixels of the left side.</Abstract>
-				</Parameter><Parameter>
-					<Name>patternWidth</Name>
-					<Abstract type="html">The width in pixels of the middle side.</Abstract>
-				</Parameter><Parameter>
-					<Name>rightWidth</Name>
-					<Abstract type="html">The width in pixels of the right side.</Abstract>
-				</Parameter><Parameter>
-					<Name>destinationSize</Name>
-					<Abstract type="html">The final size in pixels.</Abstract>
-				</Parameter><Parameter>
-					<Name>leftImage</Name>
-					<Abstract type="html">The left image.</Abstract>
-				</Parameter><Parameter>
-					<Name>middleImage</Name>
-					<Abstract type="html">The middle image.</Abstract>
-				</Parameter><Parameter>
-					<Name>rightImage</Name>
-					<Abstract type="html">The left image.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">NSImage A custom strechable image from left to right.</Abstract></ReturnValue>
-			<Anchor>//api/name/stretchableImageWithLeftWidth:middleWidth:rightWidth:toSize:leftImage:middleImage:rightImage:</Anchor>
+			<Declaration>- (void)reverse</Declaration>
+			
+			
+			<Anchor>//api/name/reverse</Anchor>
             <NodeRef refid="12"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSImage(NSKitExtensions)/stretchableImageWithLeftWidth:middleWidth:rightWidth:toSize:fromImage:</TokenIdentifier>
-			<Abstract type="html">Create a stretchable image from another image.</Abstract>
-			<DeclaredIn>NSImage+NSKitExtensions.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/intfm/NSMutableArray(NSKitExtensions)/firstObject</TokenIdentifier>
+			<Abstract type="html">id The first object in the array, nil if the array is empty.</Abstract>
+			<DeclaredIn>NSMutableArray+NSKitExtensions.h</DeclaredIn>			
 			
-			<Declaration>+ (NSImage *)stretchableImageWithLeftWidth:(CGFloat)leftWidth middleWidth:(CGFloat)patternWidth rightWidth:(CGFloat)rightWidth toSize:(NSSize)destinationSize fromImage:(NSImage *)sourceImage</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>leftWidth</Name>
-					<Abstract type="html">The width in pixels of the left side.</Abstract>
-				</Parameter><Parameter>
-					<Name>patternWidth</Name>
-					<Abstract type="html">The width in pixels of the middle side.</Abstract>
-				</Parameter><Parameter>
-					<Name>rightWidth</Name>
-					<Abstract type="html">The width in pixels of the right side.</Abstract>
-				</Parameter><Parameter>
-					<Name>destinationSize</Name>
-					<Abstract type="html">The final size in pixels.</Abstract>
-				</Parameter><Parameter>
-					<Name>sourceImage</Name>
-					<Abstract type="html">The source image.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">NSImage A custom strechable image from left to right,</Abstract></ReturnValue>
-			<Anchor>//api/name/stretchableImageWithLeftWidth:middleWidth:rightWidth:toSize:fromImage:</Anchor>
+			<Declaration>- (id)firstObject</Declaration>
+			
+			<ReturnValue><Abstract type="html">id The first object in the array, nil if the array is empty.</Abstract></ReturnValue>
+			<Anchor>//api/name/firstObject</Anchor>
             <NodeRef refid="12"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSImage(NSKitExtensions)/stretchableImageWithTopWidth:middleWidth:bottomWidth:toSize:fromImage:</TokenIdentifier>
-			<Abstract type="html">Create a stretchable image from another image.</Abstract>
-			<DeclaredIn>NSImage+NSKitExtensions.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/intfm/NSMutableArray(NSKitExtensions)/removeFirstObject</TokenIdentifier>
+			<Abstract type="html">Removes the first object of the array, nothing happens if the array is empty.</Abstract>
+			<DeclaredIn>NSMutableArray+NSKitExtensions.h</DeclaredIn>			
 			
-			<Declaration>+ (NSImage *)stretchableImageWithTopWidth:(CGFloat)topheight middleWidth:(CGFloat)patternHeight bottomWidth:(CGFloat)bottomHeight toSize:(NSSize)destinationSize fromImage:(NSImage *)sourceImage</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>topheight</Name>
-					<Abstract type="html">The height in pixels of the top side.</Abstract>
-				</Parameter><Parameter>
-					<Name>patternHeight</Name>
-					<Abstract type="html">The height in pixels of the middle side.</Abstract>
-				</Parameter><Parameter>
-					<Name>bottomHeight</Name>
-					<Abstract type="html">The height in pixels of the bottom side.</Abstract>
-				</Parameter><Parameter>
-					<Name>destinationSize</Name>
-					<Abstract type="html">The final size in pixels.</Abstract>
-				</Parameter><Parameter>
-					<Name>sourceImage</Name>
-					<Abstract type="html">The source image.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">NSImage A custom strechable image from top to bottom.</Abstract></ReturnValue>
-			<Anchor>//api/name/stretchableImageWithTopWidth:middleWidth:bottomWidth:toSize:fromImage:</Anchor>
+			<Declaration>- (void)removeFirstObject</Declaration>
+			
+			
+			<Anchor>//api/name/removeFirstObject</Anchor>
             <NodeRef refid="12"/>
 		</Token>
 		

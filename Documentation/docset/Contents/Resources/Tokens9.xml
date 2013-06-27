@@ -1,110 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/NSKitUtilities.html">
+	<File path="Categories/NSArray+NSKitExtensions.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/NSKitUtilities</TokenIdentifier>
-			<Abstract type="html">Several different helpers</Abstract>
-			<DeclaredIn>NSKitUtilities.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cat/NSArray(NSKitExtensions)</TokenIdentifier>
+			<Abstract type="html">Extends the NSArray class</Abstract>
+			<DeclaredIn>NSArray+NSKitExtensions.h</DeclaredIn>
 			
 			<NodeRef refid="9"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/NSKitUtilities/isValidEmail:</TokenIdentifier>
-			<Abstract type="html">Checks whether the email is valid or not.</Abstract>
-			<DeclaredIn>NSKitUtilities.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/intfm/NSArray(NSKitExtensions)/reversedArray</TokenIdentifier>
+			<Abstract type="html">an NSArray where the items are in reversed order.</Abstract>
+			<DeclaredIn>NSArray+NSKitExtensions.h</DeclaredIn>			
 			
-			<Declaration>+ (BOOL)isValidEmail:(NSString *)email</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>email</Name>
-					<Abstract type="html">The Email of the user</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">YES if the email is valid; otherwise, NO.</Abstract></ReturnValue>
-			<Anchor>//api/name/isValidEmail:</Anchor>
+			<Declaration>- (NSArray *)reversedArray</Declaration>
+			
+			<ReturnValue><Abstract type="html">an NSArray where the items are in reversed order.</Abstract></ReturnValue>
+			<Anchor>//api/name/reversedArray</Anchor>
             <NodeRef refid="9"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/NSKitUtilities/flooredRect:</TokenIdentifier>
-			<Abstract type="html">Receives a rect and floors, x, y, width and height.</Abstract>
-			<DeclaredIn>NSKitUtilities.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/intfm/NSArray(NSKitExtensions)/firstObject</TokenIdentifier>
+			<Abstract type="html">id The first object in the array, nil if the array is empty.</Abstract>
+			<DeclaredIn>NSArray+NSKitExtensions.h</DeclaredIn>			
 			
-			<Declaration>+ (NSRect)flooredRect:(NSRect)rect</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>rect</Name>
-					<Abstract type="html">The NSRect to floor</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">NSRect the floored rect.</Abstract></ReturnValue>
-			<Anchor>//api/name/flooredRect:</Anchor>
-            <NodeRef refid="9"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/NSKitUtilities/flooredOriginRect:</TokenIdentifier>
-			<Abstract type="html">Receives a rect and floors the origin of the rect, (x and y)</Abstract>
-			<DeclaredIn>NSKitUtilities.h</DeclaredIn>			
+			<Declaration>- (id)firstObject</Declaration>
 			
-			<Declaration>+ (NSRect)flooredOriginRect:(NSRect)rect</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>rect</Name>
-					<Abstract type="html">The NSRect to floor the origin.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">NSRect the floored origin rect.</Abstract></ReturnValue>
-			<Anchor>//api/name/flooredOriginRect:</Anchor>
-            <NodeRef refid="9"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/NSKitUtilities/ceiledRect:</TokenIdentifier>
-			<Abstract type="html">Receives a rect and ceils, x, y, width and height.</Abstract>
-			<DeclaredIn>NSKitUtilities.h</DeclaredIn>			
-			
-			<Declaration>+ (NSRect)ceiledRect:(NSRect)rect</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>rect</Name>
-					<Abstract type="html">The NSRect to ceil.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">NSRect the ceiled rect.</Abstract></ReturnValue>
-			<Anchor>//api/name/ceiledRect:</Anchor>
-            <NodeRef refid="9"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/NSKitUtilities/ceiledOriginRect:</TokenIdentifier>
-			<Abstract type="html">Receives a rect and ceils the origin of the rect, (x and y)</Abstract>
-			<DeclaredIn>NSKitUtilities.h</DeclaredIn>			
-			
-			<Declaration>+ (NSRect)ceiledOriginRect:(NSRect)rect</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>rect</Name>
-					<Abstract type="html">The NSRect to floor the origin.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">NSRect the floored origin rect.</Abstract></ReturnValue>
-			<Anchor>//api/name/ceiledOriginRect:</Anchor>
-            <NodeRef refid="9"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/NSKitUtilities/screenForMouseLocation</TokenIdentifier>
-			<Abstract type="html">Returns the screen where the mouse is located</Abstract>
-			<DeclaredIn>NSKitUtilities.h</DeclaredIn>			
-			
-			<Declaration>+ (NSScreen *)screenForMouseLocation</Declaration>
-			
-			<ReturnValue><Abstract type="html">NSScreen where the mouse is located.</Abstract></ReturnValue>
-			<Anchor>//api/name/screenForMouseLocation</Anchor>
+			<ReturnValue><Abstract type="html">id The first object in the array, nil if the array is empty.</Abstract></ReturnValue>
+			<Anchor>//api/name/firstObject</Anchor>
             <NodeRef refid="9"/>
 		</Token>
 		
