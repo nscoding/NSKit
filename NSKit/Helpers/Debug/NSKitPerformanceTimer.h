@@ -24,6 +24,7 @@
 // THE SOFTWARE.
 
 
+/** Permormance timer helper class */
 @interface NSKitPerformanceTimer : NSObject
 
 /**

@@ -23,7 +23,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-
+/** Extends the NSColor class */
 @interface NSColor (NSKitExtensions)
 
 
@@ -39,8 +39,7 @@
 /**
  * Coverts a HEX color (e.g. #A3A3A3) from a string.
  *
- * @param NSString
- * The hex value to convert.
+ * @param colorString The hex value to convert.
  *
  * @return NSColor, the converted color.
  *
@@ -51,8 +50,7 @@
 /**
  * Hex string from NSColor.
  *
- * @param NSColor
- * The NSColor to covert.
+ * @param color The NSColor to covert.
  *
  * @return NSString, the hex value.
  *
@@ -63,8 +61,7 @@
 /**
  * RGB string from NSColor.
  *
- * @param NSColor
- * The NSColor to covert.
+ * @param color The NSColor to covert.
  *
  * @return NSString, the RGB value.
  *
@@ -84,10 +81,10 @@
 /**
  * Adjust the float pointers based on the given color
  *
- * @param CGFloat, a CGFloat pointer to be adjusted
- * @param CGFloat, a CGFloat pointer to be adjusted
- * @param CGFloat, a CGFloat pointer to be adjusted
- * @param NSColor, a color reference to populate the float pointers.
+ * @param red a CGFloat pointer to be adjusted
+ * @param green a CGFloat pointer to be adjusted
+ * @param blue a CGFloat pointer to be adjusted
+ * @param color a color reference to populate the float pointers.
  *
  */
 + (void)adjustRed:(CGFloat *)red

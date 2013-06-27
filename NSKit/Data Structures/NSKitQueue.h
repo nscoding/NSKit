@@ -23,14 +23,15 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+
+/** A basic queue implementation using NSMutableArray*/
 @interface NSKitQueue : NSMutableArray
 
 
 /**
  * Add an element to the queue.
  *
- * @param id
- * the object to be added to the queue.
+ * @param objectToAdd The object to be added to the queue.
  *
  */
 - (void)add:(id)objectToAdd;

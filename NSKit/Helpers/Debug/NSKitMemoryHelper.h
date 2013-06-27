@@ -33,16 +33,15 @@ typedef enum
     NSKitMemoryOptionAll
 } NSKitMemoryOption;
 
+/** Memory helper class */
 @interface NSKitMemoryHelper : NSObject
 
 /**
  * Return the bytes for a given memory option.
  *
- * @param NSKitMemoryOption
- * The memory option. (free, inactive, active, wired or all)
+ * @param option The memory option. (free, inactive, active, wired or all)
  *
- * @returns NSUInteger
- * Number of bytes for a given option.
+ * @returns NSUInteger Number of bytes for a given option.
  *
  */
 + (NSUInteger)memoryForOption:(NSKitMemoryOption)option;
@@ -51,11 +50,9 @@ typedef enum
 /**
  * Return a string representation for a given memory option.
  *
- * @param NSKitMemoryOption
- * The memory option. (free, inactive, active, wired or all)
+ * @param option The memory option. (free, inactive, active, wired or all)
  *
- * @returns NSString
- * A string representation of the total bytes in MB.
+ * @returns NSString A string representation of the total bytes in MB.
  *
  */
 + (NSString *)stringMemoryForOption:(NSKitMemoryOption)option;

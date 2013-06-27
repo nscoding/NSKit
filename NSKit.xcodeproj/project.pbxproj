@@ -380,6 +380,7 @@
 				CDB298051777A4A700889B06 /* Frameworks */,
 				CDB298061777A4A700889B06 /* Headers */,
 				CDB298071777A4A700889B06 /* Resources */,
+				CD500172177CBDD400922A03 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -457,6 +458,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CD500172177CBDD400922A03 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/appledoc \\\n--project-name \"NSKit\" \\\n--project-company \"nscoding\" \\\n--company-id \"com.nscoding\" \\\n--docset-atom-filename \"NSKit.atom\" \\\n--docset-feed-url \"http://nscoding.github.com/NSKit/%DOCSETATOMFILENAME\" \\\n--docset-package-url \"http://nscoding.github.com/NSKit/%DOCSETPACKAGEFILENAME\" \\\n--docset-fallback-url \"http://nscoding.github.com/NSKit/\" \\\n--output \"${PROJECT_DIR}/Documentation\" \\\n--publish-docset \\\n--logformat xcode \\\n--keep-undocumented-members \\\n--keep-intermediate-files \\\n--no-repeat-first-par \\\n--no-warn-invalid-crossref \\\n--ignore \"*.m\" \\\n--exit-threshold 2 \\\n--index-desc \"${PROJECT_DIR}/README.md\" \\\n\"${PROJECT_DIR}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CDB298041777A4A700889B06 /* Sources */ = {

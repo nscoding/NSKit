@@ -24,6 +24,7 @@
 // THE SOFTWARE.
 
 
+/** Extends the NSMutableArray class */
 @interface NSMutableArray (NSKitExtensions)
 
 /**

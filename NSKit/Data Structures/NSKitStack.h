@@ -23,15 +23,13 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-
+/** A basic stack implementation using NSMutableArray*/
 @interface NSKitStack : NSMutableArray
 
 /**
  * Add an element to the stack.
  *
- * @param id
- * the object to be added to the stack.
- *
+ * @param objToPush the object to be added to the stack.
  */
 - (void)push:(id)objToPush;
 

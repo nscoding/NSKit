@@ -24,19 +24,17 @@
 // THE SOFTWARE.
 
 
+/** Email helper class */
 @interface NSKitEmailHelper : NSObject
 
 /**
  * Opens your default email client and prepopulates the fields
  *
- * @param email
- * The email of the user to send the email.
+ * @param email The email of the user to send the email.
  *
- * @param subject
- * The subject of the email.
+ * @param subject The subject of the email.
  *
- * @param body
- * The body of the email.
+ * @param body The body of the email.
  *
  */
 + (void)sendEmailTo:(NSString *)email

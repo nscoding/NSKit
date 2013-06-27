@@ -23,14 +23,13 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-
+/** Extends the NSWindow class */
 @interface NSWindow (NSKitExtensions)
 
 /**
  * Moves the window in the center of the given screen.
  *
- * @param
- * NSScreen, the screen where the window will be centered, 
+ * @param screen the screen where the window will be centered, 
  * if screen is nil, the main screen is used.
  */
 - (void)centerHorizontallyAndVerticallyOnScreen:(NSScreen *)screen;

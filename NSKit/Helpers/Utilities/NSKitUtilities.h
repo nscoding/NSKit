@@ -23,14 +23,13 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-
+/** Several different helpers */
 @interface NSKitUtilities : NSObject
 
 /**
  * Checks whether the email is valid or not.
  *
- * @param email
- * The email of the user.
+ * @param email The Email of the user
  *
  * @return YES if the email is valid; otherwise, NO.
  *
@@ -41,8 +40,7 @@
 /**
  * Receives a rect and floors, x, y, width and height.
  *
- * @param NSRect
- * The NSRect to floor.
+ * @param rect The NSRect to floor
  *
  * @return NSRect the floored rect.
  *
@@ -53,8 +51,7 @@
 /**
  * Receives a rect and floors the origin of the rect, (x and y)
  *
- * @param NSRect
- * The NSRect to floor the origin.
+ * @param rect The NSRect to floor the origin.
  *
  * @return NSRect the floored origin rect.
  *
@@ -65,8 +62,7 @@
 /**
  * Receives a rect and ceils, x, y, width and height.
  *
- * @param NSRect
- * The NSRect to ceil.
+ * @param rect The NSRect to ceil.
  *
  * @return NSRect the ceiled rect.
  *
@@ -77,8 +73,7 @@
 /**
  * Receives a rect and ceils the origin of the rect, (x and y)
  *
- * @param NSRect
- * The NSRect to floor the origin.
+ * @param rect The NSRect to floor the origin.
  *
  * @return NSRect the floored origin rect.
  *

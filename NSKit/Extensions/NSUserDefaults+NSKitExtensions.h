@@ -23,7 +23,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-
+/** Extends the NSUserDefaults with helper methods */
 @interface NSUserDefaults (NSKitExtensions)
 
 
@@ -31,18 +31,20 @@
  * Set value will set the value to NSUserDefaults for a give key
  * And will syncronize the defaults.
  *
- * @param
- * value, the value to be stored in defaults for the given key, if the
+ * @param value The value to be stored in defaults for the given key, if the
  * key is emplty the it removed the object for the given key.
  *
- * @param
- * key, the key name to save the object.
+ * @param key The key name to save the object.
+ *
  */
 + (void)setValue:(id)value forKey:(NSString *)key;
 
 
 /**
- * @return the object for a give key.
+ *
+ * @param key The key name to retrieve the object.
+ *
+ * @return id The object for a give key.
  */
 + (id)valueForKey:(NSString *)key;
 
