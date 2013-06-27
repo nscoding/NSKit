@@ -28,7 +28,7 @@
 @interface NSMutableArray (NSKitExtensions)
 
 /**
- * Reverses the order of the items in the array
+ * Reverses the order of the items in the mutable array.
  */
 - (void)reverse;
 

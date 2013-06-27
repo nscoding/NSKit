@@ -70,15 +70,6 @@
 
 
 /**
- * CGColorRef implmentation for to support < 10.8
- *
- * @return CGColorRef
- *
- */
-- (CGColorRef)nsCGColor;
-
-
-/**
  * Adjust the float pointers based on the given color
  *
  * @param red a CGFloat pointer to be adjusted
@@ -91,5 +82,15 @@
             green:(CGFloat *)green
              blue:(CGFloat *)blue
             color:(NSColor *)color;
+
+
+/**
+ * CGColorRef implmentation for to support < 10.8
+ *
+ * @return CGColorRef
+ *
+ */
+- (CGColorRef)nsCGColor;
+
 
 @end
