@@ -23,10 +23,16 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-
+/** 
+ * Each element keeps explicit information about the location
+ * of the next and previous element through a pointer (or link)
+ */
 @interface NSKitNode : NSObject
 
+/** link to the next node, used in NSKitSinglyLinkedList */
 @property (nonatomic, strong) NSKitNode *next;
+
+/** link to the previous node, used in Double linked list */
 @property (nonatomic, strong) NSKitNode *preview;
 
 @end

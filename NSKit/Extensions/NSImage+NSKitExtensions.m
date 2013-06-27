@@ -30,7 +30,7 @@
 @implementation NSImage (NSKitExtensions)
 
 
-+ (NSImage *)stretchableImageWithLeftWidth:(CGFloat)leftwidth
++ (NSImage *)stretchableImageWithLeftWidth:(CGFloat)leftWidth
                                middleWidth:(CGFloat)patternWidth
                                 rightWidth:(CGFloat)rightWidth
                                     toSize:(NSSize)destinationSize
@@ -40,15 +40,15 @@
 
 {
     NSImage *destinationImage = [[NSImage alloc] initWithSize:destinationSize];
-    NSRect leftCorner = NSMakeRect(0, 0, leftwidth, destinationSize.height);
-    NSRect centerArea = NSMakeRect(leftwidth, 0, destinationSize.width - rightWidth, destinationSize.height);
+    NSRect leftCorner = NSMakeRect(0, 0, leftWidth, destinationSize.height);
+    NSRect centerArea = NSMakeRect(leftWidth, 0, destinationSize.width - rightWidth, destinationSize.height);
     NSRect rightArea = NSMakeRect(ceilf(destinationSize.width - rightWidth), 0, rightWidth, destinationSize.height);
     [NSGraphicsContext saveGraphicsState];
     [destinationImage lockFocus];
     
     [leftImage drawInRect:leftCorner fromRect:NSZeroRect operation:NSCompositeCopy fraction:1.0];
     
-    for (CGFloat step = leftwidth; step < centerArea.size.width; step += patternWidth)
+    for (CGFloat step = leftWidth; step < centerArea.size.width; step += patternWidth)
     {
         [middleImage drawInRect:NSMakeRect(step, 0, patternWidth, destinationSize.height)
                        fromRect:NSZeroRect
@@ -64,7 +64,7 @@
 }
 
 
-+ (NSImage *)stretchableImageWithLeftWidth:(CGFloat)leftwidth
++ (NSImage *)stretchableImageWithLeftWidth:(CGFloat)leftWidth
                                middleWidth:(CGFloat)patternWidth
                                 rightWidth:(CGFloat)rightWidth
                                     toSize:(NSSize)destinationSize
@@ -73,13 +73,13 @@
     NSImage *destinationImage = [[NSImage alloc] initWithSize:destinationSize];
     
     // get the left corner
-    NSRect leftCorner = NSMakeRect(0, 0, leftwidth, destinationSize.height);
+    NSRect leftCorner = NSMakeRect(0, 0, leftWidth, destinationSize.height);
     
     // get the patter area
-    NSRect patternArea = NSMakeRect(leftwidth, 0, patternWidth, destinationSize.height);
+    NSRect patternArea = NSMakeRect(leftWidth, 0, patternWidth, destinationSize.height);
     
     // calculate the center area
-    NSRect centerArea = NSMakeRect(leftwidth, 0, destinationSize.width - rightWidth, destinationSize.height);
+    NSRect centerArea = NSMakeRect(leftWidth, 0, destinationSize.width - rightWidth, destinationSize.height);
     
     
     NSRect rightCorner = NSMakeRect(sourceImage.size.width - rightWidth, 0, rightWidth, destinationSize.height);
@@ -92,7 +92,7 @@
     [sourceImage drawInRect:leftCorner fromRect:leftCorner operation:NSCompositeCopy fraction:1.0];
     
     // draw the pattern in the middle
-    for (CGFloat step = leftwidth; step < centerArea.size.width; step += patternWidth)
+    for (CGFloat step = leftWidth; step < centerArea.size.width; step += patternWidth)
     {
         [sourceImage drawInRect:NSMakeRect(step, 0, patternWidth, destinationSize.height)
                        fromRect:patternArea

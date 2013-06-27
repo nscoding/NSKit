@@ -37,6 +37,37 @@
 @implementation NSKitSinglyLinkedList
 
 
+
+- (NSString *)description
+{
+    NSKitNode *node = first;
+    NSInteger count = 0;
+    
+    if (self.count == 0)
+    {
+        return @"Linked list is empty";
+    }
+    
+    NSMutableString *log = [[NSMutableString alloc] init];
+    [log appendString:@"-------------"];
+    
+    while (node)
+    {
+        if (node)
+        {
+            [log appendString:[node description]];
+            count++;
+        }
+        
+        node = node.next;
+    }
+    
+    [log appendString:@"-------------"];
+    
+    return log;
+}
+
+
 - (BOOL)insertObject:(id)object
 {
     return [self insertObject:object
@@ -47,56 +78,85 @@
 - (BOOL)insertObject:(id)object
              atIndex:(NSInteger)index
 {
-    NSInteger count = 0;
-
-    if (object)
+    if (object == nil)
     {
-        if (index < 0 || index > self.count)
-        {
-            @throw @"Index out of bounds";
-        }
+        return NO;
+    }
+    
+    if (index == 0 && first == nil)
+    {
+        first = object;
+        
+        return YES;
+    }
 
-        if (index == 0)
-        {
-            first = object;
-            return YES;
-        }
-        
-        NSKitNode *nodeToSet = first;
-        while (nodeToSet)
-        {
-            NSKitNode *nextNode = nodeToSet.next;
-            if (nextNode)
-            {
-                nodeToSet = nextNode;
-            }
-            
-            if (count == index)
-            {
-                break;
-            }
-            
-            count++;
-        }
-        
-        nodeToSet.next = object;
+    NSKitNode *previousNode = [self objectAtIndex:index - 1];
+    if (previousNode)
+    {
+        NSKitNode *currentNext = previousNode.next;
+        previousNode.next = object;
+        ((NSKitNode *)object).next = currentNext;
         
         return YES;
     }
     
+    NSKitNode *currentNode = [self objectAtIndex:index];
+    if (currentNode && currentNode == first)
+    {
+        NSKitNode *current = first;
+        first = object;
+        ((NSKitNode *)object).next = current;
+        return YES;
+    }
+
     return NO;
+}
+
+
+- (id)objectAtIndex:(NSInteger)index
+{
+    NSKitNode *objectToReturn = first;
+    NSInteger count = 0;
+    
+    while (objectToReturn)
+    {
+        if (count == index)
+        {
+            return objectToReturn;
+        }
+        
+        count++;
+        objectToReturn = objectToReturn.next;
+    }
+    
+    return nil;
 }
 
 
 - (id)deleObjectAtIndex:(NSInteger)index
 {
-    return nil;
+    NSKitNode *nodeToDelete = [self objectAtIndex:index];
+    NSKitNode *previousNode = [self objectAtIndex:index - 1];
+    previousNode.next = nodeToDelete.next;
+    
+    if (index == 0)
+    {
+        first = nodeToDelete.next;
+    }
+    
+    return nodeToDelete;
 }
 
 
 - (id)deleObject:(id)object
-         atIndex:(NSInteger)index
 {
+    NSInteger index = [self indexOfObject:object];
+
+    if (index != NSNotFound)
+    {
+        return [self deleObjectAtIndex:index];
+    }
+    
     return nil;
 }
 
@@ -123,16 +183,11 @@
 
 - (BOOL)isEmpty
 {
-    if (first == nil)
-    {
-        return YES;
-    }
-    
-    return NO;
+    return (first == nil);
 }
 
 
-- (NSInteger)count
+- (NSUInteger)count
 {
     if (first == nil)
     {
@@ -140,16 +195,12 @@
     }
     
     NSKitNode *node = first;
-    NSInteger count = 0;
+    NSUInteger count = 0;
     
     while (node)
     {
+        count++;
         node = node.next;
-
-        if (node)
-        {
-            count++;
-        }
     }
     
     return count;
