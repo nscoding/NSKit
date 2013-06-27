@@ -38,21 +38,22 @@
 
 - (id)pop
 {
-    id objToPop;
-    
-    if(self.count > 0)
+    if (self.isEmpty == YES)
     {
-        objToPop = [self lastObject];
-        [self removeLastObject];
+        return nil;
     }
     
+    id objToPop = self.lastObject;
+    
+    [self removeLastObject];
+
     return objToPop;
 }
 
 
 - (id)top
 {
-    return [self lastObject];
+    return self.lastObject;
 }
 
 

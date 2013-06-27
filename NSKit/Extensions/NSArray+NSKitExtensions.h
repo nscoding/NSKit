@@ -31,4 +31,10 @@
  */
 - (NSArray *)reversedArray;
 
+
+/**
+ * @return id The first object in the array, nil if the array is empty.
+ */
+- (id)firstObject;
+
 @end
