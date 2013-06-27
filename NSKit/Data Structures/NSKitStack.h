@@ -26,13 +26,33 @@
 
 @interface NSKitStack : NSMutableArray
 
-/* Add element (objToPush) to the stack */
+/**
+ * Add an element to the stack.
+ *
+ * @param id
+ * the object to be added to the stack.
+ *
+ */
 - (void)push:(id)objToPush;
 
-/* Delete top element from stack and return it */
+
+/**
+ * Delete top element from stack.
+ *
+ * @returns id
+ * the poped object.
+ *
+ */
 - (id)pop;
 
-/* Return top element of stack */
+
+/**
+ * Returns top element from stack.
+ *
+ * @returns id
+ * the top object in the stack.
+ *
+ */
 - (id)top;
 
 @end

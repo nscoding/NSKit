@@ -25,16 +25,44 @@
 
 @interface NSKitQueue : NSMutableArray
 
-/* Insert element (objectToAdd) to the queue */
+
+/**
+ * Add an element to the queue.
+ *
+ * @param id
+ * the object to be added to the queue.
+ *
+ */
 - (void)add:(id)objectToAdd;
 
-/* Delete the front element of the queue and return it */
+
+/**
+ * Delete the front element of the queue.
+ *
+ * @returns id
+ * the object that was removed from the front.
+ *
+ */
 - (id)remove;
 
-/* Return the first element of the queue */
+
+/**
+ * Return the first element of the queue.
+ *
+ * @returns id
+ * the first object in the queue.
+ *
+ */
 - (id)first;
 
-/* Return the last element of the queue */
+
+/**
+ * Return the last element of the queue.
+ *
+ * @returns id
+ * the last object in the queue.
+ *
+ */
 - (id)last;
 
 @end
