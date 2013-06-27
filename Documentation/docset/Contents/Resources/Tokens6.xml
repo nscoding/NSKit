@@ -4,7 +4,9 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/cl/NSKitQueue</TokenIdentifier>
-			<Abstract type="html">A basic queue implementation using NSMutableArray</Abstract>
+			<Abstract type="html">A queue is a special case of linear list where insertions and deletions take place at different ends.
+- Last: end at which a new element is added.
+- First: end at which an element is deleted.</Abstract>
 			<DeclaredIn>NSKitQueue.h</DeclaredIn>
 			
 			<NodeRef refid="6"/>
@@ -64,6 +66,19 @@ the first object in the queue.</Abstract></ReturnValue>
 			<ReturnValue><Abstract type="html">id
 the last object in the queue.</Abstract></ReturnValue>
 			<Anchor>//api/name/last</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitQueue/isEmpty</TokenIdentifier>
+			<Abstract type="html">Checks if the queue is empty.</Abstract>
+			<DeclaredIn>NSKitQueue.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)isEmpty</Declaration>
+			
+			<ReturnValue><Abstract type="html">BOOL
+YES if is empty, otherwise NO.</Abstract></ReturnValue>
+			<Anchor>//api/name/isEmpty</Anchor>
             <NodeRef refid="6"/>
 		</Token>
 		

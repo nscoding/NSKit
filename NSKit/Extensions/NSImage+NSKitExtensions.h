@@ -24,11 +24,24 @@
 // THE SOFTWARE.
 
 
+/** Extends the NSArray class */
 @interface NSImage (NSKitExtensions)
 
-#warning documentation missing
-
-+ (NSImage *)stretchableImageWithLeftWidth:(CGFloat)leftwidth
+/**
+ * Create a stretchable image from 3 different images.
+ *
+ * @param leftWidth The width in pixels of the left side.
+ * @param patternWidth The width in pixels of the middle side.
+ * @param rightWidth The width in pixels of the right side.
+ * @param destinationSize The final size in pixels.
+ * @param leftImage The left image.
+ * @param middleImage The middle image.
+ * @param rightImage The left image.
+ *
+ * @return NSImage A custom strechable image from left to right.
+ *
+ */
++ (NSImage *)stretchableImageWithLeftWidth:(CGFloat)leftWidth
                                middleWidth:(CGFloat)patternWidth
                                 rightWidth:(CGFloat)rightWidth
                                     toSize:(NSSize)destinationSize
@@ -37,13 +50,37 @@
                                 rightImage:(NSImage *)rightImage;
 
 
-+ (NSImage *)stretchableImageWithLeftWidth:(CGFloat)leftwidth
+/**
+ * Create a stretchable image from another image.
+ *
+ * @param leftWidth The width in pixels of the left side.
+ * @param patternWidth The width in pixels of the middle side.
+ * @param rightWidth The width in pixels of the right side.
+ * @param destinationSize The final size in pixels.
+ * @param sourceImage The source image.
+ *
+ * @return NSImage A custom strechable image from left to right,
+ *
+ */
++ (NSImage *)stretchableImageWithLeftWidth:(CGFloat)leftWidth
                                middleWidth:(CGFloat)patternWidth
                                 rightWidth:(CGFloat)rightWidth
                                     toSize:(NSSize)destinationSize
                                  fromImage:(NSImage *)sourceImage;
 
 
+/**
+ * Create a stretchable image from another image.
+ *
+ * @param topheight The height in pixels of the top side.
+ * @param patternHeight The height in pixels of the middle side.
+ * @param bottomHeight The height in pixels of the bottom side.
+ * @param destinationSize The final size in pixels.
+ * @param sourceImage The source image.
+ *
+ * @return NSImage A custom strechable image from top to bottom.
+ *
+ */
 + (NSImage *)stretchableImageWithTopWidth:(CGFloat)topheight
                               middleWidth:(CGFloat)patternHeight
                               bottomWidth:(CGFloat)bottomHeight

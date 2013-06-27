@@ -4,7 +4,10 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/cl/NSKitSinglyLinkedList</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Each element of an instance of a data object is represented as a group of memory locations called cell or node.
+The elements may be stored in any arbitrary set of memory locations.
+Each element keeps explicit information about the location of the next element through a pointer (or link).
+Also is called Chain.</Abstract>
 			<DeclaredIn>NSKitSinglyLinkedList.h</DeclaredIn>
 			
 			<NodeRef refid="7"/>
@@ -13,73 +16,132 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/NSKitSinglyLinkedList/insertObject:</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Inserts a new object at the end of the chain.</Abstract>
 			<DeclaredIn>NSKitSinglyLinkedList.h</DeclaredIn>			
 			
 			<Declaration>- (BOOL)insertObject:(id)object</Declaration>
-			
-			
+			<Parameters>
+				<Parameter>
+					<Name>object</Name>
+					<Abstract type="html">The object to be added at the end of the chain.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if the object was successfully added, otherwise NO.</Abstract></ReturnValue>
 			<Anchor>//api/name/insertObject:</Anchor>
             <NodeRef refid="7"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/NSKitSinglyLinkedList/insertObject:atIndex:</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Inserts a new object at a specific index.</Abstract>
 			<DeclaredIn>NSKitSinglyLinkedList.h</DeclaredIn>			
 			
 			<Declaration>- (BOOL)insertObject:(id)object atIndex:(NSInteger)index</Declaration>
-			
-			
+			<Parameters>
+				<Parameter>
+					<Name>object</Name>
+					<Abstract type="html">The object to be added at a specific index.</Abstract>
+				</Parameter><Parameter>
+					<Name>index</Name>
+					<Abstract type="html">The specific index.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if the object was successfully added, otherwise NO.</Abstract></ReturnValue>
 			<Anchor>//api/name/insertObject:atIndex:</Anchor>
             <NodeRef refid="7"/>
 		</Token>
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitSinglyLinkedList/objectAtIndex:</TokenIdentifier>
+			<Abstract type="html">Returns an object at a specific index.</Abstract>
+			<DeclaredIn>NSKitSinglyLinkedList.h</DeclaredIn>			
+			
+			<Declaration>- (id)objectAtIndex:(NSInteger)index</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>index</Name>
+					<Abstract type="html">The specific index.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">id If there is an object at this index is returned, otherwise nil.</Abstract></ReturnValue>
+			<Anchor>//api/name/objectAtIndex:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/NSKitSinglyLinkedList/deleObjectAtIndex:</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Deletes the object at a specific index.</Abstract>
 			<DeclaredIn>NSKitSinglyLinkedList.h</DeclaredIn>			
 			
 			<Declaration>- (id)deleObjectAtIndex:(NSInteger)index</Declaration>
-			
-			
+			<Parameters>
+				<Parameter>
+					<Name>index</Name>
+					<Abstract type="html">The index of the object to be removed</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">id The object that was removed on that index,
+if nothing was removed nil is returned</Abstract></ReturnValue>
 			<Anchor>//api/name/deleObjectAtIndex:</Anchor>
             <NodeRef refid="7"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitSinglyLinkedList/deleObject:atIndex:</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitSinglyLinkedList/deleObject:</TokenIdentifier>
+			<Abstract type="html">Deletes the object that is equat to.</Abstract>
 			<DeclaredIn>NSKitSinglyLinkedList.h</DeclaredIn>			
 			
-			<Declaration>- (id)deleObject:(id)object atIndex:(NSInteger)index</Declaration>
-			
-			
-			<Anchor>//api/name/deleObject:atIndex:</Anchor>
+			<Declaration>- (id)deleObject:(id)object</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>object</Name>
+					<Abstract type="html">The object to be removed</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">id The object that was removed,
+if nothing was removed nil is returned</Abstract></ReturnValue>
+			<Anchor>//api/name/deleObject:</Anchor>
             <NodeRef refid="7"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/NSKitSinglyLinkedList/indexOfObject:</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Returns an index for a specific object.</Abstract>
 			<DeclaredIn>NSKitSinglyLinkedList.h</DeclaredIn>			
 			
 			<Declaration>- (NSInteger)indexOfObject:(id)object</Declaration>
-			
-			
+			<Parameters>
+				<Parameter>
+					<Name>object</Name>
+					<Abstract type="html">The specific object.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">NSInteger If there such object the index is returned, otherwise NSNotFound.</Abstract></ReturnValue>
 			<Anchor>//api/name/indexOfObject:</Anchor>
             <NodeRef refid="7"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/NSKitSinglyLinkedList/isEmpty</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Checks if the chain is empty.</Abstract>
 			<DeclaredIn>NSKitSinglyLinkedList.h</DeclaredIn>			
 			
 			<Declaration>- (BOOL)isEmpty</Declaration>
 			
-			
+			<ReturnValue><Abstract type="html">BOOL, YES if the chain is empty, otherwise NO.</Abstract></ReturnValue>
 			<Anchor>//api/name/isEmpty</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitSinglyLinkedList/count</TokenIdentifier>
+			<Abstract type="html">Returns the count of the chain.</Abstract>
+			<DeclaredIn>NSKitSinglyLinkedList.h</DeclaredIn>			
+			
+			<Declaration>- (NSUInteger)count</Declaration>
+			
+			<ReturnValue><Abstract type="html">NSInteger The number of items in the list.</Abstract></ReturnValue>
+			<Anchor>//api/name/count</Anchor>
             <NodeRef refid="7"/>
 		</Token>
 		

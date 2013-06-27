@@ -4,7 +4,8 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/cl/NSKitNode</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Each element keeps explicit information about the location
+of the next and previous element through a pointer (or link)</Abstract>
 			<DeclaredIn>NSKitNode.h</DeclaredIn>
 			
 			<NodeRef refid="4"/>
@@ -13,7 +14,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/NSKitNode/setNext:</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">link to the next node, used in NSKitSinglyLinkedList</Abstract>
 			<DeclaredIn>NSKitNode.h</DeclaredIn>			
 			
 			<Declaration>@property (nonatomic, strong) NSKitNode *next</Declaration>
@@ -25,7 +26,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/NSKitNode/next</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">link to the next node, used in NSKitSinglyLinkedList</Abstract>
 			<DeclaredIn>NSKitNode.h</DeclaredIn>			
 			
 			<Declaration>@property (nonatomic, strong) NSKitNode *next</Declaration>
@@ -37,7 +38,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/NSKitNode/next</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">link to the next node, used in NSKitSinglyLinkedList</Abstract>
 			<DeclaredIn>NSKitNode.h</DeclaredIn>			
 			
 			<Declaration>@property (nonatomic, strong) NSKitNode *next</Declaration>
@@ -49,7 +50,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/NSKitNode/setPreview:</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">link to the previous node, used in Double linked list</Abstract>
 			<DeclaredIn>NSKitNode.h</DeclaredIn>			
 			
 			<Declaration>@property (nonatomic, strong) NSKitNode *preview</Declaration>
@@ -61,7 +62,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/NSKitNode/preview</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">link to the previous node, used in Double linked list</Abstract>
 			<DeclaredIn>NSKitNode.h</DeclaredIn>			
 			
 			<Declaration>@property (nonatomic, strong) NSKitNode *preview</Declaration>
@@ -73,7 +74,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/NSKitNode/preview</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">link to the previous node, used in Double linked list</Abstract>
 			<DeclaredIn>NSKitNode.h</DeclaredIn>			
 			
 			<Declaration>@property (nonatomic, strong) NSKitNode *preview</Declaration>
