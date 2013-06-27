@@ -26,22 +26,148 @@
 
 @interface NSMutableAttributedString (NSKitExtensions)
 
-#warning documentation missing
+/**
+ * Set the text color on the attributed string.
+ *
+ * @param NSColor
+ * Set the text color on the whole string.
+ *
+ */
+- (void)nskit_setColor:(NSColor *)color;
 
-- (void)setColor:(NSColor *)color;
-- (void)setColor:(NSColor *)color inRange:(NSRange)range;
-- (void)setBackgroundColor:(NSColor *)color;
 
-- (void)setFont:(NSFont *)font;
+/**
+ * Set the text color on the attributed string.
+ *
+ * @param NSColor
+ * The color to be set on the text.
+ *
+ * @param NSRange
+ * Set the text color on a given range.
+ *
+ */
+- (void)nskit_setColor:(NSColor *)color inRange:(NSRange)range;
+
+
+/**
+ * Set the background color on the attributed string.
+ *
+ * @param NSColor
+ * Set the background color on the whole string.
+ *
+ */
+- (void)nskit_setBackgroundColor:(NSColor *)color;
+
+
+/**
+ * Set the background color on the attributed string.
+ *
+ * @param NSColor
+ * The background color to be set on the text.
+ *
+ * @param NSRange
+ * Set the background color color on a given range.
+ *
+ */
+- (void)nskit_setBackgroundColor:(NSColor *)color inRange:(NSRange)range;
+
+
+/**
+ * Set the font on the attributed string.
+ *
+ * @param NSFont
+ * Set the Font color on the whole string.
+ *
+ */
+- (void)nskit_setFont:(NSFont *)font;
+
+
+/**
+ * Set the font on the attributed string.
+ *
+ * @param NSFont
+ * The Font to be set on the text.
+ *
+ * @param NSRange
+ * Set the Font on a given range.
+ *
+ */
 - (void)setFont:(NSFont *)font inRange:(NSRange)range;
 
-- (void)setLineBreak:(NSLineBreakMode)breakMode;
-- (void)setAlignment:(NSTextAlignment)alignment;
-- (void)setShadowWithColor:(NSColor *)color withOffset:(NSSize)offset;
 
-- (void)setLineBreak:(NSLineBreakMode)breakMode
-        andAlignment:(NSTextAlignment)alignment;
-- (void)setLineBreak:(NSLineBreakMode)breakMode
-          LineHeight:(CGFloat)height
-        andAlignment:(NSTextAlignment)alignment;
+/**
+ * Set the line spacing on the attributed string.
+ *
+ * @param CGFloat
+ * The line spacing to be set on the text.
+ *
+ */
+- (void)nskit_setLineHeight:(CGFloat)height;
+
+
+/**
+ * Set the line break on the attributed string.
+ *
+ * @param NSLineBreakMode
+ * The break mode to be set on the text.
+ *
+ */
+- (void)nskit_setLineBreak:(NSLineBreakMode)breakMode;
+
+
+/**
+ * Set the text alignment on the attributed string.
+ *
+ * @param NSTextAlignment
+ * The text alignment mode to be set on the text.
+ *
+ */
+- (void)nskit_setAlignment:(NSTextAlignment)alignment;
+
+
+/**
+ * Set the text alignment & line break on the attributed string.
+ *
+ * @param NSLineBreakMode
+ * The break mode to be set on the text.
+ *
+ * @param NSTextAlignment
+ * The text alignment mode to be set on the text.
+ *
+ */
+- (void)nskit_setLineBreak:(NSLineBreakMode)breakMode
+              andAlignment:(NSTextAlignment)alignment;
+
+
+/**
+ * Set the text alignment & line break on the attributed string.
+ *
+ * @param NSLineBreakMode
+ * The break mode to be set on the text.
+ *
+ * @param CGFloat
+ * The line spacing to be set on the text.
+ *
+ * @param NSTextAlignment
+ * The text alignment mode to be set on the text.
+ *
+ */
+- (void)nskit_setLineBreak:(NSLineBreakMode)breakMode
+                LineHeight:(CGFloat)height
+              andAlignment:(NSTextAlignment)alignment;
+
+
+/**
+ * Set the shadow on the text
+ *
+ * @param NSColor
+ * The color of the shadow of the text.
+ *
+ * @param NSSize
+ * The offset of the shadow.
+ *
+ */
+- (void)nskit_setShadowWithColor:(NSColor *)color
+                      withOffset:(NSSize)offset
+
 @end

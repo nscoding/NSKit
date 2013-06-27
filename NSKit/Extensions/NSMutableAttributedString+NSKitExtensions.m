@@ -30,25 +30,31 @@
 @implementation NSMutableAttributedString (NSKitExtensions)
 
 
-- (void)setColor:(NSColor *)color
+- (void)nskit_setColor:(NSColor *)color
 {
-    [self addAttribute:NSForegroundColorAttributeName value:color range:NSMakeRange(0, self.length)];
+    [self nskit_setColor:color inRange:NSMakeRange(0, self.length)];
 }
 
 
-- (void)setColor:(NSColor *)color inRange:(NSRange)range
+- (void)nskit_setColor:(NSColor *)color inRange:(NSRange)range
 {
     [self addAttribute:NSForegroundColorAttributeName value:color range:range];
 }
 
 
-- (void)setBackgroundColor:(NSColor *)color
+- (void)nskit_setBackgroundColor:(NSColor *)color
 {
-    [self addAttribute:NSBackgroundColorAttributeName value:color range:NSMakeRange(0, self.length)];
+    [self nskit_setBackgroundColor:color inRange:NSMakeRange(0, self.length)];
 }
 
 
-- (void)setFont:(NSFont *)font
+- (void)nskit_setBackgroundColor:(NSColor *)color inRange:(NSRange)range
+{
+    [self addAttribute:NSBackgroundColorAttributeName value:color range:range];
+}
+
+
+- (void)nskit_setFont:(NSFont *)font
 {
     [self setFont:font inRange:NSMakeRange(0, self.length)];
 }
@@ -61,18 +67,27 @@
 }
 
 
-- (void)setLineBreak:(NSLineBreakMode)breakMode
+- (void)nskit_setLineHeight:(CGFloat)height
 {
     NSMutableParagraphStyle *style = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
-    [style setLineBreakMode:breakMode];
-  
+    [style setLineSpacing:height];
+    
     [self addAttribute:NSParagraphStyleAttributeName value:style range:NSMakeRange(0, self.length)];
 }
 
 
-- (void)setAlignment:(NSTextAlignment)alignment
+- (void)nskit_setLineBreak:(NSLineBreakMode)breakMode
 {
-    NSMutableParagraphStyle *style=[[NSMutableParagraphStyle alloc] init];
+    NSMutableParagraphStyle *style = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
+    [style setLineBreakMode:breakMode];
+    
+    [self addAttribute:NSParagraphStyleAttributeName value:style range:NSMakeRange(0, self.length)];
+}
+
+
+- (void)nskit_setAlignment:(NSTextAlignment)alignment
+{
+    NSMutableParagraphStyle *style = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
     [style setAlignment:alignment];
     
     [self addAttributes:[NSDictionary dictionaryWithObject:style forKey:NSParagraphStyleAttributeName]
@@ -80,8 +95,8 @@
 }
 
 
-- (void)setLineBreak:(NSLineBreakMode)breakMode
-        andAlignment:(NSTextAlignment)alignment
+- (void)nskit_setLineBreak:(NSLineBreakMode)breakMode
+              andAlignment:(NSTextAlignment)alignment
 {
     NSMutableParagraphStyle *style = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
     [style setLineBreakMode:breakMode];
@@ -91,9 +106,9 @@
 }
 
 
-- (void)setLineBreak:(NSLineBreakMode)breakMode
-          LineHeight:(CGFloat)height
-        andAlignment:(NSTextAlignment)alignment
+- (void)nskit_setLineBreak:(NSLineBreakMode)breakMode
+                LineHeight:(CGFloat)height
+              andAlignment:(NSTextAlignment)alignment
 {
     NSMutableParagraphStyle *style = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
     [style setLineBreakMode:breakMode];
@@ -104,11 +119,12 @@
 }
 
 
-- (void)setShadowWithColor:(NSColor *)color withOffset:(NSSize)offset
+- (void)nskit_setShadowWithColor:(NSColor *)color
+                      withOffset:(NSSize)offset
 {
     NSShadow *shadow = [[NSShadow alloc] init];
-    [shadow setShadowColor:color];
-    [shadow setShadowOffset:offset];
+    shadow.shadowColor = color;
+    shadow.shadowOffset = offset;
     
     [self addAttribute:NSShadowAttributeName value:shadow range:NSMakeRange(0, self.length)];
 }
