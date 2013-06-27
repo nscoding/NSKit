@@ -25,6 +25,8 @@
 
 
 #import "NSKitQueue.h"
+#import "NSMutableArray+NSKitExtensions.h"
+
 
 @implementation NSKitQueue
 
@@ -40,13 +42,14 @@
 
 - (id)remove
 {
-    id objToRemove;
-    
-    if (self.count > 0)
+    if (self.isEmpty)
     {
-        objToRemove = [self objectAtIndex:0];
-        [self removeObjectAtIndex:0];
+        return nil;
     }
+    
+    id objToRemove = [self firstObject];
+
+    [self removeFirstObject];
     
     return objToRemove;
 }
@@ -54,12 +57,12 @@
 
 - (id)first
 {
-    if (self.count == 0)
+    if (self.isEmpty)
     {
         return nil;
     }
     
-    return [self objectAtIndex:0];
+    return [self firstObject];
 }
 
 

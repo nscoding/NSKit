@@ -35,8 +35,7 @@
 			
 			<Declaration>- (id)pop</Declaration>
 			
-			<ReturnValue><Abstract type="html">id
-the poped object.</Abstract></ReturnValue>
+			<ReturnValue><Abstract type="html">id The poped object, nil if the stack is empty.</Abstract></ReturnValue>
 			<Anchor>//api/name/pop</Anchor>
             <NodeRef refid="8"/>
 		</Token>
@@ -48,8 +47,7 @@ the poped object.</Abstract></ReturnValue>
 			
 			<Declaration>- (id)top</Declaration>
 			
-			<ReturnValue><Abstract type="html">id
-the top object in the stack.</Abstract></ReturnValue>
+			<ReturnValue><Abstract type="html">id The top object in the stack, nil if the stack is empty.</Abstract></ReturnValue>
 			<Anchor>//api/name/top</Anchor>
             <NodeRef refid="8"/>
 		</Token>
@@ -61,8 +59,7 @@ the top object in the stack.</Abstract></ReturnValue>
 			
 			<Declaration>- (BOOL)isEmpty</Declaration>
 			
-			<ReturnValue><Abstract type="html">BOOL
-YES if is empty, otherwise NO.</Abstract></ReturnValue>
+			<ReturnValue><Abstract type="html">BOOL YES if is empty, otherwise NO.</Abstract></ReturnValue>
 			<Anchor>//api/name/isEmpty</Anchor>
             <NodeRef refid="8"/>
 		</Token>

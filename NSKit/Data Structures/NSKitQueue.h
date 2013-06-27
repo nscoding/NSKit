@@ -46,8 +46,7 @@
 /**
  * Delete the front element of the queue.
  *
- * @returns id
- * the object that was removed from the front.
+ * @returns id The object that was removed from the front, nil if the queue if empty.
  *
  */
 - (id)remove;
@@ -56,8 +55,7 @@
 /**
  * Return the first element of the queue.
  *
- * @returns id
- * the first object in the queue.
+ * @returns id The first object in the queue, nil if the queue if empty.
  *
  */
 - (id)first;
@@ -66,8 +64,7 @@
 /**
  * Return the last element of the queue.
  *
- * @returns id
- * the last object in the queue.
+ * @returns id The last object in the queue, nil if the queue if empty.
  *
  */
 - (id)last;

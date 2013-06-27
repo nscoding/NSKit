@@ -23,5 +23,29 @@
             <NodeRef refid="13"/>
 		</Token>
 		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSMutableArray(NSKitExtensions)/firstObject</TokenIdentifier>
+			<Abstract type="html">id The first object in the array, nil if the array is empty.</Abstract>
+			<DeclaredIn>NSMutableArray+NSKitExtensions.h</DeclaredIn>			
+			
+			<Declaration>- (id)firstObject</Declaration>
+			
+			<ReturnValue><Abstract type="html">id The first object in the array, nil if the array is empty.</Abstract></ReturnValue>
+			<Anchor>//api/name/firstObject</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSMutableArray(NSKitExtensions)/removeFirstObject</TokenIdentifier>
+			<Abstract type="html">Removes the first object of the array, nothing happens if the array is empty.</Abstract>
+			<DeclaredIn>NSMutableArray+NSKitExtensions.h</DeclaredIn>			
+			
+			<Declaration>- (void)removeFirstObject</Declaration>
+			
+			
+			<Anchor>//api/name/removeFirstObject</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
 	</File>
 </Tokens>

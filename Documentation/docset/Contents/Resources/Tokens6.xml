@@ -37,8 +37,7 @@
 			
 			<Declaration>- (id)remove</Declaration>
 			
-			<ReturnValue><Abstract type="html">id
-the object that was removed from the front.</Abstract></ReturnValue>
+			<ReturnValue><Abstract type="html">id The object that was removed from the front, nil if the queue if empty.</Abstract></ReturnValue>
 			<Anchor>//api/name/remove</Anchor>
             <NodeRef refid="6"/>
 		</Token>
@@ -50,8 +49,7 @@ the object that was removed from the front.</Abstract></ReturnValue>
 			
 			<Declaration>- (id)first</Declaration>
 			
-			<ReturnValue><Abstract type="html">id
-the first object in the queue.</Abstract></ReturnValue>
+			<ReturnValue><Abstract type="html">id The first object in the queue, nil if the queue if empty.</Abstract></ReturnValue>
 			<Anchor>//api/name/first</Anchor>
             <NodeRef refid="6"/>
 		</Token>
@@ -63,8 +61,7 @@ the first object in the queue.</Abstract></ReturnValue>
 			
 			<Declaration>- (id)last</Declaration>
 			
-			<ReturnValue><Abstract type="html">id
-the last object in the queue.</Abstract></ReturnValue>
+			<ReturnValue><Abstract type="html">id The last object in the queue, nil if the queue if empty.</Abstract></ReturnValue>
 			<Anchor>//api/name/last</Anchor>
             <NodeRef refid="6"/>
 		</Token>

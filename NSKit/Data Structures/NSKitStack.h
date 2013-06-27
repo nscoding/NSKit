@@ -31,6 +31,7 @@
  */
 @interface NSKitStack : NSMutableArray
 
+
 /**
  * Add an element to the stack.
  *
@@ -42,8 +43,7 @@
 /**
  * Delete top element from stack.
  *
- * @returns id
- * the poped object.
+ * @returns id The poped object, nil if the stack is empty.
  *
  */
 - (id)pop;
@@ -52,8 +52,7 @@
 /**
  * Returns top element from stack.
  *
- * @returns id
- * the top object in the stack.
+ * @returns id The top object in the stack, nil if the stack is empty.
  *
  */
 - (id)top;
@@ -62,8 +61,7 @@
 /**
  * Checks if the stack is empty.
  *
- * @returns BOOL
- * YES if is empty, otherwise NO.
+ * @returns BOOL YES if is empty, otherwise NO.
  *
  */
 - (BOOL)isEmpty;
