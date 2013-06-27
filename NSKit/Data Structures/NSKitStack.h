@@ -58,4 +58,14 @@
  */
 - (id)top;
 
+
+/**
+ * Checks if the stack is empty.
+ *
+ * @returns BOOL
+ * YES if is empty, otherwise NO.
+ *
+ */
+- (BOOL)isEmpty;
+
 @end

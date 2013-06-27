@@ -26,6 +26,7 @@
 /** Extends the NSWindow class */
 @interface NSWindow (NSKitExtensions)
 
+
 /**
  * Moves the window in the center of the given screen.
  *

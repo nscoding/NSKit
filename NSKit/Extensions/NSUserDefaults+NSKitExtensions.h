@@ -28,13 +28,13 @@
 
 
 /**
- * Set value will set the value to NSUserDefaults for a give key
- * And will syncronize the defaults.
+ * Sets the value of the specified key, relative to the receiver, to the provided value,
+ * additionally will syncronize the defaults.
  *
  * @param value The value to be stored in defaults for the given key, if the
  * key is emplty the it removed the object for the given key.
  *
- * @param key The key name to save the object.
+ * @param key The name of the key.
  *
  */
 + (void)setValue:(id)value forKey:(NSString *)key;

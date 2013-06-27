@@ -24,7 +24,13 @@
 // THE SOFTWARE.
 
 
-/** A basic queue implementation using NSMutableArray*/
+/**
+ A queue is a special case of linear list where insertions and deletions take place at different ends.
+ - Last: end at which a new element is added.
+ - First: end at which an element is deleted.
+ 
+ A basic queue implementation using NSMutableArray
+ */
 @interface NSKitQueue : NSMutableArray
 
 
@@ -65,5 +71,16 @@
  *
  */
 - (id)last;
+
+
+/**
+ * Checks if the queue is empty.
+ *
+ * @returns BOOL
+ * YES if is empty, otherwise NO.
+ *
+ */
+- (BOOL)isEmpty;
+
 
 @end

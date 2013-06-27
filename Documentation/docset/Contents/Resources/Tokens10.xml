@@ -13,12 +13,12 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/NSArray(NSKitExtensions)/reversedArray</TokenIdentifier>
-			<Abstract type="html">an NSArray, reverses the order of the items in the array.</Abstract>
+			<Abstract type="html">an NSArray where the items are in reversed order.</Abstract>
 			<DeclaredIn>NSArray+NSKitExtensions.h</DeclaredIn>			
 			
 			<Declaration>- (NSArray *)reversedArray</Declaration>
 			
-			<ReturnValue><Abstract type="html">an NSArray, reverses the order of the items in the array.</Abstract></ReturnValue>
+			<ReturnValue><Abstract type="html">an NSArray where the items are in reversed order.</Abstract></ReturnValue>
 			<Anchor>//api/name/reversedArray</Anchor>
             <NodeRef refid="10"/>
 		</Token>

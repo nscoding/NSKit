@@ -89,27 +89,6 @@
 }
 
 
-- (CGColorRef)nsCGColor
-{
-    if ([self respondsToSelector:@selector(CGColor)])
-    {
-        return self.CGColor;
-    }
-    
-    NSColorSpace *colorSpace = [NSColorSpace genericRGBColorSpace];
-    NSColor *color = [self colorUsingColorSpace:colorSpace];
-    
-    NSInteger count = [color numberOfComponents];
-    CGFloat components[count];
-    [color getComponents:components];
-    
-    CGColorSpaceRef colorSpaceRef = colorSpace.CGColorSpace;
-    CGColorRef result = CGColorCreate(colorSpaceRef, components);
-    
-    return (CGColorRef)result;
-}
-
-
 + (void)adjustRed:(CGFloat *)red
             green:(CGFloat *)green
              blue:(CGFloat *)blue
@@ -138,6 +117,27 @@
     {
         NSLog(@"Edge case %@", [color colorSpaceName]);
     }
+}
+
+
+- (CGColorRef)nsCGColor
+{
+    if ([self respondsToSelector:@selector(CGColor)])
+    {
+        return self.CGColor;
+    }
+    
+    NSColorSpace *colorSpace = [NSColorSpace genericRGBColorSpace];
+    NSColor *color = [self colorUsingColorSpace:colorSpace];
+    
+    NSInteger count = [color numberOfComponents];
+    CGFloat components[count];
+    [color getComponents:components];
+    
+    CGColorSpaceRef colorSpaceRef = colorSpace.CGColorSpace;
+    CGColorRef result = CGColorCreate(colorSpaceRef, components);
+    
+    return (CGColorRef)result;
 }
 
 

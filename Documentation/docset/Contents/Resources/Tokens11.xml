@@ -75,18 +75,6 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSColor(NSKitExtensions)/nsCGColor</TokenIdentifier>
-			<Abstract type="html">CGColorRef implmentation for to support &lt; 10.8</Abstract>
-			<DeclaredIn>NSColor+NSKitExtensions.h</DeclaredIn>			
-			
-			<Declaration>- (CGColorRef)nsCGColor</Declaration>
-			
-			<ReturnValue><Abstract type="html">CGColorRef</Abstract></ReturnValue>
-			<Anchor>//api/name/nsCGColor</Anchor>
-            <NodeRef refid="11"/>
-		</Token>
-		
-		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/NSColor(NSKitExtensions)/adjustRed:green:blue:color:</TokenIdentifier>
 			<Abstract type="html">Adjust the float pointers based on the given color</Abstract>
 			<DeclaredIn>NSColor+NSKitExtensions.h</DeclaredIn>			
@@ -109,6 +97,18 @@
 			</Parameters>
 			
 			<Anchor>//api/name/adjustRed:green:blue:color:</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSColor(NSKitExtensions)/nsCGColor</TokenIdentifier>
+			<Abstract type="html">CGColorRef implmentation for to support &lt; 10.8</Abstract>
+			<DeclaredIn>NSColor+NSKitExtensions.h</DeclaredIn>			
+			
+			<Declaration>- (CGColorRef)nsCGColor</Declaration>
+			
+			<ReturnValue><Abstract type="html">CGColorRef</Abstract></ReturnValue>
+			<Anchor>//api/name/nsCGColor</Anchor>
             <NodeRef refid="11"/>
 		</Token>
 		

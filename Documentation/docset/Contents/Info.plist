@@ -29,8 +29,8 @@
 	<key>DocSetPublisherIdentifier</key>
 	<string>com.nscoding.documentation</string>
 	<key>DocSetPublisherName</key>
-	<string>nscoding</string>
+	<string>@nscoding</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2013 nscoding. All rights reserved.</string>
+	<string>Copyright © 2013 @nscoding. All rights reserved.</string>
 </dict>
 </plist>

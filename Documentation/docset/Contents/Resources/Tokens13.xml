@@ -13,7 +13,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/NSMutableArray(NSKitExtensions)/reverse</TokenIdentifier>
-			<Abstract type="html">Reverses the order of the items in the array</Abstract>
+			<Abstract type="html">Reverses the order of the items in the mutable array.</Abstract>
 			<DeclaredIn>NSMutableArray+NSKitExtensions.h</DeclaredIn>			
 			
 			<Declaration>- (void)reverse</Declaration>

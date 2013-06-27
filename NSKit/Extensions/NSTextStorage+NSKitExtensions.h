@@ -34,6 +34,10 @@ extern NSColor *NSKitTextStorageColor;
  */
 extern NSColor *NSKitTextStorageLinkColor;
 
+/**
+ Scans the text storage for URLs and sets them with underline and a color
+ of your choice, you must invoke the method your self.
+ */
 @interface NSTextStorage (NSKitExtensions)
 
 /**
