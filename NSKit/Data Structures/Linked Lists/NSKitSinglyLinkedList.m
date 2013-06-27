@@ -90,14 +90,14 @@
 
 - (id)deleObjectAtIndex:(NSInteger)index
 {
-
+    return nil;
 }
 
 
 - (id)deleObject:(id)object
          atIndex:(NSInteger)index
 {
-
+    return nil;
 }
 
 

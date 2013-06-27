@@ -168,6 +168,6 @@
  *
  */
 - (void)nskit_setShadowWithColor:(NSColor *)color
-                      withOffset:(NSSize)offset
+                      withOffset:(NSSize)offset;
 
 @end
