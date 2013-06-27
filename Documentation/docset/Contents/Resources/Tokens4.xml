@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/NSKitPerformanceTimer.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/NSKitPerformanceTimer</TokenIdentifier>
+			<Abstract type="html">Permormance timer helper class</Abstract>
+			<DeclaredIn>NSKitPerformanceTimer.h</DeclaredIn>
+			
+			<NodeRef refid="4"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitPerformanceTimer/fire</TokenIdentifier>
+			<Abstract type="html">Fire the perfomance timer.</Abstract>
+			<DeclaredIn>NSKitPerformanceTimer.h</DeclaredIn>			
+			
+			<Declaration>- (void)fire</Declaration>
+			
+			
+			<Anchor>//api/name/fire</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitPerformanceTimer/logResult</TokenIdentifier>
+			<Abstract type="html">Logs the time in milliseconds since fire was invoked.</Abstract>
+			<DeclaredIn>NSKitPerformanceTimer.h</DeclaredIn>			
+			
+			<Declaration>- (void)logResult</Declaration>
+			
+			
+			<Anchor>//api/name/logResult</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+	</File>
+</Tokens>

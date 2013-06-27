@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DocSetNodes version="1.0">
+    <TOC>
+        <Node type="folder">
+            <Name>NSKit</Name>
+            <Path>index.html</Path>
+			<Subnodes>
+                
+				
+				<Node type="folder">
+					<Name>Classes</Name>
+					<Path>index.html</Path>
+					<Subnodes>
+						<NodeRef refid="1"/>
+						<NodeRef refid="2"/>
+						<NodeRef refid="3"/>
+						<NodeRef refid="4"/>
+						<NodeRef refid="5"/>
+						<NodeRef refid="6"/>
+						<NodeRef refid="7"/>
+						
+					</Subnodes>
+				</Node>
+				
+				
+				<Node type="folder">
+					<Name>Categories</Name>
+					<Path>index.html</Path>
+					<Subnodes>
+						<NodeRef refid="8"/>
+						<NodeRef refid="9"/>
+						<NodeRef refid="10"/>
+						<NodeRef refid="11"/>
+						<NodeRef refid="12"/>
+						<NodeRef refid="13"/>
+						<NodeRef refid="14"/>
+						<NodeRef refid="15"/>
+						
+					</Subnodes>
+				</Node>
+				
+				
+			</Subnodes>
+        </Node>
+    </TOC>
+	<Library>
+		
+		<Node id="1">
+			<Name>NSKitEmailHelper</Name>
+			<Path>Classes/NSKitEmailHelper.html</Path>
+		</Node>
+		<Node id="2">
+			<Name>NSKitKeyboardHelper</Name>
+			<Path>Classes/NSKitKeyboardHelper.html</Path>
+		</Node>
+		<Node id="3">
+			<Name>NSKitMemoryHelper</Name>
+			<Path>Classes/NSKitMemoryHelper.html</Path>
+		</Node>
+		<Node id="4">
+			<Name>NSKitPerformanceTimer</Name>
+			<Path>Classes/NSKitPerformanceTimer.html</Path>
+		</Node>
+		<Node id="5">
+			<Name>NSKitQueue</Name>
+			<Path>Classes/NSKitQueue.html</Path>
+		</Node>
+		<Node id="6">
+			<Name>NSKitStack</Name>
+			<Path>Classes/NSKitStack.html</Path>
+		</Node>
+		<Node id="7">
+			<Name>NSKitUtilities</Name>
+			<Path>Classes/NSKitUtilities.html</Path>
+		</Node>
+		
+		<Node id="8">
+			<Name>NSArray(NSKitExtensions)</Name>
+			<Path>Categories/NSArray+NSKitExtensions.html</Path>
+		</Node>
+		<Node id="9">
+			<Name>NSColor(NSKitExtensions)</Name>
+			<Path>Categories/NSColor+NSKitExtensions.html</Path>
+		</Node>
+		<Node id="10">
+			<Name>NSMutableArray(NSKitExtensions)</Name>
+			<Path>Categories/NSMutableArray+NSKitExtensions.html</Path>
+		</Node>
+		<Node id="11">
+			<Name>NSMutableAttributedString(NSKitExtensions)</Name>
+			<Path>Categories/NSMutableAttributedString+NSKitExtensions.html</Path>
+		</Node>
+		<Node id="12">
+			<Name>NSTextStorage(NSKitExtensions)</Name>
+			<Path>Categories/NSTextStorage+NSKitExtensions.html</Path>
+		</Node>
+		<Node id="13">
+			<Name>NSUserDefaults(NSKitExtensions)</Name>
+			<Path>Categories/NSUserDefaults+NSKitExtensions.html</Path>
+		</Node>
+		<Node id="14">
+			<Name>NSView(NSKitExtensions)</Name>
+			<Path>Categories/NSView+NSKitExtensions.html</Path>
+		</Node>
+		<Node id="15">
+			<Name>NSWindow(NSKitExtensions)</Name>
+			<Path>Categories/NSWindow+NSKitExtensions.html</Path>
+		</Node>
+		
+		
+	</Library>
+</DocSetNodes>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/NSKitStack.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/NSKitStack</TokenIdentifier>
+			<Abstract type="html">A basic stack implementation using NSMutableArray</Abstract>
+			<DeclaredIn>NSKitStack.h</DeclaredIn>
+			
+			<NodeRef refid="6"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitStack/push:</TokenIdentifier>
+			<Abstract type="html">Add an element to the stack.</Abstract>
+			<DeclaredIn>NSKitStack.h</DeclaredIn>			
+			
+			<Declaration>- (void)push:(id)objToPush</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>objToPush</Name>
+					<Abstract type="html">the object to be added to the stack.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/push:</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitStack/pop</TokenIdentifier>
+			<Abstract type="html">Delete top element from stack.</Abstract>
+			<DeclaredIn>NSKitStack.h</DeclaredIn>			
+			
+			<Declaration>- (id)pop</Declaration>
+			
+			<ReturnValue><Abstract type="html">id
+the poped object.</Abstract></ReturnValue>
+			<Anchor>//api/name/pop</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitStack/top</TokenIdentifier>
+			<Abstract type="html">Returns top element from stack.</Abstract>
+			<DeclaredIn>NSKitStack.h</DeclaredIn>			
+			
+			<Declaration>- (id)top</Declaration>
+			
+			<ReturnValue><Abstract type="html">id
+the top object in the stack.</Abstract></ReturnValue>
+			<Anchor>//api/name/top</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+	</File>
+</Tokens>

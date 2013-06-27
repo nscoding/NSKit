@@ -1,0 +1,973 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>NSMutableAttributedString(NSKitExtensions) Category Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 858)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">NSKit </a></h1>
+				<a id="developerHome" href="../index.html">nscoding</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">NSMutableAttributedString(NSKitExtensions) Category Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/nskit_setAlignment:">&nbsp;&nbsp;&nbsp;&nbsp;- nskit_setAlignment:</option>
+	
+	<option value="//api/name/nskit_setBackgroundColor:">&nbsp;&nbsp;&nbsp;&nbsp;- nskit_setBackgroundColor:</option>
+	
+	<option value="//api/name/nskit_setBackgroundColor:inRange:">&nbsp;&nbsp;&nbsp;&nbsp;- nskit_setBackgroundColor:inRange:</option>
+	
+	<option value="//api/name/nskit_setColor:">&nbsp;&nbsp;&nbsp;&nbsp;- nskit_setColor:</option>
+	
+	<option value="//api/name/nskit_setColor:inRange:">&nbsp;&nbsp;&nbsp;&nbsp;- nskit_setColor:inRange:</option>
+	
+	<option value="//api/name/nskit_setFont:">&nbsp;&nbsp;&nbsp;&nbsp;- nskit_setFont:</option>
+	
+	<option value="//api/name/nskit_setLineBreak:">&nbsp;&nbsp;&nbsp;&nbsp;- nskit_setLineBreak:</option>
+	
+	<option value="//api/name/nskit_setLineBreak:LineHeight:andAlignment:">&nbsp;&nbsp;&nbsp;&nbsp;- nskit_setLineBreak:LineHeight:andAlignment:</option>
+	
+	<option value="//api/name/nskit_setLineBreak:andAlignment:">&nbsp;&nbsp;&nbsp;&nbsp;- nskit_setLineBreak:andAlignment:</option>
+	
+	<option value="//api/name/nskit_setLineHeight:">&nbsp;&nbsp;&nbsp;&nbsp;- nskit_setLineHeight:</option>
+	
+	<option value="//api/name/nskit_setShadowWithColor:withOffset:">&nbsp;&nbsp;&nbsp;&nbsp;- nskit_setShadowWithColor:withOffset:</option>
+	
+	<option value="//api/name/setFont:inRange:">&nbsp;&nbsp;&nbsp;&nbsp;- setFont:inRange:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/nskit_setAlignment:">nskit_setAlignment:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/nskit_setBackgroundColor:">nskit_setBackgroundColor:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/nskit_setBackgroundColor:inRange:">nskit_setBackgroundColor:inRange:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/nskit_setColor:">nskit_setColor:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/nskit_setColor:inRange:">nskit_setColor:inRange:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/nskit_setFont:">nskit_setFont:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/nskit_setLineBreak:">nskit_setLineBreak:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/nskit_setLineBreak:LineHeight:andAlignment:">nskit_setLineBreak:LineHeight:andAlignment:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/nskit_setLineBreak:andAlignment:">nskit_setLineBreak:andAlignment:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/nskit_setLineHeight:">nskit_setLineHeight:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/nskit_setShadowWithColor:withOffset:">nskit_setShadowWithColor:withOffset:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setFont:inRange:">setFont:inRange:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="NSMutableAttributedString(NSKitExtensions) Category Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">NSMutableAttributedString(NSKitExtensions) Category Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">NSMutableAttributedString+NSKitExtensions.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Extends the NSMutableAttributedString class.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/nskit_setColor:">&ndash;&nbsp;nskit_setColor:</a></code>
+		<span class="tooltip"><p>Set the text color on the attributed string.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/nskit_setColor:inRange:">&ndash;&nbsp;nskit_setColor:inRange:</a></code>
+		<span class="tooltip"><p>Set the text color on the attributed string.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/nskit_setBackgroundColor:">&ndash;&nbsp;nskit_setBackgroundColor:</a></code>
+		<span class="tooltip"><p>Set the background color on the attributed string.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/nskit_setBackgroundColor:inRange:">&ndash;&nbsp;nskit_setBackgroundColor:inRange:</a></code>
+		<span class="tooltip"><p>Set the background color on the attributed string.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/nskit_setFont:">&ndash;&nbsp;nskit_setFont:</a></code>
+		<span class="tooltip"><p>Set the font on the attributed string.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setFont:inRange:">&ndash;&nbsp;setFont:inRange:</a></code>
+		<span class="tooltip"><p>Set the font on the attributed string.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/nskit_setLineHeight:">&ndash;&nbsp;nskit_setLineHeight:</a></code>
+		<span class="tooltip"><p>Set the line spacing on the attributed string.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/nskit_setLineBreak:">&ndash;&nbsp;nskit_setLineBreak:</a></code>
+		<span class="tooltip"><p>Set the line break on the attributed string.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/nskit_setAlignment:">&ndash;&nbsp;nskit_setAlignment:</a></code>
+		<span class="tooltip"><p>Set the text alignment on the attributed string.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/nskit_setLineBreak:andAlignment:">&ndash;&nbsp;nskit_setLineBreak:andAlignment:</a></code>
+		<span class="tooltip"><p>Set the text alignment &amp; line break on the attributed string.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/nskit_setLineBreak:LineHeight:andAlignment:">&ndash;&nbsp;nskit_setLineBreak:LineHeight:andAlignment:</a></code>
+		<span class="tooltip"><p>Set the text alignment &amp; line break on the attributed string.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/nskit_setShadowWithColor:withOffset:">&ndash;&nbsp;nskit_setShadowWithColor:withOffset:</a></code>
+		<span class="tooltip"><p>Set the shadow on the text</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/nskit_setAlignment:" title="nskit_setAlignment:"></a>
+	<h3 class="subsubtitle method-title">nskit_setAlignment:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Set the text alignment on the attributed string.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)nskit_setAlignment:(NSTextAlignment)<em>alignment</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>alignment</em></dt>
+			<dd><p>The text alignment mode to be set on the text.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSMutableAttributedString+NSKitExtensions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/nskit_setBackgroundColor:" title="nskit_setBackgroundColor:"></a>
+	<h3 class="subsubtitle method-title">nskit_setBackgroundColor:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Set the background color on the attributed string.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)nskit_setBackgroundColor:(NSColor *)<em>color</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>color</em></dt>
+			<dd><p>Set the background color on the whole string.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSMutableAttributedString+NSKitExtensions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/nskit_setBackgroundColor:inRange:" title="nskit_setBackgroundColor:inRange:"></a>
+	<h3 class="subsubtitle method-title">nskit_setBackgroundColor:inRange:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Set the background color on the attributed string.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)nskit_setBackgroundColor:(NSColor *)<em>color</em> inRange:(NSRange)<em>range</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>color</em></dt>
+			<dd><p>The background color to be set on the text.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>range</em></dt>
+			<dd><p>Set the background color color on a given range.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSMutableAttributedString+NSKitExtensions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/nskit_setColor:" title="nskit_setColor:"></a>
+	<h3 class="subsubtitle method-title">nskit_setColor:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Set the text color on the attributed string.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)nskit_setColor:(NSColor *)<em>color</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>color</em></dt>
+			<dd><p>Set the text color on the whole string.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSMutableAttributedString+NSKitExtensions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/nskit_setColor:inRange:" title="nskit_setColor:inRange:"></a>
+	<h3 class="subsubtitle method-title">nskit_setColor:inRange:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Set the text color on the attributed string.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)nskit_setColor:(NSColor *)<em>color</em> inRange:(NSRange)<em>range</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>color</em></dt>
+			<dd><p>The color to be set on the text.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>range</em></dt>
+			<dd><p>Set the text color on a given range.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSMutableAttributedString+NSKitExtensions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/nskit_setFont:" title="nskit_setFont:"></a>
+	<h3 class="subsubtitle method-title">nskit_setFont:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Set the font on the attributed string.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)nskit_setFont:(NSFont *)<em>font</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>font</em></dt>
+			<dd><p>Set the Font color on the whole string.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSMutableAttributedString+NSKitExtensions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/nskit_setLineBreak:" title="nskit_setLineBreak:"></a>
+	<h3 class="subsubtitle method-title">nskit_setLineBreak:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Set the line break on the attributed string.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)nskit_setLineBreak:(NSLineBreakMode)<em>breakMode</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>breakMode</em></dt>
+			<dd><p>The break mode to be set on the text.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSMutableAttributedString+NSKitExtensions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/nskit_setLineBreak:LineHeight:andAlignment:" title="nskit_setLineBreak:LineHeight:andAlignment:"></a>
+	<h3 class="subsubtitle method-title">nskit_setLineBreak:LineHeight:andAlignment:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Set the text alignment &amp; line break on the attributed string.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)nskit_setLineBreak:(NSLineBreakMode)<em>breakMode</em> LineHeight:(CGFloat)<em>height</em> andAlignment:(NSTextAlignment)<em>alignment</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>breakMode</em></dt>
+			<dd><p>The break mode to be set on the text.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>height</em></dt>
+			<dd><p>The line spacing to be set on the text.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>alignment</em></dt>
+			<dd><p>The text alignment mode to be set on the text.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSMutableAttributedString+NSKitExtensions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/nskit_setLineBreak:andAlignment:" title="nskit_setLineBreak:andAlignment:"></a>
+	<h3 class="subsubtitle method-title">nskit_setLineBreak:andAlignment:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Set the text alignment &amp; line break on the attributed string.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)nskit_setLineBreak:(NSLineBreakMode)<em>breakMode</em> andAlignment:(NSTextAlignment)<em>alignment</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>breakMode</em></dt>
+			<dd><p>The break mode to be set on the text.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>alignment</em></dt>
+			<dd><p>The text alignment mode to be set on the text.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSMutableAttributedString+NSKitExtensions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/nskit_setLineHeight:" title="nskit_setLineHeight:"></a>
+	<h3 class="subsubtitle method-title">nskit_setLineHeight:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Set the line spacing on the attributed string.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)nskit_setLineHeight:(CGFloat)<em>height</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>height</em></dt>
+			<dd><p>The line spacing to be set on the text.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSMutableAttributedString+NSKitExtensions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/nskit_setShadowWithColor:withOffset:" title="nskit_setShadowWithColor:withOffset:"></a>
+	<h3 class="subsubtitle method-title">nskit_setShadowWithColor:withOffset:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Set the shadow on the text</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)nskit_setShadowWithColor:(NSColor *)<em>color</em> withOffset:(NSSize)<em>offset</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>color</em></dt>
+			<dd><p>The color of the shadow of the text.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>offset</em></dt>
+			<dd><p>The offset of the shadow.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSMutableAttributedString+NSKitExtensions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setFont:inRange:" title="setFont:inRange:"></a>
+	<h3 class="subsubtitle method-title">setFont:inRange:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Set the font on the attributed string.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setFont:(NSFont *)<em>font</em> inRange:(NSRange)<em>range</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>font</em></dt>
+			<dd><p>The Font to be set on the text.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>range</em></dt>
+			<dd><p>Set the Font on a given range.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSMutableAttributedString+NSKitExtensions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 nscoding. All rights reserved. (Last updated: 2013-06-27)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

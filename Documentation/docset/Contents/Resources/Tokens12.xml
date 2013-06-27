@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/NSTextStorage+NSKitExtensions.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/NSTextStorage(NSKitExtensions)</TokenIdentifier>
+			<Abstract type="html">Holds a reference to a color for the link color of the text.</Abstract>
+			<DeclaredIn>NSTextStorage+NSKitExtensions.h</DeclaredIn>
+			
+			<NodeRef refid="12"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSTextStorage(NSKitExtensions)/scanForLinks</TokenIdentifier>
+			<Abstract type="html">Scans the text storage for URLs and sets them with underline and a color
+of your choice, you must invoke the method your self.</Abstract>
+			<DeclaredIn>NSTextStorage+NSKitExtensions.h</DeclaredIn>			
+			
+			<Declaration>- (void)scanForLinks</Declaration>
+			
+			
+			<Anchor>//api/name/scanForLinks</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+	</File>
+</Tokens>
