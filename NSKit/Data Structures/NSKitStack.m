@@ -27,6 +27,7 @@
 
 @implementation NSKitStack
 
+
 - (void)push:(id)objToPush
 {
     if (objToPush)

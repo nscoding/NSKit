@@ -58,6 +58,8 @@
  * views in your view hierarchy. This block takes no parameters and has no
  * return value. This parameter must not be NULL.
  *
+ * @warning *Important:* If the animations is NULL, an exception is raised.
+ *
  */
 + (void)animateWithDuration:(NSTimeInterval)duration
                  animations:(void (^)(void))animations;
@@ -78,6 +80,9 @@
  * or not the animations actually finished before the completion handler was called.
  * If the duration of the animation is 0, this block is performed at the beginning of 
  * the next run loop cycle. This parameter may be NULL.
+ *
+ * @warning *Important:* If the animations is NULL, an exception is raised.
+ *
  */
 + (void)animateWithDuration:(NSTimeInterval)duration
                  animations:(void (^)(void))animations
