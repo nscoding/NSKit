@@ -1,18 +1,18 @@
 <?xml version="1.0" standalone="no"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:docset="http://developer.apple.com/rss/docset_extensions" xml:lang="en">
-    <id>http://nscoding.github.com/NSKit/NSKit.atom/20130628011137</id>
+    <id>http://nscoding.github.com/NSKit/NSKit.atom/20130628221207</id>
     <title type="text">NSKit Documentation</title>
     <rights>Copyright © 2013 @nscoding. All rights reserved.</rights>
     <link rel="self" href="http://nscoding.github.com/NSKit/NSKit.atom"></link>
     <docset:publisherName>@nscoding</docset:publisherName>
     <docset:publisherID>com.nscoding.documentation</docset:publisherID>
-    <updated>2013-06-28T01:11:37+02:00</updated>
+    <updated>2013-06-28T22:12:07+02:00</updated>
     <entry>
         <id>tag:nscoding.github.com,2013-06-28:com.nscoding.NSKit/1.0.0</id>
         <title type="text">NSKit Documentation</title>
-        <updated>2013-06-28T01:11:37+02:00</updated>
+        <updated>2013-06-28T22:12:07+02:00</updated>
         <content type="text">NSKit Documentation (v1.0.0)</content>
-        <link rel="enclosure" type="application/octet-stream" href="http:/nscoding.github.com/NSKit/com.nscoding.NSKit-1.0.xar" length="123681"></link>
+        <link rel="enclosure" type="application/octet-stream" href="http:/nscoding.github.com/NSKit/com.nscoding.NSKit-1.0.xar" length="133449"></link>
         <docset:identifier>com.nscoding.NSKit</docset:identifier>
         <docset:version>1.0.0</docset:version>
         <docset:minimumXcodeVersion>3.0.0</docset:minimumXcodeVersion>

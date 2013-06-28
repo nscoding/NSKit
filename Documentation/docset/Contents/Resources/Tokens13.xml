@@ -1,238 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Categories/NSMutableAttributedString+NSKitExtensions.html">
+	<File path="Categories/NSImage+NSKitExtensions.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cat/NSMutableAttributedString(NSKitExtensions)</TokenIdentifier>
-			<Abstract type="html">Extends the NSMutableAttributedString class.</Abstract>
-			<DeclaredIn>NSMutableAttributedString+NSKitExtensions.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cat/NSImage(NSKitExtensions)</TokenIdentifier>
+			<Abstract type="html">Extends the NSArray class</Abstract>
+			<DeclaredIn>NSImage+NSKitExtensions.h</DeclaredIn>
 			
 			<NodeRef refid="13"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSMutableAttributedString(NSKitExtensions)/nskit_setColor:</TokenIdentifier>
-			<Abstract type="html">Set the text color on the attributed string.</Abstract>
-			<DeclaredIn>NSMutableAttributedString+NSKitExtensions.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/intfm/NSImage(NSKitExtensions)/stretchableImageWithLeftWidth:middleWidth:rightWidth:toSize:leftImage:middleImage:rightImage:</TokenIdentifier>
+			<Abstract type="html">Create a stretchable image from 3 different images.</Abstract>
+			<DeclaredIn>NSImage+NSKitExtensions.h</DeclaredIn>			
 			
-			<Declaration>- (void)nskit_setColor:(NSColor *)color</Declaration>
+			<Declaration>+ (NSImage *)stretchableImageWithLeftWidth:(CGFloat)leftWidth middleWidth:(CGFloat)patternWidth rightWidth:(CGFloat)rightWidth toSize:(NSSize)destinationSize leftImage:(NSImage *)leftImage middleImage:(NSImage *)middleImage rightImage:(NSImage *)rightImage</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>color</Name>
-					<Abstract type="html">Set the text color on the whole string.</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/nskit_setColor:</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSMutableAttributedString(NSKitExtensions)/nskit_setColor:inRange:</TokenIdentifier>
-			<Abstract type="html">Set the text color on the attributed string.</Abstract>
-			<DeclaredIn>NSMutableAttributedString+NSKitExtensions.h</DeclaredIn>			
-			
-			<Declaration>- (void)nskit_setColor:(NSColor *)color inRange:(NSRange)range</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>color</Name>
-					<Abstract type="html">The color to be set on the text.</Abstract>
+					<Name>leftWidth</Name>
+					<Abstract type="html">The width in pixels of the left side.</Abstract>
 				</Parameter><Parameter>
-					<Name>range</Name>
-					<Abstract type="html">Set the text color on a given range.</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/nskit_setColor:inRange:</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSMutableAttributedString(NSKitExtensions)/nskit_setBackgroundColor:</TokenIdentifier>
-			<Abstract type="html">Set the background color on the attributed string.</Abstract>
-			<DeclaredIn>NSMutableAttributedString+NSKitExtensions.h</DeclaredIn>			
-			
-			<Declaration>- (void)nskit_setBackgroundColor:(NSColor *)color</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>color</Name>
-					<Abstract type="html">Set the background color on the whole string.</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/nskit_setBackgroundColor:</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSMutableAttributedString(NSKitExtensions)/nskit_setBackgroundColor:inRange:</TokenIdentifier>
-			<Abstract type="html">Set the background color on the attributed string.</Abstract>
-			<DeclaredIn>NSMutableAttributedString+NSKitExtensions.h</DeclaredIn>			
-			
-			<Declaration>- (void)nskit_setBackgroundColor:(NSColor *)color inRange:(NSRange)range</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>color</Name>
-					<Abstract type="html">The background color to be set on the text.</Abstract>
+					<Name>patternWidth</Name>
+					<Abstract type="html">The width in pixels of the middle side.</Abstract>
 				</Parameter><Parameter>
-					<Name>range</Name>
-					<Abstract type="html">Set the background color color on a given range.</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/nskit_setBackgroundColor:inRange:</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSMutableAttributedString(NSKitExtensions)/nskit_setFont:</TokenIdentifier>
-			<Abstract type="html">Set the font on the attributed string.</Abstract>
-			<DeclaredIn>NSMutableAttributedString+NSKitExtensions.h</DeclaredIn>			
-			
-			<Declaration>- (void)nskit_setFont:(NSFont *)font</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>font</Name>
-					<Abstract type="html">Set the Font color on the whole string.</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/nskit_setFont:</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSMutableAttributedString(NSKitExtensions)/setFont:inRange:</TokenIdentifier>
-			<Abstract type="html">Set the font on the attributed string.</Abstract>
-			<DeclaredIn>NSMutableAttributedString+NSKitExtensions.h</DeclaredIn>			
-			
-			<Declaration>- (void)setFont:(NSFont *)font inRange:(NSRange)range</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>font</Name>
-					<Abstract type="html">The Font to be set on the text.</Abstract>
+					<Name>rightWidth</Name>
+					<Abstract type="html">The width in pixels of the right side.</Abstract>
 				</Parameter><Parameter>
-					<Name>range</Name>
-					<Abstract type="html">Set the Font on a given range.</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/setFont:inRange:</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSMutableAttributedString(NSKitExtensions)/nskit_setLineHeight:</TokenIdentifier>
-			<Abstract type="html">Set the line spacing on the attributed string.</Abstract>
-			<DeclaredIn>NSMutableAttributedString+NSKitExtensions.h</DeclaredIn>			
-			
-			<Declaration>- (void)nskit_setLineHeight:(CGFloat)height</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>height</Name>
-					<Abstract type="html">The line spacing to be set on the text.</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/nskit_setLineHeight:</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSMutableAttributedString(NSKitExtensions)/nskit_setLineBreak:</TokenIdentifier>
-			<Abstract type="html">Set the line break on the attributed string.</Abstract>
-			<DeclaredIn>NSMutableAttributedString+NSKitExtensions.h</DeclaredIn>			
-			
-			<Declaration>- (void)nskit_setLineBreak:(NSLineBreakMode)breakMode</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>breakMode</Name>
-					<Abstract type="html">The break mode to be set on the text.</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/nskit_setLineBreak:</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSMutableAttributedString(NSKitExtensions)/nskit_setAlignment:</TokenIdentifier>
-			<Abstract type="html">Set the text alignment on the attributed string.</Abstract>
-			<DeclaredIn>NSMutableAttributedString+NSKitExtensions.h</DeclaredIn>			
-			
-			<Declaration>- (void)nskit_setAlignment:(NSTextAlignment)alignment</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>alignment</Name>
-					<Abstract type="html">The text alignment mode to be set on the text.</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/nskit_setAlignment:</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSMutableAttributedString(NSKitExtensions)/nskit_setLineBreak:andAlignment:</TokenIdentifier>
-			<Abstract type="html">Set the text alignment &amp;amp; line break on the attributed string.</Abstract>
-			<DeclaredIn>NSMutableAttributedString+NSKitExtensions.h</DeclaredIn>			
-			
-			<Declaration>- (void)nskit_setLineBreak:(NSLineBreakMode)breakMode andAlignment:(NSTextAlignment)alignment</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>breakMode</Name>
-					<Abstract type="html">The break mode to be set on the text.</Abstract>
+					<Name>destinationSize</Name>
+					<Abstract type="html">The final size in pixels.</Abstract>
 				</Parameter><Parameter>
-					<Name>alignment</Name>
-					<Abstract type="html">The text alignment mode to be set on the text.</Abstract>
+					<Name>leftImage</Name>
+					<Abstract type="html">The left image.</Abstract>
+				</Parameter><Parameter>
+					<Name>middleImage</Name>
+					<Abstract type="html">The middle image.</Abstract>
+				</Parameter><Parameter>
+					<Name>rightImage</Name>
+					<Abstract type="html">The left image.</Abstract>
 				</Parameter>
 			</Parameters>
-			
-			<Anchor>//api/name/nskit_setLineBreak:andAlignment:</Anchor>
+			<ReturnValue><Abstract type="html">NSImage A custom strechable image from left to right.</Abstract></ReturnValue>
+			<Anchor>//api/name/stretchableImageWithLeftWidth:middleWidth:rightWidth:toSize:leftImage:middleImage:rightImage:</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSMutableAttributedString(NSKitExtensions)/nskit_setLineBreak:LineHeight:andAlignment:</TokenIdentifier>
-			<Abstract type="html">Set the text alignment &amp;amp; line break on the attributed string.</Abstract>
-			<DeclaredIn>NSMutableAttributedString+NSKitExtensions.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/intfm/NSImage(NSKitExtensions)/stretchableImageWithLeftWidth:middleWidth:rightWidth:toSize:fromImage:</TokenIdentifier>
+			<Abstract type="html">Create a stretchable image from another image.</Abstract>
+			<DeclaredIn>NSImage+NSKitExtensions.h</DeclaredIn>			
 			
-			<Declaration>- (void)nskit_setLineBreak:(NSLineBreakMode)breakMode LineHeight:(CGFloat)height andAlignment:(NSTextAlignment)alignment</Declaration>
+			<Declaration>+ (NSImage *)stretchableImageWithLeftWidth:(CGFloat)leftWidth middleWidth:(CGFloat)patternWidth rightWidth:(CGFloat)rightWidth toSize:(NSSize)destinationSize fromImage:(NSImage *)sourceImage</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>breakMode</Name>
-					<Abstract type="html">The break mode to be set on the text.</Abstract>
+					<Name>leftWidth</Name>
+					<Abstract type="html">The width in pixels of the left side.</Abstract>
 				</Parameter><Parameter>
-					<Name>height</Name>
-					<Abstract type="html">The line spacing to be set on the text.</Abstract>
+					<Name>patternWidth</Name>
+					<Abstract type="html">The width in pixels of the middle side.</Abstract>
 				</Parameter><Parameter>
-					<Name>alignment</Name>
-					<Abstract type="html">The text alignment mode to be set on the text.</Abstract>
+					<Name>rightWidth</Name>
+					<Abstract type="html">The width in pixels of the right side.</Abstract>
+				</Parameter><Parameter>
+					<Name>destinationSize</Name>
+					<Abstract type="html">The final size in pixels.</Abstract>
+				</Parameter><Parameter>
+					<Name>sourceImage</Name>
+					<Abstract type="html">The source image.</Abstract>
 				</Parameter>
 			</Parameters>
-			
-			<Anchor>//api/name/nskit_setLineBreak:LineHeight:andAlignment:</Anchor>
+			<ReturnValue><Abstract type="html">NSImage A custom strechable image from left to right,</Abstract></ReturnValue>
+			<Anchor>//api/name/stretchableImageWithLeftWidth:middleWidth:rightWidth:toSize:fromImage:</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSMutableAttributedString(NSKitExtensions)/nskit_setShadowWithColor:withOffset:</TokenIdentifier>
-			<Abstract type="html">Set the shadow on the text</Abstract>
-			<DeclaredIn>NSMutableAttributedString+NSKitExtensions.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/intfm/NSImage(NSKitExtensions)/stretchableImageWithTopWidth:middleWidth:bottomWidth:toSize:fromImage:</TokenIdentifier>
+			<Abstract type="html">Create a stretchable image from another image.</Abstract>
+			<DeclaredIn>NSImage+NSKitExtensions.h</DeclaredIn>			
 			
-			<Declaration>- (void)nskit_setShadowWithColor:(NSColor *)color withOffset:(NSSize)offset</Declaration>
+			<Declaration>+ (NSImage *)stretchableImageWithTopWidth:(CGFloat)topheight middleWidth:(CGFloat)patternHeight bottomWidth:(CGFloat)bottomHeight toSize:(NSSize)destinationSize fromImage:(NSImage *)sourceImage</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>color</Name>
-					<Abstract type="html">The color of the shadow of the text.</Abstract>
+					<Name>topheight</Name>
+					<Abstract type="html">The height in pixels of the top side.</Abstract>
 				</Parameter><Parameter>
-					<Name>offset</Name>
-					<Abstract type="html">The offset of the shadow.</Abstract>
+					<Name>patternHeight</Name>
+					<Abstract type="html">The height in pixels of the middle side.</Abstract>
+				</Parameter><Parameter>
+					<Name>bottomHeight</Name>
+					<Abstract type="html">The height in pixels of the bottom side.</Abstract>
+				</Parameter><Parameter>
+					<Name>destinationSize</Name>
+					<Abstract type="html">The final size in pixels.</Abstract>
+				</Parameter><Parameter>
+					<Name>sourceImage</Name>
+					<Abstract type="html">The source image.</Abstract>
 				</Parameter>
 			</Parameters>
-			
-			<Anchor>//api/name/nskit_setShadowWithColor:withOffset:</Anchor>
+			<ReturnValue><Abstract type="html">NSImage A custom strechable image from top to bottom.</Abstract></ReturnValue>
+			<Anchor>//api/name/stretchableImageWithTopWidth:middleWidth:bottomWidth:toSize:fromImage:</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		

@@ -1,37 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/NSKitPerformanceTimer.html">
+	<File path="Classes/NSKitMath.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/NSKitPerformanceTimer</TokenIdentifier>
-			<Abstract type="html">Permormance timer helper class</Abstract>
-			<DeclaredIn>NSKitPerformanceTimer.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/NSKitMath</TokenIdentifier>
+			<Abstract type="html">Math helpers</Abstract>
+			<DeclaredIn>NSKitMath.h</DeclaredIn>
 			
 			<NodeRef refid="4"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitPerformanceTimer/fire</TokenIdentifier>
-			<Abstract type="html">Fire the perfomance timer.</Abstract>
-			<DeclaredIn>NSKitPerformanceTimer.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/clm/NSKitMath/hasDecimalPoints:</TokenIdentifier>
+			<Abstract type="html">Checks if the float has decimal points.</Abstract>
+			<DeclaredIn>NSKitMath.h</DeclaredIn>			
 			
-			<Declaration>- (void)fire</Declaration>
-			
-			
-			<Anchor>//api/name/fire</Anchor>
+			<Declaration>+ (BOOL)hasDecimalPoints:(CGFloat)value</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>value</Name>
+					<Abstract type="html">The value to check</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if the number has decimal points; otherwise, NO.</Abstract></ReturnValue>
+			<Anchor>//api/name/hasDecimalPoints:</Anchor>
             <NodeRef refid="4"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitPerformanceTimer/logResult</TokenIdentifier>
-			<Abstract type="html">Logs the time in milliseconds since fire was invoked.</Abstract>
-			<DeclaredIn>NSKitPerformanceTimer.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/clm/NSKitMath/generateRandomFromNumber:toNumber:</TokenIdentifier>
+			<Abstract type="html">Generates a random number from a start to end.</Abstract>
+			<DeclaredIn>NSKitMath.h</DeclaredIn>			
 			
-			<Declaration>- (void)logResult</Declaration>
-			
-			
-			<Anchor>//api/name/logResult</Anchor>
+			<Declaration>+ (NSInteger)generateRandomFromNumber:(NSInteger)start toNumber:(NSInteger)end</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>start</Name>
+					<Abstract type="html">The starting value for the random generation</Abstract>
+				</Parameter><Parameter>
+					<Name>end</Name>
+					<Abstract type="html">The ending value for the random generation</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">NSInteger A random number between start and end.</Abstract></ReturnValue>
+			<Anchor>//api/name/generateRandomFromNumber:toNumber:</Anchor>
             <NodeRef refid="4"/>
 		</Token>
 		

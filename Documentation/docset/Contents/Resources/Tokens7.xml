@@ -1,65 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/NSKitStack.html">
+	<File path="Classes/NSKitQueue.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/NSKitStack</TokenIdentifier>
-			<Abstract type="html">A stack is a linear list in which insertions (also called additions) and deletions take place at the same end. This end is called the top. The other end is called the bottom.</Abstract>
-			<DeclaredIn>NSKitStack.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/NSKitQueue</TokenIdentifier>
+			<Abstract type="html">A queue is a special case of linear list where insertions and deletions take place at different ends.
+- Last: end at which a new element is added.
+- First: end at which an element is deleted.</Abstract>
+			<DeclaredIn>NSKitQueue.h</DeclaredIn>
 			
 			<NodeRef refid="7"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitStack/push:</TokenIdentifier>
-			<Abstract type="html">Add an element to the stack.</Abstract>
-			<DeclaredIn>NSKitStack.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitQueue/add:</TokenIdentifier>
+			<Abstract type="html">Add an element to the queue.</Abstract>
+			<DeclaredIn>NSKitQueue.h</DeclaredIn>			
 			
-			<Declaration>- (void)push:(id)objToPush</Declaration>
+			<Declaration>- (void)add:(id)objectToAdd</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>objToPush</Name>
-					<Abstract type="html">the object to be added to the stack.</Abstract>
+					<Name>objectToAdd</Name>
+					<Abstract type="html">The object to be added to the queue.</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/push:</Anchor>
+			<Anchor>//api/name/add:</Anchor>
             <NodeRef refid="7"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitStack/pop</TokenIdentifier>
-			<Abstract type="html">Delete top element from stack.</Abstract>
-			<DeclaredIn>NSKitStack.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitQueue/remove</TokenIdentifier>
+			<Abstract type="html">Delete the front element of the queue.</Abstract>
+			<DeclaredIn>NSKitQueue.h</DeclaredIn>			
 			
-			<Declaration>- (id)pop</Declaration>
+			<Declaration>- (id)remove</Declaration>
 			
-			<ReturnValue><Abstract type="html">id The poped object, nil if the stack is empty.</Abstract></ReturnValue>
-			<Anchor>//api/name/pop</Anchor>
+			<ReturnValue><Abstract type="html">id The object that was removed from the front, nil if the queue if empty.</Abstract></ReturnValue>
+			<Anchor>//api/name/remove</Anchor>
             <NodeRef refid="7"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitStack/top</TokenIdentifier>
-			<Abstract type="html">Returns top element from stack.</Abstract>
-			<DeclaredIn>NSKitStack.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitQueue/first</TokenIdentifier>
+			<Abstract type="html">Return the first element of the queue.</Abstract>
+			<DeclaredIn>NSKitQueue.h</DeclaredIn>			
 			
-			<Declaration>- (id)top</Declaration>
+			<Declaration>- (id)first</Declaration>
 			
-			<ReturnValue><Abstract type="html">id The top object in the stack, nil if the stack is empty.</Abstract></ReturnValue>
-			<Anchor>//api/name/top</Anchor>
+			<ReturnValue><Abstract type="html">id The first object in the queue, nil if the queue if empty.</Abstract></ReturnValue>
+			<Anchor>//api/name/first</Anchor>
             <NodeRef refid="7"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitStack/isEmpty</TokenIdentifier>
-			<Abstract type="html">Checks if the stack is empty.</Abstract>
-			<DeclaredIn>NSKitStack.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitQueue/last</TokenIdentifier>
+			<Abstract type="html">Return the last element of the queue.</Abstract>
+			<DeclaredIn>NSKitQueue.h</DeclaredIn>			
+			
+			<Declaration>- (id)last</Declaration>
+			
+			<ReturnValue><Abstract type="html">id The last object in the queue, nil if the queue if empty.</Abstract></ReturnValue>
+			<Anchor>//api/name/last</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitQueue/isEmpty</TokenIdentifier>
+			<Abstract type="html">Checks if the queue is empty.</Abstract>
+			<DeclaredIn>NSKitQueue.h</DeclaredIn>			
 			
 			<Declaration>- (BOOL)isEmpty</Declaration>
 			
-			<ReturnValue><Abstract type="html">BOOL YES if is empty, otherwise NO.</Abstract></ReturnValue>
+			<ReturnValue><Abstract type="html">BOOL
+YES if is empty, otherwise NO.</Abstract></ReturnValue>
 			<Anchor>//api/name/isEmpty</Anchor>
             <NodeRef refid="7"/>
 		</Token>
