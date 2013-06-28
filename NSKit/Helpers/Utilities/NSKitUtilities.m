@@ -26,9 +26,16 @@
 
 #import "NSKitUtilities.h"
 
+
+// ------------------------------------------------------------------------------------------
+
+
 @implementation NSKitUtilities
 
 
+// ------------------------------------------------------------------------------------------
+#pragma mark - Email
+// ------------------------------------------------------------------------------------------
 + (BOOL)isValidEmail:(NSString *)email
 {
     email = [email stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
@@ -40,6 +47,9 @@
 }
 
 
+// ------------------------------------------------------------------------------------------
+#pragma mark - Rects
+// ------------------------------------------------------------------------------------------
 + (NSRect)flooredRect:(NSRect)rect
 {
     return CGRectMake(floorf(rect.origin.x),
@@ -76,6 +86,9 @@
 }
 
 
+// ------------------------------------------------------------------------------------------
+#pragma mark - Screen
+// ------------------------------------------------------------------------------------------
 + (NSScreen *)screenForMouseLocation
 {
     NSPoint mouseLoc = [NSEvent mouseLocation];
