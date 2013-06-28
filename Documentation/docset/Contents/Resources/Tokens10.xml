@@ -13,7 +13,8 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/clm/NSKitUtilities/isValidEmail:</TokenIdentifier>
-			<Abstract type="html">Checks whether the email is valid or not.</Abstract>
+			<Abstract type="html">The methood returns true if the given string contains a valid e-mail
+address and false if it does not, but takes no other action.</Abstract>
 			<DeclaredIn>NSKitUtilities.h</DeclaredIn>			
 			
 			<Declaration>+ (BOOL)isValidEmail:(NSString *)email</Declaration>

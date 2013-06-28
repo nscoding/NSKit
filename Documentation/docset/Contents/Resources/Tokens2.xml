@@ -13,7 +13,9 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/NSKitInternetDoctor/setConnected:</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Is connected.
+@discussion
+This property will inform you if you are connected to the internet or not.</Abstract>
 			<DeclaredIn>NSKitInternetDoctor.h</DeclaredIn>			
 			
 			<Declaration>@property (nonatomic, assign) BOOL connected</Declaration>
@@ -25,7 +27,9 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/NSKitInternetDoctor/connected</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Is connected.
+@discussion
+This property will inform you if you are connected to the internet or not.</Abstract>
 			<DeclaredIn>NSKitInternetDoctor.h</DeclaredIn>			
 			
 			<Declaration>@property (nonatomic, assign) BOOL connected</Declaration>
@@ -37,7 +41,9 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/NSKitInternetDoctor/connected</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Is connected.
+@discussion
+This property will inform you if you are connected to the internet or not.</Abstract>
 			<DeclaredIn>NSKitInternetDoctor.h</DeclaredIn>			
 			
 			<Declaration>@property (nonatomic, assign) BOOL connected</Declaration>
@@ -49,7 +55,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/clm/NSKitInternetDoctor/shared</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Singleton, class method to receive back the singleton reference.</Abstract>
 			<DeclaredIn>NSKitInternetDoctor.h</DeclaredIn>			
 			
 			<Declaration>+ (NSKitInternetDoctor *)shared</Declaration>
@@ -60,20 +66,8 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitInternetDoctor/pingServer</TokenIdentifier>
-			<Abstract type="html"></Abstract>
-			<DeclaredIn>NSKitInternetDoctor.h</DeclaredIn>			
-			
-			<Declaration>- (void)pingServer</Declaration>
-			
-			
-			<Anchor>//api/name/pingServer</Anchor>
-            <NodeRef refid="2"/>
-		</Token>
-		
-		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/NSKitInternetDoctor/retry</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Method to retry pinging the given server.</Abstract>
 			<DeclaredIn>NSKitInternetDoctor.h</DeclaredIn>			
 			
 			<Declaration>- (void)retry</Declaration>

@@ -13,11 +13,24 @@ extern NSString *NSKitPingURL;
 
 @interface NSKitInternetDoctor : NSObject
 
+/**
+ * Is connected.
+ * @discussion
+ * This property will inform you if you are connected to the internet or not.
+ *
+ */
 @property (nonatomic, assign) BOOL connected;
 
+
+/**
+ * Singleton, class method to receive back the singleton reference.
+ */
 + (NSKitInternetDoctor *)shared;
 
-- (void)pingServer;
+
+/**
+ * Method to retry pinging the given server.
+ */
 - (void)retry;
 
 @end
