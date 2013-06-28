@@ -1,8 +1,8 @@
 //
-//  NSKitPerformanceTimer.h
+//  NSKitMath.h
 //  NSKit
 //
-//  Created by Patrick Chamelo on 6/24/13.
+//  Created by Patrick Chamelo on 6/28/13.
 //  Copyright (c) 2013 Patrick Chamelo. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -24,20 +24,34 @@
 // THE SOFTWARE.
 
 
-/** Permormance timer helper class */
-@interface NSKitPerformanceTimer : NSObject
+/** Math helpers */
+@interface NSKitMath : NSObject
 
 
 /**
- * Fire the perfomance timer.
+ * Checks if the float has decimal points.
+ *
+ * @param value The value to check
+ *
+ * @return YES if the number has decimal points; otherwise, NO.
+ *
  */
-- (void)fire;
++ (BOOL)hasDecimalPoints:(CGFloat)value;
 
 
 /**
- * Logs the time in milliseconds since fire was invoked.
+ * Generates a random number from a start to end.
+ *
+ * @param start The starting value for the random generation
+ * @param end The ending value for the random generation
+ *
+ * @return NSInteger A random number between start and end. 
+ *
+ * @warning *Important:* If the start value is higher than the end value, an exception is raised.
+ *
  */
-- (void)logResult;
++ (NSInteger)generateRandomFromNumber:(NSInteger)start
+                             toNumber:(NSInteger)end;
 
 
 @end

@@ -26,6 +26,7 @@
 /** Several different helpers */
 @interface NSKitUtilities : NSObject
 
+
 /**
  * Checks whether the email is valid or not.
  *

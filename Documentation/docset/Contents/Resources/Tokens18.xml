@@ -1,85 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Protocols/NSKitLinkedListProtocol.html">
+	<File path="Categories/NSWindow+NSKitExtensions.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intf/NSKitLinkedListProtocol</TokenIdentifier>
-			<Abstract type="html">Linked list protocol, object that will be added in the linked lists must conform to this protocol.</Abstract>
-			<DeclaredIn>NSKitLinkedListProtocol.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cat/NSWindow(NSKitExtensions)</TokenIdentifier>
+			<Abstract type="html">Extends the NSWindow class</Abstract>
+			<DeclaredIn>NSWindow+NSKitExtensions.h</DeclaredIn>
 			
 			<NodeRef refid="18"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSKitLinkedListProtocol/setNextLink:</TokenIdentifier>
-			<Abstract type="html">link to the next node, used in NSKitSinglyLinkedList</Abstract>
-			<DeclaredIn>NSKitLinkedListProtocol.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/intfm/NSWindow(NSKitExtensions)/centerHorizontallyAndVerticallyOnScreen:</TokenIdentifier>
+			<Abstract type="html">Moves the window in the center of the given screen.</Abstract>
+			<DeclaredIn>NSWindow+NSKitExtensions.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, strong) NSObject&lt;NSKitLinkedListProtocol&gt; *nextLink</Declaration>
+			<Declaration>- (void)centerHorizontallyAndVerticallyOnScreen:(NSScreen *)screen</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>screen</Name>
+					<Abstract type="html">the screen where the window will be centered,
+if screen is nil, the main screen is used.</Abstract>
+				</Parameter>
+			</Parameters>
 			
-			
-			<Anchor>//api/name/nextLink</Anchor>
+			<Anchor>//api/name/centerHorizontallyAndVerticallyOnScreen:</Anchor>
             <NodeRef refid="18"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSKitLinkedListProtocol/nextLink</TokenIdentifier>
-			<Abstract type="html">link to the next node, used in NSKitSinglyLinkedList</Abstract>
-			<DeclaredIn>NSKitLinkedListProtocol.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/intfm/NSWindow(NSKitExtensions)/centerHorizontallyAndVertically</TokenIdentifier>
+			<Abstract type="html">Moves the window in the center of the window screen.</Abstract>
+			<DeclaredIn>NSWindow+NSKitExtensions.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, strong) NSObject&lt;NSKitLinkedListProtocol&gt; *nextLink</Declaration>
+			<Declaration>- (void)centerHorizontallyAndVertically</Declaration>
 			
 			
-			<Anchor>//api/name/nextLink</Anchor>
+			<Anchor>//api/name/centerHorizontallyAndVertically</Anchor>
             <NodeRef refid="18"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/NSKitLinkedListProtocol/nextLink</TokenIdentifier>
-			<Abstract type="html">link to the next node, used in NSKitSinglyLinkedList</Abstract>
-			<DeclaredIn>NSKitLinkedListProtocol.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/intfm/NSWindow(NSKitExtensions)/isFullScreen</TokenIdentifier>
+			<Abstract type="html">Check if the window is Fullscreen mode.</Abstract>
+			<DeclaredIn>NSWindow+NSKitExtensions.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, strong) NSObject&lt;NSKitLinkedListProtocol&gt; *nextLink</Declaration>
+			<Declaration>- (BOOL)isFullScreen</Declaration>
 			
-			
-			<Anchor>//api/name/nextLink</Anchor>
-            <NodeRef refid="18"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSKitLinkedListProtocol/setPreviousLink:</TokenIdentifier>
-			<Abstract type="html">link to the previous node, used in Double linked list</Abstract>
-			<DeclaredIn>NSKitLinkedListProtocol.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, strong) NSObject&lt;NSKitLinkedListProtocol&gt; *previousLink</Declaration>
-			
-			
-			<Anchor>//api/name/previousLink</Anchor>
-            <NodeRef refid="18"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSKitLinkedListProtocol/previousLink</TokenIdentifier>
-			<Abstract type="html">link to the previous node, used in Double linked list</Abstract>
-			<DeclaredIn>NSKitLinkedListProtocol.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, strong) NSObject&lt;NSKitLinkedListProtocol&gt; *previousLink</Declaration>
-			
-			
-			<Anchor>//api/name/previousLink</Anchor>
-            <NodeRef refid="18"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/NSKitLinkedListProtocol/previousLink</TokenIdentifier>
-			<Abstract type="html">link to the previous node, used in Double linked list</Abstract>
-			<DeclaredIn>NSKitLinkedListProtocol.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, strong) NSObject&lt;NSKitLinkedListProtocol&gt; *previousLink</Declaration>
-			
-			
-			<Anchor>//api/name/previousLink</Anchor>
+			<ReturnValue><Abstract type="html">YES if the window is in Fullscreen; otherwise, NO.</Abstract></ReturnValue>
+			<Anchor>//api/name/isFullScreen</Anchor>
             <NodeRef refid="18"/>
 		</Token>
 		

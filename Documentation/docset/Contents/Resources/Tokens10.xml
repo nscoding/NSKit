@@ -1,114 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Categories/NSColor+NSKitExtensions.html">
+	<File path="Categories/NSArray+NSKitExtensions.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cat/NSColor(NSKitExtensions)</TokenIdentifier>
-			<Abstract type="html">Extends the NSColor class</Abstract>
-			<DeclaredIn>NSColor+NSKitExtensions.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cat/NSArray(NSKitExtensions)</TokenIdentifier>
+			<Abstract type="html">Extends the NSArray class</Abstract>
+			<DeclaredIn>NSArray+NSKitExtensions.h</DeclaredIn>
 			
 			<NodeRef refid="10"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSColor(NSKitExtensions)/randomColor</TokenIdentifier>
-			<Abstract type="html">Creates a random color, usefull for debugging.</Abstract>
-			<DeclaredIn>NSColor+NSKitExtensions.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/intfm/NSArray(NSKitExtensions)/reversedArray</TokenIdentifier>
+			<Abstract type="html">an NSArray where the items are in reversed order.</Abstract>
+			<DeclaredIn>NSArray+NSKitExtensions.h</DeclaredIn>			
 			
-			<Declaration>+ (NSColor *)randomColor</Declaration>
+			<Declaration>- (NSArray *)reversedArray</Declaration>
 			
-			<ReturnValue><Abstract type="html">NSColor, a random color.</Abstract></ReturnValue>
-			<Anchor>//api/name/randomColor</Anchor>
+			<ReturnValue><Abstract type="html">an NSArray where the items are in reversed order.</Abstract></ReturnValue>
+			<Anchor>//api/name/reversedArray</Anchor>
             <NodeRef refid="10"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSColor(NSKitExtensions)/colorFromHexRGB:</TokenIdentifier>
-			<Abstract type="html">Coverts a HEX color (e.g. #A3A3A3) from a string.</Abstract>
-			<DeclaredIn>NSColor+NSKitExtensions.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/intfm/NSArray(NSKitExtensions)/firstObject</TokenIdentifier>
+			<Abstract type="html">id The first object in the array, nil if the array is empty.</Abstract>
+			<DeclaredIn>NSArray+NSKitExtensions.h</DeclaredIn>			
 			
-			<Declaration>+ (NSColor *)colorFromHexRGB:(NSString *)colorString</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>colorString</Name>
-					<Abstract type="html">The hex value to convert.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">NSColor, the converted color.</Abstract></ReturnValue>
-			<Anchor>//api/name/colorFromHexRGB:</Anchor>
-            <NodeRef refid="10"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSColor(NSKitExtensions)/hexCodeWithColor:</TokenIdentifier>
-			<Abstract type="html">Hex string from NSColor.</Abstract>
-			<DeclaredIn>NSColor+NSKitExtensions.h</DeclaredIn>			
+			<Declaration>- (id)firstObject</Declaration>
 			
-			<Declaration>+ (NSString *)hexCodeWithColor:(NSColor *)color</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>color</Name>
-					<Abstract type="html">The NSColor to covert.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">NSString, the hex value.</Abstract></ReturnValue>
-			<Anchor>//api/name/hexCodeWithColor:</Anchor>
-            <NodeRef refid="10"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSColor(NSKitExtensions)/RGBWithColor:</TokenIdentifier>
-			<Abstract type="html">RGB string from NSColor.</Abstract>
-			<DeclaredIn>NSColor+NSKitExtensions.h</DeclaredIn>			
-			
-			<Declaration>+ (NSString *)RGBWithColor:(NSColor *)color</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>color</Name>
-					<Abstract type="html">The NSColor to covert.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">NSString, the RGB value.</Abstract></ReturnValue>
-			<Anchor>//api/name/RGBWithColor:</Anchor>
-            <NodeRef refid="10"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSColor(NSKitExtensions)/adjustRed:green:blue:color:</TokenIdentifier>
-			<Abstract type="html">Adjust the float pointers based on the given color</Abstract>
-			<DeclaredIn>NSColor+NSKitExtensions.h</DeclaredIn>			
-			
-			<Declaration>+ (void)adjustRed:(CGFloat *)red green:(CGFloat *)green blue:(CGFloat *)blue color:(NSColor *)color</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>red</Name>
-					<Abstract type="html">a CGFloat pointer to be adjusted</Abstract>
-				</Parameter><Parameter>
-					<Name>green</Name>
-					<Abstract type="html">a CGFloat pointer to be adjusted</Abstract>
-				</Parameter><Parameter>
-					<Name>blue</Name>
-					<Abstract type="html">a CGFloat pointer to be adjusted</Abstract>
-				</Parameter><Parameter>
-					<Name>color</Name>
-					<Abstract type="html">a color reference to populate the float pointers.</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/adjustRed:green:blue:color:</Anchor>
-            <NodeRef refid="10"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSColor(NSKitExtensions)/nsCGColor</TokenIdentifier>
-			<Abstract type="html">CGColorRef implmentation for to support &lt; 10.8</Abstract>
-			<DeclaredIn>NSColor+NSKitExtensions.h</DeclaredIn>			
-			
-			<Declaration>- (CGColorRef)nsCGColor</Declaration>
-			
-			<ReturnValue><Abstract type="html">CGColorRef</Abstract></ReturnValue>
-			<Anchor>//api/name/nsCGColor</Anchor>
+			<ReturnValue><Abstract type="html">id The first object in the array, nil if the array is empty.</Abstract></ReturnValue>
+			<Anchor>//api/name/firstObject</Anchor>
             <NodeRef refid="10"/>
 		</Token>
 		

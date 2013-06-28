@@ -1,8 +1,8 @@
 //
-//  NSKitPerformanceTimer.h
+//  NSKitMath.m
 //  NSKit
 //
-//  Created by Patrick Chamelo on 6/24/13.
+//  Created by Patrick Chamelo on 6/28/13.
 //  Copyright (c) 2013 Patrick Chamelo. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -24,20 +24,39 @@
 // THE SOFTWARE.
 
 
-/** Permormance timer helper class */
-@interface NSKitPerformanceTimer : NSObject
+#import "NSKitMath.h"
 
 
-/**
- * Fire the perfomance timer.
- */
-- (void)fire;
+@implementation NSKitMath
 
 
-/**
- * Logs the time in milliseconds since fire was invoked.
- */
-- (void)logResult;
++ (BOOL)hasDecimalPoints:(CGFloat)value
+{
+    if (floor(value) != value)
+    {
+        return YES;
+    }
+    
+    return NO;
+}
+
+
++ (NSInteger)generateRandomFromNumber:(NSInteger)start
+                             toNumber:(NSInteger)end
+{
+    NSCKitAssert((start > end), @"Start number cannot be higher than the end number");
+    
+    int diff = abs((int)start - (int)end);
+    
+    if (diff == 0)
+    {
+        return start;
+    }
+    
+    NSInteger value = arc4random() % diff;
+
+    return start + value;
+}
 
 
 @end
