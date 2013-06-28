@@ -1,47 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/NSKitMemoryHelper.html">
+	<File path="Classes/NSKitMath.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/NSKitMemoryHelper</TokenIdentifier>
-			<Abstract type="html">Memory helper class</Abstract>
-			<DeclaredIn>NSKitMemoryHelper.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/NSKitMath</TokenIdentifier>
+			<Abstract type="html">Math helpers</Abstract>
+			<DeclaredIn>NSKitMath.h</DeclaredIn>
 			
 			<NodeRef refid="4"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/NSKitMemoryHelper/memoryForOption:</TokenIdentifier>
-			<Abstract type="html">Return the bytes for a given memory option.</Abstract>
-			<DeclaredIn>NSKitMemoryHelper.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/clm/NSKitMath/hasDecimalPoints:</TokenIdentifier>
+			<Abstract type="html">Checks if the float has decimal points.</Abstract>
+			<DeclaredIn>NSKitMath.h</DeclaredIn>			
 			
-			<Declaration>+ (NSUInteger)memoryForOption:(NSKitMemoryOption)option</Declaration>
+			<Declaration>+ (BOOL)hasDecimalPoints:(CGFloat)value</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>option</Name>
-					<Abstract type="html">The memory option. (free, inactive, active, wired or all)</Abstract>
+					<Name>value</Name>
+					<Abstract type="html">The value to check</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">NSUInteger Number of bytes for a given option.</Abstract></ReturnValue>
-			<Anchor>//api/name/memoryForOption:</Anchor>
+			<ReturnValue><Abstract type="html">YES if the number has decimal points; otherwise, NO.</Abstract></ReturnValue>
+			<Anchor>//api/name/hasDecimalPoints:</Anchor>
             <NodeRef refid="4"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/NSKitMemoryHelper/stringMemoryForOption:</TokenIdentifier>
-			<Abstract type="html">Return a string representation for a given memory option.</Abstract>
-			<DeclaredIn>NSKitMemoryHelper.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/clm/NSKitMath/generateRandomFromNumber:toNumber:</TokenIdentifier>
+			<Abstract type="html">Generates a random number from a start to end.</Abstract>
+			<DeclaredIn>NSKitMath.h</DeclaredIn>			
 			
-			<Declaration>+ (NSString *)stringMemoryForOption:(NSKitMemoryOption)option</Declaration>
+			<Declaration>+ (NSInteger)generateRandomFromNumber:(NSInteger)start toNumber:(NSInteger)end</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>option</Name>
-					<Abstract type="html">The memory option. (free, inactive, active, wired or all)</Abstract>
+					<Name>start</Name>
+					<Abstract type="html">The starting value for the random generation</Abstract>
+				</Parameter><Parameter>
+					<Name>end</Name>
+					<Abstract type="html">The ending value for the random generation</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">NSString A string representation of the total bytes in MB.</Abstract></ReturnValue>
-			<Anchor>//api/name/stringMemoryForOption:</Anchor>
+			<ReturnValue><Abstract type="html">NSInteger A random number between start and end.</Abstract></ReturnValue>
+			<Anchor>//api/name/generateRandomFromNumber:toNumber:</Anchor>
             <NodeRef refid="4"/>
 		</Token>
 		

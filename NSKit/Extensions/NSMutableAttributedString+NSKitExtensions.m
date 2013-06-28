@@ -27,9 +27,15 @@
 #import "NSMutableAttributedString+NSKitExtensions.h"
 
 
+// ------------------------------------------------------------------------------------------
+
+
 @implementation NSMutableAttributedString (NSKitExtensions)
 
 
+// ------------------------------------------------------------------------------------------
+#pragma mark - Methods
+// ------------------------------------------------------------------------------------------
 - (void)nskit_setColor:(NSColor *)color
 {
     [self nskit_setColor:color inRange:NSMakeRange(0, self.length)];

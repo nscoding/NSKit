@@ -1,52 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Categories/NSUserDefaults+NSKitExtensions.html">
+	<File path="Categories/NSTextStorage+NSKitExtensions.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cat/NSUserDefaults(NSKitExtensions)</TokenIdentifier>
-			<Abstract type="html">Extends the NSUserDefaults with helper methods</Abstract>
-			<DeclaredIn>NSUserDefaults+NSKitExtensions.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cat/NSTextStorage(NSKitExtensions)</TokenIdentifier>
+			<Abstract type="html">Scans the text storage for URLs and sets them with underline and a color
+of your choice, you must invoke the method your self.</Abstract>
+			<DeclaredIn>NSTextStorage+NSKitExtensions.h</DeclaredIn>
 			
 			<NodeRef refid="16"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSUserDefaults(NSKitExtensions)/setValue:forKey:</TokenIdentifier>
-			<Abstract type="html">Sets the value of the specified key, relative to the receiver, to the provided value,
-additionally will syncronize the defaults.</Abstract>
-			<DeclaredIn>NSUserDefaults+NSKitExtensions.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/intfm/NSTextStorage(NSKitExtensions)/scanForLinks</TokenIdentifier>
+			<Abstract type="html">Scans the text storage for URLs and sets them with underline and a color
+of your choice, you must invoke the method your self.</Abstract>
+			<DeclaredIn>NSTextStorage+NSKitExtensions.h</DeclaredIn>			
 			
-			<Declaration>+ (void)setValue:(id)value forKey:(NSString *)key</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>value</Name>
-					<Abstract type="html">The value to be stored in defaults for the given key, if the
-key is emplty the it removed the object for the given key.</Abstract>
-				</Parameter><Parameter>
-					<Name>key</Name>
-					<Abstract type="html">The name of the key.</Abstract>
-				</Parameter>
-			</Parameters>
+			<Declaration>- (void)scanForLinks</Declaration>
 			
-			<Anchor>//api/name/setValue:forKey:</Anchor>
-            <NodeRef refid="16"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSUserDefaults(NSKitExtensions)/valueForKey:</TokenIdentifier>
-			<Abstract type="html">The key name to retrieve the object.</Abstract>
-			<DeclaredIn>NSUserDefaults+NSKitExtensions.h</DeclaredIn>			
 			
-			<Declaration>+ (id)valueForKey:(NSString *)key</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>key</Name>
-					<Abstract type="html">The key name to retrieve the object.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">id The object for a give key.</Abstract></ReturnValue>
-			<Anchor>//api/name/valueForKey:</Anchor>
+			<Anchor>//api/name/scanForLinks</Anchor>
             <NodeRef refid="16"/>
 		</Token>
 		
