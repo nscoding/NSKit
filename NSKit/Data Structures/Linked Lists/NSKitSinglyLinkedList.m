@@ -26,6 +26,10 @@
 
 #import "NSKitSinglyLinkedList.h"
 
+
+// ------------------------------------------------------------------------------------------
+
+
 @interface NSKitSinglyLinkedList()
 {
      NSObject<NSKitLinkedListProtocol> *first;
@@ -33,9 +37,16 @@
 
 @end
 
+
+// ------------------------------------------------------------------------------------------
+
+
 @implementation NSKitSinglyLinkedList
 
 
+// ------------------------------------------------------------------------------------------
+#pragma mark - Methods
+// ------------------------------------------------------------------------------------------
 - (NSString *)description
 {
     NSObject<NSKitLinkedListProtocol> *node = first;

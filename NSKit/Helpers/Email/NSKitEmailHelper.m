@@ -25,13 +25,18 @@
 
 
 #import "NSKitEmailHelper.h"
-
 #import "NSKitUtilities.h"
+
+
+// ------------------------------------------------------------------------------------------
 
 
 @implementation NSKitEmailHelper
 
 
+// ------------------------------------------------------------------------------------------
+#pragma mark - Methods
+// ------------------------------------------------------------------------------------------
 + (void)sendEmailTo:(NSString *)email
             subject:(NSString *)subject
                body:(NSString *)body

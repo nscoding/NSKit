@@ -26,6 +26,10 @@
 
 #import "NSKitKeyboardHelper.h"
 
+
+// ------------------------------------------------------------------------------------------
+
+
 static unsigned short kReturnKey = 36;
 static unsigned short kReturnNumBlockKey = 76;
 static unsigned short kTabKey = 48;
@@ -36,9 +40,15 @@ static unsigned short kUpArrowKey = 126;
 static unsigned short kDownArrowKey = 125;
 
 
+// ------------------------------------------------------------------------------------------
+
+
 @implementation NSKitKeyboardHelper
 
 
+// ------------------------------------------------------------------------------------------
+#pragma mark - Methods
+// ------------------------------------------------------------------------------------------
 + (BOOL)returnKeyIsPressedForEvent:(NSEvent *)event
 {
     if (event && [event respondsToSelector:@selector(keyCode)] &&

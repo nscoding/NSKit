@@ -25,11 +25,23 @@
 
 #import "NSTextStorage+NSKitExtensions.h"
 
+
+// ------------------------------------------------------------------------------------------
+
+
 NSColor *NSKitTextStorageColor;
 NSColor *NSKitTextStorageLinkColor;
 
+
+// ------------------------------------------------------------------------------------------
+
+
 @implementation NSTextStorage (NSKitExtensions)
 
+
+// ------------------------------------------------------------------------------------------
+#pragma mark - Methods
+// ------------------------------------------------------------------------------------------
 - (void)scanForLinks;
 {
     [self beginEditing];
