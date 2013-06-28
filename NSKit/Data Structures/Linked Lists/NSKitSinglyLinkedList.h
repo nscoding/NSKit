@@ -24,6 +24,8 @@
 // THE SOFTWARE.
 
 #import "NSKitLinkedListProtocol.h"
+
+
 /**
  * Each element of an instance of a data object is represented as a group of memory locations called cell or node.
  * The elements may be stored in any arbitrary set of memory locations.

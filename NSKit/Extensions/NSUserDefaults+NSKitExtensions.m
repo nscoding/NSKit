@@ -26,9 +26,16 @@
 
 #import "NSUserDefaults+NSKitExtensions.h"
 
+
+// ------------------------------------------------------------------------------------------
+
+
 @implementation NSUserDefaults (NSKitExtensions)
 
 
+// ------------------------------------------------------------------------------------------
+#pragma mark - Class Methods
+// ------------------------------------------------------------------------------------------
 + (void)setValue:(id)value forKey:(NSString *)key
 {
     if (value)

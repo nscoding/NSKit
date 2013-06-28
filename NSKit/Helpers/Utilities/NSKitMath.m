@@ -1,8 +1,8 @@
 //
-//  NSKitTests.m
-//  NSKitTests
+//  NSKitMath.m
+//  NSKit
 //
-//  Created by Patrick Chamelo on 6/23/13.
+//  Created by Patrick Chamelo on 6/28/13.
 //  Copyright (c) 2013 Patrick Chamelo. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -24,22 +24,44 @@
 // THE SOFTWARE.
 
 
-#import <XCTest/XCTest.h>
+#import "NSKitMath.h"
 
-@interface NSKitTests : XCTestCase
 
-@end
+// ------------------------------------------------------------------------------------------
 
-@implementation NSKitTests
 
-- (void)setUp
+@implementation NSKitMath
+
+
+// ------------------------------------------------------------------------------------------
+#pragma mark - Methods
+// ------------------------------------------------------------------------------------------
++ (BOOL)hasDecimalPoints:(CGFloat)value
 {
-    [super setUp];
+    if (floor(value) != value)
+    {
+        return YES;
+    }
+    
+    return NO;
 }
 
-- (void)tearDown
+
++ (NSInteger)generateRandomFromNumber:(NSInteger)start
+                             toNumber:(NSInteger)end
 {
-    [super tearDown];
+    NSCKitAssert((start > end), @"Start number cannot be higher than the end number");
+    
+    int diff = abs((int)start - (int)end);
+    
+    if (diff == 0)
+    {
+        return start;
+    }
+    
+    NSInteger value = arc4random() % diff;
+
+    return start + value;
 }
 
 

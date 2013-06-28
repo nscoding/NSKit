@@ -36,6 +36,7 @@ typedef enum
 /** Memory helper class */
 @interface NSKitMemoryHelper : NSObject
 
+
 /**
  * Return the bytes for a given memory option.
  *
@@ -56,5 +57,6 @@ typedef enum
  *
  */
 + (NSString *)stringMemoryForOption:(NSKitMemoryOption)option;
+
 
 @end

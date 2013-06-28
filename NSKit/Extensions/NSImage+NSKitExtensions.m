@@ -27,9 +27,15 @@
 #import "NSImage+NSKitExtensions.h"
 
 
+// ------------------------------------------------------------------------------------------
+
+
 @implementation NSImage (NSKitExtensions)
 
 
+// ------------------------------------------------------------------------------------------
+#pragma mark - Class Methods
+// ------------------------------------------------------------------------------------------
 + (NSImage *)stretchableImageWithLeftWidth:(CGFloat)leftWidth
                                middleWidth:(CGFloat)patternWidth
                                 rightWidth:(CGFloat)rightWidth
