@@ -71,6 +71,7 @@
  * Set the font on the attributed string.
  *
  * @param font Set the Font color on the whole string.
+ * @warning *Important:* If the font is nil, an exception is raised.
  *
  */
 - (void)nskit_setFont:(NSFont *)font;
@@ -82,6 +83,7 @@
  * @param font The Font to be set on the text.
  *
  * @param range Set the Font on a given range.
+ * @warning *Important:* If the font is nil, an exception is raised.
  *
  */
 - (void)setFont:(NSFont *)font inRange:(NSRange)range;

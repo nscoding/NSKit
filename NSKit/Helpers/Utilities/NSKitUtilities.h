@@ -26,8 +26,10 @@
 /** Several different helpers */
 @interface NSKitUtilities : NSObject
 
+
 /**
- * Checks whether the email is valid or not.
+ * The methood returns true if the given string contains a valid e-mail
+ * address and false if it does not, but takes no other action.
  *
  * @param email The Email of the user
  *
