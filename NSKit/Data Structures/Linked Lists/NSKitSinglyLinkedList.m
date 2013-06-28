@@ -90,8 +90,14 @@
         
         return YES;
     }
+    
+    NSObject<NSKitLinkedListProtocol> *previousNode = nil;
+    NSObject<NSKitLinkedListProtocol> *currentNode = nil;
+    
+    [self previousObject:&previousNode
+           currentObject:&currentNode
+                 atIndex:index];
 
-    NSObject<NSKitLinkedListProtocol> *previousNode = [self objectAtIndex:index - 1];
     if (previousNode)
     {
         NSObject<NSKitLinkedListProtocol> *currentNext = previousNode.nextLink;
@@ -101,7 +107,6 @@
         return YES;
     }
     
-    NSObject<NSKitLinkedListProtocol> *currentNode = [self objectAtIndex:index];
     if (currentNode && currentNode == first)
     {
         NSObject<NSKitLinkedListProtocol> *current = first;
@@ -116,28 +121,50 @@
 
 - (id)objectAtIndex:(NSInteger)index
 {
+    NSObject<NSKitLinkedListProtocol> *currentNode = nil;
+    
+    [self previousObject:nil
+           currentObject:&currentNode
+                 atIndex:index];
+    
+    return currentNode;
+}
+
+
+- (void)previousObject:(NSObject **)prevObject
+         currentObject:(NSObject **)currentObject
+               atIndex:(NSInteger)index
+{
     NSObject<NSKitLinkedListProtocol> *objectToReturn = first;
     NSInteger count = 0;
     
     while (objectToReturn)
     {
-        if (count == index)
+        if (count == index - 1)
         {
-            return objectToReturn;
+            *prevObject = objectToReturn;
+        }
+        else if (count == index)
+        {
+            *currentObject = objectToReturn;
+            break;
         }
         
         count++;
         objectToReturn = objectToReturn.nextLink;
     }
-    
-    return nil;
 }
 
 
 - (id)deleObjectAtIndex:(NSInteger)index
 {
-    NSObject<NSKitLinkedListProtocol> *nodeToDelete = [self objectAtIndex:index];
-    NSObject<NSKitLinkedListProtocol> *previousNode = [self objectAtIndex:index - 1];
+    NSObject<NSKitLinkedListProtocol> *previousNode = nil;
+    NSObject<NSKitLinkedListProtocol> *nodeToDelete = nil;
+    
+    [self previousObject:&previousNode
+           currentObject:&nodeToDelete
+                 atIndex:index];
+    
     previousNode.nextLink = nodeToDelete.nextLink;
     
     if (index == 0)
