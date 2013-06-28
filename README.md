@@ -24,6 +24,7 @@ Is a collection of well-documented __Data Structures__, __Helpers__ and __Catego
 - NSKitEmailHelper
 - NSKitKeyboardHelper
 - NSKitUtilities
+- NSKitInternetDoctor
 
 Enjoy!
 
