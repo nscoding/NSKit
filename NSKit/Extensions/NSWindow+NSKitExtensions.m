@@ -26,9 +26,16 @@
 
 #import "NSWindow+NSKitExtensions.h"
 
+
+// ------------------------------------------------------------------------------------------
+
+
 @implementation NSWindow (NSKitExtensions)
 
 
+// ------------------------------------------------------------------------------------------
+#pragma mark - Object methods
+// ------------------------------------------------------------------------------------------
 - (void)centerHorizontallyAndVerticallyOnScreen:(NSScreen *)screen
 {
     NSRect box = self.frame;

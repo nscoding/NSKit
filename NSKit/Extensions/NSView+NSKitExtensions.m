@@ -27,10 +27,17 @@
 #import "NSView+NSKitExtensions.h"
 
 
+// ------------------------------------------------------------------------------------------
+
+
 @implementation NSView (NSKitExtensions)
 
 @dynamic center;
 
+
+// ------------------------------------------------------------------------------------------
+#pragma mark - Object Methods
+// ------------------------------------------------------------------------------------------
 - (void)setCenter:(NSPoint)center
 {
     [self setFrameOrigin:NSMakePoint(floorf(center.x - (NSWidth(self.bounds)) / 2),
@@ -56,6 +63,9 @@
 }
 
 
+// ------------------------------------------------------------------------------------------
+#pragma mark - Class Methods
+// ------------------------------------------------------------------------------------------
 + (void)animateWithDuration:(NSTimeInterval)duration
                  animations:(void (^)(void))animations
 {

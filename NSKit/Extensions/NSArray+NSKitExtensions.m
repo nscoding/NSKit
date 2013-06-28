@@ -26,9 +26,16 @@
 
 #import "NSArray+NSKitExtensions.h"
 
+
+// ------------------------------------------------------------------------------------------
+
+
 @implementation NSArray (NSKitExtensions)
 
 
+// ------------------------------------------------------------------------------------------
+#pragma mark - Methods
+// ------------------------------------------------------------------------------------------
 - (NSArray *)reversedArray
 {
     NSMutableArray *array = [NSMutableArray arrayWithCapacity:self.count];
