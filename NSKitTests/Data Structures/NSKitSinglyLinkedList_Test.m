@@ -12,6 +12,9 @@
 #import "NSKitLinkedListProtocol.h"
 
 
+// ------------------------------------------------------------------------------------------
+
+
 @interface NSKitNode : NSObject <NSKitLinkedListProtocol>
 
 /** link to the next node, used in NSKitSinglyLinkedList */
@@ -19,18 +22,29 @@
 
 @end
 
+
+// ------------------------------------------------------------------------------------------
+
+
 @implementation NSKitNode
 
 @end
 
 
-@interface NSKitSinglyLinkedList_Test : XCTestCase
+// ------------------------------------------------------------------------------------------
 
-@end
+
+@interface NSKitSinglyLinkedList_Test : XCTestCase @end
+
+
+// ------------------------------------------------------------------------------------------
+
 
 @implementation NSKitSinglyLinkedList_Test
 
-
+// ------------------------------------------------------------------------------------------
+#pragma mark - Tests
+// ------------------------------------------------------------------------------------------
 - (void)testInsert
 {
     NSKitSinglyLinkedList *linkedList = [[NSKitSinglyLinkedList alloc] init];
@@ -106,7 +120,7 @@
     {
         XCTAssertFalse(linkedList.count == 0, @"Count is not the same");
     }
-    
 }
+
 
 @end
