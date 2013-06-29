@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/NSKitHeapPriorityQueueComparator.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/NSKitHeapPriorityQueueComparator</TokenIdentifier>
+			<Abstract type="html">This protocol ensures that the object that is added in the priority queue
+has a comparisson mechanism.</Abstract>
+			<DeclaredIn>NSKitHeapPriorityQueue.h</DeclaredIn>
+			
+			<NodeRef refid="21"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSKitHeapPriorityQueueComparator/compare:to:</TokenIdentifier>
+			<Abstract type="html">Returns an NSComparisonResult value that indicates the ordering
+between to given objects.</Abstract>
+			<DeclaredIn>NSKitHeapPriorityQueue.h</DeclaredIn>			
+			
+			<Declaration>- (NSComparisonResult)compare:(id)obj1 to:(id)obj2</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>obj1</Name>
+					<Abstract type="html">The first object for the comparison</Abstract>
+				</Parameter><Parameter>
+					<Name>obj2</Name>
+					<Abstract type="html">The second object for the comparison</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">NSComparisonResult constant which is used to indicate the order.</Abstract></ReturnValue>
+			<Anchor>//api/name/compare:to:</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+	</File>
+</Tokens>
