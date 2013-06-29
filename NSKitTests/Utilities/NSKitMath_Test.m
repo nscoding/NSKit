@@ -11,13 +11,19 @@
 #import "NSKitMath.h"
 
 
-@interface NSKitMath_Test : XCTestCase
+// ------------------------------------------------------------------------------------------
 
-@end
+
+@interface NSKitMath_Test : XCTestCase @end
+
+
+// ------------------------------------------------------------------------------------------
 
 @implementation NSKitMath_Test
 
-
+// ------------------------------------------------------------------------------------------
+#pragma mark - Tests
+// ------------------------------------------------------------------------------------------
 - (void)testHasDecimals
 {
     XCTAssertTrue([NSKitMath hasDecimalPoints:4.44], @"Issue found with decimal points");
