@@ -10,25 +10,22 @@
 #import "NSArray+NSKitExtensions.h"
 #import "NSMutableArray+NSKitExtensions.h"
 
-@interface NSArray_Test : XCTestCase
 
-@end
+// ------------------------------------------------------------------------------------------
+
+
+@interface NSArray_Test : XCTestCase @end
+
+
+// ------------------------------------------------------------------------------------------
+
 
 @implementation NSArray_Test
 
-- (void)setUp
-{
-    [super setUp];
-    // Put setup code here; it will be run once, before the first test case.
-}
 
-- (void)tearDown
-{
-    // Put teardown code here; it will be run once, after the last test case.
-    [super tearDown];
-}
-
-
+// ------------------------------------------------------------------------------------------
+#pragma mark - Tests
+// ------------------------------------------------------------------------------------------
 - (void)testReverseArray
 {
     NSArray *array = @[@(1), @(2), @(3), @(4)];

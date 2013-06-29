@@ -27,14 +27,22 @@
 #import <XCTest/XCTest.h>
 #import "NSKitUtilities.h"
 
-@interface NSKitUtilities_Test : XCTestCase
 
-@end
+// ------------------------------------------------------------------------------------------
+
+
+@interface NSKitUtilities_Test : XCTestCase @end
+
+
+// ------------------------------------------------------------------------------------------
 
 
 @implementation NSKitUtilities_Test
 
 
+// ------------------------------------------------------------------------------------------
+#pragma mark - Tests
+// ------------------------------------------------------------------------------------------
 - (void)testFloor
 {
     NSRect previousRect = NSMakeRect(10.5, 5.5, 20.7, 30.2);
