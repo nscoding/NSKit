@@ -26,7 +26,10 @@
 
 #import "NSKit.h"
 
-BOOL AtLeastLion = NO;
+BOOL SystemAtLeastLion = NO;
+BOOL SystemAtLeastLionWithRetina = NO;
+BOOL SystemAtLeastMountainLion = NO;
+BOOL SystemAtLeastMaverics = NO;
 
 @implementation NSKit
 
