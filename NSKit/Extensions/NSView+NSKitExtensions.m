@@ -83,7 +83,7 @@
 {
     NSCKitAssert(animations, @"Animations parameter must not be NULL");
     
-    if (AtLeastLion)
+    if (SystemAtLeastLion)
     {
         [NSAnimationContext runAnimationGroup:^(NSAnimationContext *context)
         {
