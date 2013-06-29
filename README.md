@@ -25,8 +25,6 @@ Is a collection of well-documented __Data Structures__, __Helpers__ and __Catego
 - NSKitKeyboardHelper
 - NSKitUtilities
 - NSKitInternetDoctor
-<<<<<<< Updated upstream
-=======
 
 ###TODO
 - Double linked list
@@ -58,7 +56,6 @@ Found a bug or missing a feature? Don't hesitate to create a new issue here on G
 ###License
 
 NSKit is available under the MIT license. See the LICENSE file for details.
->>>>>>> Stashed changes
 
 Enjoy!
 
