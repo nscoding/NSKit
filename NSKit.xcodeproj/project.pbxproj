@@ -37,6 +37,9 @@
 		CD553958177E19BF004B33D8 /* NSKitInternetDoctor.h in Headers */ = {isa = PBXBuildFile; fileRef = CD553956177E19BF004B33D8 /* NSKitInternetDoctor.h */; };
 		CD553959177E19BF004B33D8 /* NSKitInternetDoctor.m in Sources */ = {isa = PBXBuildFile; fileRef = CD553957177E19BF004B33D8 /* NSKitInternetDoctor.m */; };
 		CD55395B177E1D37004B33D8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD55395A177E1D37004B33D8 /* SystemConfiguration.framework */; };
+		CD88570D177F9256007322E8 /* NSKitHeapPriorityQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = CD88570B177F9256007322E8 /* NSKitHeapPriorityQueue.h */; };
+		CD88570E177F9256007322E8 /* NSKitHeapPriorityQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = CD88570C177F9256007322E8 /* NSKitHeapPriorityQueue.m */; };
+		CD885711177F97EC007322E8 /* NSKitPriorityQueue_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = CD885710177F97EC007322E8 /* NSKitPriorityQueue_Test.m */; };
 		CD8BAA681779F13300DA1996 /* NSKitSinglyLinkedList.h in Headers */ = {isa = PBXBuildFile; fileRef = CD8BAA661779F13300DA1996 /* NSKitSinglyLinkedList.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD8BAA691779F13300DA1996 /* NSKitSinglyLinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8BAA671779F13300DA1996 /* NSKitSinglyLinkedList.m */; };
 		CDB2980D1777A4A700889B06 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB2980C1777A4A700889B06 /* Cocoa.framework */; };
@@ -100,6 +103,9 @@
 		CD553956177E19BF004B33D8 /* NSKitInternetDoctor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSKitInternetDoctor.h; sourceTree = "<group>"; };
 		CD553957177E19BF004B33D8 /* NSKitInternetDoctor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSKitInternetDoctor.m; sourceTree = "<group>"; };
 		CD55395A177E1D37004B33D8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		CD88570B177F9256007322E8 /* NSKitHeapPriorityQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSKitHeapPriorityQueue.h; sourceTree = "<group>"; };
+		CD88570C177F9256007322E8 /* NSKitHeapPriorityQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSKitHeapPriorityQueue.m; sourceTree = "<group>"; };
+		CD885710177F97EC007322E8 /* NSKitPriorityQueue_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSKitPriorityQueue_Test.m; sourceTree = "<group>"; };
 		CD8BAA661779F13300DA1996 /* NSKitSinglyLinkedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSKitSinglyLinkedList.h; sourceTree = "<group>"; };
 		CD8BAA671779F13300DA1996 /* NSKitSinglyLinkedList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSKitSinglyLinkedList.m; sourceTree = "<group>"; };
 		CDB298091777A4A700889B06 /* NSKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NSKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,6 +170,8 @@
 				CD0258611777C42D006A7C54 /* NSKitQueue.m */,
 				CD0258621777C42D006A7C54 /* NSKitStack.h */,
 				CD0258631777C42D006A7C54 /* NSKitStack.m */,
+				CD88570B177F9256007322E8 /* NSKitHeapPriorityQueue.h */,
+				CD88570C177F9256007322E8 /* NSKitHeapPriorityQueue.m */,
 			);
 			path = "Data Structures";
 			sourceTree = "<group>";
@@ -190,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				CD5538F8177CE980004B33D8 /* NSKitSinglyLinkedList_Test.m */,
+				CD885710177F97EC007322E8 /* NSKitPriorityQueue_Test.m */,
 			);
 			path = "Data Structures";
 			sourceTree = "<group>";
@@ -393,6 +402,7 @@
 				CD0258AF1778D981006A7C54 /* NSUserDefaults+NSKitExtensions.h in Headers */,
 				CD0258881778C88E006A7C54 /* NSTextStorage+NSKitExtensions.h in Headers */,
 				CD0258941778CBB2006A7C54 /* NSColor+NSKitExtensions.h in Headers */,
+				CD88570D177F9256007322E8 /* NSKitHeapPriorityQueue.h in Headers */,
 				CD0258641777C42D006A7C54 /* NSKitQueue.h in Headers */,
 				CD553900177D904E004B33D8 /* NSKitMath.h in Headers */,
 				CD02588C1778CB0A006A7C54 /* NSMutableAttributedString+NSKitExtensions.h in Headers */,
@@ -531,6 +541,7 @@
 				CDB298411777ACAB00889B06 /* NSWindow+NSKitExtensions.m in Sources */,
 				CD0258741777C5F5006A7C54 /* NSKitKeyboardHelper.m in Sources */,
 				CD553959177E19BF004B33D8 /* NSKitInternetDoctor.m in Sources */,
+				CD88570E177F9256007322E8 /* NSKitHeapPriorityQueue.m in Sources */,
 				CD0258951778CBB2006A7C54 /* NSColor+NSKitExtensions.m in Sources */,
 				CDB2985E1777C05700889B06 /* NSArray+NSKitExtensions.m in Sources */,
 				CD0258671777C42D006A7C54 /* NSKitStack.m in Sources */,
@@ -551,6 +562,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDC82B56177F2F7600FCC56B /* NSArray_Test.m in Sources */,
+				CD885711177F97EC007322E8 /* NSKitPriorityQueue_Test.m in Sources */,
 				CDC82B59177F2FC000FCC56B /* NSColor_Test.m in Sources */,
 				CD553906177D9710004B33D8 /* NSKitMath_Test.m in Sources */,
 				CD5538F9177CE980004B33D8 /* NSKitSinglyLinkedList_Test.m in Sources */,
