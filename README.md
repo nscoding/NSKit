@@ -17,6 +17,7 @@ Is a collection of well-documented __Data Structures__, __Helpers__ and __Catego
 ###Data Structures
 - NSKitQueue
 - NSKitStack
+- NSKitSinglyLinkedList
 
 ###Helpers
 - NSKitMemoryHelper
