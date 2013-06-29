@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>NSKitInternetDoctor Class Reference</title>
+		<title>NSKitHeapPriorityQueue Class Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">NSKitInternetDoctor Class Reference</h1>
+				<h1 class="hideInXcode">NSKitHeapPriorityQueue Class Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -37,23 +37,23 @@
 	
 	
 	
-	<option value="properties">Properties</option>
-	
-	<option value="//api/name/connected">&nbsp;&nbsp;&nbsp;&nbsp;connected</option>
-	
-	
-	
-	
-	<option value="class_methods">Class Methods</option>
-	
-	<option value="//api/name/shared">&nbsp;&nbsp;&nbsp;&nbsp;+ shared</option>
 	
 	
 	
 	
 	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/retry">&nbsp;&nbsp;&nbsp;&nbsp;- retry</option>
+	<option value="//api/name/addObject:">&nbsp;&nbsp;&nbsp;&nbsp;- addObject:</option>
+	
+	<option value="//api/name/allObjects">&nbsp;&nbsp;&nbsp;&nbsp;- allObjects</option>
+	
+	<option value="//api/name/count">&nbsp;&nbsp;&nbsp;&nbsp;- count</option>
+	
+	<option value="//api/name/nextObject">&nbsp;&nbsp;&nbsp;&nbsp;- nextObject</option>
+	
+	<option value="//api/name/peekObject">&nbsp;&nbsp;&nbsp;&nbsp;- peekObject</option>
+	
+	<option value="//api/name/removeAllObjects">&nbsp;&nbsp;&nbsp;&nbsp;- removeAllObjects</option>
 	
 	
 	
@@ -77,25 +77,23 @@
 
 
 
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/connected">connected</a></span></li>
-	
-</ul></li>
 
-
-
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shared">shared</a></span></li>
-	
-</ul></li>
 
 
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/retry">retry</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addObject:">addObject:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/allObjects">allObjects</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/count">count</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/nextObject">nextObject</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/peekObject">peekObject</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/removeAllObjects">removeAllObjects</a></span></li>
 	
 </ul></li>
 
@@ -104,7 +102,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="NSKitInternetDoctor Class Reference" name="top"></a>
+				<a title="NSKitHeapPriorityQueue Class Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -113,7 +111,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">NSKitInternetDoctor Class Reference</h1>
+						<h1 class="title title-header">NSKitHeapPriorityQueue Class Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -124,7 +122,7 @@
 	<td class="specification-value">NSObject</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">NSKitInternetDoctor.h</td>
+	<td class="specification-value">NSKitHeapPriorityQueue.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -134,7 +132,13 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Holds a reference to the default URL to ping.</p>
+						<p>Priority Queue implementation. A priority queue is a queue that&rsquo;s always kept
+sorted in a fast CFBinaryHeapRef implementation.</p>
+
+<ul>
+<li><a href="http://developer.apple.com/library/mac/documentation/CoreFoundation/Reference/CFBinaryHeapRef/CFBinaryHeapRef.pdf">http://developer.apple.com/library/mac/documentation/CoreFoundation/Reference/CFBinaryHeapRef/CFBinaryHeapRef.pdf</a></li>
+</ul>
+
 					</div>
 					
 					
@@ -152,24 +156,45 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/connected">&nbsp;&nbsp;connected</a></code>
-		<span class="tooltip"><p>Is connected.
-@discussion
-This property will inform you if you are connected to the internet or not.</p></span>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/shared">+&nbsp;shared</a></code>
-		<span class="tooltip"><p>Singleton, class method to receive back the singleton reference.</p></span>
+		<code><a href="#//api/name/count">&ndash;&nbsp;count</a></code>
+		<span class="tooltip"><p>Returns number of items in the queue</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/retry">&ndash;&nbsp;retry</a></code>
-		<span class="tooltip"><p>Method to retry pinging the given server.</p></span>
+		<code><a href="#//api/name/allObjects">&ndash;&nbsp;allObjects</a></code>
+		<span class="tooltip"><p>Returns all (sorted) objects in the queue</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addObject:">&ndash;&nbsp;addObject:</a></code>
+		<span class="tooltip"><p>Adds an object to the queue</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/removeAllObjects">&ndash;&nbsp;removeAllObjects</a></code>
+		<span class="tooltip"><p>Removes all objects from the queue</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/nextObject">&ndash;&nbsp;nextObject</a></code>
+		<span class="tooltip"><p>Removes the &ldquo;top-most&rdquo; (as determined by the callback sort function) object from the queue
+and returns it</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/peekObject">&ndash;&nbsp;peekObject</a></code>
+		<span class="tooltip"><p>Returns the &ldquo;top-most&rdquo; (as determined by the callback sort function) object from the queue
+without removing it from the queue</p></span>
 	</span>
 	
 	
@@ -182,93 +207,7 @@ This property will inform you if you are connected to the internet or not.</p></
 					
 					
 					
-					<div class="section section-methods">
-						<a title="Properties" name="properties"></a>
-						<h2 class="subtitle subtitle-methods">Properties</h2>
-						
-						<div class="section-method">
-	<a name="//api/name/connected" title="connected"></a>
-	<h3 class="subsubtitle method-title">connected</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Is connected.
-@discussion
-This property will inform you if you are connected to the internet or not.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL connected</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">NSKitInternetDoctor.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-					</div>
 					
-					
-					
-					<div class="section section-methods">
-						<a title="Class Methods" name="class_methods"></a>
-						<h2 class="subtitle subtitle-methods">Class Methods</h2>
-						
-						<div class="section-method">
-	<a name="//api/name/shared" title="shared"></a>
-	<h3 class="subsubtitle method-title">shared</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Singleton, class method to receive back the singleton reference.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>+ (NSKitInternetDoctor *)shared</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">NSKitInternetDoctor.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-					</div>
 					
 					
 					
@@ -277,18 +216,64 @@ This property will inform you if you are connected to the internet or not.</p>
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/retry" title="retry"></a>
-	<h3 class="subsubtitle method-title">retry</h3>
+	<a name="//api/name/addObject:" title="addObject:"></a>
+	<h3 class="subsubtitle method-title">addObject:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Method to retry pinging the given server.</p>
+		<p>Adds an object to the queue</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)retry</code></div>
+	<div class="method-subsection method-declaration"><code>- (void)addObject:(NSObject&lt;NSKitHeapPriorityQueueComparator&gt; *)<em>object</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>object</em></dt>
+			<dd><p>The object to be added to the priority queue</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSKitHeapPriorityQueue.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/allObjects" title="allObjects"></a>
+	<h3 class="subsubtitle method-title">allObjects</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns all (sorted) objects in the queue</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSArray *)allObjects</code></div>
 
     
 	
@@ -306,7 +291,153 @@ This property will inform you if you are connected to the internet or not.</p>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">NSKitInternetDoctor.h</code><br />
+		<code class="declared-in-ref">NSKitHeapPriorityQueue.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/count" title="count"></a>
+	<h3 class="subsubtitle method-title">count</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns number of items in the queue</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSUInteger)count</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSKitHeapPriorityQueue.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/nextObject" title="nextObject"></a>
+	<h3 class="subsubtitle method-title">nextObject</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Removes the &ldquo;top-most&rdquo; (as determined by the callback sort function) object from the queue
+and returns it</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSObject *)nextObject</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSKitHeapPriorityQueue.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/peekObject" title="peekObject"></a>
+	<h3 class="subsubtitle method-title">peekObject</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the &ldquo;top-most&rdquo; (as determined by the callback sort function) object from the queue
+without removing it from the queue</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSObject *)peekObject</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSKitHeapPriorityQueue.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/removeAllObjects" title="removeAllObjects"></a>
+	<h3 class="subsubtitle method-title">removeAllObjects</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Removes all objects from the queue</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)removeAllObjects</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSKitHeapPriorityQueue.h</code><br />
 	</div>				
 	
 	
