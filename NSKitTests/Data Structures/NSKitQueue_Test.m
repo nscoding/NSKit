@@ -1,8 +1,8 @@
 //
-//  NSKitMath_Test.m
+//  NSKitQueue_Test.m
 //  NSKit
 //
-//  Created by Patrick Chamelo on 6/28/13.
+//  Created by Patrick Chamelo on 6/27/13.
 //  Copyright (c) 2013 Patrick Chamelo. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -25,39 +25,52 @@
 
 
 #import <XCTest/XCTest.h>
-#import "NSKitMath.h"
+#import "NSKitQueue.h"
 
 
 // ------------------------------------------------------------------------------------------
 
 
-@interface NSKitMath_Test : XCTestCase @end
+@interface NSKitQueue_Test : XCTestCase @end
 
 
 // ------------------------------------------------------------------------------------------
 
-@implementation NSKitMath_Test
+
+@implementation NSKitQueue_Test
 
 // ------------------------------------------------------------------------------------------
 #pragma mark - Tests
 // ------------------------------------------------------------------------------------------
-- (void)testHasDecimals
+- (void)testQueue
 {
-    XCTAssertTrue([NSKitMath hasDecimalPoints:4.44], @"Issue found with decimal points");
-    XCTAssertTrue([NSKitMath hasDecimalPoints:1.001], @"Issue found with decimal points");
-    XCTAssertFalse([NSKitMath hasDecimalPoints:5], @"Issue found with decimal points");
-}
+    NSKitQueue *queue = [[NSKitQueue alloc] init];
+    NSNumber *node1 = [NSNumber numberWithInteger:1];
+    NSNumber *node2 = [NSNumber numberWithInteger:2];
+    NSNumber *node3 = [NSNumber numberWithInteger:3];
 
+    [queue add:node1];
+    XCTAssertTrue(queue.count == 1, @"Count is not the same");
 
-- (void)testGenerateRandom
-{
-    NSInteger random = [NSKitMath generateRandomFromNumber:10 toNumber:20];
-    XCTAssertTrue((random >= 10 && random <= 20), @"Issue found random generation");
+    [queue add:node2];
+    XCTAssertTrue(queue.count == 2, @"Count is not the same");
 
-    random = [NSKitMath generateRandomFromNumber:5 toNumber:5];
-    XCTAssertTrue((random == 5), @"Issue found random generation");
+    [queue add:node3];
+    XCTAssertTrue(queue.count == 3, @"Count is not the same");
 
-    XCTAssertTrueNoThrow([NSKitMath generateRandomFromNumber:6 toNumber:5], @"Should throw exception");
+    XCTAssertTrue(queue.isEmpty == NO, @"Queue is not empty");
+
+    XCTAssertTrue([queue first] == node1, @"Node is wrong");
+    XCTAssertTrue([queue last] == node3, @"Node is wrong");
+    
+    [queue remove];
+    XCTAssertTrue([queue first] == node2, @"Node is wrong");
+
+    [queue remove];
+    XCTAssertTrue([queue first] == node3, @"Node is wrong");
+
+    [queue remove];
+    XCTAssertTrue(queue.isEmpty == YES, @"Queue is not empty");
 }
 
 
