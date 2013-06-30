@@ -47,6 +47,12 @@ extern BOOL SystemAtLeastMaverics; // set at launch
 #import "NSColor+NSKitExtensions.h"
 #import "NSImage+NSKitExtensions.h"
 #import "NSUserDefaults+NSKitExtensions.h"
+#import "NSKitSoundProxy.h"
+#import "NSKitInternetDoctor.h"
+#import "NSKitMath.h"
+#import "NSKitHeapPriorityQueue.h"
+#import "NSKitMutableArray.h"
+#import "NSKitCGContextHelper.h"
 
 @interface NSKit : NSObject
 
