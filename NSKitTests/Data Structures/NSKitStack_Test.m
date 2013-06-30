@@ -1,8 +1,8 @@
 //
-//  NSKitMath_Test.m
+//  NSKitStack_Test.m
 //  NSKit
 //
-//  Created by Patrick Chamelo on 6/28/13.
+//  Created by Patrick Chamelo on 6/27/13.
 //  Copyright (c) 2013 Patrick Chamelo. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -25,39 +25,46 @@
 
 
 #import <XCTest/XCTest.h>
-#import "NSKitMath.h"
+#import "NSKitStack.h"
 
 
 // ------------------------------------------------------------------------------------------
 
 
-@interface NSKitMath_Test : XCTestCase @end
+@interface NSKitStack_Test : XCTestCase @end
 
 
 // ------------------------------------------------------------------------------------------
 
-@implementation NSKitMath_Test
+
+@implementation NSKitStack_Test
 
 // ------------------------------------------------------------------------------------------
 #pragma mark - Tests
 // ------------------------------------------------------------------------------------------
-- (void)testHasDecimals
+- (void)testStack
 {
-    XCTAssertTrue([NSKitMath hasDecimalPoints:4.44], @"Issue found with decimal points");
-    XCTAssertTrue([NSKitMath hasDecimalPoints:1.001], @"Issue found with decimal points");
-    XCTAssertFalse([NSKitMath hasDecimalPoints:5], @"Issue found with decimal points");
-}
+    NSKitStack *stack = [[NSKitStack alloc] init];
+    NSNumber *node1 = [NSNumber numberWithInteger:1];
+    NSNumber *node2 = [NSNumber numberWithInteger:2];
+    NSNumber *node3 = [NSNumber numberWithInteger:3];
 
+    [stack push:node1];
+    XCTAssertTrue(stack.count == 1, @"Count is not the same");
 
-- (void)testGenerateRandom
-{
-    NSInteger random = [NSKitMath generateRandomFromNumber:10 toNumber:20];
-    XCTAssertTrue((random >= 10 && random <= 20), @"Issue found random generation");
+    [stack push:node2];
+    XCTAssertTrue(stack.count == 2, @"Count is not the same");
 
-    random = [NSKitMath generateRandomFromNumber:5 toNumber:5];
-    XCTAssertTrue((random == 5), @"Issue found random generation");
+    [stack push:node3];
+    XCTAssertTrue(stack.count == 3, @"Count is not the same");
 
-    XCTAssertTrueNoThrow([NSKitMath generateRandomFromNumber:6 toNumber:5], @"Should throw exception");
+    XCTAssertTrue(stack.isEmpty == NO, @"Stack is not empty");
+
+    XCTAssertTrue([stack pop] == node3, @"Node is wrong");
+    XCTAssertTrue([stack pop] == node2, @"Node is wrong");
+    XCTAssertTrue([stack pop] == node1, @"Node is wrong");
+    
+    XCTAssertTrue(stack.isEmpty == YES, @"Stack is not empty");
 }
 
 
