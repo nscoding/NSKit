@@ -1,8 +1,8 @@
 //
-//  NSKitInternetDoctor.h
+//  NSKitSoundProxy.h
 //  NSKit
 //
-//  Created by Patrick Chamelo on 6/28/13.
+//  Created by Patrick Chamelo on 6/30/13.
 //  Copyright (c) 2013 Patrick Chamelo. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -24,31 +24,17 @@
 // THE SOFTWARE.
 
 
-/**
- Holds a reference to the default URL to ping.
- */
-extern NSString *NSKitPingURL;
+#import <AudioToolbox/AudioServices.h>
 
-@interface NSKitInternetDoctor : NSObject
+/** Sound helper */
+@interface NSKitSoundProxy : NSObject
 
 /**
- * Is connected.
- * @discussion
- * This property will inform you if you are connected to the internet or not.
- *
+ * Plays a short sound from a give URL path.
+ * @param soundURL Thu user of the path to play the short sound 
+ * e.g. [[NSBundle mainBundle] URLForResource:@"sound" withExtension:@"wav"];
  */
-@property (nonatomic, assign) BOOL connected;
++ (void)playSoundAtURL:(NSURL *)soundURL;
 
-
-/**
- * Singleton, class method to receive back the singleton reference.
- */
-+ (NSKitInternetDoctor *)shared;
-
-
-/**
- * Method to retry pinging the given server.
- */
-- (void)retry;
 
 @end

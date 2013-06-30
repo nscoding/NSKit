@@ -23,6 +23,7 @@
 						<NodeRef refid="10"/>
 						<NodeRef refid="11"/>
 						<NodeRef refid="12"/>
+						<NodeRef refid="13"/>
 						
 					</Subnodes>
 				</Node>
@@ -32,7 +33,6 @@
 					<Name>Categories</Name>
 					<Path>index.html</Path>
 					<Subnodes>
-						<NodeRef refid="13"/>
 						<NodeRef refid="14"/>
 						<NodeRef refid="15"/>
 						<NodeRef refid="16"/>
@@ -41,6 +41,7 @@
 						<NodeRef refid="19"/>
 						<NodeRef refid="20"/>
 						<NodeRef refid="21"/>
+						<NodeRef refid="22"/>
 						
 					</Subnodes>
 				</Node>
@@ -50,8 +51,8 @@
 					<Name>Protocols</Name>
 					<Path>index.html</Path>
 					<Subnodes>
-						<NodeRef refid="22"/>
 						<NodeRef refid="23"/>
+						<NodeRef refid="24"/>
 						
 					</Subnodes>
 				</Node>
@@ -102,56 +103,60 @@
 			<Path>Classes/NSKitSinglyLinkedList.html</Path>
 		</Node>
 		<Node id="11">
+			<Name>NSKitSoundProxy</Name>
+			<Path>Classes/NSKitSoundProxy.html</Path>
+		</Node>
+		<Node id="12">
 			<Name>NSKitStack</Name>
 			<Path>Classes/NSKitStack.html</Path>
 		</Node>
-		<Node id="12">
+		<Node id="13">
 			<Name>NSKitUtilities</Name>
 			<Path>Classes/NSKitUtilities.html</Path>
 		</Node>
 		
-		<Node id="13">
+		<Node id="14">
 			<Name>NSArray(NSKitExtensions)</Name>
 			<Path>Categories/NSArray+NSKitExtensions.html</Path>
 		</Node>
-		<Node id="14">
+		<Node id="15">
 			<Name>NSColor(NSKitExtensions)</Name>
 			<Path>Categories/NSColor+NSKitExtensions.html</Path>
 		</Node>
-		<Node id="15">
+		<Node id="16">
 			<Name>NSImage(NSKitExtensions)</Name>
 			<Path>Categories/NSImage+NSKitExtensions.html</Path>
 		</Node>
-		<Node id="16">
+		<Node id="17">
 			<Name>NSMutableArray(NSKitExtensions)</Name>
 			<Path>Categories/NSMutableArray+NSKitExtensions.html</Path>
 		</Node>
-		<Node id="17">
+		<Node id="18">
 			<Name>NSMutableAttributedString(NSKitExtensions)</Name>
 			<Path>Categories/NSMutableAttributedString+NSKitExtensions.html</Path>
 		</Node>
-		<Node id="18">
+		<Node id="19">
 			<Name>NSTextStorage(NSKitExtensions)</Name>
 			<Path>Categories/NSTextStorage+NSKitExtensions.html</Path>
 		</Node>
-		<Node id="19">
+		<Node id="20">
 			<Name>NSUserDefaults(NSKitExtensions)</Name>
 			<Path>Categories/NSUserDefaults+NSKitExtensions.html</Path>
 		</Node>
-		<Node id="20">
+		<Node id="21">
 			<Name>NSView(NSKitExtensions)</Name>
 			<Path>Categories/NSView+NSKitExtensions.html</Path>
 		</Node>
-		<Node id="21">
+		<Node id="22">
 			<Name>NSWindow(NSKitExtensions)</Name>
 			<Path>Categories/NSWindow+NSKitExtensions.html</Path>
 		</Node>
 		
-		<Node id="22">
+		<Node id="23">
 			<Name>NSKitHeapPriorityQueueComparator</Name>
 			<Path>Protocols/NSKitHeapPriorityQueueComparator.html</Path>
 		</Node>
-		<Node id="23">
+		<Node id="24">
 			<Name>NSKitLinkedListProtocol</Name>
 			<Path>Protocols/NSKitLinkedListProtocol.html</Path>
 		</Node>

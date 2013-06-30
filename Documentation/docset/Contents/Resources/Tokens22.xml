@@ -1,35 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Protocols/NSKitHeapPriorityQueueComparator.html">
+	<File path="Categories/NSWindow+NSKitExtensions.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intf/NSKitHeapPriorityQueueComparator</TokenIdentifier>
-			<Abstract type="html">This protocol ensures that the object that is added in the priority queue
-has a comparisson mechanism.</Abstract>
-			<DeclaredIn>NSKitHeapPriorityQueue.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cat/NSWindow(NSKitExtensions)</TokenIdentifier>
+			<Abstract type="html">Extends the NSWindow class</Abstract>
+			<DeclaredIn>NSWindow+NSKitExtensions.h</DeclaredIn>
 			
 			<NodeRef refid="22"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSKitHeapPriorityQueueComparator/compare:to:</TokenIdentifier>
-			<Abstract type="html">Returns an NSComparisonResult value that indicates the ordering
-between to given objects.</Abstract>
-			<DeclaredIn>NSKitHeapPriorityQueue.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/intfm/NSWindow(NSKitExtensions)/centerHorizontallyAndVerticallyOnScreen:</TokenIdentifier>
+			<Abstract type="html">Moves the window in the center of the given screen.</Abstract>
+			<DeclaredIn>NSWindow+NSKitExtensions.h</DeclaredIn>			
 			
-			<Declaration>- (NSComparisonResult)compare:(id)obj1 to:(id)obj2</Declaration>
+			<Declaration>- (void)centerHorizontallyAndVerticallyOnScreen:(NSScreen *)screen</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>obj1</Name>
-					<Abstract type="html">The first object for the comparison</Abstract>
-				</Parameter><Parameter>
-					<Name>obj2</Name>
-					<Abstract type="html">The second object for the comparison</Abstract>
+					<Name>screen</Name>
+					<Abstract type="html">the screen where the window will be centered,
+if screen is nil, the main screen is used.</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">NSComparisonResult constant which is used to indicate the order.</Abstract></ReturnValue>
-			<Anchor>//api/name/compare:to:</Anchor>
+			
+			<Anchor>//api/name/centerHorizontallyAndVerticallyOnScreen:</Anchor>
+            <NodeRef refid="22"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSWindow(NSKitExtensions)/centerHorizontallyAndVertically</TokenIdentifier>
+			<Abstract type="html">Moves the window in the center of the window screen.</Abstract>
+			<DeclaredIn>NSWindow+NSKitExtensions.h</DeclaredIn>			
+			
+			<Declaration>- (void)centerHorizontallyAndVertically</Declaration>
+			
+			
+			<Anchor>//api/name/centerHorizontallyAndVertically</Anchor>
+            <NodeRef refid="22"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSWindow(NSKitExtensions)/isFullScreen</TokenIdentifier>
+			<Abstract type="html">Check if the window is Fullscreen mode.</Abstract>
+			<DeclaredIn>NSWindow+NSKitExtensions.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)isFullScreen</Declaration>
+			
+			<ReturnValue><Abstract type="html">YES if the window is in Fullscreen; otherwise, NO.</Abstract></ReturnValue>
+			<Anchor>//api/name/isFullScreen</Anchor>
             <NodeRef refid="22"/>
 		</Token>
 		

@@ -1,85 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Protocols/NSKitLinkedListProtocol.html">
+	<File path="Protocols/NSKitHeapPriorityQueueComparator.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intf/NSKitLinkedListProtocol</TokenIdentifier>
-			<Abstract type="html">Linked list protocol, object that will be added in the linked lists must conform to this protocol.</Abstract>
-			<DeclaredIn>NSKitLinkedListProtocol.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intf/NSKitHeapPriorityQueueComparator</TokenIdentifier>
+			<Abstract type="html">This protocol ensures that the object that is added in the priority queue
+has a comparisson mechanism.</Abstract>
+			<DeclaredIn>NSKitHeapPriorityQueue.h</DeclaredIn>
 			
 			<NodeRef refid="23"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSKitLinkedListProtocol/setNextLink:</TokenIdentifier>
-			<Abstract type="html">link to the next node, used in NSKitSinglyLinkedList</Abstract>
-			<DeclaredIn>NSKitLinkedListProtocol.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/intfm/NSKitHeapPriorityQueueComparator/compare:to:</TokenIdentifier>
+			<Abstract type="html">Returns an NSComparisonResult value that indicates the ordering
+between to given objects.</Abstract>
+			<DeclaredIn>NSKitHeapPriorityQueue.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, strong) NSObject&lt;NSKitLinkedListProtocol&gt; *nextLink</Declaration>
-			
-			
-			<Anchor>//api/name/nextLink</Anchor>
-            <NodeRef refid="23"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSKitLinkedListProtocol/nextLink</TokenIdentifier>
-			<Abstract type="html">link to the next node, used in NSKitSinglyLinkedList</Abstract>
-			<DeclaredIn>NSKitLinkedListProtocol.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, strong) NSObject&lt;NSKitLinkedListProtocol&gt; *nextLink</Declaration>
-			
-			
-			<Anchor>//api/name/nextLink</Anchor>
-            <NodeRef refid="23"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/NSKitLinkedListProtocol/nextLink</TokenIdentifier>
-			<Abstract type="html">link to the next node, used in NSKitSinglyLinkedList</Abstract>
-			<DeclaredIn>NSKitLinkedListProtocol.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, strong) NSObject&lt;NSKitLinkedListProtocol&gt; *nextLink</Declaration>
-			
-			
-			<Anchor>//api/name/nextLink</Anchor>
-            <NodeRef refid="23"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSKitLinkedListProtocol/setPreviousLink:</TokenIdentifier>
-			<Abstract type="html">link to the previous node, used in Double linked list</Abstract>
-			<DeclaredIn>NSKitLinkedListProtocol.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, strong) NSObject&lt;NSKitLinkedListProtocol&gt; *previousLink</Declaration>
-			
-			
-			<Anchor>//api/name/previousLink</Anchor>
-            <NodeRef refid="23"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSKitLinkedListProtocol/previousLink</TokenIdentifier>
-			<Abstract type="html">link to the previous node, used in Double linked list</Abstract>
-			<DeclaredIn>NSKitLinkedListProtocol.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, strong) NSObject&lt;NSKitLinkedListProtocol&gt; *previousLink</Declaration>
-			
-			
-			<Anchor>//api/name/previousLink</Anchor>
-            <NodeRef refid="23"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/NSKitLinkedListProtocol/previousLink</TokenIdentifier>
-			<Abstract type="html">link to the previous node, used in Double linked list</Abstract>
-			<DeclaredIn>NSKitLinkedListProtocol.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, strong) NSObject&lt;NSKitLinkedListProtocol&gt; *previousLink</Declaration>
-			
-			
-			<Anchor>//api/name/previousLink</Anchor>
+			<Declaration>- (NSComparisonResult)compare:(id)obj1 to:(id)obj2</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>obj1</Name>
+					<Abstract type="html">The first object for the comparison</Abstract>
+				</Parameter><Parameter>
+					<Name>obj2</Name>
+					<Abstract type="html">The second object for the comparison</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">NSComparisonResult constant which is used to indicate the order.</Abstract></ReturnValue>
+			<Anchor>//api/name/compare:to:</Anchor>
             <NodeRef refid="23"/>
 		</Token>
 		
