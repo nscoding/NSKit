@@ -1,4 +1,4 @@
 Documentation set was installed to Xcode!
 
 Path: /Users/Patrick/Library/Developer/Shared/Documentation/DocSets/com.nscoding.NSKit.docset
-Time: 2013-06-30 00:20:37 +0000
+Time: 2013-06-30 11:00:23 +0000
