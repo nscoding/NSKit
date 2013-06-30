@@ -1,16 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/NSKitMutableArray.html">
+	<File path="Classes/NSKitMemoryHelper.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/NSKitMutableArray</TokenIdentifier>
-			<Abstract type="html">A basic overiding the primitive methods of NSMutableArray and NSArray
-to create a subclass for NSMutable array used with the Stack and the Queue.</Abstract>
-			<DeclaredIn>NSKitMutableArray.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/NSKitMemoryHelper</TokenIdentifier>
+			<Abstract type="html">Memory helper class</Abstract>
+			<DeclaredIn>NSKitMemoryHelper.h</DeclaredIn>
 			
 			<NodeRef refid="7"/>
 		</Token>
 		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/NSKitMemoryHelper/memoryForOption:</TokenIdentifier>
+			<Abstract type="html">Return the bytes for a given memory option.</Abstract>
+			<DeclaredIn>NSKitMemoryHelper.h</DeclaredIn>			
+			
+			<Declaration>+ (NSUInteger)memoryForOption:(NSKitMemoryOption)option</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>option</Name>
+					<Abstract type="html">The memory option. (free, inactive, active, wired or all)</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">NSUInteger Number of bytes for a given option.</Abstract></ReturnValue>
+			<Anchor>//api/name/memoryForOption:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/NSKitMemoryHelper/stringMemoryForOption:</TokenIdentifier>
+			<Abstract type="html">Return a string representation for a given memory option.</Abstract>
+			<DeclaredIn>NSKitMemoryHelper.h</DeclaredIn>			
+			
+			<Declaration>+ (NSString *)stringMemoryForOption:(NSKitMemoryOption)option</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>option</Name>
+					<Abstract type="html">The memory option. (free, inactive, active, wired or all)</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">NSString A string representation of the total bytes in MB.</Abstract></ReturnValue>
+			<Anchor>//api/name/stringMemoryForOption:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
 		
 	</File>
 </Tokens>

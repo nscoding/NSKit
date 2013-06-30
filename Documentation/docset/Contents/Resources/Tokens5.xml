@@ -1,50 +1,166 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/NSKitMath.html">
+	<File path="Classes/NSKitKeyboardHelper.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/NSKitMath</TokenIdentifier>
-			<Abstract type="html">Math helpers</Abstract>
-			<DeclaredIn>NSKitMath.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/NSKitKeyboardHelper</TokenIdentifier>
+			<Abstract type="html">Keyboard helper class</Abstract>
+			<DeclaredIn>NSKitKeyboardHelper.h</DeclaredIn>
 			
 			<NodeRef refid="5"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/NSKitMath/hasDecimalPoints:</TokenIdentifier>
-			<Abstract type="html">Checks if the float has decimal points.</Abstract>
-			<DeclaredIn>NSKitMath.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/clm/NSKitKeyboardHelper/returnKeyIsPressedForEvent:</TokenIdentifier>
+			<Abstract type="html">Check if the &quot;Return&quot; key is pressed for a given event.</Abstract>
+			<DeclaredIn>NSKitKeyboardHelper.h</DeclaredIn>			
 			
-			<Declaration>+ (BOOL)hasDecimalPoints:(CGFloat)value</Declaration>
+			<Declaration>+ (BOOL)returnKeyIsPressedForEvent:(NSEvent *)event</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>value</Name>
-					<Abstract type="html">The value to check</Abstract>
+					<Name>event</Name>
+					<Abstract type="html">The event to check the pressed key.</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">YES if the number has decimal points; otherwise, NO.</Abstract></ReturnValue>
-			<Anchor>//api/name/hasDecimalPoints:</Anchor>
+			<ReturnValue><Abstract type="html">YES if the return key is pressed.</Abstract></ReturnValue>
+			<Anchor>//api/name/returnKeyIsPressedForEvent:</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/NSKitMath/generateRandomFromNumber:toNumber:</TokenIdentifier>
-			<Abstract type="html">Generates a random number from a start to end.</Abstract>
-			<DeclaredIn>NSKitMath.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/clm/NSKitKeyboardHelper/tabKeyIsPressedForEvent:</TokenIdentifier>
+			<Abstract type="html">Check if the &quot;Tab&quot; key is pressed for a given event.</Abstract>
+			<DeclaredIn>NSKitKeyboardHelper.h</DeclaredIn>			
 			
-			<Declaration>+ (NSInteger)generateRandomFromNumber:(NSInteger)start toNumber:(NSInteger)end</Declaration>
+			<Declaration>+ (BOOL)tabKeyIsPressedForEvent:(NSEvent *)event</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>start</Name>
-					<Abstract type="html">The starting value for the random generation</Abstract>
-				</Parameter><Parameter>
-					<Name>end</Name>
-					<Abstract type="html">The ending value for the random generation</Abstract>
+					<Name>event</Name>
+					<Abstract type="html">The event to check the pressed key.</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">NSInteger A random number between start and end.</Abstract></ReturnValue>
-			<Anchor>//api/name/generateRandomFromNumber:toNumber:</Anchor>
+			<ReturnValue><Abstract type="html">YES if the &quot;Tab&quot; key is pressed.</Abstract></ReturnValue>
+			<Anchor>//api/name/tabKeyIsPressedForEvent:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/NSKitKeyboardHelper/shiftKeyIsPressedForEvent:</TokenIdentifier>
+			<Abstract type="html">Check if the &quot;Shift&quot; key is pressed for a given event.</Abstract>
+			<DeclaredIn>NSKitKeyboardHelper.h</DeclaredIn>			
+			
+			<Declaration>+ (BOOL)shiftKeyIsPressedForEvent:(NSEvent *)event</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>event</Name>
+					<Abstract type="html">The event to check the pressed key.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if the &quot;Shift&quot; key is pressed.</Abstract></ReturnValue>
+			<Anchor>//api/name/shiftKeyIsPressedForEvent:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/NSKitKeyboardHelper/escapeKeyIsPressedForEvent:</TokenIdentifier>
+			<Abstract type="html">Check if the &quot;Escape&quot; key is pressed for a given event.</Abstract>
+			<DeclaredIn>NSKitKeyboardHelper.h</DeclaredIn>			
+			
+			<Declaration>+ (BOOL)escapeKeyIsPressedForEvent:(NSEvent *)event</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>event</Name>
+					<Abstract type="html">The event to check the pressed key.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if the &quot;Escape&quot; key is pressed.</Abstract></ReturnValue>
+			<Anchor>//api/name/escapeKeyIsPressedForEvent:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/NSKitKeyboardHelper/leftKeyIsPressedForEvent:</TokenIdentifier>
+			<Abstract type="html">Check if the &quot;Left&quot; key is pressed for a given event.</Abstract>
+			<DeclaredIn>NSKitKeyboardHelper.h</DeclaredIn>			
+			
+			<Declaration>+ (BOOL)leftKeyIsPressedForEvent:(NSEvent *)event</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>event</Name>
+					<Abstract type="html">The event to check the pressed key.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if the &quot;Left&quot; key is pressed.</Abstract></ReturnValue>
+			<Anchor>//api/name/leftKeyIsPressedForEvent:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/NSKitKeyboardHelper/rightKeyIsPressedForEvent:</TokenIdentifier>
+			<Abstract type="html">Check if the &quot;Right&quot; key is pressed for a given event.</Abstract>
+			<DeclaredIn>NSKitKeyboardHelper.h</DeclaredIn>			
+			
+			<Declaration>+ (BOOL)rightKeyIsPressedForEvent:(NSEvent *)event</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>event</Name>
+					<Abstract type="html">The event to check the pressed key.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if the &quot;Right&quot; key is pressed.</Abstract></ReturnValue>
+			<Anchor>//api/name/rightKeyIsPressedForEvent:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/NSKitKeyboardHelper/upKeyIsPressedForEvent:</TokenIdentifier>
+			<Abstract type="html">Check if the &quot;Up&quot; key is pressed for a given event.</Abstract>
+			<DeclaredIn>NSKitKeyboardHelper.h</DeclaredIn>			
+			
+			<Declaration>+ (BOOL)upKeyIsPressedForEvent:(NSEvent *)event</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>event</Name>
+					<Abstract type="html">The event to check the pressed key.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if the &quot;Up&quot; key is pressed.</Abstract></ReturnValue>
+			<Anchor>//api/name/upKeyIsPressedForEvent:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/NSKitKeyboardHelper/downKeyIsPressedForEvent:</TokenIdentifier>
+			<Abstract type="html">Check if the &quot;Down&quot; key is pressed for a given event.</Abstract>
+			<DeclaredIn>NSKitKeyboardHelper.h</DeclaredIn>			
+			
+			<Declaration>+ (BOOL)downKeyIsPressedForEvent:(NSEvent *)event</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>event</Name>
+					<Abstract type="html">The event to check the pressed key.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if the &quot;Down&quot; key is pressed.</Abstract></ReturnValue>
+			<Anchor>//api/name/downKeyIsPressedForEvent:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/NSKitKeyboardHelper/controlKeyIsPressedForEvent:</TokenIdentifier>
+			<Abstract type="html">Check if the &quot;Control&quot; key is pressed for a given event.</Abstract>
+			<DeclaredIn>NSKitKeyboardHelper.h</DeclaredIn>			
+			
+			<Declaration>+ (BOOL)controlKeyIsPressedForEvent:(NSEvent *)event</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>event</Name>
+					<Abstract type="html">The event to check the pressed key.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if the &quot;Control&quot; key is pressed.</Abstract></ReturnValue>
+			<Anchor>//api/name/controlKeyIsPressedForEvent:</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		
