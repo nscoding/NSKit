@@ -1,79 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/NSKitInternetDoctor.html">
+	<File path="Classes/NSKitHeapPriorityQueue.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/NSKitInternetDoctor</TokenIdentifier>
-			<Abstract type="html">Holds a reference to the default URL to ping.</Abstract>
-			<DeclaredIn>NSKitInternetDoctor.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/NSKitHeapPriorityQueue</TokenIdentifier>
+			<Abstract type="html">Priority Queue implementation. A priority queue is a queue that&apos;s always kept
+sorted in a fast CFBinaryHeapRef implementation.</Abstract>
+			<DeclaredIn>NSKitHeapPriorityQueue.h</DeclaredIn>
 			
 			<NodeRef refid="3"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitInternetDoctor/setConnected:</TokenIdentifier>
-			<Abstract type="html">Is connected.
-@discussion
-This property will inform you if you are connected to the internet or not.</Abstract>
-			<DeclaredIn>NSKitInternetDoctor.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitHeapPriorityQueue/count</TokenIdentifier>
+			<Abstract type="html">Returns number of items in the queue</Abstract>
+			<DeclaredIn>NSKitHeapPriorityQueue.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, assign) BOOL connected</Declaration>
+			<Declaration>- (NSUInteger)count</Declaration>
 			
 			
-			<Anchor>//api/name/connected</Anchor>
+			<Anchor>//api/name/count</Anchor>
             <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitInternetDoctor/connected</TokenIdentifier>
-			<Abstract type="html">Is connected.
-@discussion
-This property will inform you if you are connected to the internet or not.</Abstract>
-			<DeclaredIn>NSKitInternetDoctor.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitHeapPriorityQueue/allObjects</TokenIdentifier>
+			<Abstract type="html">Returns all (sorted) objects in the queue</Abstract>
+			<DeclaredIn>NSKitHeapPriorityQueue.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, assign) BOOL connected</Declaration>
+			<Declaration>- (NSArray *)allObjects</Declaration>
 			
 			
-			<Anchor>//api/name/connected</Anchor>
+			<Anchor>//api/name/allObjects</Anchor>
             <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/NSKitInternetDoctor/connected</TokenIdentifier>
-			<Abstract type="html">Is connected.
-@discussion
-This property will inform you if you are connected to the internet or not.</Abstract>
-			<DeclaredIn>NSKitInternetDoctor.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitHeapPriorityQueue/addObject:</TokenIdentifier>
+			<Abstract type="html">Adds an object to the queue</Abstract>
+			<DeclaredIn>NSKitHeapPriorityQueue.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, assign) BOOL connected</Declaration>
+			<Declaration>- (void)addObject:(NSObject&lt;NSKitHeapPriorityQueueComparator&gt; *)object</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>object</Name>
+					<Abstract type="html">The object to be added to the priority queue</Abstract>
+				</Parameter>
+			</Parameters>
 			
-			
-			<Anchor>//api/name/connected</Anchor>
+			<Anchor>//api/name/addObject:</Anchor>
             <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/NSKitInternetDoctor/shared</TokenIdentifier>
-			<Abstract type="html">Singleton, class method to receive back the singleton reference.</Abstract>
-			<DeclaredIn>NSKitInternetDoctor.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitHeapPriorityQueue/removeAllObjects</TokenIdentifier>
+			<Abstract type="html">Removes all objects from the queue</Abstract>
+			<DeclaredIn>NSKitHeapPriorityQueue.h</DeclaredIn>			
 			
-			<Declaration>+ (NSKitInternetDoctor *)shared</Declaration>
+			<Declaration>- (void)removeAllObjects</Declaration>
 			
 			
-			<Anchor>//api/name/shared</Anchor>
+			<Anchor>//api/name/removeAllObjects</Anchor>
             <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitInternetDoctor/retry</TokenIdentifier>
-			<Abstract type="html">Method to retry pinging the given server.</Abstract>
-			<DeclaredIn>NSKitInternetDoctor.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitHeapPriorityQueue/nextObject</TokenIdentifier>
+			<Abstract type="html">Removes the &quot;top-most&quot; (as determined by the callback sort function) object from the queue
+and returns it</Abstract>
+			<DeclaredIn>NSKitHeapPriorityQueue.h</DeclaredIn>			
 			
-			<Declaration>- (void)retry</Declaration>
+			<Declaration>- (NSObject *)nextObject</Declaration>
 			
 			
-			<Anchor>//api/name/retry</Anchor>
+			<Anchor>//api/name/nextObject</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitHeapPriorityQueue/peekObject</TokenIdentifier>
+			<Abstract type="html">Returns the &quot;top-most&quot; (as determined by the callback sort function) object from the queue
+without removing it from the queue</Abstract>
+			<DeclaredIn>NSKitHeapPriorityQueue.h</DeclaredIn>			
+			
+			<Declaration>- (NSObject *)peekObject</Declaration>
+			
+			
+			<Anchor>//api/name/peekObject</Anchor>
             <NodeRef refid="3"/>
 		</Token>
 		
