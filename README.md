@@ -5,37 +5,37 @@ Is a collection of well-documented __Data Structures__, __Helpers__ and __Catego
 
 ###Categories
 - NSArray(NSKitExtensions)
+- NSColor(NSKitExtensions)
+- NSImage(NSKitExtensions)
 - NSMutableArray(NSKitExtensions)
 - NSMutableAttributedString(NSKitExtensions)
 - NSTextStorage(NSKitExtensions)
+- NSUserDefaults(NSKitExtensions)
 - NSView(NSKitExtensions)
 - NSWindow(NSKitExtensions)
-- NSColor(NSKitExtensions)
-- NSImage(NSKitExtensions)
-- NSUserDefaults(NSKitExtensions)
 
 ###Data Structures
+- NSKitHeapPriorityQueue
 - NSKitMutableArray (Base)
 - NSKitQueue
-- NSKitStack
 - NSKitSinglyLinkedList
-- NSKitHeapPriorityQueue
+- NSKitStack
 
 ###Helpers
+- NSKitEmailHelper
+- NSKitInternetDoctor
+- NSKitKeyboardHelper
 - NSKitMemoryHelper
 - NSKitPerformanceTimer
-- NSKitEmailHelper
-- NSKitKeyboardHelper
+- NSKitSoundProxy
 - NSKitUtilities
-- NSKitInternetDoctor
 
 ###TODO
-- Double linked list
-- NSUserNotification proxy
-- Sound proxy
 - Alert factory
+- Double linked list
 - NSDate Extensions
 - NSSet Extensions
+- NSUserNotification proxy
 
 ###Documentation
 
