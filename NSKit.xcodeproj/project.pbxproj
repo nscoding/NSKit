@@ -28,10 +28,10 @@
 		CD0258B71778E945006A7C54 /* NSKitUtilities_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0258B61778E945006A7C54 /* NSKitUtilities_Test.m */; };
 		CD0258BD1778F1FA006A7C54 /* NSMutableArray+NSKitExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB298601777C13300889B06 /* NSMutableArray+NSKitExtensions.m */; };
 		CD3B0BFE1780409400D2B16F /* NSUserDefaults_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3B0BFD1780409400D2B16F /* NSUserDefaults_Test.m */; };
-		CD3B0C0117804D1F00D2B16F /* NSKitSoundProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = CD3B0BFF17804D1F00D2B16F /* NSKitSoundProxy.h */; };
+		CD3B0C0117804D1F00D2B16F /* NSKitSoundProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = CD3B0BFF17804D1F00D2B16F /* NSKitSoundProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD3B0C0217804D1F00D2B16F /* NSKitSoundProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3B0C0017804D1F00D2B16F /* NSKitSoundProxy.m */; };
 		CD3B0C0417804DAC00D2B16F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD3B0C0317804DAC00D2B16F /* AudioToolbox.framework */; };
-		CD3B0C081780520700D2B16F /* NSKitCGContextHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = CD3B0C061780520700D2B16F /* NSKitCGContextHelper.h */; };
+		CD3B0C081780520700D2B16F /* NSKitCGContextHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = CD3B0C061780520700D2B16F /* NSKitCGContextHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD3B0C091780520700D2B16F /* NSKitCGContextHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3B0C071780520700D2B16F /* NSKitCGContextHelper.m */; };
 		CD5538F9177CE980004B33D8 /* NSKitSinglyLinkedList_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5538F8177CE980004B33D8 /* NSKitSinglyLinkedList_Test.m */; };
 		CD5538FC177CFBB2004B33D8 /* NSKitLinkedListProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = CD5538FA177CFBB2004B33D8 /* NSKitLinkedListProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -40,10 +40,10 @@
 		CD553906177D9710004B33D8 /* NSKitMath_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = CD553903177D9618004B33D8 /* NSKitMath_Test.m */; };
 		CD553954177E199E004B33D8 /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = CD553952177E199E004B33D8 /* Reachability.h */; };
 		CD553955177E199E004B33D8 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = CD553953177E199E004B33D8 /* Reachability.m */; };
-		CD553958177E19BF004B33D8 /* NSKitInternetDoctor.h in Headers */ = {isa = PBXBuildFile; fileRef = CD553956177E19BF004B33D8 /* NSKitInternetDoctor.h */; };
+		CD553958177E19BF004B33D8 /* NSKitInternetDoctor.h in Headers */ = {isa = PBXBuildFile; fileRef = CD553956177E19BF004B33D8 /* NSKitInternetDoctor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD553959177E19BF004B33D8 /* NSKitInternetDoctor.m in Sources */ = {isa = PBXBuildFile; fileRef = CD553957177E19BF004B33D8 /* NSKitInternetDoctor.m */; };
 		CD55395B177E1D37004B33D8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD55395A177E1D37004B33D8 /* SystemConfiguration.framework */; };
-		CD88570D177F9256007322E8 /* NSKitHeapPriorityQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = CD88570B177F9256007322E8 /* NSKitHeapPriorityQueue.h */; };
+		CD88570D177F9256007322E8 /* NSKitHeapPriorityQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = CD88570B177F9256007322E8 /* NSKitHeapPriorityQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD88570E177F9256007322E8 /* NSKitHeapPriorityQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = CD88570C177F9256007322E8 /* NSKitHeapPriorityQueue.m */; };
 		CD885711177F97EC007322E8 /* NSKitPriorityQueue_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = CD885710177F97EC007322E8 /* NSKitPriorityQueue_Test.m */; };
 		CD8BAA681779F13300DA1996 /* NSKitSinglyLinkedList.h in Headers */ = {isa = PBXBuildFile; fileRef = CD8BAA661779F13300DA1996 /* NSKitSinglyLinkedList.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -66,7 +66,7 @@
 		CDB2986A1777C2EF00889B06 /* NSKitPerformanceTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = CDB298591777BF0500889B06 /* NSKitPerformanceTimer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CDB2986B1777C2FC00889B06 /* NSMutableArray+NSKitExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = CDB2985F1777C13300889B06 /* NSMutableArray+NSKitExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CDBE1E6F177FAA25002E6F58 /* NSKitStack_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = CDBE1E6D177FAA25002E6F58 /* NSKitStack_Test.m */; };
-		CDBE1E73177FADFC002E6F58 /* NSKitMutableArray.h in Headers */ = {isa = PBXBuildFile; fileRef = CDBE1E71177FADFC002E6F58 /* NSKitMutableArray.h */; };
+		CDBE1E73177FADFC002E6F58 /* NSKitMutableArray.h in Headers */ = {isa = PBXBuildFile; fileRef = CDBE1E71177FADFC002E6F58 /* NSKitMutableArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CDBE1E74177FADFC002E6F58 /* NSKitMutableArray.m in Sources */ = {isa = PBXBuildFile; fileRef = CDBE1E72177FADFC002E6F58 /* NSKitMutableArray.m */; };
 		CDBE1E76177FAF97002E6F58 /* NSKitQueue_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = CDBE1E75177FAF97002E6F58 /* NSKitQueue_Test.m */; };
 		CDC82B56177F2F7600FCC56B /* NSArray_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC82B55177F2F7600FCC56B /* NSArray_Test.m */; };
@@ -448,22 +448,22 @@
 				CD02589E1778D1AA006A7C54 /* NSImage+NSKitExtensions.h in Headers */,
 				CD0258AF1778D981006A7C54 /* NSUserDefaults+NSKitExtensions.h in Headers */,
 				CD0258881778C88E006A7C54 /* NSTextStorage+NSKitExtensions.h in Headers */,
-				CD3B0C0117804D1F00D2B16F /* NSKitSoundProxy.h in Headers */,
 				CD0258941778CBB2006A7C54 /* NSColor+NSKitExtensions.h in Headers */,
-				CD88570D177F9256007322E8 /* NSKitHeapPriorityQueue.h in Headers */,
 				CD0258641777C42D006A7C54 /* NSKitQueue.h in Headers */,
 				CD553900177D904E004B33D8 /* NSKitMath.h in Headers */,
 				CD02588C1778CB0A006A7C54 /* NSMutableAttributedString+NSKitExtensions.h in Headers */,
-				CD553958177E19BF004B33D8 /* NSKitInternetDoctor.h in Headers */,
 				CD0258661777C42D006A7C54 /* NSKitStack.h in Headers */,
 				CDB298461777AFC900889B06 /* NSView+NSKitExtensions.h in Headers */,
 				CD553954177E199E004B33D8 /* Reachability.h in Headers */,
 				CDB2986A1777C2EF00889B06 /* NSKitPerformanceTimer.h in Headers */,
 				CD5538FC177CFBB2004B33D8 /* NSKitLinkedListProtocol.h in Headers */,
-				CD3B0C081780520700D2B16F /* NSKitCGContextHelper.h in Headers */,
-				CDBE1E73177FADFC002E6F58 /* NSKitMutableArray.h in Headers */,
 				CD0258771777C7A3006A7C54 /* NSKitMemoryHelper.h in Headers */,
 				CDB298571777BAB100889B06 /* NSKitEmailHelper.h in Headers */,
+				CD3B0C0117804D1F00D2B16F /* NSKitSoundProxy.h in Headers */,
+				CD88570D177F9256007322E8 /* NSKitHeapPriorityQueue.h in Headers */,
+				CD553958177E19BF004B33D8 /* NSKitInternetDoctor.h in Headers */,
+				CD3B0C081780520700D2B16F /* NSKitCGContextHelper.h in Headers */,
+				CDBE1E73177FADFC002E6F58 /* NSKitMutableArray.h in Headers */,
 				CDB2985D1777C05700889B06 /* NSArray+NSKitExtensions.h in Headers */,
 				CDB298401777ACAB00889B06 /* NSWindow+NSKitExtensions.h in Headers */,
 				CDB2986B1777C2FC00889B06 /* NSMutableArray+NSKitExtensions.h in Headers */,
