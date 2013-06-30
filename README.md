@@ -28,6 +28,7 @@ Is a collection of well-documented __Data Structures__, __Helpers__ and __Catego
 - NSKitKeyboardHelper
 - NSKitMemoryHelper
 - NSKitPerformanceTimer
+- NSKitRateHelper
 - NSKitSoundProxy
 - NSKitUtilities
 

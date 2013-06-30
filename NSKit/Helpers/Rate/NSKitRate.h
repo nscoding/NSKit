@@ -1,8 +1,8 @@
 //
-//  NSKit.h
+//  NSKitRate.h
 //  NSKit
 //
-//  Created by Patrick Chamelo on 6/23/13.
+//  Created by Patrick Chamelo on 6/30/13.
 //  Copyright (c) 2013 Patrick Chamelo. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -24,37 +24,22 @@
 // THE SOFTWARE.
 
 
-extern BOOL SystemAtLeastLion;
-extern BOOL SystemAtLeastLionWithRetina;
-extern BOOL SystemAtLeastMountainLion;
-extern BOOL SystemAtLeastMaverics; // set at launch
+/** Rate helper object to store the information. */
+@interface NSKitRate : NSObject
 
-#import "NSKitLinkedListProtocol.h"
-#import "NSKitSinglyLinkedList.h"
-#import "NSKitQueue.h"
-#import "NSKitStack.h"
-#import "NSKitPerformanceTimer.h"
-#import "NSKitMemoryHelper.h"
-#import "NSKitEmailHelper.h"
-#import "NSKitUtilities.h"
-#import "NSKitKeyboardHelper.h"
-#import "NSArray+NSKitExtensions.h"
-#import "NSMutableArray+NSKitExtensions.h"
-#import "NSMutableAttributedString+NSKitExtensions.h"
-#import "NSTextStorage+NSKitExtensions.h"
-#import "NSView+NSKitExtensions.h"
-#import "NSWindow+NSKitExtensions.h"
-#import "NSColor+NSKitExtensions.h"
-#import "NSImage+NSKitExtensions.h"
-#import "NSUserDefaults+NSKitExtensions.h"
-#import "NSKitSoundProxy.h"
-#import "NSKitInternetDoctor.h"
-#import "NSKitMath.h"
-#import "NSKitHeapPriorityQueue.h"
-#import "NSKitMutableArray.h"
-#import "NSKitCGContextHelper.h"
-#import "NSKitRateHelper.h"
+/** Stores the major bundle version. */
+@property (nonatomic, copy) NSString *majorBundleVerion;
 
-@interface NSKit : NSObject
+/** Stores the last date asked. */
+@property (nonatomic, copy) NSDate *lastDateAsked;
+
+/** Stores if the rate was shown already. */
+@property (nonatomic, assign) BOOL doneAlready;
+
+/** Stores the number of significant events. */
+@property (nonatomic, assign) NSUInteger significantEvents;
+
+/** Stores the number of usages. */
+@property (nonatomic, assign) NSUInteger numberOfUsages;
 
 @end
