@@ -1,8 +1,8 @@
 //
-//  NSKitStack.h
+//  NSKitMutableArray.m
 //  NSKit
 //
-//  Created by Patrick Chamelo on 6/24/13.
+//  Created by Patrick Chamelo on 6/30/13.
 //  Copyright (c) 2013 Patrick Chamelo. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -23,50 +23,55 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+
 #import "NSKitMutableArray.h"
 
-/** A stack is a linear list in which insertions (also called additions) and deletions take place at the same end. This end is called the top. The other end is called the bottom. 
- 
- - Stack is a specialized or restricted version of a more general data object linear list.
- - Every instance of the data object stack is also an instance of the data object linear list. Moreover, all stack operations can be performed as linear list operations.
- - This specialized version of the stack is created by extending the NSMutableArray.
- */
-@interface NSKitStack : NSKitMutableArray
+
+// ------------------------------------------------------------------------------------------
 
 
-/**
- * Add an element to the stack.
- *
- * @param objToPush the object to be added to the stack.
- */
-- (void)push:(id)objToPush;
+@implementation NSKitMutableArray
 
 
-/**
- * Delete top element from stack.
- *
- * @returns id The poped object, nil if the stack is empty.
- *
- */
-- (id)pop;
+- (id)init
+{
+    if ((self = [super init]))
+    {
+        contentArrayRef = CFArrayCreateMutable(NULL, 0, &kCFTypeArrayCallBacks);
+    }
+    
+    return self;
+}
 
 
-/**
- * Returns top element from stack.
- *
- * @returns id The top object in the stack, nil if the stack is empty.
- *
- */
-- (id)top;
+- (NSUInteger)count
+{
+    return CFArrayGetCount(contentArrayRef);
+}
 
 
-/**
- * Checks if the stack is empty.
- *
- * @returns BOOL YES if is empty, otherwise NO.
- *
- */
-- (BOOL)isEmpty;
+- (void)insertObject:(id)anObject atIndex:(NSUInteger)index
+{
+    CFArrayInsertValueAtIndex(contentArrayRef, index, (const void *)anObject);
+}
+
+
+- (id)objectAtIndex:(NSUInteger)index
+{
+    return (id)CFArrayGetValueAtIndex(contentArrayRef, index);
+}
+
+
+- (void)removeObjectAtIndex:(NSUInteger)index
+{
+    CFArrayRemoveValueAtIndex(contentArrayRef, index);
+}
+
+
+- (void)dealloc
+{
+    CFRelease(contentArrayRef);
+}
 
 
 @end
