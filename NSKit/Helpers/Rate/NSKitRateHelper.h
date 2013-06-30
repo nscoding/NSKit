@@ -72,19 +72,19 @@ extern NSString *NSKitRateNoThanksButtonText;
 
 /**
  * Holds a reference to the minimum number of usages before prompting.
- * if is less than zero ( < 0) then is ignored.
+ * if is less than zero ( < 0) then is ignored. Default value is 2.
  */
 extern NSInteger NSKitRateMinimumUsages;
 
 /**
  * Holds a reference to the minimum number of days before prompting.
- * if is less than zero ( < 0) then is ignored.
+ * if is less than zero ( < 0) then is ignored.  Default value is 10.
  */
 extern NSInteger NSKitRateMinimumDays;
 
 /**
  * Holds a reference to the minimum number of significant events before prompting.
- * if is less than zero ( < 0) then is ignored.
+ * if is less than zero ( < 0) then is ignored. Default value is 0.
  */
 extern NSInteger NSKitRateMinimumSignificantEvents;
 

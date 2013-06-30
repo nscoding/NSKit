@@ -37,9 +37,8 @@ NSString *NSKitRateDescriptionText;
 NSString *NSKitRateNowButtonText;
 NSString *NSKitRateLaterButtonText;
 NSString *NSKitRateNoThanksButtonText;
-
-NSInteger NSKitRateMinimumUsages;
-NSInteger NSKitRateMinimumDays;
+NSInteger NSKitRateMinimumUsages = 2;
+NSInteger NSKitRateMinimumDays = 10;
 NSInteger NSKitRateMinimumSignificantEvents;
 
 
@@ -170,7 +169,7 @@ NSInteger NSKitRateMinimumSignificantEvents;
         
         if (self.rate.lastDateAsked == nil)
         {
-            if (self.rate.significantEvents > NSKitRateMinimumSignificantEvents &&
+            if (self.rate.significantEvents >= NSKitRateMinimumSignificantEvents &&
                 self.rate.numberOfUsages >= NSKitRateMinimumUsages &&
                 self.rate.doneAlready == NO)
             {
@@ -187,7 +186,7 @@ NSInteger NSKitRateMinimumSignificantEvents;
                                         toDate:[NSDate date]
                                         options:0];
         
-        if (self.rate.significantEvents > NSKitRateMinimumSignificantEvents &&
+        if (self.rate.significantEvents >= NSKitRateMinimumSignificantEvents &&
             self.rate.numberOfUsages >= NSKitRateMinimumUsages &&
             self.rate.doneAlready == NO  && components.day >= NSKitRateMinimumDays)
         {
