@@ -15,6 +15,7 @@ Is a collection of well-documented __Data Structures__, __Helpers__ and __Catego
 - NSUserDefaults(NSKitExtensions)
 
 ###Data Structures
+- NSKitMutableArray (Base)
 - NSKitQueue
 - NSKitStack
 - NSKitSinglyLinkedList
