@@ -1,31 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/NSKitSoundProxy.html">
+	<File path="Classes/NSKitRateHelper.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/NSKitSoundProxy</TokenIdentifier>
-			<Abstract type="html">Sound helper</Abstract>
-			<DeclaredIn>NSKitSoundProxy.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/NSKitRateHelper</TokenIdentifier>
+			<Abstract type="html">A utility that reminds your users to review the app.</Abstract>
+			<DeclaredIn>NSKitRateHelper.h</DeclaredIn>
 			
 			<NodeRef refid="12"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/NSKitSoundProxy/playSoundAtURL:</TokenIdentifier>
-			<Abstract type="html">Plays a short sound from a give URL path.</Abstract>
-			<DeclaredIn>NSKitSoundProxy.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitRateHelper/setRate:</TokenIdentifier>
+			<Abstract type="html">NSKit rate object to store the rate information.
+Usage: Just invoke [[NSKitRateHelper shared] applicationDidFinishLaunch]
+when your application is finishing launching.</Abstract>
+			<DeclaredIn>NSKitRateHelper.h</DeclaredIn>			
 			
-			<Declaration>+ (void)playSoundAtURL:(NSURL *)soundURL</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>soundURL</Name>
-					<Abstract type="html">Thu user of the path to play the short sound
-e.g. [[NSBundle mainBundle] URLForResource:@&quot;sound&quot; withExtension:@&quot;wav&quot;];</Abstract>
-				</Parameter>
-			</Parameters>
+			<Declaration>@property (nonatomic, strong) NSKitRate *rate</Declaration>
 			
-			<Anchor>//api/name/playSoundAtURL:</Anchor>
+			
+			<Anchor>//api/name/rate</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitRateHelper/rate</TokenIdentifier>
+			<Abstract type="html">NSKit rate object to store the rate information.
+Usage: Just invoke [[NSKitRateHelper shared] applicationDidFinishLaunch]
+when your application is finishing launching.</Abstract>
+			<DeclaredIn>NSKitRateHelper.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong) NSKitRate *rate</Declaration>
+			
+			
+			<Anchor>//api/name/rate</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/NSKitRateHelper/rate</TokenIdentifier>
+			<Abstract type="html">NSKit rate object to store the rate information.
+Usage: Just invoke [[NSKitRateHelper shared] applicationDidFinishLaunch]
+when your application is finishing launching.</Abstract>
+			<DeclaredIn>NSKitRateHelper.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong) NSKitRate *rate</Declaration>
+			
+			
+			<Anchor>//api/name/rate</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/NSKitRateHelper/shared</TokenIdentifier>
+			<Abstract type="html">Singleton implementation for the rate helper.</Abstract>
+			<DeclaredIn>NSKitRateHelper.h</DeclaredIn>			
+			
+			<Declaration>+ (NSKitRateHelper *)shared</Declaration>
+			
+			
+			<Anchor>//api/name/shared</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitRateHelper/applicationDidFinishLaunch</TokenIdentifier>
+			<Abstract type="html">This method should be called in your applicationDidFinishLaunching notification
+to inform the Rate helper that app is launched.</Abstract>
+			<DeclaredIn>NSKitRateHelper.h</DeclaredIn>			
+			
+			<Declaration>- (void)applicationDidFinishLaunch</Declaration>
+			
+			
+			<Anchor>//api/name/applicationDidFinishLaunch</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitRateHelper/performedSignigicantEvent</TokenIdentifier>
+			<Abstract type="html">This method should be called when you want to bring the rate me dialog after some
+significant events. e.g. NSKitRateMinimumSignificantEvents = 10; the user must
+perform 10 events to get the rate dialog.</Abstract>
+			<DeclaredIn>NSKitRateHelper.h</DeclaredIn>			
+			
+			<Declaration>- (void)performedSignigicantEvent</Declaration>
+			
+			
+			<Anchor>//api/name/performedSignigicantEvent</Anchor>
             <NodeRef refid="12"/>
 		</Token>
 		
