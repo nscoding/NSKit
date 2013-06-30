@@ -28,6 +28,9 @@
 		CD0258B71778E945006A7C54 /* NSKitUtilities_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0258B61778E945006A7C54 /* NSKitUtilities_Test.m */; };
 		CD0258BD1778F1FA006A7C54 /* NSMutableArray+NSKitExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB298601777C13300889B06 /* NSMutableArray+NSKitExtensions.m */; };
 		CD3B0BFE1780409400D2B16F /* NSUserDefaults_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3B0BFD1780409400D2B16F /* NSUserDefaults_Test.m */; };
+		CD3B0C0117804D1F00D2B16F /* NSKitSoundProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = CD3B0BFF17804D1F00D2B16F /* NSKitSoundProxy.h */; };
+		CD3B0C0217804D1F00D2B16F /* NSKitSoundProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3B0C0017804D1F00D2B16F /* NSKitSoundProxy.m */; };
+		CD3B0C0417804DAC00D2B16F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD3B0C0317804DAC00D2B16F /* AudioToolbox.framework */; };
 		CD5538F9177CE980004B33D8 /* NSKitSinglyLinkedList_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5538F8177CE980004B33D8 /* NSKitSinglyLinkedList_Test.m */; };
 		CD5538FC177CFBB2004B33D8 /* NSKitLinkedListProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = CD5538FA177CFBB2004B33D8 /* NSKitLinkedListProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD553900177D904E004B33D8 /* NSKitMath.h in Headers */ = {isa = PBXBuildFile; fileRef = CD5538FE177D904E004B33D8 /* NSKitMath.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -99,6 +102,9 @@
 		CD0258AE1778D981006A7C54 /* NSUserDefaults+NSKitExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+NSKitExtensions.m"; sourceTree = "<group>"; };
 		CD0258B61778E945006A7C54 /* NSKitUtilities_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSKitUtilities_Test.m; sourceTree = "<group>"; };
 		CD3B0BFD1780409400D2B16F /* NSUserDefaults_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSUserDefaults_Test.m; sourceTree = "<group>"; };
+		CD3B0BFF17804D1F00D2B16F /* NSKitSoundProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSKitSoundProxy.h; sourceTree = "<group>"; };
+		CD3B0C0017804D1F00D2B16F /* NSKitSoundProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSKitSoundProxy.m; sourceTree = "<group>"; };
+		CD3B0C0317804DAC00D2B16F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		CD5538F8177CE980004B33D8 /* NSKitSinglyLinkedList_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSKitSinglyLinkedList_Test.m; sourceTree = "<group>"; };
 		CD5538FA177CFBB2004B33D8 /* NSKitLinkedListProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSKitLinkedListProtocol.h; sourceTree = "<group>"; };
 		CD5538FE177D904E004B33D8 /* NSKitMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSKitMath.h; sourceTree = "<group>"; };
@@ -154,6 +160,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD3B0C0417804DAC00D2B16F /* AudioToolbox.framework in Frameworks */,
 				CD55395B177E1D37004B33D8 /* SystemConfiguration.framework in Frameworks */,
 				CDB2980D1777A4A700889B06 /* Cocoa.framework in Frameworks */,
 			);
@@ -265,6 +272,7 @@
 		CDB2980B1777A4A700889B06 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CD3B0C0317804DAC00D2B16F /* AudioToolbox.framework */,
 				CD55395A177E1D37004B33D8 /* SystemConfiguration.framework */,
 				CDB2980C1777A4A700889B06 /* Cocoa.framework */,
 				CDB298211777A4A700889B06 /* XCTest.framework */,
@@ -380,6 +388,8 @@
 				CD5538FF177D904E004B33D8 /* NSKitMath.m */,
 				CD553956177E19BF004B33D8 /* NSKitInternetDoctor.h */,
 				CD553957177E19BF004B33D8 /* NSKitInternetDoctor.m */,
+				CD3B0BFF17804D1F00D2B16F /* NSKitSoundProxy.h */,
+				CD3B0C0017804D1F00D2B16F /* NSKitSoundProxy.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -424,6 +434,7 @@
 				CD02589E1778D1AA006A7C54 /* NSImage+NSKitExtensions.h in Headers */,
 				CD0258AF1778D981006A7C54 /* NSUserDefaults+NSKitExtensions.h in Headers */,
 				CD0258881778C88E006A7C54 /* NSTextStorage+NSKitExtensions.h in Headers */,
+				CD3B0C0117804D1F00D2B16F /* NSKitSoundProxy.h in Headers */,
 				CD0258941778CBB2006A7C54 /* NSColor+NSKitExtensions.h in Headers */,
 				CD88570D177F9256007322E8 /* NSKitHeapPriorityQueue.h in Headers */,
 				CD0258641777C42D006A7C54 /* NSKitQueue.h in Headers */,
@@ -578,6 +589,7 @@
 				CDB2981B1777A4A700889B06 /* NSKit.m in Sources */,
 				CD0258891778C88E006A7C54 /* NSTextStorage+NSKitExtensions.m in Sources */,
 				CD553955177E199E004B33D8 /* Reachability.m in Sources */,
+				CD3B0C0217804D1F00D2B16F /* NSKitSoundProxy.m in Sources */,
 				CD8BAA691779F13300DA1996 /* NSKitSinglyLinkedList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
