@@ -150,7 +150,7 @@ if nothing was removed nil is returned</Abstract></ReturnValue>
 			<Abstract type="html"></Abstract>
 			<DeclaredIn>NSKitSinglyLinkedList+Private.h</DeclaredIn>			
 			
-			<Declaration>- (void)previousObject:(NSObject **)prevObject currentObject:(NSObject **)currentObject atIndex:(NSInteger)index</Declaration>
+			<Declaration>- (void)previousObject:(NSObject&lt;NSKitLinkedListProtocol&gt; **)prevObject currentObject:(NSObject&lt;NSKitLinkedListProtocol&gt; **)currentObject atIndex:(NSInteger)index</Declaration>
 			
 			
 			<Anchor>//api/name/previousObject:currentObject:atIndex:</Anchor>
