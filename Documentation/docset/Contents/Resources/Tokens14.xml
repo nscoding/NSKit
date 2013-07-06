@@ -145,5 +145,17 @@ if nothing was removed nil is returned</Abstract></ReturnValue>
             <NodeRef refid="14"/>
 		</Token>
 		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitSinglyLinkedList/previousObject:currentObject:atIndex:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSKitSinglyLinkedList+Private.h</DeclaredIn>			
+			
+			<Declaration>- (void)previousObject:(NSObject **)prevObject currentObject:(NSObject **)currentObject atIndex:(NSInteger)index</Declaration>
+			
+			
+			<Anchor>//api/name/previousObject:currentObject:atIndex:</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
 	</File>
 </Tokens>
