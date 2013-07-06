@@ -62,8 +62,22 @@
     
     count += [linkedList insertObject:node1];
     count += [linkedList insertObject:node2 atIndex:1];
+    
+    XCTAssertTrue(node1.nextLink == node2, @"Next is broken");
+    XCTAssertTrue(node1.previousLink == nil, @"Previous is broken");
+
+    XCTAssertTrue(node2.nextLink == nil, @"Next is broken");
+    XCTAssertTrue(node2.previousLink == node1, @"Previous is broken");
+
+    
     count += [linkedList insertObject:node3];
     count += [linkedList insertObject:node4 atIndex:0];
+    
+    XCTAssertTrue(node1.previousLink == node4, @"Previous is broken");
+    XCTAssertTrue(node4.nextLink == node1, @"Next is broken");
+    XCTAssertTrue(node2.previousLink == node1, @"Previous is broken");
+    XCTAssertTrue(node1.nextLink == node2, @"Next is broken");
+
     count += [linkedList insertObject:node5 atIndex:random];
     count += [linkedList insertObject:node6 atIndex:random];
     

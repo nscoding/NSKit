@@ -25,6 +25,8 @@
 
 
 #import "NSKitDoubleLinkedList.h"
+#import "NSKitSinglyLinkedList+Private.h"
+
 
 
 // ------------------------------------------------------------------------------------------
@@ -48,10 +50,22 @@
         return YES;
     }
     
-    NSObject<NSKitLinkedListProtocol> *currentNode = [self objectAtIndex:index];
-    NSObject<NSKitLinkedListProtocol> *previousNode = currentNode.previousLink;
-
+    NSObject<NSKitLinkedListProtocol> *previousNode = nil;
+    NSObject<NSKitLinkedListProtocol> *currentNode = nil;
     
+    [self previousObject:&previousNode
+           currentObject:&currentNode
+                 atIndex:index];
+ 
+    if (currentNode)
+    {
+       previousNode = currentNode.previousLink;
+    }
+    else
+    {
+        previousNode = [self objectAtIndex:index - 1];
+    }
+
     if (previousNode)
     {
         NSObject<NSKitLinkedListProtocol> *currentNext = previousNode.nextLink;
