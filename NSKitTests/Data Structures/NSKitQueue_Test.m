@@ -45,9 +45,9 @@
 - (void)testQueue
 {
     NSKitQueue *queue = [[NSKitQueue alloc] init];
-    NSNumber *node1 = [NSNumber numberWithInteger:1];
-    NSNumber *node2 = [NSNumber numberWithInteger:2];
-    NSNumber *node3 = [NSNumber numberWithInteger:3];
+    NSNumber *node1 = @(1);
+    NSNumber *node2 = @(2);
+    NSNumber *node3 = @(3);
 
     [queue add:node1];
     XCTAssertTrue(queue.count == 1, @"Count is not the same");
