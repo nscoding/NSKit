@@ -1,8 +1,8 @@
 //
-//  NSKit.h
+//  NSKitDoubleLinkedList.h
 //  NSKit
 //
-//  Created by Patrick Chamelo on 6/23/13.
+//  Created by Patrick Chamelo on 7/6/13.
 //  Copyright (c) 2013 Patrick Chamelo. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -23,39 +23,13 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-
-extern BOOL SystemAtLeastLion;
-extern BOOL SystemAtLeastLionWithRetina;
-extern BOOL SystemAtLeastMountainLion;
-extern BOOL SystemAtLeastMaverics; // set at launch
-
-#import "NSKitLinkedListProtocol.h"
-#import "NSKitSinglyLinkedList.h"
-#import "NSKitQueue.h"
-#import "NSKitStack.h"
-#import "NSKitPerformanceTimer.h"
-#import "NSKitMemoryHelper.h"
-#import "NSKitEmailHelper.h"
-#import "NSKitUtilities.h"
-#import "NSKitKeyboardHelper.h"
-#import "NSArray+NSKitExtensions.h"
-#import "NSMutableArray+NSKitExtensions.h"
-#import "NSMutableAttributedString+NSKitExtensions.h"
-#import "NSTextStorage+NSKitExtensions.h"
-#import "NSView+NSKitExtensions.h"
-#import "NSWindow+NSKitExtensions.h"
-#import "NSColor+NSKitExtensions.h"
-#import "NSImage+NSKitExtensions.h"
-#import "NSUserDefaults+NSKitExtensions.h"
-#import "NSKitSoundProxy.h"
-#import "NSKitInternetDoctor.h"
-#import "NSKitMath.h"
-#import "NSKitHeapPriorityQueue.h"
-#import "NSKitMutableArray.h"
-#import "NSKitCGContextHelper.h"
-#import "NSKitRateHelper.h"
-#import "NSKitDoubleLinkedList.h"
-
-@interface NSKit : NSObject
+/**
+ * Each element of an instance of a data object is represented as a group of memory locations called cell or node.
+ * The elements may be stored in any arbitrary set of memory locations.
+ * Each element keeps explicit information about the location of the next element through a pointer (or link).
+ * Each elements keeps explicit information about the location of the previous element through a pointer (or link).
+ * Also is called Double Chain.
+ */
+@interface NSKitDoubleLinkedList : NSKitSinglyLinkedList
 
 @end
