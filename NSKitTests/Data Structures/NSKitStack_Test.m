@@ -48,7 +48,7 @@
     NSNumber *node1 = @(1);
     NSNumber *node2 = @(2);
 
-    XCTAssertTrue(stack.isEmpty == NO, @"Stack should not be empty");
+    XCTAssertTrue(stack.isEmpty == YES, @"Stack should be empty");
 
     [stack push:node1];
 
@@ -69,6 +69,10 @@
     NSNumber *node2 = @(2);
     NSNumber *node3 = @(3);
 
+    [stack push:node1];
+    [stack push:node2];
+    [stack push:node3];
+    
     XCTAssertTrue([[stack top] isEqual:node3], @"Top object is not the right object");
     XCTAssertTrue([[stack pop] isEqual:node3], @"Top object is not the right object");
     XCTAssertTrue([[stack top] isEqual:node2], @"Top object is not the right object");
