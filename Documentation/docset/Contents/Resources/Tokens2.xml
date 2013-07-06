@@ -1,38 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/NSKitEmailHelper.html">
+	<File path="Classes/NSKitDoubleLinkedList.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/NSKitEmailHelper</TokenIdentifier>
-			<Abstract type="html">Email helper class</Abstract>
-			<DeclaredIn>NSKitEmailHelper.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/NSKitDoubleLinkedList</TokenIdentifier>
+			<Abstract type="html">Each element of an instance of a data object is represented as a group of memory locations called cell or node.
+The elements may be stored in any arbitrary set of memory locations.
+Each element keeps explicit information about the location of the next element through a pointer (or link).
+Each elements keeps explicit information about the location of the previous element through a pointer (or link).
+Also is called Double Chain.</Abstract>
+			<DeclaredIn>NSKitDoubleLinkedList.h</DeclaredIn>
 			
 			<NodeRef refid="2"/>
 		</Token>
 		
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/NSKitEmailHelper/sendEmailTo:subject:body:</TokenIdentifier>
-			<Abstract type="html">Opens your default email client and prepopulates the fields</Abstract>
-			<DeclaredIn>NSKitEmailHelper.h</DeclaredIn>			
-			
-			<Declaration>+ (void)sendEmailTo:(NSString *)email subject:(NSString *)subject body:(NSString *)body</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>email</Name>
-					<Abstract type="html">The email of the user to send the email.</Abstract>
-				</Parameter><Parameter>
-					<Name>subject</Name>
-					<Abstract type="html">The subject of the email.</Abstract>
-				</Parameter><Parameter>
-					<Name>body</Name>
-					<Abstract type="html">The body of the email.</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/sendEmailTo:subject:body:</Anchor>
-            <NodeRef refid="2"/>
-		</Token>
 		
 	</File>
 </Tokens>
