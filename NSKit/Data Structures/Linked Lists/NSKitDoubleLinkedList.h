@@ -1,8 +1,8 @@
 //
-//  NSKitStack.m
+//  NSKitDoubleLinkedList.h
 //  NSKit
 //
-//  Created by Patrick Chamelo on 6/24/13.
+//  Created by Patrick Chamelo on 7/6/13.
 //  Copyright (c) 2013 Patrick Chamelo. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -23,52 +23,13 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "NSKitStack.h"
-
-
-// ------------------------------------------------------------------------------------------
-
-
-@implementation NSKitStack
-
-
-// ------------------------------------------------------------------------------------------
-#pragma mark - Methods
-// ------------------------------------------------------------------------------------------
-- (void)push:(id)objToPush
-{
-    if (objToPush)
-    {
-        [self addObject:objToPush];
-    }
-}
-
-
-- (id)pop
-{
-    if (self.isEmpty == YES)
-    {
-        return nil;
-    }
-    
-    id objToPop = self.lastObject;
-    
-    [self removeLastObject];
-
-    return objToPop;
-}
-
-
-- (id)top
-{
-    return self.lastObject;
-}
-
-
-- (BOOL)isEmpty
-{
-    return (self.count == 0);
-}
-
+/**
+ * Each element of an instance of a data object is represented as a group of memory locations called cell or node.
+ * The elements may be stored in any arbitrary set of memory locations.
+ * Each element keeps explicit information about the location of the next element through a pointer (or link).
+ * Each elements keeps explicit information about the location of the previous element through a pointer (or link).
+ * Also is called Double Chain.
+ */
+@interface NSKitDoubleLinkedList : NSKitSinglyLinkedList
 
 @end

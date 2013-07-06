@@ -15,6 +15,7 @@ Is a collection of well-documented __Data Structures__, __Helpers__ and __Catego
 - NSWindow(NSKitExtensions)
 
 ###Data Structures
+- NSKitDoubleLinkedList
 - NSKitHeapPriorityQueue
 - NSKitMutableArray (Base)
 - NSKitQueue
@@ -34,7 +35,6 @@ Is a collection of well-documented __Data Structures__, __Helpers__ and __Catego
 
 ###TODO
 - Alert factory
-- Double linked list
 - NSDate Extensions
 - NSSet Extensions
 - NSUserNotification proxy
