@@ -1,94 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/NSKitRateHelper.html">
+	<File path="Classes/NSKitQueue.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/NSKitRateHelper</TokenIdentifier>
-			<Abstract type="html">A utility that reminds your users to review the app.</Abstract>
-			<DeclaredIn>NSKitRateHelper.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/NSKitQueue</TokenIdentifier>
+			<Abstract type="html">A queue is a special case of linear list where insertions and deletions take place at different ends.
+- Last: end at which a new element is added.
+- First: end at which an element is deleted.</Abstract>
+			<DeclaredIn>NSKitQueue.h</DeclaredIn>
 			
 			<NodeRef refid="12"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitRateHelper/setRate:</TokenIdentifier>
-			<Abstract type="html">NSKit rate object to store the rate information.
-Usage: Just invoke [[NSKitRateHelper shared] applicationDidFinishLaunch]
-when your application is finishing launching.</Abstract>
-			<DeclaredIn>NSKitRateHelper.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitQueue/add:</TokenIdentifier>
+			<Abstract type="html">Add an element to the queue.</Abstract>
+			<DeclaredIn>NSKitQueue.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, strong) NSKitRate *rate</Declaration>
+			<Declaration>- (void)add:(id)objectToAdd</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>objectToAdd</Name>
+					<Abstract type="html">The object to be added to the queue.</Abstract>
+				</Parameter>
+			</Parameters>
 			
-			
-			<Anchor>//api/name/rate</Anchor>
+			<Anchor>//api/name/add:</Anchor>
             <NodeRef refid="12"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitRateHelper/rate</TokenIdentifier>
-			<Abstract type="html">NSKit rate object to store the rate information.
-Usage: Just invoke [[NSKitRateHelper shared] applicationDidFinishLaunch]
-when your application is finishing launching.</Abstract>
-			<DeclaredIn>NSKitRateHelper.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitQueue/remove</TokenIdentifier>
+			<Abstract type="html">Delete the front element of the queue.</Abstract>
+			<DeclaredIn>NSKitQueue.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, strong) NSKitRate *rate</Declaration>
+			<Declaration>- (id)remove</Declaration>
 			
-			
-			<Anchor>//api/name/rate</Anchor>
+			<ReturnValue><Abstract type="html">id The object that was removed from the front, nil if the queue if empty.</Abstract></ReturnValue>
+			<Anchor>//api/name/remove</Anchor>
             <NodeRef refid="12"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/NSKitRateHelper/rate</TokenIdentifier>
-			<Abstract type="html">NSKit rate object to store the rate information.
-Usage: Just invoke [[NSKitRateHelper shared] applicationDidFinishLaunch]
-when your application is finishing launching.</Abstract>
-			<DeclaredIn>NSKitRateHelper.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitQueue/first</TokenIdentifier>
+			<Abstract type="html">Return the first element of the queue.</Abstract>
+			<DeclaredIn>NSKitQueue.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, strong) NSKitRate *rate</Declaration>
+			<Declaration>- (id)first</Declaration>
 			
-			
-			<Anchor>//api/name/rate</Anchor>
+			<ReturnValue><Abstract type="html">id The first object in the queue, nil if the queue if empty.</Abstract></ReturnValue>
+			<Anchor>//api/name/first</Anchor>
             <NodeRef refid="12"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/NSKitRateHelper/shared</TokenIdentifier>
-			<Abstract type="html">Singleton implementation for the rate helper.</Abstract>
-			<DeclaredIn>NSKitRateHelper.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitQueue/last</TokenIdentifier>
+			<Abstract type="html">Return the last element of the queue.</Abstract>
+			<DeclaredIn>NSKitQueue.h</DeclaredIn>			
 			
-			<Declaration>+ (NSKitRateHelper *)shared</Declaration>
+			<Declaration>- (id)last</Declaration>
 			
-			
-			<Anchor>//api/name/shared</Anchor>
+			<ReturnValue><Abstract type="html">id The last object in the queue, nil if the queue if empty.</Abstract></ReturnValue>
+			<Anchor>//api/name/last</Anchor>
             <NodeRef refid="12"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitRateHelper/applicationDidFinishLaunch</TokenIdentifier>
-			<Abstract type="html">This method should be called in your applicationDidFinishLaunching notification
-to inform the Rate helper that app is launched.</Abstract>
-			<DeclaredIn>NSKitRateHelper.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitQueue/isEmpty</TokenIdentifier>
+			<Abstract type="html">Checks if the queue is empty.</Abstract>
+			<DeclaredIn>NSKitQueue.h</DeclaredIn>			
 			
-			<Declaration>- (void)applicationDidFinishLaunch</Declaration>
+			<Declaration>- (BOOL)isEmpty</Declaration>
 			
-			
-			<Anchor>//api/name/applicationDidFinishLaunch</Anchor>
-            <NodeRef refid="12"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitRateHelper/performedSignigicantEvent</TokenIdentifier>
-			<Abstract type="html">This method should be called when you want to bring the rate me dialog after some
-significant events. e.g. NSKitRateMinimumSignificantEvents = 10; the user must
-perform 10 events to get the rate dialog.</Abstract>
-			<DeclaredIn>NSKitRateHelper.h</DeclaredIn>			
-			
-			<Declaration>- (void)performedSignigicantEvent</Declaration>
-			
-			
-			<Anchor>//api/name/performedSignigicantEvent</Anchor>
+			<ReturnValue><Abstract type="html">BOOL
+YES if is empty, otherwise NO.</Abstract></ReturnValue>
+			<Anchor>//api/name/isEmpty</Anchor>
             <NodeRef refid="12"/>
 		</Token>
 		

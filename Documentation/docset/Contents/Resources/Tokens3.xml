@@ -1,93 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/NSKitHeapPriorityQueue.html">
+	<File path="Classes/NSKitEmailHelper.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/NSKitHeapPriorityQueue</TokenIdentifier>
-			<Abstract type="html">Priority Queue implementation. A priority queue is a queue that&apos;s always kept
-sorted in a fast CFBinaryHeapRef implementation.</Abstract>
-			<DeclaredIn>NSKitHeapPriorityQueue.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/NSKitEmailHelper</TokenIdentifier>
+			<Abstract type="html">Email helper class</Abstract>
+			<DeclaredIn>NSKitEmailHelper.h</DeclaredIn>
 			
 			<NodeRef refid="3"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitHeapPriorityQueue/count</TokenIdentifier>
-			<Abstract type="html">Returns number of items in the queue</Abstract>
-			<DeclaredIn>NSKitHeapPriorityQueue.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/clm/NSKitEmailHelper/sendEmailTo:subject:body:</TokenIdentifier>
+			<Abstract type="html">Opens your default email client and prepopulates the fields</Abstract>
+			<DeclaredIn>NSKitEmailHelper.h</DeclaredIn>			
 			
-			<Declaration>- (NSUInteger)count</Declaration>
-			
-			
-			<Anchor>//api/name/count</Anchor>
-            <NodeRef refid="3"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitHeapPriorityQueue/allObjects</TokenIdentifier>
-			<Abstract type="html">Returns all (sorted) objects in the queue</Abstract>
-			<DeclaredIn>NSKitHeapPriorityQueue.h</DeclaredIn>			
-			
-			<Declaration>- (NSArray *)allObjects</Declaration>
-			
-			
-			<Anchor>//api/name/allObjects</Anchor>
-            <NodeRef refid="3"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitHeapPriorityQueue/addObject:</TokenIdentifier>
-			<Abstract type="html">Adds an object to the queue</Abstract>
-			<DeclaredIn>NSKitHeapPriorityQueue.h</DeclaredIn>			
-			
-			<Declaration>- (void)addObject:(NSObject&lt;NSKitHeapPriorityQueueComparator&gt; *)object</Declaration>
+			<Declaration>+ (void)sendEmailTo:(NSString *)email subject:(NSString *)subject body:(NSString *)body</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>object</Name>
-					<Abstract type="html">The object to be added to the priority queue</Abstract>
+					<Name>email</Name>
+					<Abstract type="html">The email of the user to send the email.</Abstract>
+				</Parameter><Parameter>
+					<Name>subject</Name>
+					<Abstract type="html">The subject of the email.</Abstract>
+				</Parameter><Parameter>
+					<Name>body</Name>
+					<Abstract type="html">The body of the email.</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/addObject:</Anchor>
-            <NodeRef refid="3"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitHeapPriorityQueue/removeAllObjects</TokenIdentifier>
-			<Abstract type="html">Removes all objects from the queue</Abstract>
-			<DeclaredIn>NSKitHeapPriorityQueue.h</DeclaredIn>			
-			
-			<Declaration>- (void)removeAllObjects</Declaration>
-			
-			
-			<Anchor>//api/name/removeAllObjects</Anchor>
-            <NodeRef refid="3"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitHeapPriorityQueue/nextObject</TokenIdentifier>
-			<Abstract type="html">Removes the &quot;top-most&quot; (as determined by the callback sort function) object from the queue
-and returns it</Abstract>
-			<DeclaredIn>NSKitHeapPriorityQueue.h</DeclaredIn>			
-			
-			<Declaration>- (NSObject *)nextObject</Declaration>
-			
-			
-			<Anchor>//api/name/nextObject</Anchor>
-            <NodeRef refid="3"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitHeapPriorityQueue/peekObject</TokenIdentifier>
-			<Abstract type="html">Returns the &quot;top-most&quot; (as determined by the callback sort function) object from the queue
-without removing it from the queue</Abstract>
-			<DeclaredIn>NSKitHeapPriorityQueue.h</DeclaredIn>			
-			
-			<Declaration>- (NSObject *)peekObject</Declaration>
-			
-			
-			<Anchor>//api/name/peekObject</Anchor>
+			<Anchor>//api/name/sendEmailTo:subject:body:</Anchor>
             <NodeRef refid="3"/>
 		</Token>
 		

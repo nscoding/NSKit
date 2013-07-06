@@ -1,81 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/NSKitQueue.html">
+	<File path="Classes/NSKitNode.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/NSKitQueue</TokenIdentifier>
-			<Abstract type="html">A queue is a special case of linear list where insertions and deletions take place at different ends.
-- Last: end at which a new element is added.
-- First: end at which an element is deleted.</Abstract>
-			<DeclaredIn>NSKitQueue.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/NSKitNode</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSKitNode.h</DeclaredIn>
 			
 			<NodeRef refid="10"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitQueue/add:</TokenIdentifier>
-			<Abstract type="html">Add an element to the queue.</Abstract>
-			<DeclaredIn>NSKitQueue.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitNode/setNextLink:</TokenIdentifier>
+			<Abstract type="html">link to the next node, used in NSKitSinglyLinkedList</Abstract>
+			<DeclaredIn>NSKitNode.h</DeclaredIn>			
 			
-			<Declaration>- (void)add:(id)objectToAdd</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>objectToAdd</Name>
-					<Abstract type="html">The object to be added to the queue.</Abstract>
-				</Parameter>
-			</Parameters>
+			<Declaration>@property (nonatomic, strong) NSObject&lt;NSKitLinkedListProtocol&gt; *nextLink</Declaration>
 			
-			<Anchor>//api/name/add:</Anchor>
+			
+			<Anchor>//api/name/nextLink</Anchor>
             <NodeRef refid="10"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitQueue/remove</TokenIdentifier>
-			<Abstract type="html">Delete the front element of the queue.</Abstract>
-			<DeclaredIn>NSKitQueue.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitNode/nextLink</TokenIdentifier>
+			<Abstract type="html">link to the next node, used in NSKitSinglyLinkedList</Abstract>
+			<DeclaredIn>NSKitNode.h</DeclaredIn>			
 			
-			<Declaration>- (id)remove</Declaration>
+			<Declaration>@property (nonatomic, strong) NSObject&lt;NSKitLinkedListProtocol&gt; *nextLink</Declaration>
 			
-			<ReturnValue><Abstract type="html">id The object that was removed from the front, nil if the queue if empty.</Abstract></ReturnValue>
-			<Anchor>//api/name/remove</Anchor>
+			
+			<Anchor>//api/name/nextLink</Anchor>
             <NodeRef refid="10"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitQueue/first</TokenIdentifier>
-			<Abstract type="html">Return the first element of the queue.</Abstract>
-			<DeclaredIn>NSKitQueue.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/NSKitNode/nextLink</TokenIdentifier>
+			<Abstract type="html">link to the next node, used in NSKitSinglyLinkedList</Abstract>
+			<DeclaredIn>NSKitNode.h</DeclaredIn>			
 			
-			<Declaration>- (id)first</Declaration>
+			<Declaration>@property (nonatomic, strong) NSObject&lt;NSKitLinkedListProtocol&gt; *nextLink</Declaration>
 			
-			<ReturnValue><Abstract type="html">id The first object in the queue, nil if the queue if empty.</Abstract></ReturnValue>
-			<Anchor>//api/name/first</Anchor>
+			
+			<Anchor>//api/name/nextLink</Anchor>
             <NodeRef refid="10"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitQueue/last</TokenIdentifier>
-			<Abstract type="html">Return the last element of the queue.</Abstract>
-			<DeclaredIn>NSKitQueue.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitNode/setPreviousLink:</TokenIdentifier>
+			<Abstract type="html">link to the next node, used in NSKitSinglyLinkedList</Abstract>
+			<DeclaredIn>NSKitNode.h</DeclaredIn>			
 			
-			<Declaration>- (id)last</Declaration>
+			<Declaration>@property (nonatomic, strong) NSObject&lt;NSKitLinkedListProtocol&gt; *previousLink</Declaration>
 			
-			<ReturnValue><Abstract type="html">id The last object in the queue, nil if the queue if empty.</Abstract></ReturnValue>
-			<Anchor>//api/name/last</Anchor>
+			
+			<Anchor>//api/name/previousLink</Anchor>
             <NodeRef refid="10"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitQueue/isEmpty</TokenIdentifier>
-			<Abstract type="html">Checks if the queue is empty.</Abstract>
-			<DeclaredIn>NSKitQueue.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitNode/previousLink</TokenIdentifier>
+			<Abstract type="html">link to the next node, used in NSKitSinglyLinkedList</Abstract>
+			<DeclaredIn>NSKitNode.h</DeclaredIn>			
 			
-			<Declaration>- (BOOL)isEmpty</Declaration>
+			<Declaration>@property (nonatomic, strong) NSObject&lt;NSKitLinkedListProtocol&gt; *previousLink</Declaration>
 			
-			<ReturnValue><Abstract type="html">BOOL
-YES if is empty, otherwise NO.</Abstract></ReturnValue>
-			<Anchor>//api/name/isEmpty</Anchor>
+			
+			<Anchor>//api/name/previousLink</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/NSKitNode/previousLink</TokenIdentifier>
+			<Abstract type="html">link to the next node, used in NSKitSinglyLinkedList</Abstract>
+			<DeclaredIn>NSKitNode.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong) NSObject&lt;NSKitLinkedListProtocol&gt; *previousLink</Declaration>
+			
+			
+			<Anchor>//api/name/previousLink</Anchor>
             <NodeRef refid="10"/>
 		</Token>
 		

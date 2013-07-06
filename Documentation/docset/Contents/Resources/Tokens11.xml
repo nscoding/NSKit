@@ -1,193 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/NSKitRate.html">
+	<File path="Classes/NSKitPerformanceTimer.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/NSKitRate</TokenIdentifier>
-			<Abstract type="html">Rate helper object to store the information.</Abstract>
-			<DeclaredIn>NSKitRate.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/NSKitPerformanceTimer</TokenIdentifier>
+			<Abstract type="html">Permormance timer helper class</Abstract>
+			<DeclaredIn>NSKitPerformanceTimer.h</DeclaredIn>
 			
 			<NodeRef refid="11"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitRate/setMajorBundleVerion:</TokenIdentifier>
-			<Abstract type="html">Stores the major bundle version.</Abstract>
-			<DeclaredIn>NSKitRate.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitPerformanceTimer/fire</TokenIdentifier>
+			<Abstract type="html">Fire the perfomance timer.</Abstract>
+			<DeclaredIn>NSKitPerformanceTimer.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, copy) NSString *majorBundleVerion</Declaration>
+			<Declaration>- (void)fire</Declaration>
 			
 			
-			<Anchor>//api/name/majorBundleVerion</Anchor>
+			<Anchor>//api/name/fire</Anchor>
             <NodeRef refid="11"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitRate/majorBundleVerion</TokenIdentifier>
-			<Abstract type="html">Stores the major bundle version.</Abstract>
-			<DeclaredIn>NSKitRate.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitPerformanceTimer/logResult</TokenIdentifier>
+			<Abstract type="html">Logs the time in milliseconds since fire was invoked.</Abstract>
+			<DeclaredIn>NSKitPerformanceTimer.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, copy) NSString *majorBundleVerion</Declaration>
-			
-			
-			<Anchor>//api/name/majorBundleVerion</Anchor>
-            <NodeRef refid="11"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/NSKitRate/majorBundleVerion</TokenIdentifier>
-			<Abstract type="html">Stores the major bundle version.</Abstract>
-			<DeclaredIn>NSKitRate.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, copy) NSString *majorBundleVerion</Declaration>
+			<Declaration>- (void)logResult</Declaration>
 			
 			
-			<Anchor>//api/name/majorBundleVerion</Anchor>
-            <NodeRef refid="11"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitRate/setLastDateAsked:</TokenIdentifier>
-			<Abstract type="html">Stores the last date asked.</Abstract>
-			<DeclaredIn>NSKitRate.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, copy) NSDate *lastDateAsked</Declaration>
-			
-			
-			<Anchor>//api/name/lastDateAsked</Anchor>
-            <NodeRef refid="11"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitRate/lastDateAsked</TokenIdentifier>
-			<Abstract type="html">Stores the last date asked.</Abstract>
-			<DeclaredIn>NSKitRate.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, copy) NSDate *lastDateAsked</Declaration>
-			
-			
-			<Anchor>//api/name/lastDateAsked</Anchor>
-            <NodeRef refid="11"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/NSKitRate/lastDateAsked</TokenIdentifier>
-			<Abstract type="html">Stores the last date asked.</Abstract>
-			<DeclaredIn>NSKitRate.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, copy) NSDate *lastDateAsked</Declaration>
-			
-			
-			<Anchor>//api/name/lastDateAsked</Anchor>
-            <NodeRef refid="11"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitRate/setDoneAlready:</TokenIdentifier>
-			<Abstract type="html">Stores if the rate was shown already.</Abstract>
-			<DeclaredIn>NSKitRate.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, assign) BOOL doneAlready</Declaration>
-			
-			
-			<Anchor>//api/name/doneAlready</Anchor>
-            <NodeRef refid="11"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitRate/doneAlready</TokenIdentifier>
-			<Abstract type="html">Stores if the rate was shown already.</Abstract>
-			<DeclaredIn>NSKitRate.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, assign) BOOL doneAlready</Declaration>
-			
-			
-			<Anchor>//api/name/doneAlready</Anchor>
-            <NodeRef refid="11"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/NSKitRate/doneAlready</TokenIdentifier>
-			<Abstract type="html">Stores if the rate was shown already.</Abstract>
-			<DeclaredIn>NSKitRate.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, assign) BOOL doneAlready</Declaration>
-			
-			
-			<Anchor>//api/name/doneAlready</Anchor>
-            <NodeRef refid="11"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitRate/setSignificantEvents:</TokenIdentifier>
-			<Abstract type="html">Stores the number of significant events.</Abstract>
-			<DeclaredIn>NSKitRate.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, assign) NSUInteger significantEvents</Declaration>
-			
-			
-			<Anchor>//api/name/significantEvents</Anchor>
-            <NodeRef refid="11"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitRate/significantEvents</TokenIdentifier>
-			<Abstract type="html">Stores the number of significant events.</Abstract>
-			<DeclaredIn>NSKitRate.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, assign) NSUInteger significantEvents</Declaration>
-			
-			
-			<Anchor>//api/name/significantEvents</Anchor>
-            <NodeRef refid="11"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/NSKitRate/significantEvents</TokenIdentifier>
-			<Abstract type="html">Stores the number of significant events.</Abstract>
-			<DeclaredIn>NSKitRate.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, assign) NSUInteger significantEvents</Declaration>
-			
-			
-			<Anchor>//api/name/significantEvents</Anchor>
-            <NodeRef refid="11"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitRate/setNumberOfUsages:</TokenIdentifier>
-			<Abstract type="html">Stores the number of usages.</Abstract>
-			<DeclaredIn>NSKitRate.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, assign) NSUInteger numberOfUsages</Declaration>
-			
-			
-			<Anchor>//api/name/numberOfUsages</Anchor>
-            <NodeRef refid="11"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitRate/numberOfUsages</TokenIdentifier>
-			<Abstract type="html">Stores the number of usages.</Abstract>
-			<DeclaredIn>NSKitRate.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, assign) NSUInteger numberOfUsages</Declaration>
-			
-			
-			<Anchor>//api/name/numberOfUsages</Anchor>
-            <NodeRef refid="11"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/NSKitRate/numberOfUsages</TokenIdentifier>
-			<Abstract type="html">Stores the number of usages.</Abstract>
-			<DeclaredIn>NSKitRate.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, assign) NSUInteger numberOfUsages</Declaration>
-			
-			
-			<Anchor>//api/name/numberOfUsages</Anchor>
+			<Anchor>//api/name/logResult</Anchor>
             <NodeRef refid="11"/>
 		</Token>
 		

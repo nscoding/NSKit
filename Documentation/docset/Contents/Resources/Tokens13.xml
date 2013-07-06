@@ -1,147 +1,193 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/NSKitSinglyLinkedList.html">
+	<File path="Classes/NSKitRate.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/NSKitSinglyLinkedList</TokenIdentifier>
-			<Abstract type="html">Each element of an instance of a data object is represented as a group of memory locations called cell or node.
-The elements may be stored in any arbitrary set of memory locations.
-Each element keeps explicit information about the location of the next element through a pointer (or link).
-Also is called Chain.</Abstract>
-			<DeclaredIn>NSKitSinglyLinkedList.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/NSKitRate</TokenIdentifier>
+			<Abstract type="html">Rate helper object to store the information.</Abstract>
+			<DeclaredIn>NSKitRate.h</DeclaredIn>
 			
 			<NodeRef refid="13"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitSinglyLinkedList/insertObject:</TokenIdentifier>
-			<Abstract type="html">Inserts a new object at the end of the chain.</Abstract>
-			<DeclaredIn>NSKitSinglyLinkedList.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitRate/setMajorBundleVerion:</TokenIdentifier>
+			<Abstract type="html">Stores the major bundle version.</Abstract>
+			<DeclaredIn>NSKitRate.h</DeclaredIn>			
 			
-			<Declaration>- (BOOL)insertObject:(id&lt;NSKitLinkedListProtocol&gt;)object</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>object</Name>
-					<Abstract type="html">The object to be added at the end of the chain.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">YES if the object was successfully added, otherwise NO.</Abstract></ReturnValue>
-			<Anchor>//api/name/insertObject:</Anchor>
+			<Declaration>@property (nonatomic, copy) NSString *majorBundleVerion</Declaration>
+			
+			
+			<Anchor>//api/name/majorBundleVerion</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitSinglyLinkedList/insertObject:atIndex:</TokenIdentifier>
-			<Abstract type="html">Inserts a new object at a specific index.</Abstract>
-			<DeclaredIn>NSKitSinglyLinkedList.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitRate/majorBundleVerion</TokenIdentifier>
+			<Abstract type="html">Stores the major bundle version.</Abstract>
+			<DeclaredIn>NSKitRate.h</DeclaredIn>			
 			
-			<Declaration>- (BOOL)insertObject:(id&lt;NSKitLinkedListProtocol&gt;)object atIndex:(NSInteger)index</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>object</Name>
-					<Abstract type="html">The object to be added at a specific index.</Abstract>
-				</Parameter><Parameter>
-					<Name>index</Name>
-					<Abstract type="html">The specific index.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">YES if the object was successfully added, otherwise NO.</Abstract></ReturnValue>
-			<Anchor>//api/name/insertObject:atIndex:</Anchor>
+			<Declaration>@property (nonatomic, copy) NSString *majorBundleVerion</Declaration>
+			
+			
+			<Anchor>//api/name/majorBundleVerion</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitSinglyLinkedList/objectAtIndex:</TokenIdentifier>
-			<Abstract type="html">Returns an object at a specific index.</Abstract>
-			<DeclaredIn>NSKitSinglyLinkedList.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/NSKitRate/majorBundleVerion</TokenIdentifier>
+			<Abstract type="html">Stores the major bundle version.</Abstract>
+			<DeclaredIn>NSKitRate.h</DeclaredIn>			
 			
-			<Declaration>- (id)objectAtIndex:(NSInteger)index</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>index</Name>
-					<Abstract type="html">The specific index.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">id If there is an object at this index is returned, otherwise nil.</Abstract></ReturnValue>
-			<Anchor>//api/name/objectAtIndex:</Anchor>
+			<Declaration>@property (nonatomic, copy) NSString *majorBundleVerion</Declaration>
+			
+			
+			<Anchor>//api/name/majorBundleVerion</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitSinglyLinkedList/deleObjectAtIndex:</TokenIdentifier>
-			<Abstract type="html">Deletes the object at a specific index.</Abstract>
-			<DeclaredIn>NSKitSinglyLinkedList.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitRate/setLastDateAsked:</TokenIdentifier>
+			<Abstract type="html">Stores the last date asked.</Abstract>
+			<DeclaredIn>NSKitRate.h</DeclaredIn>			
 			
-			<Declaration>- (id)deleObjectAtIndex:(NSInteger)index</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>index</Name>
-					<Abstract type="html">The index of the object to be removed</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">id The object that was removed on that index,
-if nothing was removed nil is returned</Abstract></ReturnValue>
-			<Anchor>//api/name/deleObjectAtIndex:</Anchor>
+			<Declaration>@property (nonatomic, copy) NSDate *lastDateAsked</Declaration>
+			
+			
+			<Anchor>//api/name/lastDateAsked</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitSinglyLinkedList/deleObject:</TokenIdentifier>
-			<Abstract type="html">Deletes the object that is equat to.</Abstract>
-			<DeclaredIn>NSKitSinglyLinkedList.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitRate/lastDateAsked</TokenIdentifier>
+			<Abstract type="html">Stores the last date asked.</Abstract>
+			<DeclaredIn>NSKitRate.h</DeclaredIn>			
 			
-			<Declaration>- (id)deleObject:(id&lt;NSKitLinkedListProtocol&gt;)object</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>object</Name>
-					<Abstract type="html">The object to be removed</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">id The object that was removed,
-if nothing was removed nil is returned</Abstract></ReturnValue>
-			<Anchor>//api/name/deleObject:</Anchor>
+			<Declaration>@property (nonatomic, copy) NSDate *lastDateAsked</Declaration>
+			
+			
+			<Anchor>//api/name/lastDateAsked</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitSinglyLinkedList/indexOfObject:</TokenIdentifier>
-			<Abstract type="html">Returns an index for a specific object.</Abstract>
-			<DeclaredIn>NSKitSinglyLinkedList.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/NSKitRate/lastDateAsked</TokenIdentifier>
+			<Abstract type="html">Stores the last date asked.</Abstract>
+			<DeclaredIn>NSKitRate.h</DeclaredIn>			
 			
-			<Declaration>- (NSInteger)indexOfObject:(id&lt;NSKitLinkedListProtocol&gt;)object</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>object</Name>
-					<Abstract type="html">The specific object.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">NSInteger If there such object the index is returned, otherwise NSNotFound.</Abstract></ReturnValue>
-			<Anchor>//api/name/indexOfObject:</Anchor>
+			<Declaration>@property (nonatomic, copy) NSDate *lastDateAsked</Declaration>
+			
+			
+			<Anchor>//api/name/lastDateAsked</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitSinglyLinkedList/isEmpty</TokenIdentifier>
-			<Abstract type="html">Checks if the chain is empty.</Abstract>
-			<DeclaredIn>NSKitSinglyLinkedList.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitRate/setDoneAlready:</TokenIdentifier>
+			<Abstract type="html">Stores if the rate was shown already.</Abstract>
+			<DeclaredIn>NSKitRate.h</DeclaredIn>			
 			
-			<Declaration>- (BOOL)isEmpty</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL doneAlready</Declaration>
 			
-			<ReturnValue><Abstract type="html">BOOL, YES if the chain is empty, otherwise NO.</Abstract></ReturnValue>
-			<Anchor>//api/name/isEmpty</Anchor>
+			
+			<Anchor>//api/name/doneAlready</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitSinglyLinkedList/count</TokenIdentifier>
-			<Abstract type="html">Returns the count of the chain.</Abstract>
-			<DeclaredIn>NSKitSinglyLinkedList.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitRate/doneAlready</TokenIdentifier>
+			<Abstract type="html">Stores if the rate was shown already.</Abstract>
+			<DeclaredIn>NSKitRate.h</DeclaredIn>			
 			
-			<Declaration>- (NSUInteger)count</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL doneAlready</Declaration>
 			
-			<ReturnValue><Abstract type="html">NSInteger The number of items in the list.</Abstract></ReturnValue>
-			<Anchor>//api/name/count</Anchor>
+			
+			<Anchor>//api/name/doneAlready</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/NSKitRate/doneAlready</TokenIdentifier>
+			<Abstract type="html">Stores if the rate was shown already.</Abstract>
+			<DeclaredIn>NSKitRate.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) BOOL doneAlready</Declaration>
+			
+			
+			<Anchor>//api/name/doneAlready</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitRate/setSignificantEvents:</TokenIdentifier>
+			<Abstract type="html">Stores the number of significant events.</Abstract>
+			<DeclaredIn>NSKitRate.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) NSUInteger significantEvents</Declaration>
+			
+			
+			<Anchor>//api/name/significantEvents</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitRate/significantEvents</TokenIdentifier>
+			<Abstract type="html">Stores the number of significant events.</Abstract>
+			<DeclaredIn>NSKitRate.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) NSUInteger significantEvents</Declaration>
+			
+			
+			<Anchor>//api/name/significantEvents</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/NSKitRate/significantEvents</TokenIdentifier>
+			<Abstract type="html">Stores the number of significant events.</Abstract>
+			<DeclaredIn>NSKitRate.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) NSUInteger significantEvents</Declaration>
+			
+			
+			<Anchor>//api/name/significantEvents</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitRate/setNumberOfUsages:</TokenIdentifier>
+			<Abstract type="html">Stores the number of usages.</Abstract>
+			<DeclaredIn>NSKitRate.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) NSUInteger numberOfUsages</Declaration>
+			
+			
+			<Anchor>//api/name/numberOfUsages</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitRate/numberOfUsages</TokenIdentifier>
+			<Abstract type="html">Stores the number of usages.</Abstract>
+			<DeclaredIn>NSKitRate.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) NSUInteger numberOfUsages</Declaration>
+			
+			
+			<Anchor>//api/name/numberOfUsages</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/NSKitRate/numberOfUsages</TokenIdentifier>
+			<Abstract type="html">Stores the number of usages.</Abstract>
+			<DeclaredIn>NSKitRate.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) NSUInteger numberOfUsages</Declaration>
+			
+			
+			<Anchor>//api/name/numberOfUsages</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		

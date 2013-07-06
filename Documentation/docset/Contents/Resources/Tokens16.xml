@@ -1,111 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/NSKitUtilities.html">
+	<File path="Classes/NSKitSoundProxy.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/NSKitUtilities</TokenIdentifier>
-			<Abstract type="html">Several different helpers</Abstract>
-			<DeclaredIn>NSKitUtilities.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/NSKitSoundProxy</TokenIdentifier>
+			<Abstract type="html">Sound helper</Abstract>
+			<DeclaredIn>NSKitSoundProxy.h</DeclaredIn>
 			
 			<NodeRef refid="16"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/NSKitUtilities/isValidEmail:</TokenIdentifier>
-			<Abstract type="html">The methood returns true if the given string contains a valid e-mail
-address and false if it does not, but takes no other action.</Abstract>
-			<DeclaredIn>NSKitUtilities.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/clm/NSKitSoundProxy/playSoundAtURL:</TokenIdentifier>
+			<Abstract type="html">Plays a short sound from a give URL path.</Abstract>
+			<DeclaredIn>NSKitSoundProxy.h</DeclaredIn>			
 			
-			<Declaration>+ (BOOL)isValidEmail:(NSString *)email</Declaration>
+			<Declaration>+ (void)playSoundAtURL:(NSURL *)soundURL</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>email</Name>
-					<Abstract type="html">The Email of the user</Abstract>
+					<Name>soundURL</Name>
+					<Abstract type="html">Thu user of the path to play the short sound
+e.g. [[NSBundle mainBundle] URLForResource:@&quot;sound&quot; withExtension:@&quot;wav&quot;];</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">YES if the email is valid; otherwise, NO.</Abstract></ReturnValue>
-			<Anchor>//api/name/isValidEmail:</Anchor>
-            <NodeRef refid="16"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/NSKitUtilities/flooredRect:</TokenIdentifier>
-			<Abstract type="html">Receives a rect and floors, x, y, width and height.</Abstract>
-			<DeclaredIn>NSKitUtilities.h</DeclaredIn>			
 			
-			<Declaration>+ (NSRect)flooredRect:(NSRect)rect</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>rect</Name>
-					<Abstract type="html">The NSRect to floor</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">NSRect the floored rect.</Abstract></ReturnValue>
-			<Anchor>//api/name/flooredRect:</Anchor>
-            <NodeRef refid="16"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/NSKitUtilities/flooredOriginRect:</TokenIdentifier>
-			<Abstract type="html">Receives a rect and floors the origin of the rect, (x and y)</Abstract>
-			<DeclaredIn>NSKitUtilities.h</DeclaredIn>			
-			
-			<Declaration>+ (NSRect)flooredOriginRect:(NSRect)rect</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>rect</Name>
-					<Abstract type="html">The NSRect to floor the origin.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">NSRect the floored origin rect.</Abstract></ReturnValue>
-			<Anchor>//api/name/flooredOriginRect:</Anchor>
-            <NodeRef refid="16"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/NSKitUtilities/ceiledRect:</TokenIdentifier>
-			<Abstract type="html">Receives a rect and ceils, x, y, width and height.</Abstract>
-			<DeclaredIn>NSKitUtilities.h</DeclaredIn>			
-			
-			<Declaration>+ (NSRect)ceiledRect:(NSRect)rect</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>rect</Name>
-					<Abstract type="html">The NSRect to ceil.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">NSRect the ceiled rect.</Abstract></ReturnValue>
-			<Anchor>//api/name/ceiledRect:</Anchor>
-            <NodeRef refid="16"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/NSKitUtilities/ceiledOriginRect:</TokenIdentifier>
-			<Abstract type="html">Receives a rect and ceils the origin of the rect, (x and y)</Abstract>
-			<DeclaredIn>NSKitUtilities.h</DeclaredIn>			
-			
-			<Declaration>+ (NSRect)ceiledOriginRect:(NSRect)rect</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>rect</Name>
-					<Abstract type="html">The NSRect to floor the origin.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">NSRect the floored origin rect.</Abstract></ReturnValue>
-			<Anchor>//api/name/ceiledOriginRect:</Anchor>
-            <NodeRef refid="16"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/NSKitUtilities/screenForMouseLocation</TokenIdentifier>
-			<Abstract type="html">Returns the screen where the mouse is located</Abstract>
-			<DeclaredIn>NSKitUtilities.h</DeclaredIn>			
-			
-			<Declaration>+ (NSScreen *)screenForMouseLocation</Declaration>
-			
-			<ReturnValue><Abstract type="html">NSScreen where the mouse is located.</Abstract></ReturnValue>
-			<Anchor>//api/name/screenForMouseLocation</Anchor>
+			<Anchor>//api/name/playSoundAtURL:</Anchor>
             <NodeRef refid="16"/>
 		</Token>
 		
