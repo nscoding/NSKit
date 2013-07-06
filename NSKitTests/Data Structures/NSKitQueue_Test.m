@@ -42,12 +42,68 @@
 // ------------------------------------------------------------------------------------------
 #pragma mark - Tests
 // ------------------------------------------------------------------------------------------
+- (void)testAdd
+{
+    NSKitQueue *queue = [[NSKitQueue alloc] init];
+    NSNumber *node1 = @(1);
+    NSNumber *node2 = @(2);
+    
+    XCTAssertTrue(queue.isEmpty == YES, @"Queue should be empty");
+    
+    [queue add:node1];
+    
+    XCTAssertTrue(queue.count == 1, @"Count should be 1");
+    XCTAssertTrue([[queue remove] isEqual:node1], @"Removed object is not the right object");
+    XCTAssertTrue(queue.isEmpty == YES, @"Queue should be empty");
+    
+    [queue add:node2];
+    
+    XCTAssertTrue(queue.isEmpty == NO, @"Queue should not be empty");
+}
+
+
+- (void)testRemove
+{
+    NSKitQueue *queue = [[NSKitQueue alloc] init];
+    NSNumber *node1 = @(1);
+    NSNumber *node2 = @(2);
+    NSNumber *node3 = @(3);
+    
+    [queue add:node1];
+    [queue add:node2];
+    [queue add:node3];
+
+    XCTAssertTrue([[queue first] isEqual:node1], @"Top object is not the right object");
+    XCTAssertTrue([[queue remove] isEqual:node1], @"Top object is not the right object");
+    XCTAssertTrue([[queue first] isEqual:node2], @"Top object is not the right object");
+    XCTAssertTrue([[queue remove] isEqual:node2], @"Top object is not the right object");
+    XCTAssertTrue([[queue first] isEqual:node3], @"Top object is not the right object");
+    XCTAssertTrue([[queue remove] isEqual:node3], @"Top object is not the right object");
+    XCTAssertTrue(queue.isEmpty == YES, @"Queue should be empty");
+}
+
+
+- (void)testIsEmpty
+{
+    NSKitQueue *queue = [[NSKitQueue alloc] init];
+    NSNumber *node1 = @(1);
+    
+    XCTAssertTrue(queue.isEmpty == YES, @"Queue should be empty");
+    
+    [queue add:node1];
+    XCTAssertTrue(queue.isEmpty == NO, @"Queue should not be empty");
+    
+    [queue remove];
+    XCTAssertTrue(queue.isEmpty == YES, @"Queue should be empty");
+}
+
+
 - (void)testQueue
 {
     NSKitQueue *queue = [[NSKitQueue alloc] init];
-    NSNumber *node1 = [NSNumber numberWithInteger:1];
-    NSNumber *node2 = [NSNumber numberWithInteger:2];
-    NSNumber *node3 = [NSNumber numberWithInteger:3];
+    NSNumber *node1 = @(1);
+    NSNumber *node2 = @(2);
+    NSNumber *node3 = @(3);
 
     [queue add:node1];
     XCTAssertTrue(queue.count == 1, @"Count is not the same");
