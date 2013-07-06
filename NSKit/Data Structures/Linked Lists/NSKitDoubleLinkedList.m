@@ -56,15 +56,6 @@
     [self previousObject:&previousNode
            currentObject:&currentNode
                  atIndex:index];
- 
-    if (currentNode)
-    {
-       previousNode = currentNode.previousLink;
-    }
-    else
-    {
-        previousNode = [self objectAtIndex:index - 1];
-    }
 
     if (previousNode)
     {
