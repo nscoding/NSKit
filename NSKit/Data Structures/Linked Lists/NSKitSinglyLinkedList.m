@@ -25,6 +25,7 @@
 
 
 #import "NSKitSinglyLinkedList.h"
+#import "NSKitSinglyLinkedList+Private.h"
 
 
 // ------------------------------------------------------------------------------------------
@@ -131,8 +132,8 @@
 }
 
 
-- (void)previousObject:(NSObject **)prevObject
-         currentObject:(NSObject **)currentObject
+- (void)previousObject:(NSObject<NSKitLinkedListProtocol> **)prevObject
+         currentObject:(NSObject<NSKitLinkedListProtocol> **)currentObject
                atIndex:(NSInteger)index
 {
     NSObject<NSKitLinkedListProtocol> *objectToReturn = first;
@@ -189,7 +190,7 @@
 }
 
 
-- (NSInteger)indexOfObject:(id)object
+- (NSInteger)indexOfObject:(id <NSKitLinkedListProtocol>)object
 {
     NSObject<NSKitLinkedListProtocol> *nodeToSet = first;
     NSUInteger count = 0;
