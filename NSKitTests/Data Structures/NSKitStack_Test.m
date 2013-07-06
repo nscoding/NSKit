@@ -42,29 +42,78 @@
 // ------------------------------------------------------------------------------------------
 #pragma mark - Tests
 // ------------------------------------------------------------------------------------------
+- (void)testPush
+{
+    NSKitStack *stack = [[NSKitStack alloc] init];
+    NSNumber *node1 = @(1);
+    NSNumber *node2 = @(2);
+
+    XCTAssertTrue(stack.isEmpty == NO, @"Stack should not be empty");
+
+    [stack push:node1];
+
+    XCTAssertTrue(stack.count == 1, @"Count should be 1");
+    XCTAssertTrue([[stack top] isEqual:node1], @"Top object is not the right object");
+    XCTAssertTrue(stack.isEmpty == NO, @"Stack should not be empty");
+    
+    [stack push:node2];
+    
+    XCTAssertTrue(stack.isEmpty == NO, @"Stack should not be empty");
+}
+
+
+- (void)testPop
+{
+    NSKitStack *stack = [[NSKitStack alloc] init];
+    NSNumber *node1 = @(1);
+    NSNumber *node2 = @(2);
+    NSNumber *node3 = @(3);
+
+    XCTAssertTrue([[stack top] isEqual:node3], @"Top object is not the right object");
+    XCTAssertTrue([[stack pop] isEqual:node3], @"Top object is not the right object");
+    XCTAssertTrue([[stack top] isEqual:node2], @"Top object is not the right object");
+    XCTAssertTrue([[stack pop] isEqual:node2], @"Top object is not the right object");
+    XCTAssertTrue([[stack top] isEqual:node1], @"Top object is not the right object");
+    XCTAssertTrue([[stack pop] isEqual:node1], @"Top object is not the right object");
+    XCTAssertTrue(stack.isEmpty == YES, @"Stack should be empty");
+}
+
+
+- (void)testIsEmpty
+{
+    NSKitStack *stack = [[NSKitStack alloc] init];
+    NSNumber *node1 = @(1);
+
+    XCTAssertTrue(stack.isEmpty == YES, @"Stack should be empty");
+
+    [stack push:node1];
+    XCTAssertTrue(stack.isEmpty == NO, @"Stack should not be empty");
+
+    [stack pop];
+    XCTAssertTrue(stack.isEmpty == YES, @"Stack should be empty");
+}
+
+
 - (void)testStack
 {
     NSKitStack *stack = [[NSKitStack alloc] init];
-    NSNumber *node1 = [NSNumber numberWithInteger:1];
-    NSNumber *node2 = [NSNumber numberWithInteger:2];
-    NSNumber *node3 = [NSNumber numberWithInteger:3];
+    NSNumber *node1 = @(1);
+    NSNumber *node2 = @(2);
+    NSNumber *node3 = @(3);
 
     [stack push:node1];
-    XCTAssertTrue(stack.count == 1, @"Count is not the same");
+    XCTAssertTrue(stack.count == 1, @"Count should be 1");
 
     [stack push:node2];
-    XCTAssertTrue(stack.count == 2, @"Count is not the same");
+    XCTAssertTrue(stack.count == 2, @"Count should be 2");
 
     [stack push:node3];
-    XCTAssertTrue(stack.count == 3, @"Count is not the same");
-
-    XCTAssertTrue(stack.isEmpty == NO, @"Stack is not empty");
-
+    XCTAssertTrue(stack.count == 3,  @"Count should be 3");
+    XCTAssertTrue(stack.isEmpty == NO, @"Stack should not be empty");
     XCTAssertTrue([stack pop] == node3, @"Node is wrong");
     XCTAssertTrue([stack pop] == node2, @"Node is wrong");
-    XCTAssertTrue([stack pop] == node1, @"Node is wrong");
-    
-    XCTAssertTrue(stack.isEmpty == YES, @"Stack is not empty");
+    XCTAssertTrue([stack pop] == node1, @"Node is wrong");    
+    XCTAssertTrue(stack.isEmpty == YES, @"Stack should be empty");
 }
 
 
