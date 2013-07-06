@@ -1,55 +1,137 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Categories/NSWindow+NSKitExtensions.html">
+	<File path="Categories/NSView+NSKitExtensions.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cat/NSWindow(NSKitExtensions)</TokenIdentifier>
-			<Abstract type="html">Extends the NSWindow class</Abstract>
-			<DeclaredIn>NSWindow+NSKitExtensions.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cat/NSView(NSKitExtensions)</TokenIdentifier>
+			<Abstract type="html">Extends the NSView</Abstract>
+			<DeclaredIn>NSView+NSKitExtensions.h</DeclaredIn>
 			
 			<NodeRef refid="25"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSWindow(NSKitExtensions)/centerHorizontallyAndVerticallyOnScreen:</TokenIdentifier>
-			<Abstract type="html">Moves the window in the center of the given screen.</Abstract>
-			<DeclaredIn>NSWindow+NSKitExtensions.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/intfm/NSView(NSKitExtensions)/setCenter:</TokenIdentifier>
+			<Abstract type="html">The center of the frame.
+@discussion
+The center is specified within the coordinate system of its
+superview and is measured in points. Setting this property</Abstract>
+			<DeclaredIn>NSView+NSKitExtensions.h</DeclaredIn>			
 			
-			<Declaration>- (void)centerHorizontallyAndVerticallyOnScreen:(NSScreen *)screen</Declaration>
+			<Declaration>@property (nonatomic, assign, setter=setCenter:) NSPoint center</Declaration>
+			
+			
+			<Anchor>//api/name/center</Anchor>
+            <NodeRef refid="25"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSView(NSKitExtensions)/center</TokenIdentifier>
+			<Abstract type="html">The center of the frame.
+@discussion
+The center is specified within the coordinate system of its
+superview and is measured in points. Setting this property</Abstract>
+			<DeclaredIn>NSView+NSKitExtensions.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign, setter=setCenter:) NSPoint center</Declaration>
+			
+			
+			<Anchor>//api/name/center</Anchor>
+            <NodeRef refid="25"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSView(NSKitExtensions)/center</TokenIdentifier>
+			<Abstract type="html">The center of the frame.
+@discussion
+The center is specified within the coordinate system of its
+superview and is measured in points. Setting this property</Abstract>
+			<DeclaredIn>NSView+NSKitExtensions.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign, setter=setCenter:) NSPoint center</Declaration>
+			
+			
+			<Anchor>//api/name/center</Anchor>
+            <NodeRef refid="25"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSView(NSKitExtensions)/fadeInAnimated</TokenIdentifier>
+			<Abstract type="html">Sets the alpha value of the view to 0 animated.</Abstract>
+			<DeclaredIn>NSView+NSKitExtensions.h</DeclaredIn>			
+			
+			<Declaration>- (void)fadeInAnimated</Declaration>
+			
+			
+			<Anchor>//api/name/fadeInAnimated</Anchor>
+            <NodeRef refid="25"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSView(NSKitExtensions)/fadeOutAnimated</TokenIdentifier>
+			<Abstract type="html">Sets the alpha value of the view to 1 animated.</Abstract>
+			<DeclaredIn>NSView+NSKitExtensions.h</DeclaredIn>			
+			
+			<Declaration>- (void)fadeOutAnimated</Declaration>
+			
+			
+			<Anchor>//api/name/fadeOutAnimated</Anchor>
+            <NodeRef refid="25"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSView(NSKitExtensions)/animateWithDuration:animations:</TokenIdentifier>
+			<Abstract type="html">Animate changes to one or more views using the specified duration.</Abstract>
+			<DeclaredIn>NSView+NSKitExtensions.h</DeclaredIn>			
+			
+			<Declaration>+ (void)animateWithDuration:(NSTimeInterval)duration animations:(void ( ^ ) ( void ))animations</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>screen</Name>
-					<Abstract type="html">the screen where the window will be centered,
-if screen is nil, the main screen is used.</Abstract>
+					<Name>duration</Name>
+					<Abstract type="html">The total duration of the animations, measured in seconds.
+If you specify a negative value or 0, the changes are made without animating.</Abstract>
+				</Parameter><Parameter>
+					<Name>animations</Name>
+					<Abstract type="html">A block object containing the changes to commit to the views.
+This is where you programmatically change any animatable properties of the
+views in your view hierarchy. This block takes no parameters and has no
+return value. This parameter must not be NULL.</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/centerHorizontallyAndVerticallyOnScreen:</Anchor>
+			<Anchor>//api/name/animateWithDuration:animations:</Anchor>
             <NodeRef refid="25"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSWindow(NSKitExtensions)/centerHorizontallyAndVertically</TokenIdentifier>
-			<Abstract type="html">Moves the window in the center of the window screen.</Abstract>
-			<DeclaredIn>NSWindow+NSKitExtensions.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/intfm/NSView(NSKitExtensions)/animateWithDuration:animations:completion:</TokenIdentifier>
+			<Abstract type="html">Animate changes to one or more views using the specified duration.</Abstract>
+			<DeclaredIn>NSView+NSKitExtensions.h</DeclaredIn>			
 			
-			<Declaration>- (void)centerHorizontallyAndVertically</Declaration>
+			<Declaration>+ (void)animateWithDuration:(NSTimeInterval)duration animations:(void ( ^ ) ( void ))animations completion:(void ( ^ ) ( BOOL finished ))completion</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>duration</Name>
+					<Abstract type="html">The total duration of the animations, measured in seconds.
+If you specify a negative value or 0, the changes are made without animating.</Abstract>
+				</Parameter><Parameter>
+					<Name>animations</Name>
+					<Abstract type="html">A block object containing the changes to commit to the views.
+This is where you programmatically change any animatable properties of the
+views in your view hierarchy. This block takes no parameters and has no
+return value. This parameter must not be NULL.</Abstract>
+				</Parameter><Parameter>
+					<Name>completion</Name>
+					<Abstract type="html">A block object to be executed when the animation sequence ends. This block
+has no return value and takes a single Boolean argument that indicates whether
+or not the animations actually finished before the completion handler was called.
+If the duration of the animation is 0, this block is performed at the beginning of
+the next run loop cycle. This parameter may be NULL.</Abstract>
+				</Parameter>
+			</Parameters>
 			
-			
-			<Anchor>//api/name/centerHorizontallyAndVertically</Anchor>
-            <NodeRef refid="25"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSWindow(NSKitExtensions)/isFullScreen</TokenIdentifier>
-			<Abstract type="html">Check if the window is Fullscreen mode.</Abstract>
-			<DeclaredIn>NSWindow+NSKitExtensions.h</DeclaredIn>			
-			
-			<Declaration>- (BOOL)isFullScreen</Declaration>
-			
-			<ReturnValue><Abstract type="html">YES if the window is in Fullscreen; otherwise, NO.</Abstract></ReturnValue>
-			<Anchor>//api/name/isFullScreen</Anchor>
+			<Anchor>//api/name/animateWithDuration:animations:completion:</Anchor>
             <NodeRef refid="25"/>
 		</Token>
 		

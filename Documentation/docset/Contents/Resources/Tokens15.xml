@@ -1,66 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/NSKitStack.html">
+	<File path="Classes/NSKitSoundProxy.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/NSKitStack</TokenIdentifier>
-			<Abstract type="html">A stack is a linear list in which insertions (also called additions) and deletions take place at the same end. This end is called the top. The other end is called the bottom.</Abstract>
-			<DeclaredIn>NSKitStack.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/NSKitSoundProxy</TokenIdentifier>
+			<Abstract type="html">Sound helper</Abstract>
+			<DeclaredIn>NSKitSoundProxy.h</DeclaredIn>
 			
 			<NodeRef refid="15"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitStack/push:</TokenIdentifier>
-			<Abstract type="html">Add an element to the stack.</Abstract>
-			<DeclaredIn>NSKitStack.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/clm/NSKitSoundProxy/playSoundAtURL:</TokenIdentifier>
+			<Abstract type="html">Plays a short sound from a give URL path.</Abstract>
+			<DeclaredIn>NSKitSoundProxy.h</DeclaredIn>			
 			
-			<Declaration>- (void)push:(id)objToPush</Declaration>
+			<Declaration>+ (void)playSoundAtURL:(NSURL *)soundURL</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>objToPush</Name>
-					<Abstract type="html">the object to be added to the stack.</Abstract>
+					<Name>soundURL</Name>
+					<Abstract type="html">Thu user of the path to play the short sound
+e.g. [[NSBundle mainBundle] URLForResource:@&quot;sound&quot; withExtension:@&quot;wav&quot;];</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/push:</Anchor>
-            <NodeRef refid="15"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitStack/pop</TokenIdentifier>
-			<Abstract type="html">Delete top element from stack.</Abstract>
-			<DeclaredIn>NSKitStack.h</DeclaredIn>			
-			
-			<Declaration>- (id)pop</Declaration>
-			
-			<ReturnValue><Abstract type="html">id The poped object, nil if the stack is empty.</Abstract></ReturnValue>
-			<Anchor>//api/name/pop</Anchor>
-            <NodeRef refid="15"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitStack/top</TokenIdentifier>
-			<Abstract type="html">Returns top element from stack.</Abstract>
-			<DeclaredIn>NSKitStack.h</DeclaredIn>			
-			
-			<Declaration>- (id)top</Declaration>
-			
-			<ReturnValue><Abstract type="html">id The top object in the stack, nil if the stack is empty.</Abstract></ReturnValue>
-			<Anchor>//api/name/top</Anchor>
-            <NodeRef refid="15"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitStack/isEmpty</TokenIdentifier>
-			<Abstract type="html">Checks if the stack is empty.</Abstract>
-			<DeclaredIn>NSKitStack.h</DeclaredIn>			
-			
-			<Declaration>- (BOOL)isEmpty</Declaration>
-			
-			<ReturnValue><Abstract type="html">BOOL YES if is empty, otherwise NO.</Abstract></ReturnValue>
-			<Anchor>//api/name/isEmpty</Anchor>
+			<Anchor>//api/name/playSoundAtURL:</Anchor>
             <NodeRef refid="15"/>
 		</Token>
 		

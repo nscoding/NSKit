@@ -1,166 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/NSKitKeyboardHelper.html">
+	<File path="Classes/NSKitInternetDoctor.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/NSKitKeyboardHelper</TokenIdentifier>
-			<Abstract type="html">Keyboard helper class</Abstract>
-			<DeclaredIn>NSKitKeyboardHelper.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/NSKitInternetDoctor</TokenIdentifier>
+			<Abstract type="html">Holds a reference to the default URL to ping.</Abstract>
+			<DeclaredIn>NSKitInternetDoctor.h</DeclaredIn>
 			
 			<NodeRef refid="5"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/NSKitKeyboardHelper/returnKeyIsPressedForEvent:</TokenIdentifier>
-			<Abstract type="html">Check if the &quot;Return&quot; key is pressed for a given event.</Abstract>
-			<DeclaredIn>NSKitKeyboardHelper.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitInternetDoctor/setConnected:</TokenIdentifier>
+			<Abstract type="html">Is connected.
+@discussion
+This property will inform you if you are connected to the internet or not.</Abstract>
+			<DeclaredIn>NSKitInternetDoctor.h</DeclaredIn>			
 			
-			<Declaration>+ (BOOL)returnKeyIsPressedForEvent:(NSEvent *)event</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>event</Name>
-					<Abstract type="html">The event to check the pressed key.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">YES if the return key is pressed.</Abstract></ReturnValue>
-			<Anchor>//api/name/returnKeyIsPressedForEvent:</Anchor>
+			<Declaration>@property (nonatomic, assign) BOOL connected</Declaration>
+			
+			
+			<Anchor>//api/name/connected</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/NSKitKeyboardHelper/tabKeyIsPressedForEvent:</TokenIdentifier>
-			<Abstract type="html">Check if the &quot;Tab&quot; key is pressed for a given event.</Abstract>
-			<DeclaredIn>NSKitKeyboardHelper.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitInternetDoctor/connected</TokenIdentifier>
+			<Abstract type="html">Is connected.
+@discussion
+This property will inform you if you are connected to the internet or not.</Abstract>
+			<DeclaredIn>NSKitInternetDoctor.h</DeclaredIn>			
 			
-			<Declaration>+ (BOOL)tabKeyIsPressedForEvent:(NSEvent *)event</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>event</Name>
-					<Abstract type="html">The event to check the pressed key.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">YES if the &quot;Tab&quot; key is pressed.</Abstract></ReturnValue>
-			<Anchor>//api/name/tabKeyIsPressedForEvent:</Anchor>
+			<Declaration>@property (nonatomic, assign) BOOL connected</Declaration>
+			
+			
+			<Anchor>//api/name/connected</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/NSKitKeyboardHelper/shiftKeyIsPressedForEvent:</TokenIdentifier>
-			<Abstract type="html">Check if the &quot;Shift&quot; key is pressed for a given event.</Abstract>
-			<DeclaredIn>NSKitKeyboardHelper.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/NSKitInternetDoctor/connected</TokenIdentifier>
+			<Abstract type="html">Is connected.
+@discussion
+This property will inform you if you are connected to the internet or not.</Abstract>
+			<DeclaredIn>NSKitInternetDoctor.h</DeclaredIn>			
 			
-			<Declaration>+ (BOOL)shiftKeyIsPressedForEvent:(NSEvent *)event</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>event</Name>
-					<Abstract type="html">The event to check the pressed key.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">YES if the &quot;Shift&quot; key is pressed.</Abstract></ReturnValue>
-			<Anchor>//api/name/shiftKeyIsPressedForEvent:</Anchor>
+			<Declaration>@property (nonatomic, assign) BOOL connected</Declaration>
+			
+			
+			<Anchor>//api/name/connected</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/NSKitKeyboardHelper/escapeKeyIsPressedForEvent:</TokenIdentifier>
-			<Abstract type="html">Check if the &quot;Escape&quot; key is pressed for a given event.</Abstract>
-			<DeclaredIn>NSKitKeyboardHelper.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/clm/NSKitInternetDoctor/shared</TokenIdentifier>
+			<Abstract type="html">Singleton, class method to receive back the singleton reference.</Abstract>
+			<DeclaredIn>NSKitInternetDoctor.h</DeclaredIn>			
 			
-			<Declaration>+ (BOOL)escapeKeyIsPressedForEvent:(NSEvent *)event</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>event</Name>
-					<Abstract type="html">The event to check the pressed key.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">YES if the &quot;Escape&quot; key is pressed.</Abstract></ReturnValue>
-			<Anchor>//api/name/escapeKeyIsPressedForEvent:</Anchor>
+			<Declaration>+ (NSKitInternetDoctor *)shared</Declaration>
+			
+			
+			<Anchor>//api/name/shared</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/NSKitKeyboardHelper/leftKeyIsPressedForEvent:</TokenIdentifier>
-			<Abstract type="html">Check if the &quot;Left&quot; key is pressed for a given event.</Abstract>
-			<DeclaredIn>NSKitKeyboardHelper.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitInternetDoctor/retry</TokenIdentifier>
+			<Abstract type="html">Method to retry pinging the given server.</Abstract>
+			<DeclaredIn>NSKitInternetDoctor.h</DeclaredIn>			
 			
-			<Declaration>+ (BOOL)leftKeyIsPressedForEvent:(NSEvent *)event</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>event</Name>
-					<Abstract type="html">The event to check the pressed key.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">YES if the &quot;Left&quot; key is pressed.</Abstract></ReturnValue>
-			<Anchor>//api/name/leftKeyIsPressedForEvent:</Anchor>
-            <NodeRef refid="5"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/NSKitKeyboardHelper/rightKeyIsPressedForEvent:</TokenIdentifier>
-			<Abstract type="html">Check if the &quot;Right&quot; key is pressed for a given event.</Abstract>
-			<DeclaredIn>NSKitKeyboardHelper.h</DeclaredIn>			
+			<Declaration>- (void)retry</Declaration>
 			
-			<Declaration>+ (BOOL)rightKeyIsPressedForEvent:(NSEvent *)event</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>event</Name>
-					<Abstract type="html">The event to check the pressed key.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">YES if the &quot;Right&quot; key is pressed.</Abstract></ReturnValue>
-			<Anchor>//api/name/rightKeyIsPressedForEvent:</Anchor>
-            <NodeRef refid="5"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/NSKitKeyboardHelper/upKeyIsPressedForEvent:</TokenIdentifier>
-			<Abstract type="html">Check if the &quot;Up&quot; key is pressed for a given event.</Abstract>
-			<DeclaredIn>NSKitKeyboardHelper.h</DeclaredIn>			
 			
-			<Declaration>+ (BOOL)upKeyIsPressedForEvent:(NSEvent *)event</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>event</Name>
-					<Abstract type="html">The event to check the pressed key.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">YES if the &quot;Up&quot; key is pressed.</Abstract></ReturnValue>
-			<Anchor>//api/name/upKeyIsPressedForEvent:</Anchor>
-            <NodeRef refid="5"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/NSKitKeyboardHelper/downKeyIsPressedForEvent:</TokenIdentifier>
-			<Abstract type="html">Check if the &quot;Down&quot; key is pressed for a given event.</Abstract>
-			<DeclaredIn>NSKitKeyboardHelper.h</DeclaredIn>			
-			
-			<Declaration>+ (BOOL)downKeyIsPressedForEvent:(NSEvent *)event</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>event</Name>
-					<Abstract type="html">The event to check the pressed key.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">YES if the &quot;Down&quot; key is pressed.</Abstract></ReturnValue>
-			<Anchor>//api/name/downKeyIsPressedForEvent:</Anchor>
-            <NodeRef refid="5"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/NSKitKeyboardHelper/controlKeyIsPressedForEvent:</TokenIdentifier>
-			<Abstract type="html">Check if the &quot;Control&quot; key is pressed for a given event.</Abstract>
-			<DeclaredIn>NSKitKeyboardHelper.h</DeclaredIn>			
-			
-			<Declaration>+ (BOOL)controlKeyIsPressedForEvent:(NSEvent *)event</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>event</Name>
-					<Abstract type="html">The event to check the pressed key.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">YES if the &quot;Control&quot; key is pressed.</Abstract></ReturnValue>
-			<Anchor>//api/name/controlKeyIsPressedForEvent:</Anchor>
+			<Anchor>//api/name/retry</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		
