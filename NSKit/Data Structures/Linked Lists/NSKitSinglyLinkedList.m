@@ -30,17 +30,6 @@
 // ------------------------------------------------------------------------------------------
 
 
-@interface NSKitSinglyLinkedList()
-{
-     NSObject<NSKitLinkedListProtocol> *first;
-}
-
-@end
-
-
-// ------------------------------------------------------------------------------------------
-
-
 @implementation NSKitSinglyLinkedList
 
 
@@ -151,7 +140,7 @@
     
     while (objectToReturn)
     {
-        if (count == index - 1)
+        if (count == index - 1 && prevObject)
         {
             *prevObject = objectToReturn;
         }

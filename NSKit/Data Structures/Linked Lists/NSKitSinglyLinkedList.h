@@ -33,6 +33,10 @@
  * Also is called Chain.
 */
 @interface NSKitSinglyLinkedList : NSObject
+{
+    NSObject<NSKitLinkedListProtocol> *first;
+}
+
 
 /**
  * Inserts a new object at the end of the chain.
