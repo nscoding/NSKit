@@ -1,85 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/NSKitNode.html">
+	<File path="Classes/NSKitPerformanceTimer.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/NSKitNode</TokenIdentifier>
-			<Abstract type="html"></Abstract>
-			<DeclaredIn>NSKitNode.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/NSKitPerformanceTimer</TokenIdentifier>
+			<Abstract type="html">Permormance timer helper class</Abstract>
+			<DeclaredIn>NSKitPerformanceTimer.h</DeclaredIn>
 			
 			<NodeRef refid="10"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitNode/setNextLink:</TokenIdentifier>
-			<Abstract type="html">link to the next node, used in NSKitSinglyLinkedList</Abstract>
-			<DeclaredIn>NSKitNode.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitPerformanceTimer/fire</TokenIdentifier>
+			<Abstract type="html">Fire the perfomance timer.</Abstract>
+			<DeclaredIn>NSKitPerformanceTimer.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, strong) NSObject&lt;NSKitLinkedListProtocol&gt; *nextLink</Declaration>
+			<Declaration>- (void)fire</Declaration>
 			
 			
-			<Anchor>//api/name/nextLink</Anchor>
+			<Anchor>//api/name/fire</Anchor>
             <NodeRef refid="10"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitNode/nextLink</TokenIdentifier>
-			<Abstract type="html">link to the next node, used in NSKitSinglyLinkedList</Abstract>
-			<DeclaredIn>NSKitNode.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/NSKitPerformanceTimer/logResult</TokenIdentifier>
+			<Abstract type="html">Logs the time in milliseconds since fire was invoked.</Abstract>
+			<DeclaredIn>NSKitPerformanceTimer.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, strong) NSObject&lt;NSKitLinkedListProtocol&gt; *nextLink</Declaration>
-			
-			
-			<Anchor>//api/name/nextLink</Anchor>
-            <NodeRef refid="10"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/NSKitNode/nextLink</TokenIdentifier>
-			<Abstract type="html">link to the next node, used in NSKitSinglyLinkedList</Abstract>
-			<DeclaredIn>NSKitNode.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, strong) NSObject&lt;NSKitLinkedListProtocol&gt; *nextLink</Declaration>
+			<Declaration>- (void)logResult</Declaration>
 			
 			
-			<Anchor>//api/name/nextLink</Anchor>
-            <NodeRef refid="10"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitNode/setPreviousLink:</TokenIdentifier>
-			<Abstract type="html">link to the next node, used in NSKitSinglyLinkedList</Abstract>
-			<DeclaredIn>NSKitNode.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, strong) NSObject&lt;NSKitLinkedListProtocol&gt; *previousLink</Declaration>
-			
-			
-			<Anchor>//api/name/previousLink</Anchor>
-            <NodeRef refid="10"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSKitNode/previousLink</TokenIdentifier>
-			<Abstract type="html">link to the next node, used in NSKitSinglyLinkedList</Abstract>
-			<DeclaredIn>NSKitNode.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, strong) NSObject&lt;NSKitLinkedListProtocol&gt; *previousLink</Declaration>
-			
-			
-			<Anchor>//api/name/previousLink</Anchor>
-            <NodeRef refid="10"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/NSKitNode/previousLink</TokenIdentifier>
-			<Abstract type="html">link to the next node, used in NSKitSinglyLinkedList</Abstract>
-			<DeclaredIn>NSKitNode.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, strong) NSObject&lt;NSKitLinkedListProtocol&gt; *previousLink</Declaration>
-			
-			
-			<Anchor>//api/name/previousLink</Anchor>
+			<Anchor>//api/name/logResult</Anchor>
             <NodeRef refid="10"/>
 		</Token>
 		
