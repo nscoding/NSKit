@@ -1,8 +1,8 @@
 //
-//  NSKitStack.m
+//  NSKitNode.h
 //  NSKit
 //
-//  Created by Patrick Chamelo on 6/24/13.
+//  Created by Patrick Chamelo on 7/6/13.
 //  Copyright (c) 2013 Patrick Chamelo. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -23,52 +23,16 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "NSKitStack.h"
+
+#import "NSKitLinkedListProtocol.h"
 
 
-// ------------------------------------------------------------------------------------------
+@interface NSKitNode : NSObject <NSKitLinkedListProtocol>
 
+/** link to the next node, used in NSKitSinglyLinkedList */
+@property (nonatomic, strong) NSObject<NSKitLinkedListProtocol> *nextLink;
 
-@implementation NSKitStack
-
-
-// ------------------------------------------------------------------------------------------
-#pragma mark - Methods
-// ------------------------------------------------------------------------------------------
-- (void)push:(id)objToPush
-{
-    if (objToPush)
-    {
-        [self addObject:objToPush];
-    }
-}
-
-
-- (id)pop
-{
-    if (self.isEmpty == YES)
-    {
-        return nil;
-    }
-    
-    id objToPop = self.lastObject;
-    
-    [self removeLastObject];
-
-    return objToPop;
-}
-
-
-- (id)top
-{
-    return self.lastObject;
-}
-
-
-- (BOOL)isEmpty
-{
-    return (self.count == 0);
-}
-
+/** link to the next node, used in NSKitSinglyLinkedList */
+@property (nonatomic, strong) NSObject<NSKitLinkedListProtocol> *previousLink;
 
 @end

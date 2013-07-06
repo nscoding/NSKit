@@ -54,6 +54,7 @@ extern BOOL SystemAtLeastMaverics; // set at launch
 #import "NSKitMutableArray.h"
 #import "NSKitCGContextHelper.h"
 #import "NSKitRateHelper.h"
+#import "NSKitDoubleLinkedList.h"
 
 @interface NSKit : NSObject
 

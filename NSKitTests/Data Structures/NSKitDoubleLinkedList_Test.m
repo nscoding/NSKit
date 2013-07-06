@@ -1,8 +1,8 @@
 //
-//  NSKitSinglyLinkedList.m
+//  NSKitDoubleLinkedList_Test.m
 //  NSKit
 //
-//  Created by Patrick Chamelo on 6/27/13.
+//  Created by Patrick Chamelo on 7/6/13.
 //  Copyright (c) 2013 Patrick Chamelo. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -26,27 +26,30 @@
 
 #import <XCTest/XCTest.h>
 
-#import "NSKitSinglyLinkedList.h"
+#import "NSKitDoubleLinkedList.h"
 #import "NSKitNode.h"
 
 
 // ------------------------------------------------------------------------------------------
 
 
-@interface NSKitSinglyLinkedList_Test : XCTestCase @end
+@interface NSKitDoubleLinkedList_Test : XCTestCase
+
+@end
 
 
 // ------------------------------------------------------------------------------------------
 
 
-@implementation NSKitSinglyLinkedList_Test
+@implementation NSKitDoubleLinkedList_Test
+
 
 // ------------------------------------------------------------------------------------------
 #pragma mark - Tests
 // ------------------------------------------------------------------------------------------
 - (void)testInsert
 {
-    NSKitSinglyLinkedList *linkedList = [[NSKitSinglyLinkedList alloc] init];
+    NSKitDoubleLinkedList *linkedList = [[NSKitDoubleLinkedList alloc] init];
     NSKitNode *node1 = [[NSKitNode alloc] init];
     NSKitNode *node2 = [[NSKitNode alloc] init];
     NSKitNode *node3 = [[NSKitNode alloc] init];
@@ -59,13 +62,27 @@
     
     count += [linkedList insertObject:node1];
     count += [linkedList insertObject:node2 atIndex:1];
+    
+    XCTAssertTrue(node1.nextLink == node2, @"Next is broken");
+    XCTAssertTrue(node1.previousLink == nil, @"Previous is broken");
+
+    XCTAssertTrue(node2.nextLink == nil, @"Next is broken");
+    XCTAssertTrue(node2.previousLink == node1, @"Previous is broken");
+
+    
     count += [linkedList insertObject:node3];
     count += [linkedList insertObject:node4 atIndex:0];
+    
+    XCTAssertTrue(node1.previousLink == node4, @"Previous is broken");
+    XCTAssertTrue(node4.nextLink == node1, @"Next is broken");
+    XCTAssertTrue(node2.previousLink == node1, @"Previous is broken");
+    XCTAssertTrue(node1.nextLink == node2, @"Next is broken");
+
     count += [linkedList insertObject:node5 atIndex:random];
     count += [linkedList insertObject:node6 atIndex:random];
     
     XCTAssertTrue(linkedList.count == count, @"Count is not the same");
-
+    
     NSInteger previousCount = linkedList.count;
     if ([linkedList deleObjectAtIndex:random])
     {
@@ -86,7 +103,7 @@
     {
         XCTAssertTrue(linkedList.count == previousCount, @"Count is not the same");
     }
- 
+    
     previousCount = linkedList.count;
     random = arc4random() % 3;
     if ([linkedList deleObjectAtIndex:random])
@@ -97,7 +114,7 @@
     {
         XCTAssertTrue(linkedList.count == previousCount, @"Count is not the same");
     }
-
+    
     previousCount = linkedList.count;
     random = arc4random() % 3;
     if ([linkedList deleObject:node2])
@@ -110,7 +127,7 @@
     }
     
     BOOL isEmpty = linkedList.isEmpty;
-
+    
     if (isEmpty)
     {
         XCTAssertTrue(linkedList.count == 0, @"Count is not the same");
