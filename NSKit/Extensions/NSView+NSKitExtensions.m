@@ -91,7 +91,10 @@
         }
         completionHandler:^
         {
-            completion(YES);
+            if (completion)
+            {
+                completion(YES);
+            }
         }];
     }
     else
