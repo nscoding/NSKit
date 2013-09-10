@@ -24,7 +24,7 @@
 // THE SOFTWARE.
 
 
-/** Extends the NSArray class */
+/** Extends the NSImage class */
 @interface NSImage (NSKitExtensions)
 
 /**
