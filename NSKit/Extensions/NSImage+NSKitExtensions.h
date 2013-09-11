@@ -24,7 +24,7 @@
 // THE SOFTWARE.
 
 
-/** Extends the NSArray class */
+/** Extends the NSImage class */
 @interface NSImage (NSKitExtensions)
 
 /**
@@ -86,4 +86,35 @@
                               bottomWidth:(CGFloat)bottomHeight
                                    toSize:(NSSize)destinationSize
                                 fromImage:(NSImage *)sourceImage;
+
+/**
+ * Initializes and returns a high-resolution capable NSImage 
+ * instance with the contents of the specified URL. Automatically 
+ * loads @2x image (if existing) and adds it to bitmap rep. Both 
+ * images will be combined at runtime to ensure the proper
+ * resolution (regular/retina) is always applied. Use this method 
+ * in favor of "initWithContentsOfURL:".
+ *
+ * @param url The URL identifying the regular-sized image.
+ *
+ * @return NSImage instance, nil if method can't create img rep.
+ *
+ */
+- (id)initWithHiResContentsOfURL:(NSURL *)url;
+	
+/**
+ * Initializes and returns a high-resolution capable NSImage 
+ * instance with the contents of the specified path. Automatically 
+ * loads @2x image (if existing) and adds it to bitmap rep. Both 
+ * images will be combined at runtime to ensure the proper
+ * resolution (regular/retina) is always applied. Use this method 
+ * in favor of "initWithContentsOfFile:".
+ *
+ * @param fileName String containing path to regular-sized image.
+ *
+ * @return NSImage instance, nil if method can't create img rep.
+ *
+ */
+- (id)initWithHiResContentsOfFile:(NSString *)fileName;
+
 @end
