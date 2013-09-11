@@ -60,7 +60,7 @@
     return objToRemove;
 }
 
-NSInteger
+
 - (id)first
 {
     if (self.isEmpty)
