@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13414F9117E2208E00F885D2 /* NSString+NSKitExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 13414F8F17E2208E00F885D2 /* NSString+NSKitExtensions.h */; };
+		13414F9217E2208E00F885D2 /* NSString+NSKitExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 13414F9017E2208E00F885D2 /* NSString+NSKitExtensions.m */; };
 		CD0258641777C42D006A7C54 /* NSKitQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0258601777C42D006A7C54 /* NSKitQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD0258651777C42D006A7C54 /* NSKitQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0258611777C42D006A7C54 /* NSKitQueue.m */; };
 		CD0258661777C42D006A7C54 /* NSKitStack.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0258621777C42D006A7C54 /* NSKitStack.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -93,6 +95,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		13414F8F17E2208E00F885D2 /* NSString+NSKitExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NSKitExtensions.h"; sourceTree = "<group>"; };
+		13414F9017E2208E00F885D2 /* NSString+NSKitExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NSKitExtensions.m"; sourceTree = "<group>"; };
 		CD0258601777C42D006A7C54 /* NSKitQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSKitQueue.h; sourceTree = "<group>"; };
 		CD0258611777C42D006A7C54 /* NSKitQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSKitQueue.m; sourceTree = "<group>"; };
 		CD0258621777C42D006A7C54 /* NSKitStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSKitStack.h; sourceTree = "<group>"; };
@@ -397,22 +401,24 @@
 			children = (
 				CDB2985B1777C05700889B06 /* NSArray+NSKitExtensions.h */,
 				CDB2985C1777C05700889B06 /* NSArray+NSKitExtensions.m */,
-				CDB2985F1777C13300889B06 /* NSMutableArray+NSKitExtensions.h */,
-				CDB298601777C13300889B06 /* NSMutableArray+NSKitExtensions.m */,
-				CD02588A1778CB0A006A7C54 /* NSMutableAttributedString+NSKitExtensions.h */,
-				CD02588B1778CB0A006A7C54 /* NSMutableAttributedString+NSKitExtensions.m */,
-				CD0258861778C88E006A7C54 /* NSTextStorage+NSKitExtensions.h */,
-				CD0258871778C88E006A7C54 /* NSTextStorage+NSKitExtensions.m */,
-				CDB298421777AFA900889B06 /* NSView+NSKitExtensions.h */,
-				CDB298431777AFA900889B06 /* NSView+NSKitExtensions.m */,
-				CDB2983E1777ACAB00889B06 /* NSWindow+NSKitExtensions.h */,
-				CDB2983F1777ACAB00889B06 /* NSWindow+NSKitExtensions.m */,
 				CD0258921778CBB2006A7C54 /* NSColor+NSKitExtensions.h */,
 				CD0258931778CBB2006A7C54 /* NSColor+NSKitExtensions.m */,
 				CD02589C1778D1AA006A7C54 /* NSImage+NSKitExtensions.h */,
 				CD02589D1778D1AA006A7C54 /* NSImage+NSKitExtensions.m */,
+				CDB2985F1777C13300889B06 /* NSMutableArray+NSKitExtensions.h */,
+				CDB298601777C13300889B06 /* NSMutableArray+NSKitExtensions.m */,
+				CD02588A1778CB0A006A7C54 /* NSMutableAttributedString+NSKitExtensions.h */,
+				CD02588B1778CB0A006A7C54 /* NSMutableAttributedString+NSKitExtensions.m */,
+				13414F8F17E2208E00F885D2 /* NSString+NSKitExtensions.h */,
+				13414F9017E2208E00F885D2 /* NSString+NSKitExtensions.m */,
+				CD0258861778C88E006A7C54 /* NSTextStorage+NSKitExtensions.h */,
+				CD0258871778C88E006A7C54 /* NSTextStorage+NSKitExtensions.m */,
 				CD0258AD1778D981006A7C54 /* NSUserDefaults+NSKitExtensions.h */,
 				CD0258AE1778D981006A7C54 /* NSUserDefaults+NSKitExtensions.m */,
+				CDB298421777AFA900889B06 /* NSView+NSKitExtensions.h */,
+				CDB298431777AFA900889B06 /* NSView+NSKitExtensions.m */,
+				CDB2983E1777ACAB00889B06 /* NSWindow+NSKitExtensions.h */,
+				CDB2983F1777ACAB00889B06 /* NSWindow+NSKitExtensions.m */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -500,6 +506,7 @@
 				CD553900177D904E004B33D8 /* NSKitMath.h in Headers */,
 				CD02588C1778CB0A006A7C54 /* NSMutableAttributedString+NSKitExtensions.h in Headers */,
 				CD082B8E1788608A001C9E5E /* NSKitSinglyLinkedList+Private.h in Headers */,
+				13414F9117E2208E00F885D2 /* NSString+NSKitExtensions.h in Headers */,
 				CD082B81178856E7001C9E5E /* NSKitDoubleLinkedList.h in Headers */,
 				CD0258661777C42D006A7C54 /* NSKitStack.h in Headers */,
 				CDB298461777AFC900889B06 /* NSView+NSKitExtensions.h in Headers */,
@@ -641,6 +648,7 @@
 				CDB298411777ACAB00889B06 /* NSWindow+NSKitExtensions.m in Sources */,
 				CD0258741777C5F5006A7C54 /* NSKitKeyboardHelper.m in Sources */,
 				CD553959177E19BF004B33D8 /* NSKitInternetDoctor.m in Sources */,
+				13414F9217E2208E00F885D2 /* NSString+NSKitExtensions.m in Sources */,
 				CD88570E177F9256007322E8 /* NSKitHeapPriorityQueue.m in Sources */,
 				CD0258951778CBB2006A7C54 /* NSColor+NSKitExtensions.m in Sources */,
 				CD082B82178856E7001C9E5E /* NSKitDoubleLinkedList.m in Sources */,

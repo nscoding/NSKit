@@ -9,6 +9,7 @@ Is a collection of well-documented __Data Structures__, __Helpers__ and __Catego
 - NSImage(NSKitExtensions)
 - NSMutableArray(NSKitExtensions)
 - NSMutableAttributedString(NSKitExtensions)
+- NSString(NSKitExtensions)
 - NSTextStorage(NSKitExtensions)
 - NSUserDefaults(NSKitExtensions)
 - NSView(NSKitExtensions)
