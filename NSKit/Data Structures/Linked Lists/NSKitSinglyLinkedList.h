@@ -126,4 +126,11 @@
 - (NSUInteger)count;
 
 
+/**
+ * Method to reverse the chain order.
+ *
+ */
+- (void)reverseList;
+
+
 @end

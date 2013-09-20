@@ -122,4 +122,42 @@
 }
 
 
+
+- (void)testReverse
+{
+    NSKitSinglyLinkedList *linkedList = [[NSKitSinglyLinkedList alloc] init];
+    NSKitNode *node1 = [[NSKitNode alloc] init];
+    NSKitNode *node2 = [[NSKitNode alloc] init];
+    NSKitNode *node3 = [[NSKitNode alloc] init];
+    NSKitNode *node4 = [[NSKitNode alloc] init];
+    NSKitNode *node5 = [[NSKitNode alloc] init];
+    
+    [linkedList insertObject:node1];
+    [linkedList insertObject:node2];
+    [linkedList insertObject:node3];
+    [linkedList insertObject:node4];
+    [linkedList insertObject:node5];
+
+    [linkedList reverseList];
+    
+    XCTAssertTrue([linkedList objectAtIndex:0] == node5, @"Wrong object");
+    XCTAssertTrue([linkedList objectAtIndex:1] == node4, @"Wrong object");
+    XCTAssertTrue([linkedList objectAtIndex:2] == node3, @"Wrong object");
+    XCTAssertTrue([linkedList objectAtIndex:3] == node2, @"Wrong object");
+    XCTAssertTrue([linkedList objectAtIndex:4] == node1, @"Wrong object");
+
+    
+    NSKitNode *node6 = [[NSKitNode alloc] init];
+    [linkedList insertObject:node6 atIndex:0];
+    [linkedList reverseList];
+    
+    XCTAssertTrue([linkedList objectAtIndex:0] == node1, @"Wrong object");
+    XCTAssertTrue([linkedList objectAtIndex:1] == node2, @"Wrong object");
+    XCTAssertTrue([linkedList objectAtIndex:2] == node3, @"Wrong object");
+    XCTAssertTrue([linkedList objectAtIndex:3] == node4, @"Wrong object");
+    XCTAssertTrue([linkedList objectAtIndex:4] == node5, @"Wrong object");
+    XCTAssertTrue([linkedList objectAtIndex:5] == node6, @"Wrong object");
+}
+
+
 @end

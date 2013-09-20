@@ -54,7 +54,7 @@
     NSUInteger count = array.count;
     for (NSNumber *num in reversedArray)
     {
-        XCTAssertTrue([num isEqualTo:[array objectAtIndex:--count]], @"Object at %i index is wrong", count);
+        XCTAssertTrue([num isEqualTo:[array objectAtIndex:--count]], @"Object at %lu index is wrong", (unsigned long)count);
     }
 }
 
@@ -70,7 +70,7 @@
     NSUInteger count = array.count;
     for (NSNumber *num in reversedArray)
     {
-        XCTAssertTrue([num isEqualTo:[array objectAtIndex:--count]], @"Object at %i index is wrong", count);
+        XCTAssertTrue([num isEqualTo:[array objectAtIndex:--count]], @"Object at %lu index is wrong", (unsigned long)count);
     }
 }
 

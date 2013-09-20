@@ -236,4 +236,26 @@
 }
 
 
+- (void)reverseList
+{
+    NSObject<NSKitLinkedListProtocol> *previous = nil;
+    NSObject<NSKitLinkedListProtocol> *node = first;
+
+    while (node)
+    {
+        // store next
+        NSObject<NSKitLinkedListProtocol> *nextNode = node.nextLink;
+        node.nextLink = previous;
+        previous = node;
+        node = nextNode;
+        
+        if (nextNode)
+        {
+            first = nextNode;
+        }
+    }
+}
+
+
+
 @end

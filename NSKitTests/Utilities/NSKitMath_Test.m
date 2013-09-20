@@ -57,7 +57,7 @@
     random = [NSKitMath generateRandomFromNumber:5 toNumber:5];
     XCTAssertTrue((random == 5), @"Issue found random generation");
 
-    XCTAssertTrueNoThrow([NSKitMath generateRandomFromNumber:6 toNumber:5], @"Should throw exception");
+    XCTAssertNoThrow([NSKitMath generateRandomFromNumber:6 toNumber:5], @"Should throw exception");
 }
 
 
