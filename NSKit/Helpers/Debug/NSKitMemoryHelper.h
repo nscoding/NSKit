@@ -24,14 +24,15 @@
 // THE SOFTWARE.
 
 
-typedef enum
+typedef NS_ENUM(NSUInteger, NSKitMemoryOption)
 {
     NSKitMemoryOptionFree = 0,
     NSKitMemoryOptionInactive,
     NSKitMemoryOptionActive,
     NSKitMemoryOptionWired,
     NSKitMemoryOptionAll
-} NSKitMemoryOption;
+};
+
 
 /** Memory helper class */
 @interface NSKitMemoryHelper : NSObject

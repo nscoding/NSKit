@@ -59,7 +59,7 @@
         return start;
     }
     
-    NSInteger value = arc4random() % diff;
+    NSUInteger value = arc4random_uniform(diff);
 
     return start + value;
 }
