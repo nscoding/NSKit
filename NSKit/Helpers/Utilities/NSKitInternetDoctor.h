@@ -27,7 +27,7 @@
 /**
  Holds a reference to the default URL to ping.
  */
-extern NSString *NSKitPingURL;
+FOUNDATION_EXPORT NSString *NSKitPingURL;
 
 @interface NSKitInternetDoctor : NSObject
 

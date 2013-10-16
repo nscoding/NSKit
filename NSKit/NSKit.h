@@ -24,10 +24,10 @@
 // THE SOFTWARE.
 
 
-extern BOOL SystemAtLeastLion;
-extern BOOL SystemAtLeastLionWithRetina;
-extern BOOL SystemAtLeastMountainLion;
-extern BOOL SystemAtLeastMaverics; // set at launch
+FOUNDATION_EXPORT BOOL SystemAtLeastLion;
+FOUNDATION_EXPORT BOOL SystemAtLeastLionWithRetina;
+FOUNDATION_EXPORT BOOL SystemAtLeastMountainLion;
+FOUNDATION_EXPORT BOOL SystemAtLeastMaverics; // set at launch
 
 #import "NSKitLinkedListProtocol.h"
 #import "NSKitSinglyLinkedList.h"

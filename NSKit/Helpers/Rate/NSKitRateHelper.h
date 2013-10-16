@@ -30,14 +30,14 @@
  * Holds a reference to the appstore URL.
  * e.g.  NSKitAppStoreURL = @"macappstore://itunes.apple.com/app/id641027709?mt=12";
  */
-extern NSString *NSKitAppStoreURL;
+FOUNDATION_EXPORT NSString *NSKitAppStoreURL;
 
 
 /**
  * Holds a reference to the rate title string.
  * e.g. NSLocalizedString(@"Rate and Review Color Picker", @"");
  */
-extern NSString *NSKitRateTitleText;
+FOUNDATION_EXPORT NSString *NSKitRateTitleText;
 
 
 /**
@@ -46,47 +46,47 @@ extern NSString *NSKitRateTitleText;
  *                        @"would you mind taking a moment to rate it? "
  *                        @"It won't take more than a minute. Thanks for your support!", @"")
  */
-extern NSString *NSKitRateDescriptionText;
+FOUNDATION_EXPORT NSString *NSKitRateDescriptionText;
 
 
 /**
  * Holds a reference to the rate now button string.
  * e.g. NSLocalizedString(@"Rate Now", @"");
  */
-extern NSString *NSKitRateNowButtonText;
+FOUNDATION_EXPORT NSString *NSKitRateNowButtonText;
 
 
 /**
  * Holds a reference to the rate later button string.
  * e.g. NSLocalizedString(@"Later", @"");
  */
-extern NSString *NSKitRateLaterButtonText;
+FOUNDATION_EXPORT NSString *NSKitRateLaterButtonText;
 
 
 /**
  * Holds a reference to the rate no thanks button string.
  * e.g. NSLocalizedString(@"No Thanks", @"");
  */
-extern NSString *NSKitRateNoThanksButtonText;
+FOUNDATION_EXPORT NSString *NSKitRateNoThanksButtonText;
 
 
 /**
  * Holds a reference to the minimum number of usages before prompting.
  * if is less than zero ( < 0) then is ignored. Default value is 2.
  */
-extern NSInteger NSKitRateMinimumUsages;
+FOUNDATION_EXPORT NSInteger NSKitRateMinimumUsages;
 
 /**
  * Holds a reference to the minimum number of days before prompting.
  * if is less than zero ( < 0) then is ignored.  Default value is 10.
  */
-extern NSInteger NSKitRateMinimumDays;
+FOUNDATION_EXPORT NSInteger NSKitRateMinimumDays;
 
 /**
  * Holds a reference to the minimum number of significant events before prompting.
  * if is less than zero ( < 0) then is ignored. Default value is 0.
  */
-extern NSInteger NSKitRateMinimumSignificantEvents;
+FOUNDATION_EXPORT NSInteger NSKitRateMinimumSignificantEvents;
 
 
 /**

@@ -27,12 +27,12 @@
 /**
  Holds a reference to a color for the default color of the text.
  */
-extern NSColor *NSKitTextStorageColor;
+FOUNDATION_EXPORT NSColor *NSKitTextStorageColor;
 
 /**
  Holds a reference to a color for the link color of the text.
  */
-extern NSColor *NSKitTextStorageLinkColor;
+FOUNDATION_EXPORT NSColor *NSKitTextStorageLinkColor;
 
 /**
  Scans the text storage for URLs and sets them with underline and a color
