@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		13154B4E17F83BD500FFCEC3 /* NSKitView.h in Headers */ = {isa = PBXBuildFile; fileRef = 13154B4C17F83BD500FFCEC3 /* NSKitView.h */; };
 		13154B4F17F83BD500FFCEC3 /* NSKitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13154B4D17F83BD500FFCEC3 /* NSKitView.m */; };
+		131B723E182BB6B000B47763 /* NSEvent+NSKitExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 131B723C182BB6B000B47763 /* NSEvent+NSKitExtensions.h */; };
+		131B723F182BB6B000B47763 /* NSEvent+NSKitExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 131B723D182BB6B000B47763 /* NSEvent+NSKitExtensions.m */; };
+		131B7240182BB6B000B47763 /* NSEvent+NSKitExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 131B723D182BB6B000B47763 /* NSEvent+NSKitExtensions.m */; };
 		13414F9117E2208E00F885D2 /* NSString+NSKitExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 13414F8F17E2208E00F885D2 /* NSString+NSKitExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		13414F9217E2208E00F885D2 /* NSString+NSKitExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 13414F9017E2208E00F885D2 /* NSString+NSKitExtensions.m */; };
 		CD0258641777C42D006A7C54 /* NSKitQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0258601777C42D006A7C54 /* NSKitQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -99,6 +102,8 @@
 /* Begin PBXFileReference section */
 		13154B4C17F83BD500FFCEC3 /* NSKitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSKitView.h; sourceTree = "<group>"; };
 		13154B4D17F83BD500FFCEC3 /* NSKitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSKitView.m; sourceTree = "<group>"; };
+		131B723C182BB6B000B47763 /* NSEvent+NSKitExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSEvent+NSKitExtensions.h"; sourceTree = "<group>"; };
+		131B723D182BB6B000B47763 /* NSEvent+NSKitExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSEvent+NSKitExtensions.m"; sourceTree = "<group>"; };
 		13414F8F17E2208E00F885D2 /* NSString+NSKitExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NSKitExtensions.h"; sourceTree = "<group>"; };
 		13414F9017E2208E00F885D2 /* NSString+NSKitExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NSKitExtensions.m"; sourceTree = "<group>"; };
 		CD0258601777C42D006A7C54 /* NSKitQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSKitQueue.h; sourceTree = "<group>"; };
@@ -433,6 +438,8 @@
 				CDB298431777AFA900889B06 /* NSView+NSKitExtensions.m */,
 				CDB2983E1777ACAB00889B06 /* NSWindow+NSKitExtensions.h */,
 				CDB2983F1777ACAB00889B06 /* NSWindow+NSKitExtensions.m */,
+				131B723C182BB6B000B47763 /* NSEvent+NSKitExtensions.h */,
+				131B723D182BB6B000B47763 /* NSEvent+NSKitExtensions.m */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -532,6 +539,7 @@
 				13154B4E17F83BD500FFCEC3 /* NSKitView.h in Headers */,
 				CD553958177E19BF004B33D8 /* NSKitInternetDoctor.h in Headers */,
 				CD3B0C081780520700D2B16F /* NSKitCGContextHelper.h in Headers */,
+				131B723E182BB6B000B47763 /* NSEvent+NSKitExtensions.h in Headers */,
 				CDBE1E73177FADFC002E6F58 /* NSKitMutableArray.h in Headers */,
 				CD082B81178856E7001C9E5E /* NSKitDoubleLinkedList.h in Headers */,
 				CD22E08817809EAF00520971 /* NSKitRate.h in Headers */,
@@ -672,6 +680,7 @@
 				CDB298441777AFAD00889B06 /* NSView+NSKitExtensions.m in Sources */,
 				CD02588D1778CB0A006A7C54 /* NSMutableAttributedString+NSKitExtensions.m in Sources */,
 				CDBE1E74177FADFC002E6F58 /* NSKitMutableArray.m in Sources */,
+				131B723F182BB6B000B47763 /* NSEvent+NSKitExtensions.m in Sources */,
 				CD553901177D904E004B33D8 /* NSKitMath.m in Sources */,
 				13154B4F17F83BD500FFCEC3 /* NSKitView.m in Sources */,
 				CD0258651777C42D006A7C54 /* NSKitQueue.m in Sources */,
@@ -693,6 +702,7 @@
 				CDC82B56177F2F7600FCC56B /* NSArray_Test.m in Sources */,
 				CDBE1E76177FAF97002E6F58 /* NSKitQueue_Test.m in Sources */,
 				CDBE1E6F177FAA25002E6F58 /* NSKitStack_Test.m in Sources */,
+				131B7240182BB6B000B47763 /* NSEvent+NSKitExtensions.m in Sources */,
 				CD885711177F97EC007322E8 /* NSKitPriorityQueue_Test.m in Sources */,
 				CDC82B59177F2FC000FCC56B /* NSColor_Test.m in Sources */,
 				CD082B8717885A39001C9E5E /* NSKitDoubleLinkedList_Test.m in Sources */,

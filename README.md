@@ -6,6 +6,7 @@ Is a collection of well-documented __Data Structures__, __Helpers__ and __Catego
 ###Categories
 - NSArray(NSKitExtensions)
 - NSColor(NSKitExtensions)
+- NSEvent(NSKitExtensions)
 - NSImage(NSKitExtensions)
 - NSMutableArray(NSKitExtensions)
 - NSMutableAttributedString(NSKitExtensions)
