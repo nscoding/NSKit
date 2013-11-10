@@ -27,14 +27,29 @@
 /** Extends the NSView */
 @interface NSView (NSKitExtensions)
 
-
 /**
- * The center of the frame.
+ * The center of the view in with respect to the bounds.
  * @discussion
  * The center is specified within the coordinate system of its
- * superview and is measured in points. Setting this property
+ * superview and is measured in points.
  */
 @property (nonatomic, assign, setter = setCenter:) NSPoint center;
+
+
+/**
+ * The center of the view in with respect to the frame.
+ * @discussion
+ * The center is specified within the coordinate system of its
+ * superview and is measured in points.
+ */
+@property (nonatomic, assign, readonly) NSPoint centerOnFrame;
+
+
+/**
+ * Sets the center position with animation if specified.
+ */
+- (void)setCenter:(NSPoint)center animated:(BOOL)animate;
+
 
 /**
  * Sets the alpha value of the view to 0 animated.

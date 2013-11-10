@@ -33,6 +33,7 @@
 @implementation NSView (NSKitExtensions)
 
 @dynamic center;
+@dynamic centerOnFrame;
 
 
 // ------------------------------------------------------------------------------------------
@@ -48,6 +49,27 @@
 {
     return NSMakePoint(floorf(self.bounds.origin.x + (self.bounds.size.width / 2)),
                        floorf(self.bounds.origin.y + (self.bounds.size.height / 2)));
+}
+
+
+- (NSPoint)centerOnFrame
+{
+    return NSMakePoint(floorf(self.frame.origin.x + (self.frame.size.width / 2)),
+                       floorf(self.frame.origin.y + (self.frame.size.height / 2)));
+}
+
+
+- (void)setCenter:(NSPoint)center animated:(BOOL)animate
+{
+    if (animate)
+    {
+        [[self animator] setFrameOrigin:NSMakePoint(floorf(center.x - (NSWidth([self bounds])) / 2),
+                                                    floorf(center.y - (NSHeight([self bounds])) / 2))];
+    }
+    else
+    {
+        [self setCenter:center];
+    }
 }
 
 
