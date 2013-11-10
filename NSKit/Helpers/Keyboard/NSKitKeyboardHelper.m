@@ -33,6 +33,7 @@
 static unsigned short kReturnKey = 36;
 static unsigned short kReturnNumBlockKey = 76;
 static unsigned short kTabKey = 48;
+static unsigned short kSpaceKey = 49;
 static unsigned short kEspaceKey = 53;
 static unsigned short kLeftArrowKey = 123;
 static unsigned short kRightArrowKey = 124;
@@ -45,23 +46,54 @@ static unsigned short kDownArrowKey = 125;
 
 @implementation NSKitKeyboardHelper
 
-
 // ------------------------------------------------------------------------------------------
-#pragma mark - Methods
-// ------------------------------------------------------------------------------------------
+#pragma mark - Methodsg// ------------------------------------------------------------------------------------------
 + (BOOL)returnKeyIsPressedForEvent:(NSEvent *)event
 {
     if (event && [event respondsToSelector:@selector(keyCode)] &&
         (event.type == NSKeyDown || event.type == NSKeyUp))
     {
-        unsigned short keyModified = [[event charactersIgnoringModifiers] characterAtIndex:0];
+        unsigned short keyModifier = [[event charactersIgnoringModifiers] characterAtIndex:0];
         unsigned short keyEventCode = [event keyCode];
         
-        if (keyModified == NSNewlineCharacter ||
-            keyModified == NSEnterCharacter ||
-            keyModified  == NSInsertLineFunctionKey ||
+        if (keyModifier == NSNewlineCharacter ||
+            keyModifier == NSEnterCharacter ||
+            keyModifier  == NSInsertLineFunctionKey ||
             keyEventCode == kReturnKey ||
             keyEventCode == kReturnNumBlockKey)
+        {
+            return YES;
+        }
+    }
+    return NO;
+}
+
+
++ (BOOL)deleteKeyIsPressedForEvent:(NSEvent *)event
+{
+    if (event != nil && [event respondsToSelector:@selector(keyCode)] &&
+        (event.type == NSKeyDown || event.type == NSKeyUp))
+    {
+        unsigned short keyModifier = [NSKitKeyboardHelper keyModifierForEvent:event];
+        
+        if (keyModifier == NSDeleteCharacter    ||
+            keyModifier == NSBackspaceCharacter ||
+            keyModifier == NSDeleteFunctionKey)
+        {
+            return YES;
+        }
+    }
+    return NO;
+}
+
+
++ (BOOL)spaceKeyIsPressedForEvent:(NSEvent *)event
+{
+    if (event != nil && [event respondsToSelector:@selector(keyCode)] &&
+        (event.type == NSKeyDown || event.type == NSKeyUp))
+    {
+        unsigned short keyEventCode = [event keyCode];
+        if (keyEventCode == kSpaceKey)
         {
             return YES;
         }
@@ -75,10 +107,10 @@ static unsigned short kDownArrowKey = 125;
     if (event && [event respondsToSelector:@selector(keyCode)] &&
         (event.type == NSKeyDown || event.type == NSKeyUp))
     {
-        unsigned short keyModified = [[event charactersIgnoringModifiers] characterAtIndex:0];
+        unsigned short keyModifier = [NSKitKeyboardHelper keyModifierForEvent:event];
         unsigned short keyEventCode = [event keyCode];
         
-        if (keyModified == NSTabCharacter ||
+        if (keyModifier == NSTabCharacter ||
             keyEventCode == kTabKey)
         {
             return YES;
@@ -130,10 +162,10 @@ static unsigned short kDownArrowKey = 125;
     if (event && [event respondsToSelector:@selector(keyCode)] &&
         (event.type == NSKeyDown || event.type == NSKeyUp))
     {
-        unsigned short keyModified = [[event charactersIgnoringModifiers] characterAtIndex:0];
+        unsigned short keyModifier = [NSKitKeyboardHelper keyModifierForEvent:event];
         unsigned short keyEventCode = [event keyCode];
         
-        if (keyModified == NSLeftArrowFunctionKey ||
+        if (keyModifier == NSLeftArrowFunctionKey ||
             keyEventCode == kLeftArrowKey)
         {
             return YES;
@@ -151,10 +183,10 @@ static unsigned short kDownArrowKey = 125;
     if (event && [event respondsToSelector:@selector(keyCode)] &&
         (event.type == NSKeyDown || event.type == NSKeyUp))
     {
-        unsigned short keyModified = [[event charactersIgnoringModifiers] characterAtIndex:0];
+        unsigned short keyModifier = [NSKitKeyboardHelper keyModifierForEvent:event];
         unsigned short keyEventCode = [event keyCode];
         
-        if (keyModified == NSRightArrowFunctionKey ||
+        if (keyModifier == NSRightArrowFunctionKey ||
             keyEventCode == kRightArrowKey)
         {
             return YES;
@@ -172,10 +204,10 @@ static unsigned short kDownArrowKey = 125;
     if (event && [event respondsToSelector:@selector(keyCode)] &&
         (event.type == NSKeyDown || event.type == NSKeyUp))
     {
-        unsigned short keyModified = [[event charactersIgnoringModifiers] characterAtIndex:0];
+        unsigned short keyModifier = [NSKitKeyboardHelper keyModifierForEvent:event];
         unsigned short keyEventCode = [event keyCode];
         
-        if (keyModified == NSUpArrowFunctionKey ||
+        if (keyModifier == NSUpArrowFunctionKey ||
             keyEventCode == kUpArrowKey)
         {
             return YES;
@@ -193,10 +225,10 @@ static unsigned short kDownArrowKey = 125;
     if (event && [event respondsToSelector:@selector(keyCode)] &&
         (event.type == NSKeyDown || event.type == NSKeyUp))
     {
-        unsigned short keyModified = [[event charactersIgnoringModifiers] characterAtIndex:0];
+        unsigned short keyModifier = [NSKitKeyboardHelper keyModifierForEvent:event];
         unsigned short keyEventCode = [event keyCode];
         
-        if (keyModified == NSDownArrowFunctionKey ||
+        if (keyModifier == NSDownArrowFunctionKey ||
             keyEventCode == kDownArrowKey)
         {
             return YES;
@@ -215,6 +247,32 @@ static unsigned short kDownArrowKey = 125;
     }
     
     return NO;
+}
+
+
++ (BOOL)optionKeyIsPressedForEvent:(NSEvent *)event
+{
+    if ([event modifierFlags] & NSAlternateKeyMask)
+    {
+        return YES;
+    }
+    
+    return NO;
+}
+
+
++ (unsigned short)keyModifierForEvent:(NSEvent *)event
+{
+    unsigned short keyModifier = 0.0f;
+    NSString *charactersIgnoringModifiers = [event charactersIgnoringModifiers];
+    
+    if (charactersIgnoringModifiers.length > 0)
+    {
+        keyModifier = [charactersIgnoringModifiers characterAtIndex:0];
+    }
+    
+    
+    return keyModifier;
 }
 
 

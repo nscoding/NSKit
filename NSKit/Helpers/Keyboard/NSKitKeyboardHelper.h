@@ -27,6 +27,7 @@
 @interface NSKitKeyboardHelper : NSObject
 
 
+
 /**
  * Check if the "Return" key is pressed for a given event.
  *
@@ -36,6 +37,28 @@
  *
  */
 + (BOOL)returnKeyIsPressedForEvent:(NSEvent *)event;
+
+
+/**
+ * Check if the "Delete" key is pressed for a given event.
+ *
+ * @param event The event to check the pressed key.
+ *
+ * @return YES if the return key is pressed.
+ *
+ */
++ (BOOL)deleteKeyIsPressedForEvent:(NSEvent *)event;
+
+
+/**
+ * Check if the "Space" key is pressed for a given event.
+ *
+ * @param event The event to check the pressed key.
+ *
+ * @return YES if the return key is pressed.
+ *
+ */
++ (BOOL)spaceKeyIsPressedForEvent:(NSEvent *)event;
 
 
 /**
@@ -124,6 +147,18 @@
  *
  */
 + (BOOL)controlKeyIsPressedForEvent:(NSEvent *)event;
+
+
+
+/**
+ * Check if the "Option" key is pressed for a given event.
+ *
+ * @param event The event to check the pressed key.
+ *
+ * @return YES if the "Option" key is pressed.
+ *
+ */
++ (BOOL)optionKeyIsPressedForEvent:(NSEvent *)event;
 
 
 @end
