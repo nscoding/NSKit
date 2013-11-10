@@ -27,6 +27,7 @@
 /** Extends the NSView */
 @interface NSView (NSKitExtensions)
 
+
 /**
  * The center of the frame.
  * @discussion
