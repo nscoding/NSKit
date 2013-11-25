@@ -149,7 +149,6 @@
 + (BOOL)controlKeyIsPressedForEvent:(NSEvent *)event;
 
 
-
 /**
  * Check if the "Option" key is pressed for a given event.
  *

@@ -14,6 +14,8 @@
 		131B7240182BB6B000B47763 /* NSEvent+NSKitExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 131B723D182BB6B000B47763 /* NSEvent+NSKitExtensions.m */; };
 		13414F9117E2208E00F885D2 /* NSString+NSKitExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 13414F8F17E2208E00F885D2 /* NSString+NSKitExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		13414F9217E2208E00F885D2 /* NSString+NSKitExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 13414F9017E2208E00F885D2 /* NSString+NSKitExtensions.m */; };
+		1377C5A3184395BD0003E832 /* NSKitHoverView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1377C5A1184395BD0003E832 /* NSKitHoverView.h */; };
+		1377C5A4184395BD0003E832 /* NSKitHoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1377C5A2184395BD0003E832 /* NSKitHoverView.m */; };
 		CD0258641777C42D006A7C54 /* NSKitQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0258601777C42D006A7C54 /* NSKitQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD0258651777C42D006A7C54 /* NSKitQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0258611777C42D006A7C54 /* NSKitQueue.m */; };
 		CD0258661777C42D006A7C54 /* NSKitStack.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0258621777C42D006A7C54 /* NSKitStack.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -106,6 +108,8 @@
 		131B723D182BB6B000B47763 /* NSEvent+NSKitExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSEvent+NSKitExtensions.m"; sourceTree = "<group>"; };
 		13414F8F17E2208E00F885D2 /* NSString+NSKitExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NSKitExtensions.h"; sourceTree = "<group>"; };
 		13414F9017E2208E00F885D2 /* NSString+NSKitExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NSKitExtensions.m"; sourceTree = "<group>"; };
+		1377C5A1184395BD0003E832 /* NSKitHoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSKitHoverView.h; sourceTree = "<group>"; };
+		1377C5A2184395BD0003E832 /* NSKitHoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSKitHoverView.m; sourceTree = "<group>"; };
 		CD0258601777C42D006A7C54 /* NSKitQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSKitQueue.h; sourceTree = "<group>"; };
 		CD0258611777C42D006A7C54 /* NSKitQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSKitQueue.m; sourceTree = "<group>"; };
 		CD0258621777C42D006A7C54 /* NSKitStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSKitStack.h; sourceTree = "<group>"; };
@@ -220,6 +224,8 @@
 			children = (
 				13154B4C17F83BD500FFCEC3 /* NSKitView.h */,
 				13154B4D17F83BD500FFCEC3 /* NSKitView.m */,
+				1377C5A1184395BD0003E832 /* NSKitHoverView.h */,
+				1377C5A2184395BD0003E832 /* NSKitHoverView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -540,6 +546,7 @@
 				CDBE1E73177FADFC002E6F58 /* NSKitMutableArray.h in Headers */,
 				CD082B81178856E7001C9E5E /* NSKitDoubleLinkedList.h in Headers */,
 				CD22E08817809EAF00520971 /* NSKitRate.h in Headers */,
+				1377C5A3184395BD0003E832 /* NSKitHoverView.h in Headers */,
 				CDB2985D1777C05700889B06 /* NSArray+NSKitExtensions.h in Headers */,
 				CD082B8E1788608A001C9E5E /* NSKitSinglyLinkedList+Private.h in Headers */,
 				13154B4E17F83BD500FFCEC3 /* NSKitView.h in Headers */,
@@ -672,6 +679,7 @@
 				CD0258741777C5F5006A7C54 /* NSKitKeyboardHelper.m in Sources */,
 				CD553959177E19BF004B33D8 /* NSKitInternetDoctor.m in Sources */,
 				13414F9217E2208E00F885D2 /* NSString+NSKitExtensions.m in Sources */,
+				1377C5A4184395BD0003E832 /* NSKitHoverView.m in Sources */,
 				CD88570E177F9256007322E8 /* NSKitHeapPriorityQueue.m in Sources */,
 				CD0258951778CBB2006A7C54 /* NSColor+NSKitExtensions.m in Sources */,
 				CD082B82178856E7001C9E5E /* NSKitDoubleLinkedList.m in Sources */,
