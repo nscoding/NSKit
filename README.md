@@ -23,6 +23,7 @@ Is a collection of well-documented __Data Structures__, __Helpers__ and __Catego
 - NSKitQueue
 - NSKitSinglyLinkedList
 - NSKitStack
+- NSKitLRUCache
 
 ###Helpers
 - NSKitCGContextHelper

@@ -55,6 +55,7 @@ FOUNDATION_EXPORT BOOL SystemAtLeastMaverics; // set at launch
 #import "NSKitCGContextHelper.h"
 #import "NSKitRateHelper.h"
 #import "NSKitDoubleLinkedList.h"
+#import "NSKitLRUCache.h"
 
 @interface NSKit : NSObject
 
