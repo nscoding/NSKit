@@ -91,8 +91,6 @@
 		CDB2986A1777C2EF00889B06 /* NSKitPerformanceTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = CDB298591777BF0500889B06 /* NSKitPerformanceTimer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CDB2986B1777C2FC00889B06 /* NSMutableArray+NSKitExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = CDB2985F1777C13300889B06 /* NSMutableArray+NSKitExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CDBE1E6F177FAA25002E6F58 /* NSKitStack_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = CDBE1E6D177FAA25002E6F58 /* NSKitStack_Test.m */; };
-		CDBE1E73177FADFC002E6F58 /* NSKitMutableArray.h in Headers */ = {isa = PBXBuildFile; fileRef = CDBE1E71177FADFC002E6F58 /* NSKitMutableArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CDBE1E74177FADFC002E6F58 /* NSKitMutableArray.m in Sources */ = {isa = PBXBuildFile; fileRef = CDBE1E72177FADFC002E6F58 /* NSKitMutableArray.m */; };
 		CDBE1E76177FAF97002E6F58 /* NSKitQueue_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = CDBE1E75177FAF97002E6F58 /* NSKitQueue_Test.m */; };
 		CDC82B56177F2F7600FCC56B /* NSArray_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC82B55177F2F7600FCC56B /* NSArray_Test.m */; };
 		CDC82B59177F2FC000FCC56B /* NSColor_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC82B58177F2FC000FCC56B /* NSColor_Test.m */; };
@@ -200,8 +198,6 @@
 		CDB2985F1777C13300889B06 /* NSMutableArray+NSKitExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+NSKitExtensions.h"; sourceTree = "<group>"; };
 		CDB298601777C13300889B06 /* NSMutableArray+NSKitExtensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+NSKitExtensions.m"; sourceTree = "<group>"; };
 		CDBE1E6D177FAA25002E6F58 /* NSKitStack_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSKitStack_Test.m; sourceTree = "<group>"; };
-		CDBE1E71177FADFC002E6F58 /* NSKitMutableArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSKitMutableArray.h; sourceTree = "<group>"; };
-		CDBE1E72177FADFC002E6F58 /* NSKitMutableArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSKitMutableArray.m; sourceTree = "<group>"; };
 		CDBE1E75177FAF97002E6F58 /* NSKitQueue_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSKitQueue_Test.m; sourceTree = "<group>"; };
 		CDC82B55177F2F7600FCC56B /* NSArray_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_Test.m; sourceTree = "<group>"; };
 		CDC82B58177F2FC000FCC56B /* NSColor_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSColor_Test.m; sourceTree = "<group>"; };
@@ -257,7 +253,6 @@
 			isa = PBXGroup;
 			children = (
 				13563C7818B9292D001A5D4F /* Cache */,
-				CDBE1E70177FADE5002E6F58 /* Base */,
 				CD8BAA651779F13300DA1996 /* Linked Lists */,
 				CD0258601777C42D006A7C54 /* NSKitQueue.h */,
 				CD0258611777C42D006A7C54 /* NSKitQueue.m */,
@@ -522,15 +517,6 @@
 			path = Debug;
 			sourceTree = "<group>";
 		};
-		CDBE1E70177FADE5002E6F58 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				CDBE1E71177FADFC002E6F58 /* NSKitMutableArray.h */,
-				CDBE1E72177FADFC002E6F58 /* NSKitMutableArray.m */,
-			);
-			path = Base;
-			sourceTree = "<group>";
-		};
 		CDC82B54177F2F7600FCC56B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -569,7 +555,6 @@
 				CD88570D177F9256007322E8 /* NSKitHeapPriorityQueue.h in Headers */,
 				CD553958177E19BF004B33D8 /* NSKitInternetDoctor.h in Headers */,
 				CD3B0C081780520700D2B16F /* NSKitCGContextHelper.h in Headers */,
-				CDBE1E73177FADFC002E6F58 /* NSKitMutableArray.h in Headers */,
 				CD082B81178856E7001C9E5E /* NSKitDoubleLinkedList.h in Headers */,
 				CD22E08817809EAF00520971 /* NSKitRate.h in Headers */,
 				CDB2985D1777C05700889B06 /* NSArray+NSKitExtensions.h in Headers */,
@@ -632,7 +617,7 @@
 		CDB298001777A4A700889B06 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Patrick Chamelo";
 				TargetAttributes = {
 					CDB298081777A4A700889B06 = {
@@ -718,7 +703,6 @@
 				CD0258671777C42D006A7C54 /* NSKitStack.m in Sources */,
 				CDB298441777AFAD00889B06 /* NSView+NSKitExtensions.m in Sources */,
 				CD02588D1778CB0A006A7C54 /* NSMutableAttributedString+NSKitExtensions.m in Sources */,
-				CDBE1E74177FADFC002E6F58 /* NSKitMutableArray.m in Sources */,
 				131B723F182BB6B000B47763 /* NSEvent+NSKitExtensions.m in Sources */,
 				CD553901177D904E004B33D8 /* NSKitMath.m in Sources */,
 				13154B4F17F83BD500FFCEC3 /* NSKitView.m in Sources */,
@@ -783,7 +767,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = NO;
@@ -814,7 +797,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = NO;
-				SDKROOT = macosx10.8;
+				SDKROOT = macosx;
 			};
 			name = Development;
 		};
@@ -845,7 +828,6 @@
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 				SDKROOT = macosx10.8;
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = framework;
@@ -878,7 +860,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = NO;
@@ -903,7 +884,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				SDKROOT = macosx10.8;
+				SDKROOT = macosx;
 			};
 			name = "App Store";
 		};
@@ -934,7 +915,6 @@
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 				SDKROOT = macosx10.8;
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = framework;

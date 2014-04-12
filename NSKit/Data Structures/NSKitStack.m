@@ -26,11 +26,35 @@
 #import "NSKitStack.h"
 
 
+
+// ------------------------------------------------------------------------------------------
+
+
+@interface NSKitStack()
+
+@property (nonatomic, strong) NSMutableArray *backingStore;
+
+@end
+
+
 // ------------------------------------------------------------------------------------------
 
 
 @implementation NSKitStack
 
+
+// ------------------------------------------------------------------------------------------
+#pragma mark - Overrides
+// ------------------------------------------------------------------------------------------
+- (NSMutableArray *)backingStore
+{
+    if (_backingStore == nil)
+    {
+        _backingStore = [NSMutableArray array];
+    }
+    
+    return _backingStore;
+}
 
 // ------------------------------------------------------------------------------------------
 #pragma mark - Methods
@@ -39,7 +63,7 @@
 {
     if (objToPush)
     {
-        [self addObject:objToPush];
+        [self.backingStore addObject:objToPush];
     }
 }
 
@@ -51,9 +75,9 @@
         return nil;
     }
     
-    id objToPop = self.lastObject;
+    id objToPop = self.backingStore.lastObject;
     
-    [self removeLastObject];
+    [self.backingStore removeLastObject];
 
     return objToPop;
 }
@@ -61,13 +85,19 @@
 
 - (id)top
 {
-    return self.lastObject;
+    return self.backingStore.lastObject;
 }
 
 
 - (BOOL)isEmpty
 {
     return (self.count == 0);
+}
+
+
+- (NSUInteger)count
+{
+    return self.backingStore.count;
 }
 
 

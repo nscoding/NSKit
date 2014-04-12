@@ -31,7 +31,31 @@
 // ------------------------------------------------------------------------------------------
 
 
+@interface NSKitQueue()
+
+@property (nonatomic, strong) NSMutableArray *backingStore;
+
+@end
+
+
+// ------------------------------------------------------------------------------------------
+
+
 @implementation NSKitQueue
+
+
+// ------------------------------------------------------------------------------------------
+#pragma mark - Overrides
+// ------------------------------------------------------------------------------------------
+- (NSMutableArray *)backingStore
+{
+    if (_backingStore == nil)
+    {
+        _backingStore = [NSMutableArray array];
+    }
+    
+    return _backingStore;
+}
 
 
 // ------------------------------------------------------------------------------------------
@@ -41,7 +65,7 @@
 {
     if (objectToAdd)
     {
-        [self addObject:objectToAdd];
+        [self.backingStore addObject:objectToAdd];
     }
 }
 
@@ -53,9 +77,9 @@
         return nil;
     }
     
-    id objToRemove = [self firstObject];
+    id objToRemove = [self.backingStore firstObject];
 
-    [self removeFirstObject];
+    [self.backingStore removeFirstObject];
     
     return objToRemove;
 }
@@ -68,19 +92,25 @@
         return nil;
     }
     
-    return [self firstObject];
+    return [self.backingStore firstObject];
 }
 
 
 - (id)last
 {
-    return [self lastObject];
+    return [self.backingStore lastObject];
 }
 
 
 - (BOOL)isEmpty
 {
     return (self.count == 0);
+}
+
+
+- (NSUInteger)count
+{
+    return self.backingStore.count;
 }
 
 

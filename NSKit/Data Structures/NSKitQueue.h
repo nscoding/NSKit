@@ -24,8 +24,6 @@
 // THE SOFTWARE.
 
 
-#import "NSKitMutableArray.h"
-
 
 /**
  A queue is a special case of linear list where insertions and deletions take place at different ends.
@@ -34,7 +32,7 @@
  
  A basic queue implementation using NSMutableArray
  */
-@interface NSKitQueue : NSKitMutableArray
+@interface NSKitQueue : NSObject
 
 
 /**
@@ -81,6 +79,15 @@
  *
  */
 - (BOOL)isEmpty;
+
+
+/**
+ * The number of objects in the queue.
+ *
+ * @returns Returns the number of objects currently in the queue.
+ *
+ */
+- (NSUInteger)count;
 
 
 @end
