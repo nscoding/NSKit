@@ -828,12 +828,7 @@
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-<<<<<<< HEAD
-				SDKROOT = macosx;
-=======
-				PROVISIONING_PROFILE = "";
 				SDKROOT = macosx10.8;
->>>>>>> ebaa678b7c8cceee6c951110eea843f11a2a2c3c
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = framework;
 			};
@@ -920,12 +915,7 @@
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-<<<<<<< HEAD
-				SDKROOT = macosx;
-=======
-				PROVISIONING_PROFILE = "";
 				SDKROOT = macosx10.8;
->>>>>>> ebaa678b7c8cceee6c951110eea843f11a2a2c3c
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = framework;
 			};
