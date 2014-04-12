@@ -14,14 +14,14 @@
 		131B7240182BB6B000B47763 /* NSEvent+NSKitExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 131B723D182BB6B000B47763 /* NSEvent+NSKitExtensions.m */; };
 		13414F9117E2208E00F885D2 /* NSString+NSKitExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 13414F8F17E2208E00F885D2 /* NSString+NSKitExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		13414F9217E2208E00F885D2 /* NSString+NSKitExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 13414F9017E2208E00F885D2 /* NSString+NSKitExtensions.m */; };
-		13563C7B18B92959001A5D4F /* NSKitLRUCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 13563C7918B92959001A5D4F /* NSKitLRUCache.h */; };
+		13563C7B18B92959001A5D4F /* NSKitLRUCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 13563C7918B92959001A5D4F /* NSKitLRUCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		13563C7C18B92959001A5D4F /* NSKitLRUCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 13563C7A18B92959001A5D4F /* NSKitLRUCache.m */; };
-		13563C7F18B92DBB001A5D4F /* NSKitCacheEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = 13563C7D18B92DBB001A5D4F /* NSKitCacheEntry.h */; };
+		13563C7F18B92DBB001A5D4F /* NSKitCacheEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = 13563C7D18B92DBB001A5D4F /* NSKitCacheEntry.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		13563C8018B92DBB001A5D4F /* NSKitCacheEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 13563C7E18B92DBB001A5D4F /* NSKitCacheEntry.m */; };
 		13563C8118B93557001A5D4F /* NSKitLRUCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 13563C7A18B92959001A5D4F /* NSKitLRUCache.m */; };
 		13563C8218B93559001A5D4F /* NSKitCacheEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 13563C7E18B92DBB001A5D4F /* NSKitCacheEntry.m */; };
 		13563C8418B93580001A5D4F /* NSKitLRUCache_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 13563C8318B93580001A5D4F /* NSKitLRUCache_Test.m */; };
-		1377C5A3184395BD0003E832 /* NSKitHoverView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1377C5A1184395BD0003E832 /* NSKitHoverView.h */; };
+		1377C5A3184395BD0003E832 /* NSKitHoverView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1377C5A1184395BD0003E832 /* NSKitHoverView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1377C5A4184395BD0003E832 /* NSKitHoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1377C5A2184395BD0003E832 /* NSKitHoverView.m */; };
 		CD0258641777C42D006A7C54 /* NSKitQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0258601777C42D006A7C54 /* NSKitQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD0258651777C42D006A7C54 /* NSKitQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0258611777C42D006A7C54 /* NSKitQueue.m */; };
@@ -537,7 +537,6 @@
 				CD02589E1778D1AA006A7C54 /* NSImage+NSKitExtensions.h in Headers */,
 				CD0258AF1778D981006A7C54 /* NSUserDefaults+NSKitExtensions.h in Headers */,
 				CD22E08417809E8F00520971 /* NSKitRateHelper.h in Headers */,
-				13563C7F18B92DBB001A5D4F /* NSKitCacheEntry.h in Headers */,
 				CD0258881778C88E006A7C54 /* NSTextStorage+NSKitExtensions.h in Headers */,
 				CD0258941778CBB2006A7C54 /* NSColor+NSKitExtensions.h in Headers */,
 				CD22E08017809E6200520971 /* Reachability.h in Headers */,
@@ -558,13 +557,14 @@
 				CD3B0C081780520700D2B16F /* NSKitCGContextHelper.h in Headers */,
 				CD082B81178856E7001C9E5E /* NSKitDoubleLinkedList.h in Headers */,
 				CD22E08817809EAF00520971 /* NSKitRate.h in Headers */,
-				1377C5A3184395BD0003E832 /* NSKitHoverView.h in Headers */,
 				CDB2985D1777C05700889B06 /* NSArray+NSKitExtensions.h in Headers */,
 				CD082B8E1788608A001C9E5E /* NSKitSinglyLinkedList+Private.h in Headers */,
 				13154B4E17F83BD500FFCEC3 /* NSKitView.h in Headers */,
 				131B723E182BB6B000B47763 /* NSEvent+NSKitExtensions.h in Headers */,
 				CDB298401777ACAB00889B06 /* NSWindow+NSKitExtensions.h in Headers */,
 				CDB2986B1777C2FC00889B06 /* NSMutableArray+NSKitExtensions.h in Headers */,
+				13563C7F18B92DBB001A5D4F /* NSKitCacheEntry.h in Headers */,
+				1377C5A3184395BD0003E832 /* NSKitHoverView.h in Headers */,
 				CDB298551777B7A000889B06 /* NSKitUtilities.h in Headers */,
 				CD0258731777C5F5006A7C54 /* NSKitKeyboardHelper.h in Headers */,
 				CD8BAA681779F13300DA1996 /* NSKitSinglyLinkedList.h in Headers */,
@@ -620,6 +620,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Patrick Chamelo";
 				TargetAttributes = {
+					CDB298081777A4A700889B06 = {
+						DevelopmentTeam = HPSF3D2F4U;
+					};
 					CDB2981F1777A4A700889B06 = {
 						TestTargetID = CDB298081777A4A700889B06;
 					};
@@ -809,6 +812,8 @@
 				CLANG_ANALYZER_OBJC_RETAIN_COUNT = YES;
 				CLANG_ANALYZER_OBJC_UNUSED_IVARS = YES;
 				CLANG_LINK_OBJC_RUNTIME = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -823,7 +828,12 @@
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+<<<<<<< HEAD
 				SDKROOT = macosx;
+=======
+				PROVISIONING_PROFILE = "";
+				SDKROOT = macosx10.8;
+>>>>>>> ebaa678b7c8cceee6c951110eea843f11a2a2c3c
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = framework;
 			};
@@ -894,6 +904,8 @@
 				CLANG_ANALYZER_OBJC_RETAIN_COUNT = YES;
 				CLANG_ANALYZER_OBJC_UNUSED_IVARS = YES;
 				CLANG_LINK_OBJC_RUNTIME = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -908,7 +920,12 @@
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+<<<<<<< HEAD
 				SDKROOT = macosx;
+=======
+				PROVISIONING_PROFILE = "";
+				SDKROOT = macosx10.8;
+>>>>>>> ebaa678b7c8cceee6c951110eea843f11a2a2c3c
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = framework;
 			};
