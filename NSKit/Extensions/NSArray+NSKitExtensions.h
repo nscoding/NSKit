@@ -26,15 +26,11 @@
 /** Extends the NSArray class */
 @interface NSArray (NSKitExtensions)
 
+
 /**
  * @return an NSArray where the items are in reversed order.
  */
 - (NSArray *)reversedArray;
 
-
-/**
- * @return id The first object in the array, nil if the array is empty.
- */
-- (id)firstObject;
 
 @end
