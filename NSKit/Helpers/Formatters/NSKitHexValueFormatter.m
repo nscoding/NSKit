@@ -33,6 +33,14 @@
 @implementation NSKitHexValueFormatter
 
 
+/// Overrides
+- (NSString *)stringForObjectValue:(id)string
+{
+    return string;
+}
+
+
+/// Compatibility method
 - (BOOL)isPartialStringValid:(NSString *)partialString
 			newEditingString:(NSString **)newString
             errorDescription:(NSString **)error
