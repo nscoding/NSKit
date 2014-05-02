@@ -23,6 +23,10 @@
 		13563C8418B93580001A5D4F /* NSKitLRUCache_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 13563C8318B93580001A5D4F /* NSKitLRUCache_Test.m */; };
 		1377C5A3184395BD0003E832 /* NSKitHoverView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1377C5A1184395BD0003E832 /* NSKitHoverView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1377C5A4184395BD0003E832 /* NSKitHoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1377C5A2184395BD0003E832 /* NSKitHoverView.m */; };
+		13DC0D641913F73500FD02BC /* NSKitNumberFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 13DC0D621913F73500FD02BC /* NSKitNumberFormatter.h */; };
+		13DC0D651913F73500FD02BC /* NSKitNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 13DC0D631913F73500FD02BC /* NSKitNumberFormatter.m */; };
+		13DC0D691913F9C600FD02BC /* NSKitHexValueFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 13DC0D671913F9C600FD02BC /* NSKitHexValueFormatter.h */; };
+		13DC0D6A1913F9C600FD02BC /* NSKitHexValueFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 13DC0D681913F9C600FD02BC /* NSKitHexValueFormatter.m */; };
 		CD0258641777C42D006A7C54 /* NSKitQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0258601777C42D006A7C54 /* NSKitQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD0258651777C42D006A7C54 /* NSKitQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0258611777C42D006A7C54 /* NSKitQueue.m */; };
 		CD0258661777C42D006A7C54 /* NSKitStack.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0258621777C42D006A7C54 /* NSKitStack.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -120,6 +124,10 @@
 		13563C8318B93580001A5D4F /* NSKitLRUCache_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSKitLRUCache_Test.m; sourceTree = "<group>"; };
 		1377C5A1184395BD0003E832 /* NSKitHoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSKitHoverView.h; sourceTree = "<group>"; };
 		1377C5A2184395BD0003E832 /* NSKitHoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSKitHoverView.m; sourceTree = "<group>"; };
+		13DC0D621913F73500FD02BC /* NSKitNumberFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSKitNumberFormatter.h; sourceTree = "<group>"; };
+		13DC0D631913F73500FD02BC /* NSKitNumberFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSKitNumberFormatter.m; sourceTree = "<group>"; };
+		13DC0D671913F9C600FD02BC /* NSKitHexValueFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSKitHexValueFormatter.h; sourceTree = "<group>"; };
+		13DC0D681913F9C600FD02BC /* NSKitHexValueFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSKitHexValueFormatter.m; sourceTree = "<group>"; };
 		CD0258601777C42D006A7C54 /* NSKitQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSKitQueue.h; sourceTree = "<group>"; };
 		CD0258611777C42D006A7C54 /* NSKitQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSKitQueue.m; sourceTree = "<group>"; };
 		CD0258621777C42D006A7C54 /* NSKitStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSKitStack.h; sourceTree = "<group>"; };
@@ -247,6 +255,17 @@
 				13563C7E18B92DBB001A5D4F /* NSKitCacheEntry.m */,
 			);
 			path = Cache;
+			sourceTree = "<group>";
+		};
+		13DC0D611913F71200FD02BC /* Formatters */ = {
+			isa = PBXGroup;
+			children = (
+				13DC0D621913F73500FD02BC /* NSKitNumberFormatter.h */,
+				13DC0D631913F73500FD02BC /* NSKitNumberFormatter.m */,
+				13DC0D671913F9C600FD02BC /* NSKitHexValueFormatter.h */,
+				13DC0D681913F9C600FD02BC /* NSKitHexValueFormatter.m */,
+			);
+			path = Formatters;
 			sourceTree = "<group>";
 		};
 		CD02585F1777C42D006A7C54 /* Data Structures */ = {
@@ -475,6 +494,7 @@
 			children = (
 				CDB298581777BEC900889B06 /* Debug */,
 				CDB2984F1777B5EF00889B06 /* Email */,
+				13DC0D611913F71200FD02BC /* Formatters */,
 				CD0258701777C5F5006A7C54 /* Keyboard */,
 				CD22E07B17809E3E00520971 /* Rate */,
 				CDB298521777B76600889B06 /* Utilities */,
@@ -539,12 +559,14 @@
 				CD22E08417809E8F00520971 /* NSKitRateHelper.h in Headers */,
 				CD0258881778C88E006A7C54 /* NSTextStorage+NSKitExtensions.h in Headers */,
 				CD0258941778CBB2006A7C54 /* NSColor+NSKitExtensions.h in Headers */,
+				13DC0D691913F9C600FD02BC /* NSKitHexValueFormatter.h in Headers */,
 				CD22E08017809E6200520971 /* Reachability.h in Headers */,
 				CD0258641777C42D006A7C54 /* NSKitQueue.h in Headers */,
 				13563C7B18B92959001A5D4F /* NSKitLRUCache.h in Headers */,
 				CD553900177D904E004B33D8 /* NSKitMath.h in Headers */,
 				CD02588C1778CB0A006A7C54 /* NSMutableAttributedString+NSKitExtensions.h in Headers */,
 				13414F9117E2208E00F885D2 /* NSString+NSKitExtensions.h in Headers */,
+				13DC0D641913F73500FD02BC /* NSKitNumberFormatter.h in Headers */,
 				CD0258661777C42D006A7C54 /* NSKitStack.h in Headers */,
 				CDB298461777AFC900889B06 /* NSView+NSKitExtensions.h in Headers */,
 				CDB2986A1777C2EF00889B06 /* NSKitPerformanceTimer.h in Headers */,
@@ -703,11 +725,13 @@
 				CD0258671777C42D006A7C54 /* NSKitStack.m in Sources */,
 				CDB298441777AFAD00889B06 /* NSView+NSKitExtensions.m in Sources */,
 				CD02588D1778CB0A006A7C54 /* NSMutableAttributedString+NSKitExtensions.m in Sources */,
+				13DC0D6A1913F9C600FD02BC /* NSKitHexValueFormatter.m in Sources */,
 				131B723F182BB6B000B47763 /* NSEvent+NSKitExtensions.m in Sources */,
 				CD553901177D904E004B33D8 /* NSKitMath.m in Sources */,
 				13154B4F17F83BD500FFCEC3 /* NSKitView.m in Sources */,
 				CD0258651777C42D006A7C54 /* NSKitQueue.m in Sources */,
 				CD3B0C091780520700D2B16F /* NSKitCGContextHelper.m in Sources */,
+				13DC0D651913F73500FD02BC /* NSKitNumberFormatter.m in Sources */,
 				CD22E08517809E8F00520971 /* NSKitRateHelper.m in Sources */,
 				CD22E08117809E6200520971 /* Reachability.m in Sources */,
 				CD02589F1778D1AA006A7C54 /* NSImage+NSKitExtensions.m in Sources */,

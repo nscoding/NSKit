@@ -56,6 +56,10 @@ FOUNDATION_EXPORT BOOL SystemAtLeastMaverics; // set at launch
 #import "NSKitDoubleLinkedList.h"
 #import "NSKitLRUCache.h"
 
+#import "NSKitHexValueFormatter.h"
+#import "NSKitNumberFormatter.h"
+
+
 @interface NSKit : NSObject
 
 @end
