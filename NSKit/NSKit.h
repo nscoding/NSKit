@@ -38,6 +38,7 @@ FOUNDATION_EXPORT BOOL SystemAtLeastMaverics; // set at launch
 #import "NSKitEmailHelper.h"
 #import "NSKitUtilities.h"
 #import "NSKitKeyboardHelper.h"
+
 #import "NSArray+NSKitExtensions.h"
 #import "NSMutableArray+NSKitExtensions.h"
 #import "NSMutableAttributedString+NSKitExtensions.h"
@@ -47,8 +48,8 @@ FOUNDATION_EXPORT BOOL SystemAtLeastMaverics; // set at launch
 #import "NSColor+NSKitExtensions.h"
 #import "NSImage+NSKitExtensions.h"
 #import "NSUserDefaults+NSKitExtensions.h"
+
 #import "NSKitSoundProxy.h"
-#import "NSKitInternetDoctor.h"
 #import "NSKitMath.h"
 #import "NSKitHeapPriorityQueue.h"
 #import "NSKitCGContextHelper.h"
