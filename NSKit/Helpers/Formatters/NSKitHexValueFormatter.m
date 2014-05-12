@@ -40,6 +40,15 @@
 }
 
 
+- (BOOL)getObjectValue:(out __autoreleasing id *)obj
+             forString:(NSString *)string
+      errorDescription:(out NSString *__autoreleasing *)error
+{
+    *obj = string;
+    return YES;
+}
+
+
 /// Compatibility method
 - (BOOL)isPartialStringValid:(NSString *)partialString
 			newEditingString:(NSString **)newString
