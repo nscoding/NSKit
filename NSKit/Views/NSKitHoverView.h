@@ -18,12 +18,19 @@
 
 @interface NSKitHoverView : NSView
 
+/// The NSImage object displayed by the receiver on the normal state.
 @property (nonatomic, strong) NSImage *normalImage;
-@property (nonatomic, strong) NSImage *hoverImage;
+
+/// The NSImage object displayed by the receiver on the hovered state.
+@property (nonatomic, strong) NSImage *hoveredImage;
+
+/// The NSImage object displayed by the receiver on the pressed state.
 @property (nonatomic, strong) NSImage *pressedImage;
 
+/// The receiver’s delegate.
 @property (nonatomic, unsafe_unretained) id<NSKitHoverViewDelegate> delegate;
-@property (nonatomic, assign) NSUInteger actionTag;
+
+/// Property to enable or disable the user interaction with the view.
 @property (nonatomic, assign) BOOL enabled;
 
 

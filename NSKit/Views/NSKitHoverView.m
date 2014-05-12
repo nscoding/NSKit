@@ -114,7 +114,7 @@
         
         if (NSPointInRect(locationInView, self.bounds))
         {
-            [self.imageView setImage:self.hoverImage];
+            [self.imageView setImage:self.hoveredImage];
             
             if (self.delegate && [self.delegate respondsToSelector:@selector(hoverViewPressed:)])
             {
@@ -140,7 +140,7 @@
 
 - (void)mouseEntered:(NSEvent *)theEvent
 {
-    [self.imageView setImage:self.hoverImage];
+    [self.imageView setImage:self.hoveredImage];
 }
 
 
