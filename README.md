@@ -3,6 +3,15 @@ NSKit Framework
 
 Is a collection of well-documented __Data Structures__, __Helpers__ and __Categories__ to simplify and solve common problems when you develop your cocoa application. 
 
+###Data Structures
+- Linked Lists
+	- NSKitSinglyLinkedList
+	- NSKitDoubleLinkedList
+- NSKitLRUCache
+- NSKitHeapPriorityQueue
+- NSKitQueue
+- NSKitStack
+
 ###Categories
 - NSArray(NSKitExtensions)
 - NSColor(NSKitExtensions)
@@ -16,30 +25,31 @@ Is a collection of well-documented __Data Structures__, __Helpers__ and __Catego
 - NSView(NSKitExtensions)
 - NSWindow(NSKitExtensions)
 
-###Data Structures
-- NSKitDoubleLinkedList
-- NSKitHeapPriorityQueue
-- NSKitMutableArray (Base)
-- NSKitQueue
-- NSKitSinglyLinkedList
-- NSKitStack
-- NSKitLRUCache
-
 ###Helpers
-- NSKitCGContextHelper
-- NSKitEmailHelper
-- NSKitKeyboardHelper
-- NSKitMemoryHelper
-- NSKitPerformanceTimer
-- NSKitRateHelper
-- NSKitSoundProxy
-- NSKitUtilities
+- Core Graphics
+	- NSKitCGContextHelper
+- Debug
+	- NSKitCGContextHelper
+	- NSKitPerformanceTimer
+- Email
+	- NSKitEmailHelper
+- Formatters
+	- NSKitHexValueFormatter
+	- NSKitNumberFormatter
+- Keyboard
+	- NSKitKeyboardHelper
+- Rate
+	- NSKitRate
+	- NSKitRateHelper
+- Utilities
+	- NSKitSoundProxy
+	- NSKitUtilities
+	- NSKitMath
 
-###TODO
-- Alert factory
-- NSDate Extensions
-- NSSet Extensions
-- NSUserNotification proxy
+### Views
+- NSKitView
+- NSKitHoverView
+
 
 ###Documentation
 
