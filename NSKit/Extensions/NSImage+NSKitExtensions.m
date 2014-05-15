@@ -183,11 +183,11 @@
     return destinationImage;
 }
 
+
 // ------------------------------------------------------------------------------------------
 #pragma mark - methods
 // ------------------------------------------------------------------------------------------
-
-- (id)initWithHiResContentsOfURL:(NSURL *)url
+- (instancetype)initWithHiResContentsOfURL:(NSURL *)url
 {
     if ((self = [self initWithContentsOfURL:url]))
     {
@@ -210,7 +210,8 @@
     return self;
 }
 
-- (id)initWithHiResContentsOfFile:(NSString *)fileName
+
+- (instancetype)initWithHiResContentsOfFile:(NSString *)fileName
 {
     if ((self = [self initWithContentsOfFile:fileName]))
     {

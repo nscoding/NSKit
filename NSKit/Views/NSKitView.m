@@ -28,7 +28,7 @@
 // ------------------------------------------------------------------------------------------
 #pragma mark - Initializers
 // ------------------------------------------------------------------------------------------
-- (id)init
+- (instancetype)init
 {
     if ((self = [super init]))
     {
@@ -39,7 +39,7 @@
 }
 
 
-- (id)initWithFrame:(NSRect)frameRect
+- (instancetype)initWithFrame:(NSRect)frameRect
 {
     if ((self = [super initWithFrame:frameRect]))
     {
@@ -50,7 +50,7 @@
 }
 
 
-- (id)initWithCoder:(NSCoder *)aDecoder
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
     if ((self = [super initWithCoder:aDecoder]))
     {

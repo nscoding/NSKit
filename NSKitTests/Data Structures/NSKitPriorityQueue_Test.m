@@ -35,7 +35,7 @@
 
 @property (nonatomic, assign) NSInteger priority;
 
-- (id)initWithPriority:(NSInteger)pr;
+- (instancetype)initWithPriority:(NSInteger)pr;
 
 @end
 
@@ -49,7 +49,7 @@
 // ------------------------------------------------------------------------------------------
 #pragma mark - Tests
 // ------------------------------------------------------------------------------------------
-- (id)initWithPriority:(NSInteger)pr
+- (instancetype)initWithPriority:(NSInteger)pr
 {
     if ((self = [super init]))
     {

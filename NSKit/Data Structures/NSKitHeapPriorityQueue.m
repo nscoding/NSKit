@@ -78,7 +78,10 @@ static CFComparisonResult NSKitPriorityObjectCompare(const void *ptr1, const voi
 @implementation NSKitHeapPriorityQueue
 
 
-- (id)init
+// ------------------------------------------------------------------------------------------
+#pragma mark - Initialize
+// ------------------------------------------------------------------------------------------
+- (instancetype)init
 {
     if ((self = [super init]))
     {

@@ -31,13 +31,13 @@
 // ------------------------------------------------------------------------------------------
 #pragma mark - Initializers
 // ------------------------------------------------------------------------------------------
-- (id)init
+- (instancetype)init
 {
     return [self initWithCountLimit:0];
 }
 
 
-- (id)initWithCountLimit:(NSUInteger)limit
+- (instancetype)initWithCountLimit:(NSUInteger)limit
 {
     if ((self = [super init]))
     {
