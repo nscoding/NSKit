@@ -22,6 +22,6 @@
 @property (nonatomic, copy, readwrite) id<NSCopying> key;
 
 
-- (id)initWithObject:(id)anObject forKey:(id)aKey;
+- (instancetype)initWithObject:(id)anObject forKey:(id)aKey;
 
 @end

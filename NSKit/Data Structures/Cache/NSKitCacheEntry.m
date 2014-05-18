@@ -18,13 +18,13 @@
 // ------------------------------------------------------------------------------------------
 #pragma mark - Initializers
 // ------------------------------------------------------------------------------------------
-- (id)init
+- (instancetype)init
 {
     return [self initWithObject:nil forKey:nil];
 }
 
 
-- (id)initWithObject:(id)anObject forKey:(id)aKey
+- (instancetype)initWithObject:(id)anObject forKey:(id)aKey
 {
     if ((self = [super init]))
     {

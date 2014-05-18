@@ -100,7 +100,7 @@
  * @return NSImage instance, nil if method can't create img rep.
  *
  */
-- (id)initWithHiResContentsOfURL:(NSURL *)url;
+- (instancetype)initWithHiResContentsOfURL:(NSURL *)url;
 	
 /**
  * Initializes and returns a high-resolution capable NSImage 
@@ -115,6 +115,6 @@
  * @return NSImage instance, nil if method can't create img rep.
  *
  */
-- (id)initWithHiResContentsOfFile:(NSString *)fileName;
+- (instancetype)initWithHiResContentsOfFile:(NSString *)fileName;
 
 @end

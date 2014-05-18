@@ -37,7 +37,7 @@
 /**
  * Initializes the cache with a given limit.
  */
-- (id)initWithCountLimit:(NSUInteger)limit;
+- (instancetype)initWithCountLimit:(NSUInteger)limit;
 
 
 /**
