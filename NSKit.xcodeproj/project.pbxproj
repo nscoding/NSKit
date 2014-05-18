@@ -71,6 +71,7 @@
 		CD88570D177F9256007322E8 /* NSKitHeapPriorityQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = CD88570B177F9256007322E8 /* NSKitHeapPriorityQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD88570E177F9256007322E8 /* NSKitHeapPriorityQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = CD88570C177F9256007322E8 /* NSKitHeapPriorityQueue.m */; };
 		CD885711177F97EC007322E8 /* NSKitPriorityQueue_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = CD885710177F97EC007322E8 /* NSKitPriorityQueue_Test.m */; };
+		CD8AACB51928F5EE005BEFAE /* NSKitHoverView_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8AACB41928F5EE005BEFAE /* NSKitHoverView_Test.m */; };
 		CD8BAA681779F13300DA1996 /* NSKitSinglyLinkedList.h in Headers */ = {isa = PBXBuildFile; fileRef = CD8BAA661779F13300DA1996 /* NSKitSinglyLinkedList.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD8BAA691779F13300DA1996 /* NSKitSinglyLinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8BAA671779F13300DA1996 /* NSKitSinglyLinkedList.m */; };
 		CDB2980D1777A4A700889B06 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB2980C1777A4A700889B06 /* Cocoa.framework */; };
@@ -168,6 +169,7 @@
 		CD88570B177F9256007322E8 /* NSKitHeapPriorityQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSKitHeapPriorityQueue.h; sourceTree = "<group>"; };
 		CD88570C177F9256007322E8 /* NSKitHeapPriorityQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSKitHeapPriorityQueue.m; sourceTree = "<group>"; };
 		CD885710177F97EC007322E8 /* NSKitPriorityQueue_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSKitPriorityQueue_Test.m; sourceTree = "<group>"; };
+		CD8AACB41928F5EE005BEFAE /* NSKitHoverView_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSKitHoverView_Test.m; sourceTree = "<group>"; };
 		CD8BAA661779F13300DA1996 /* NSKitSinglyLinkedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSKitSinglyLinkedList.h; sourceTree = "<group>"; };
 		CD8BAA671779F13300DA1996 /* NSKitSinglyLinkedList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSKitSinglyLinkedList.m; sourceTree = "<group>"; };
 		CDB298091777A4A700889B06 /* NSKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NSKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -336,6 +338,14 @@
 			path = "Data Structures";
 			sourceTree = "<group>";
 		};
+		CD8AACB11928F570005BEFAE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CD8AACB41928F5EE005BEFAE /* NSKitHoverView_Test.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		CD8BAA651779F13300DA1996 /* Linked Lists */ = {
 			isa = PBXGroup;
 			children = (
@@ -417,10 +427,11 @@
 		CDB298271777A4A700889B06 /* NSKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				CDC82B54177F2F7600FCC56B /* Extensions */,
 				CD5538F7177CE939004B33D8 /* Data Structures */,
-				CD0258B41778E945006A7C54 /* Utilities */,
+				CDC82B54177F2F7600FCC56B /* Extensions */,
 				CDB298281777A4A700889B06 /* Supporting Files */,
+				CD0258B41778E945006A7C54 /* Utilities */,
+				CD8AACB11928F570005BEFAE /* Views */,
 			);
 			path = NSKitTests;
 			sourceTree = "<group>";
@@ -722,6 +733,7 @@
 				CD885711177F97EC007322E8 /* NSKitPriorityQueue_Test.m in Sources */,
 				CDC82B59177F2FC000FCC56B /* NSColor_Test.m in Sources */,
 				CD082B8717885A39001C9E5E /* NSKitDoubleLinkedList_Test.m in Sources */,
+				CD8AACB51928F5EE005BEFAE /* NSKitHoverView_Test.m in Sources */,
 				13563C8418B93580001A5D4F /* NSKitLRUCache_Test.m in Sources */,
 				13563C8218B93559001A5D4F /* NSKitCacheEntry.m in Sources */,
 				13563C8118B93557001A5D4F /* NSKitLRUCache.m in Sources */,
