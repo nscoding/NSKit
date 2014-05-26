@@ -40,7 +40,7 @@
 {
     NSString *trimmedString = [self copy];
     
-    trimmedString = [trimmedString stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+   // trimmedString = [trimmedString stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];
     trimmedString = [trimmedString stringByReplacingOccurrencesOfString:@"\n" withString:@""];
     trimmedString = [trimmedString stringByTrimmingPrefixSpaces];
     trimmedString = [trimmedString stringByTrimmingSuffixSpaces];
