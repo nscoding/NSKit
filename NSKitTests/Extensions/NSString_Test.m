@@ -49,7 +49,7 @@
 - (void)testTrimmingNewLines
 {
     NSString *testString = @"\n\nThis is a test\n\n for new lines\n\n";
-    XCTAssertTrue([[testString stringByTrimmingNewLines] isEqualToString:@"This is a test for new lines"],
+    XCTAssertTrue([[testString nskit_stringByTrimmingNewLines] isEqualToString:@"This is a test for new lines"],
                   @"New lines are not removed correctly.");
 }
 
@@ -57,7 +57,7 @@
 - (void)testTrimmingPrefixSpaces
 {
     NSString *testString = @"      This is a test for prefix spaces  ";
-    XCTAssertTrue([[testString stringByTrimmingPrefixSpaces] isEqualToString:@"This is a test for prefix spaces  "],
+    XCTAssertTrue([[testString nskit_stringByTrimmingPrefixSpaces] isEqualToString:@"This is a test for prefix spaces  "],
                   @"Prefix spaces are not removed correctly.");
 }
 
@@ -65,7 +65,7 @@
 - (void)testTrimmingSuffixSpaces
 {
     NSString *testString = @"  This is a test for suffix spaces  ";
-    XCTAssertTrue([[testString stringByTrimmingSuffixSpaces] isEqualToString:@"  This is a test for suffix spaces"],
+    XCTAssertTrue([[testString nskit_stringByTrimmingSuffixSpaces] isEqualToString:@"  This is a test for suffix spaces"],
                   @"Suffix spaces are not removed correctly.");
 }
 
@@ -73,7 +73,7 @@
 - (void)testTrimmingPrefixNewLines
 {
     NSString *testString = @"\n\nThis is a test\n\n for new lines\n\n";
-    XCTAssertTrue([[testString stringByTrimmingPrefixNewLines]
+    XCTAssertTrue([[testString nskit_stringByTrimmingPrefixNewLines]
             isEqualToString:@"This is a test\n\n for new lines\n\n"], @"New lines are not removed correctly.");
 }
 
@@ -81,7 +81,7 @@
 - (void)testTrimmingSuffixNewLines
 {
     NSString *testString = @"\n\nThis is a test\n\n for new lines\n\n";
-    XCTAssertTrue([[testString stringByTrimmingSuffixNewLines]
+    XCTAssertTrue([[testString nskit_stringByTrimmingSuffixNewLines]
             isEqualToString:@"\n\nThis is a test\n\n for new lines"], @"New lines are not removed correctly.");
 }
 

@@ -33,7 +33,7 @@
  * @return NSString A string without any new line characters.
  *
  */
-- (NSString *)stringByTrimmingNewLines;
+- (NSString *)nskit_stringByTrimmingNewLines;
 
 
 /**
@@ -42,7 +42,7 @@
  * @return NSString A string without any white spaces at the beginning.
  *
  */
-- (NSString *)stringByTrimmingPrefixSpaces;
+- (NSString *)nskit_stringByTrimmingPrefixSpaces;
 
 
 /**
@@ -51,7 +51,7 @@
  * @return NSString A string without any white spaces at the end.
  *
  */
-- (NSString *)stringByTrimmingSuffixSpaces;
+- (NSString *)nskit_stringByTrimmingSuffixSpaces;
 
 
 /**
@@ -60,7 +60,7 @@
  * @return NSString A string without any new lines at the beginning.
  *
  */
-- (NSString *)stringByTrimmingPrefixNewLines;
+- (NSString *)nskit_stringByTrimmingPrefixNewLines;
 
 /**
  * Removes all suffix new lines from a string.
@@ -68,7 +68,7 @@
  * @return NSString A string without any new lines at the end.
  *
  */
-- (NSString *)stringByTrimmingSuffixNewLines;
+- (NSString *)nskit_stringByTrimmingSuffixNewLines;
 
 
 /**
@@ -77,6 +77,6 @@
  * @return NSString A url encoded string.
  *
  */
-- (NSString *)stringByUrlEncoding;
+- (NSString *)nskit_stringByUrlEncoding;
 
 @end

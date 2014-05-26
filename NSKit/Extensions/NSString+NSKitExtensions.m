@@ -36,20 +36,20 @@
 // ------------------------------------------------------------------------------------------
 #pragma mark - Methods
 // ------------------------------------------------------------------------------------------
-- (NSString *)stringByTrimmingNewLines
+- (NSString *)nskit_stringByTrimmingNewLines
 {
     NSString *trimmedString = [self copy];
     
-   // trimmedString = [trimmedString stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+    trimmedString = [trimmedString stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];
     trimmedString = [trimmedString stringByReplacingOccurrencesOfString:@"\n" withString:@""];
-    trimmedString = [trimmedString stringByTrimmingPrefixSpaces];
-    trimmedString = [trimmedString stringByTrimmingSuffixSpaces];
+    trimmedString = [trimmedString nskit_stringByTrimmingPrefixSpaces];
+    trimmedString = [trimmedString nskit_stringByTrimmingSuffixSpaces];
     
     return trimmedString;
 }
 
 
-- (NSString *)stringByTrimmingPrefixSpaces
+- (NSString *)nskit_stringByTrimmingPrefixSpaces
 {
     NSString *trimmedString = [self copy];
     
@@ -62,7 +62,7 @@
 }
 
 
-- (NSString *)stringByTrimmingSuffixSpaces
+- (NSString *)nskit_stringByTrimmingSuffixSpaces
 {
     NSString *trimmedString = [self copy];
     
@@ -76,7 +76,7 @@
 }
 
 
-- (NSString *)stringByTrimmingPrefixNewLines
+- (NSString *)nskit_stringByTrimmingPrefixNewLines
 {
     NSString *trimmedString = [self copy];
     NSRange range = [trimmedString rangeOfString:@"^\\s*" options:NSRegularExpressionSearch];
@@ -85,7 +85,7 @@
 }
 
 
-- (NSString *)stringByTrimmingSuffixNewLines
+- (NSString *)nskit_stringByTrimmingSuffixNewLines
 {
     NSString *trimmedString = [self copy];
     NSRange range = [trimmedString rangeOfString:@"\\s*$" options:NSRegularExpressionSearch];
@@ -94,7 +94,7 @@
 }
 
 
-- (NSString *)stringByUrlEncoding
+- (NSString *)nskit_stringByUrlEncoding
 {
     static NSString * const kAFLegalCharactersToBeEscaped = @"?!@#$^&%*+=,:;'\"`<>()[]{}/\\|~ ";
     
