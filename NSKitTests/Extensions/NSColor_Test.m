@@ -25,6 +25,7 @@
 //  * http://hex.colorrrs.com data */
 
 #import <XCTest/XCTest.h>
+
 #import "NSColor+NSKitExtensions.h"
 
 
