@@ -36,13 +36,13 @@
 // ------------------------------------------------------------------------------------------
 #pragma mark - Class Methods
 // ------------------------------------------------------------------------------------------
-+ (NSImage *)stretchableImageWithLeftWidth:(CGFloat)leftWidth
-                               middleWidth:(CGFloat)patternWidth
-                                rightWidth:(CGFloat)rightWidth
-                                    toSize:(NSSize)destinationSize
-                                 leftImage:(NSImage *)leftImage
-                               middleImage:(NSImage *)middleImage
-                                rightImage:(NSImage *)rightImage
++ (NSImage *)nskit_stretchableImageWithLeftWidth:(CGFloat)leftWidth
+                                     middleWidth:(CGFloat)patternWidth
+                                      rightWidth:(CGFloat)rightWidth
+                                          toSize:(NSSize)destinationSize
+                                       leftImage:(NSImage *)leftImage
+                                     middleImage:(NSImage *)middleImage
+                                      rightImage:(NSImage *)rightImage
 
 {
     NSImage *destinationImage = [[NSImage alloc] initWithSize:destinationSize];
@@ -70,11 +70,11 @@
 }
 
 
-+ (NSImage *)stretchableImageWithLeftWidth:(CGFloat)leftWidth
-                               middleWidth:(CGFloat)patternWidth
-                                rightWidth:(CGFloat)rightWidth
-                                    toSize:(NSSize)destinationSize
-                                 fromImage:(NSImage *)sourceImage
++ (NSImage *)nskit_stretchableImageWithLeftWidth:(CGFloat)leftWidth
+                                     middleWidth:(CGFloat)patternWidth
+                                      rightWidth:(CGFloat)rightWidth
+                                          toSize:(NSSize)destinationSize
+                                       fromImage:(NSImage *)sourceImage
 {
     NSImage *destinationImage = [[NSImage alloc] initWithSize:destinationSize];
     
@@ -120,11 +120,11 @@
 }
 
 
-+ (NSImage *)stretchableImageWithTopWidth:(CGFloat)topheight
-                              middleWidth:(CGFloat)patternHeight
-                              bottomWidth:(CGFloat)bottomHeight
-                                   toSize:(NSSize)destinationSize
-                                fromImage:(NSImage *)sourceImage
++ (NSImage *)nskit_stretchableImageWithTopWidth:(CGFloat)topheight
+                                    middleWidth:(CGFloat)patternHeight
+                                    bottomWidth:(CGFloat)bottomHeight
+                                         toSize:(NSSize)destinationSize
+                                      fromImage:(NSImage *)sourceImage
 {
     NSImage *destinationImage = [[NSImage alloc] initWithSize:destinationSize];
     

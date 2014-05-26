@@ -130,7 +130,7 @@
         return;
     }
     
-    if ([event isMouseUp])
+    if ([event nskit_isMouseUp])
     {
         NSPoint locationInView = [self.window.contentView convertPoint:event.locationInWindow toView:self];
         if (NSPointInRect(locationInView, self.bounds))
@@ -148,7 +148,7 @@
 
 - (void)mouseDown:(NSEvent *)event
 {
-    if ([event isMouseDown])
+    if ([event nskit_isMouseDown])
     {
         [self.imageView setImage:self.pressedImage];
     }

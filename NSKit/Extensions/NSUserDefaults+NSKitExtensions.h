@@ -37,7 +37,7 @@
  * @param key The name of the key.
  *
  */
-+ (void)setValue:(id)value forKey:(NSString *)key;
++ (void)nskit_setValue:(id)value forKey:(NSString *)key;
 
 
 /**
@@ -46,7 +46,7 @@
  *
  * @return id The object for a give key.
  */
-+ (id)valueForKey:(NSString *)key;
++ (id)nskit_valueForKey:(NSString *)key;
 
 
 @end

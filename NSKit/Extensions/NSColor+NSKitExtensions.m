@@ -36,7 +36,7 @@
 // ------------------------------------------------------------------------------------------
 #pragma mark - Class Methods
 // ------------------------------------------------------------------------------------------
-+ (NSColor *)randomColor
++ (NSColor *)nskit_randomColor
 {
     CGFloat red =  (CGFloat)random() / (CGFloat)RAND_MAX;
     CGFloat blue = (CGFloat)random() / (CGFloat)RAND_MAX;
@@ -46,7 +46,7 @@
 }
 
 
-+ (NSColor *)colorFromHexRGB:(NSString *)colorString
++ (NSColor *)nskit_colorFromHexRGB:(NSString *)colorString
 {
 	NSColor *result;
 	unsigned int colorCode = 0;
@@ -71,10 +71,10 @@
 }
 
 
-+ (NSString *)hexCodeWithColor:(NSColor *)color
++ (NSString *)nskit_hexCodeWithColor:(NSColor *)color
 {
     CGFloat r, g, b;
-    [NSColor adjustRed:&r green:&g blue:&b color:color];
+    [NSColor nskit_adjustRed:&r green:&g blue:&b color:color];
     
     return [NSString stringWithFormat:@"%0.2X%0.2X%0.2X",
             (int)(r * 255),
@@ -83,10 +83,10 @@
 }
 
 
-+ (NSString *)RGBWithColor:(NSColor *)color
++ (NSString *)nskit_RGBWithColor:(NSColor *)color
 {
     CGFloat r, g, b;
-    [NSColor adjustRed:&r green:&g blue:&b color:color];
+    [NSColor nskit_adjustRed:&r green:&g blue:&b color:color];
     
     return [NSString stringWithFormat:@"%.0f, %.0f, %.0f",
             (r * 255),
@@ -95,10 +95,10 @@
 }
 
 
-+ (void)adjustRed:(CGFloat *)red
-            green:(CGFloat *)green
-             blue:(CGFloat *)blue
-            color:(NSColor *)color
++ (void)nskit_adjustRed:(CGFloat *)red
+                  green:(CGFloat *)green
+                   blue:(CGFloat *)blue
+                  color:(NSColor *)color
 {
     
     if (([[color colorSpaceName] isEqualToString:NSCalibratedWhiteColorSpace] ||
@@ -129,7 +129,7 @@
 // ------------------------------------------------------------------------------------------
 #pragma mark - Object Methods
 // ------------------------------------------------------------------------------------------
-- (CGColorRef)nsCGColor
+- (CGColorRef)nskit_CGColor
 {
     if ([self respondsToSelector:@selector(CGColor)])
     {

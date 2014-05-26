@@ -77,9 +77,9 @@
         return nil;
     }
     
-    id objToRemove = [self.backingStore firstObject];
+    id objToRemove = [self.backingStore nskit_firstObject];
 
-    [self.backingStore removeFirstObject];
+    [self.backingStore nskit_removeFirstObject];
     
     return objToRemove;
 }
@@ -92,7 +92,7 @@
         return nil;
     }
     
-    return [self.backingStore firstObject];
+    return [self.backingStore nskit_firstObject];
 }
 
 

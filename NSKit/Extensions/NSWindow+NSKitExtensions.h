@@ -33,13 +33,13 @@
  * @param screen the screen where the window will be centered, 
  * if screen is nil, the main screen is used.
  */
-- (void)centerHorizontallyAndVerticallyOnScreen:(NSScreen *)screen;
+- (void)nskit_centerHorizontallyAndVerticallyOnScreen:(NSScreen *)screen;
 
 
 /**
  * Moves the window in the center of the window screen.
  */
-- (void)centerHorizontallyAndVertically;
+- (void)nskit_centerHorizontallyAndVertically;
 
 
 /**
@@ -47,7 +47,7 @@
  *
  * @return YES if the window is in Fullscreen; otherwise, NO.
  */
-- (BOOL)isFullScreen;
+- (BOOL)nskit_isFullScreen;
 
 
 @end

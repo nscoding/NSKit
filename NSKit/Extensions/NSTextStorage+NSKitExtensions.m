@@ -42,7 +42,7 @@ NSColor *NSKitTextStorageLinkColor;
 // ------------------------------------------------------------------------------------------
 #pragma mark - Methods
 // ------------------------------------------------------------------------------------------
-- (void)scanForLinks;
+- (void)nskit_scanForLinks
 {
     [self beginEditing];
     

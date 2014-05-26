@@ -41,13 +41,13 @@
  * @return NSImage A custom strechable image from left to right.
  *
  */
-+ (NSImage *)stretchableImageWithLeftWidth:(CGFloat)leftWidth
-                               middleWidth:(CGFloat)patternWidth
-                                rightWidth:(CGFloat)rightWidth
-                                    toSize:(NSSize)destinationSize
-                                 leftImage:(NSImage *)leftImage
-                               middleImage:(NSImage *)middleImage
-                                rightImage:(NSImage *)rightImage;
++ (NSImage *)nskit_stretchableImageWithLeftWidth:(CGFloat)leftWidth
+                                     middleWidth:(CGFloat)patternWidth
+                                      rightWidth:(CGFloat)rightWidth
+                                          toSize:(NSSize)destinationSize
+                                       leftImage:(NSImage *)leftImage
+                                     middleImage:(NSImage *)middleImage
+                                      rightImage:(NSImage *)rightImage;
 
 
 /**
@@ -62,11 +62,11 @@
  * @return NSImage A custom strechable image from left to right,
  *
  */
-+ (NSImage *)stretchableImageWithLeftWidth:(CGFloat)leftWidth
-                               middleWidth:(CGFloat)patternWidth
-                                rightWidth:(CGFloat)rightWidth
-                                    toSize:(NSSize)destinationSize
-                                 fromImage:(NSImage *)sourceImage;
++ (NSImage *)nskit_stretchableImageWithLeftWidth:(CGFloat)leftWidth
+                                     middleWidth:(CGFloat)patternWidth
+                                      rightWidth:(CGFloat)rightWidth
+                                          toSize:(NSSize)destinationSize
+                                       fromImage:(NSImage *)sourceImage;
 
 
 /**
@@ -81,11 +81,11 @@
  * @return NSImage A custom strechable image from top to bottom.
  *
  */
-+ (NSImage *)stretchableImageWithTopWidth:(CGFloat)topheight
-                              middleWidth:(CGFloat)patternHeight
-                              bottomWidth:(CGFloat)bottomHeight
-                                   toSize:(NSSize)destinationSize
-                                fromImage:(NSImage *)sourceImage;
++ (NSImage *)nskit_stretchableImageWithTopWidth:(CGFloat)topheight
+                                    middleWidth:(CGFloat)patternHeight
+                                    bottomWidth:(CGFloat)bottomHeight
+                                         toSize:(NSSize)destinationSize
+                                      fromImage:(NSImage *)sourceImage;
 
 /**
  * Initializes and returns a high-resolution capable NSImage 
@@ -116,5 +116,6 @@
  *
  */
 - (instancetype)initWithHiResContentsOfFile:(NSString *)fileName;
+
 
 @end

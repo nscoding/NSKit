@@ -30,7 +30,7 @@
 /**
  * @return an NSArray where the items are in reversed order.
  */
-- (NSArray *)reversedArray;
+- (NSArray *)nskit_reversedArray;
 
 
 @end

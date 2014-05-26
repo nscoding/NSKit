@@ -47,7 +47,7 @@
 - (void)testReverseArray
 {
     NSArray *array = @[@(1), @(2), @(3), @(4)];
-    NSArray *reversedArray = [array reversedArray];
+    NSArray *reversedArray = [array nskit_reversedArray];
     
     XCTAssertTrue(array.count == reversedArray.count, @"Count is not the same");
 
@@ -63,7 +63,7 @@
 {
     NSMutableArray *reversedArray = [NSMutableArray arrayWithArray:@[@(1), @(2), @(3), @(4)]];
     NSMutableArray *array = [reversedArray copy];
-    [reversedArray reverse];
+    [reversedArray nskit_reverse];
     
     XCTAssertTrue(array.count == reversedArray.count, @"Count is not the same");
     

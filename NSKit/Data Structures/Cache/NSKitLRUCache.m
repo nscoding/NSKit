@@ -112,7 +112,7 @@
     NSUInteger count = [self.entriesOrderedByLRU count];
     while (count > self.countLimit)
     {
-        NSKitCacheEntry *enrtyToEvict = [self.entriesOrderedByLRU firstObject];
+        NSKitCacheEntry *enrtyToEvict = [self.entriesOrderedByLRU nskit_firstObject];
         [self.entries removeObjectForKey:enrtyToEvict.key];
         [self.entriesOrderedByLRU removeObjectIdenticalTo:enrtyToEvict];
         

@@ -36,7 +36,7 @@
 // ------------------------------------------------------------------------------------------
 #pragma mark - Methods
 // ------------------------------------------------------------------------------------------
-- (NSArray *)reversedArray
+- (NSArray *)nskit_reversedArray
 {
     NSMutableArray *array = [NSMutableArray arrayWithCapacity:self.count];
     NSEnumerator *enumerator = [self reverseObjectEnumerator];

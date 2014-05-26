@@ -73,13 +73,13 @@
 }
 
 
-- (void)fadeInAnimated
+- (void)nskit_fadeInAnimated
 {
     ((NSView *)self.animator).alphaValue = 1.0f;
 }
 
 
-- (void)fadeOutAnimated
+- (void)nskit_fadeOutAnimated
 {
     ((NSView *)self.animator).alphaValue = 0.0f;
 }

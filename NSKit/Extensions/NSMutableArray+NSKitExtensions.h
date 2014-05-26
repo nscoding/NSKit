@@ -30,19 +30,19 @@
 /**
  * Reverses the order of the items in the mutable array.
  */
-- (void)reverse;
+- (void)nskit_reverse;
 
 
 /**
  * @return id The first object in the array, nil if the array is empty.
  */
-- (id)firstObject;
+- (id)nskit_firstObject;
 
 
 /**
  * Removes the first object of the array, nothing happens if the array is empty.
  */
-- (void)removeFirstObject;
+- (void)nskit_removeFirstObject;
 
 
 @end

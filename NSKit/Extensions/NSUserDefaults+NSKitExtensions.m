@@ -36,7 +36,7 @@
 // ------------------------------------------------------------------------------------------
 #pragma mark - Class Methods
 // ------------------------------------------------------------------------------------------
-+ (void)setValue:(id)value forKey:(NSString *)key
++ (void)nskit_setValue:(id)value forKey:(NSString *)key
 {
     if (value)
     {
@@ -51,7 +51,7 @@
 }
 
 
-+ (id)valueForKey:(NSString *)key
++ (id)nskit_valueForKey:(NSString *)key
 {
     return [[NSUserDefaults standardUserDefaults] objectForKey:key];
 }

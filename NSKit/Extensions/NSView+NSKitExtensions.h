@@ -54,13 +54,13 @@
 /**
  * Sets the alpha value of the view to 0 animated.
  */
-- (void)fadeInAnimated;
+- (void)nskit_fadeInAnimated;
 
 
 /**
  * Sets the alpha value of the view to 1 animated.
  */
-- (void)fadeOutAnimated;
+- (void)nskit_fadeOutAnimated;
 
 
 /**

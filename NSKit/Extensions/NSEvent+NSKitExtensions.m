@@ -36,7 +36,7 @@
 // ------------------------------------------------------------------------------------------
 #pragma mark - Object Methods
 // ------------------------------------------------------------------------------------------
-- (BOOL)isMouseUp
+- (BOOL)nskit_isMouseUp
 {
     if (self.type != NSLeftMouseUp &&
         self.type != NSRightMouseUp &&
@@ -49,7 +49,7 @@
 }
 
 
-- (BOOL)isMouseDown
+- (BOOL)nskit_isMouseDown
 {
     if (self.type != NSLeftMouseDown &&
         self.type != NSRightMouseDown &&
@@ -62,7 +62,7 @@
 }
 
 
-- (BOOL)hasClickCount
+- (BOOL)nskit_hasClickCount
 {
     if ([self respondsToSelector:@selector(clickCount)] == NO)
     {
@@ -73,9 +73,9 @@
 }
 
 
-- (BOOL)isSingleClick
+- (BOOL)nskit_isSingleClick
 {
-    if ([self hasClickCount] == NO)
+    if ([self nskit_hasClickCount] == NO)
     {
         return NO;
     }
@@ -84,9 +84,9 @@
 }
 
 
-- (BOOL)isDoubleClick
+- (BOOL)nskit_isDoubleClick
 {
-    if ([self hasClickCount] == NO)
+    if ([self nskit_hasClickCount] == NO)
     {
         return NO;
     }

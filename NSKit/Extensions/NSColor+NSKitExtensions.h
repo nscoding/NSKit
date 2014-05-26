@@ -33,7 +33,7 @@
  * @return NSColor, a random color.
  *
  */
-+ (NSColor *)randomColor;
++ (NSColor *)nskit_randomColor;
 
 
 /**
@@ -44,7 +44,7 @@
  * @return NSColor, the converted color.
  *
  */
-+ (NSColor *)colorFromHexRGB:(NSString *)colorString;
++ (NSColor *)nskit_colorFromHexRGB:(NSString *)colorString;
 
 
 /**
@@ -55,7 +55,7 @@
  * @return NSString, the hex value.
  *
  */
-+ (NSString *)hexCodeWithColor:(NSColor *)color;
++ (NSString *)nskit_hexCodeWithColor:(NSColor *)color;
 
 
 /**
@@ -66,7 +66,7 @@
  * @return NSString, the RGB value.
  *
  */
-+ (NSString *)RGBWithColor:(NSColor *)color;
++ (NSString *)nskit_RGBWithColor:(NSColor *)color;
 
 
 /**
@@ -78,10 +78,10 @@
  * @param color a color reference to populate the float pointers.
  *
  */
-+ (void)adjustRed:(CGFloat *)red
-            green:(CGFloat *)green
-             blue:(CGFloat *)blue
-            color:(NSColor *)color;
++ (void)nskit_adjustRed:(CGFloat *)red
+                  green:(CGFloat *)green
+                   blue:(CGFloat *)blue
+                  color:(NSColor *)color;
 
 
 /**
@@ -90,7 +90,7 @@
  * @return CGColorRef
  *
  */
-- (CGColorRef)nsCGColor;
+- (CGColorRef)nskit_CGColor;
 
 
 @end

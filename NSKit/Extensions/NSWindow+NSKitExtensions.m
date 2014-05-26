@@ -36,7 +36,7 @@
 // ------------------------------------------------------------------------------------------
 #pragma mark - Object methods
 // ------------------------------------------------------------------------------------------
-- (void)centerHorizontallyAndVerticallyOnScreen:(NSScreen *)screen
+- (void)nskit_centerHorizontallyAndVerticallyOnScreen:(NSScreen *)screen
 {
     NSRect box = self.frame;
     
@@ -58,13 +58,13 @@
 }
 
 
-- (void)centerHorizontallyAndVertically
+- (void)nskit_centerHorizontallyAndVertically
 {
-    [self centerHorizontallyAndVerticallyOnScreen:self.screen];
+    [self nskit_centerHorizontallyAndVerticallyOnScreen:self.screen];
 }
 
 
-- (BOOL)isFullScreen
+- (BOOL)nskit_isFullScreen
 {
     if (SystemAtLeastLion)
     {

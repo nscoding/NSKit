@@ -45,7 +45,7 @@
 // ------------------------------------------------------------------------------------------
 - (void)testSaving
 {
-    [NSUserDefaults setValue:@"Test Value" forKey:@"Key 1"];
+    [NSUserDefaults nskit_setValue:@"Test Value" forKey:@"Key 1"];
     
     XCTAssertTrue([[[NSUserDefaults standardUserDefaults] objectForKey:@"Key 1"]
                    isEqualToString:@"Test Value"], @"String should match");
@@ -53,7 +53,7 @@
     XCTAssertFalse([[[NSUserDefaults standardUserDefaults] objectForKey:@"Key 1"]
                    isEqualToString:@""], @"String should not match");
     
-    [NSUserDefaults setValue:nil forKey:@"Key 1"];
+    [NSUserDefaults nskit_setValue:nil forKey:@"Key 1"];
     
     XCTAssertFalse([[[NSUserDefaults standardUserDefaults] objectForKey:@"Key 1"]
                    isEqualToString:@"Test Value"], @"String should match");
@@ -68,14 +68,13 @@
 
 - (void)testObtaining
 {
-    XCTAssertTrue([NSUserDefaults valueForKey:@"Key 1"] == nil, @"String should match");
-    [NSUserDefaults setValue:@"Test Value" forKey:@"Key 1"];
+    [NSUserDefaults nskit_setValue:nil forKey:@"Key 1"];
     
-    XCTAssertTrue([[NSUserDefaults valueForKey:@"Key 1"]
-                    isEqualToString:@"Test Value"], @"String should match");
+    XCTAssertTrue([NSUserDefaults nskit_valueForKey:@"Key 1"] == nil, @"String should match");
+    [NSUserDefaults nskit_setValue:@"Test Value" forKey:@"Key 1"];
     
-    XCTAssertFalse([[NSUserDefaults valueForKey:@"Key 1"]
-                    isEqualToString:@""], @"String should not match");
+    XCTAssertTrue([[NSUserDefaults nskit_valueForKey:@"Key 1"] isEqualToString:@"Test Value"], @"String should match");
+    XCTAssertFalse([[NSUserDefaults nskit_valueForKey:@"Key 1"] isEqualToString:@""], @"String should not match");
 }
 
 

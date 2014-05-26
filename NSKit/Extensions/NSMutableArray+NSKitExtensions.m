@@ -36,7 +36,7 @@
 // ------------------------------------------------------------------------------------------
 #pragma mark - Methods
 // ------------------------------------------------------------------------------------------
-- (void)reverse
+- (void)nskit_reverse
 {
     NSUInteger i = 0;
     NSUInteger j = self.count - 1;
@@ -51,7 +51,7 @@
 }
 
 
-- (id)firstObject
+- (id)nskit_firstObject
 {
     if (self.count > 0)
     {
@@ -62,7 +62,7 @@
 }
 
 
-- (void)removeFirstObject
+- (void)nskit_removeFirstObject
 {
     if (self.count > 0)
     {

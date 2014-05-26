@@ -31,7 +31,7 @@
  *
  * @return YES if is NSLeftMouseUp or NSRightMouseUp or NSOtherMouseUp otherwise, NO.
  */
-- (BOOL)isMouseUp;
+- (BOOL)nskit_isMouseUp;
 
 
 /**
@@ -39,7 +39,7 @@
  *
  * @return YES if is NSLeftMouseDown or NSRightMouseDown or NSOtherMouseDown otherwise, NO.
  */
-- (BOOL)isMouseDown;
+- (BOOL)nskit_isMouseDown;
 
 
 /**
@@ -47,7 +47,7 @@
  *
  * @return YES if it does respond, otherwise NO.
  */
-- (BOOL)hasClickCount;
+- (BOOL)nskit_hasClickCount;
 
 
 /**
@@ -55,7 +55,7 @@
  *
  * @return YES if it is single click, otherwise NO.
  */
-- (BOOL)isSingleClick;
+- (BOOL)nskit_isSingleClick;
 
 
 /**
@@ -63,6 +63,6 @@
  *
  * @return YES if it is double click, otherwise NO.
  */
-- (BOOL)isDoubleClick;
+- (BOOL)nskit_isDoubleClick;
 
 @end
