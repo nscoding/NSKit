@@ -70,6 +70,9 @@
 		CD55395B177E1D37004B33D8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD55395A177E1D37004B33D8 /* SystemConfiguration.framework */; };
 		CD842DE41933BA0400AE4CC7 /* NSKitSoundProxy_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = CD842DE31933BA0400AE4CC7 /* NSKitSoundProxy_Test.m */; };
 		CD842DE61933BB3B00AE4CC7 /* NSString_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = CD842DE51933BB3B00AE4CC7 /* NSString_Test.m */; };
+		CD842DE91933C6C600AE4CC7 /* NSKitProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = CD842DE71933C6C600AE4CC7 /* NSKitProgressView.h */; };
+		CD842DEA1933C6C600AE4CC7 /* NSKitProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD842DE81933C6C600AE4CC7 /* NSKitProgressView.m */; };
+		CD842DEC1933C7DB00AE4CC7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD842DEB1933C7DB00AE4CC7 /* QuartzCore.framework */; };
 		CD88570D177F9256007322E8 /* NSKitHeapPriorityQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = CD88570B177F9256007322E8 /* NSKitHeapPriorityQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD88570E177F9256007322E8 /* NSKitHeapPriorityQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = CD88570C177F9256007322E8 /* NSKitHeapPriorityQueue.m */; };
 		CD885711177F97EC007322E8 /* NSKitPriorityQueue_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = CD885710177F97EC007322E8 /* NSKitPriorityQueue_Test.m */; };
@@ -170,6 +173,9 @@
 		CD55395A177E1D37004B33D8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		CD842DE31933BA0400AE4CC7 /* NSKitSoundProxy_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSKitSoundProxy_Test.m; sourceTree = "<group>"; };
 		CD842DE51933BB3B00AE4CC7 /* NSString_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSString_Test.m; sourceTree = "<group>"; };
+		CD842DE71933C6C600AE4CC7 /* NSKitProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSKitProgressView.h; sourceTree = "<group>"; };
+		CD842DE81933C6C600AE4CC7 /* NSKitProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSKitProgressView.m; sourceTree = "<group>"; };
+		CD842DEB1933C7DB00AE4CC7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		CD88570B177F9256007322E8 /* NSKitHeapPriorityQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSKitHeapPriorityQueue.h; sourceTree = "<group>"; };
 		CD88570C177F9256007322E8 /* NSKitHeapPriorityQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSKitHeapPriorityQueue.m; sourceTree = "<group>"; };
 		CD885710177F97EC007322E8 /* NSKitPriorityQueue_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSKitPriorityQueue_Test.m; sourceTree = "<group>"; };
@@ -214,6 +220,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD842DEC1933C7DB00AE4CC7 /* QuartzCore.framework in Frameworks */,
 				CD3B0C0417804DAC00D2B16F /* AudioToolbox.framework in Frameworks */,
 				CD55395B177E1D37004B33D8 /* SystemConfiguration.framework in Frameworks */,
 				CDB2980D1777A4A700889B06 /* Cocoa.framework in Frameworks */,
@@ -240,6 +247,8 @@
 				13154B4D17F83BD500FFCEC3 /* NSKitView.m */,
 				1377C5A1184395BD0003E832 /* NSKitHoverView.h */,
 				1377C5A2184395BD0003E832 /* NSKitHoverView.m */,
+				CD842DE71933C6C600AE4CC7 /* NSKitProgressView.h */,
+				CD842DE81933C6C600AE4CC7 /* NSKitProgressView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -386,6 +395,7 @@
 		CDB2980B1777A4A700889B06 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CD842DEB1933C7DB00AE4CC7 /* QuartzCore.framework */,
 				CD3B0C0317804DAC00D2B16F /* AudioToolbox.framework */,
 				CD55395A177E1D37004B33D8 /* SystemConfiguration.framework */,
 				CDB2980C1777A4A700889B06 /* Cocoa.framework */,
@@ -574,6 +584,7 @@
 				CDB2986B1777C2FC00889B06 /* NSMutableArray+NSKitExtensions.h in Headers */,
 				13563C7F18B92DBB001A5D4F /* NSKitCacheEntry.h in Headers */,
 				1377C5A3184395BD0003E832 /* NSKitHoverView.h in Headers */,
+				CD842DE91933C6C600AE4CC7 /* NSKitProgressView.h in Headers */,
 				CDB298551777B7A000889B06 /* NSKitUtilities.h in Headers */,
 				CD0258731777C5F5006A7C54 /* NSKitKeyboardHelper.h in Headers */,
 				CD8BAA681779F13300DA1996 /* NSKitSinglyLinkedList.h in Headers */,
@@ -701,6 +712,7 @@
 				CD0258781777C7A3006A7C54 /* NSKitMemoryHelper.m in Sources */,
 				13563C7C18B92959001A5D4F /* NSKitLRUCache.m in Sources */,
 				CDB298411777ACAB00889B06 /* NSWindow+NSKitExtensions.m in Sources */,
+				CD842DEA1933C6C600AE4CC7 /* NSKitProgressView.m in Sources */,
 				CD0258741777C5F5006A7C54 /* NSKitKeyboardHelper.m in Sources */,
 				13414F9217E2208E00F885D2 /* NSString+NSKitExtensions.m in Sources */,
 				1377C5A4184395BD0003E832 /* NSKitHoverView.m in Sources */,

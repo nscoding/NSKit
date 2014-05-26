@@ -49,6 +49,7 @@ Is a collection of well-documented __Data Structures__, __Helpers__ and __Catego
 ### Views
 - NSKitView
 - NSKitHoverView
+- NSKitProgressView
 
 
 ###Documentation
