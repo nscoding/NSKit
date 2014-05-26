@@ -78,7 +78,7 @@
 - (void)configure
 {
     self.wantsLayer = YES;
-    self.currentProgress = 0.0;
+    self.currentProgress = 0.0f;
     self.duration = 0.4f;
     
     self.progressLineWidth = 3.0f;
@@ -150,7 +150,7 @@
     self.progressLineLayer.strokeColor = self.progressLineColor.CGColor;
     self.progressLineLayer.lineWidth = self.progressLineWidth;
     
-    CFTimeInterval animationDuration = (animated ? self.duration : 0.0);
+    CFTimeInterval animationDuration = (animated ? self.duration : 0.0f);
     [self.progressLineLayer addAnimation:[self fillAnimationWithDuration:animationDuration]
                                   forKey:@"strokeEnd"];
     
@@ -188,7 +188,7 @@
      that the direction is clockwise and the animation direction is correct.
      */
     
-    CGFloat cornerRadius = (rect.size.width / 2);
+    CGFloat cornerRadius = (rect.size.width / 2.0f);
     CGFloat minx = CGRectGetMinX(rect), midx = CGRectGetMidX(rect), maxx = CGRectGetMaxX(rect);
     CGFloat miny = CGRectGetMinY(rect), midy = CGRectGetMidY(rect), maxy = CGRectGetMaxY(rect);
     
