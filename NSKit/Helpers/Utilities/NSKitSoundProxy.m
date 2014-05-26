@@ -38,11 +38,22 @@
 // ------------------------------------------------------------------------------------------
 + (void)playSoundAtURL:(NSURL *)soundURL
 {
-    CFURLRef soundURLRef = (__bridge CFURLRef)soundURL;
-    SystemSoundID fileObject;
-
-    AudioServicesCreateSystemSoundID(soundURLRef, &fileObject);
-    AudioServicesPlaySystemSound(fileObject);
+    NSAssert(soundURL, @"Sound URL cannot be nil");
+    
+    if (soundURL)
+    {
+        CFURLRef soundURLRef = (__bridge CFURLRef)soundURL;
+        SystemSoundID fileObject;
+        
+        AudioServicesCreateSystemSoundID(soundURLRef, &fileObject);
+        AudioServicesPlaySystemSound(fileObject);
+    }
+    else
+    {
+        @throw [NSException exceptionWithName:@"Invalid URL"
+                                       reason:@"The sound URL cannot be nil!"
+                                     userInfo:nil];
+    }
 }
 
 

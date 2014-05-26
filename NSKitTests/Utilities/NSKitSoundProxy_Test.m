@@ -1,8 +1,8 @@
 //
-//  NSKitSoundProxy.h
+//  NSKitSoundProxy_Test.m
 //  NSKit
 //
-//  Created by Patrick Chamelo on 6/30/13.
+//  Created by Patrick Chamelo on 26/05/14.
 //  Copyright (c) 2013 Patrick Chamelo. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -24,18 +24,36 @@
 // THE SOFTWARE.
 
 
-#import <AudioToolbox/AudioServices.h>
+#import <XCTest/XCTest.h>
 
-/** Sound helper */
-@interface NSKitSoundProxy : NSObject
 
-/**
- * Plays a short sound from a give URL path.
- * @param soundURL Thu user of the path to play the short sound 
- * e.g. [[NSBundle mainBundle] URLForResource:@"sound" withExtension:@"wav"];
- * This methods should throw an exception if the URL is nil;
- */
-+ (void)playSoundAtURL:(NSURL *)soundURL;
+// ------------------------------------------------------------------------------------------
+
+
+@interface NSKitSoundProxy_Test : XCTestCase @end
+
+
+
+// ------------------------------------------------------------------------------------------
+
+
+@implementation NSKitSoundProxy_Test
+
+
+// ------------------------------------------------------------------------------------------
+#pragma mark - Tests
+// ------------------------------------------------------------------------------------------
+- (void)testValidURL
+{
+    XCTAssertNoThrow([NSKitSoundProxy playSoundAtURL:[NSURL URLWithString:@"Some/Path"]], @"Should not trigger any exception!");
+}
+
+
+- (void)testInValidURL
+{
+    XCTAssertThrows([NSKitSoundProxy playSoundAtURL:nil], @"Should thrown an invalid URL exception!");
+}
+
 
 
 @end

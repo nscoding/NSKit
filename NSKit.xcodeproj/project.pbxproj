@@ -68,6 +68,7 @@
 		CD553901177D904E004B33D8 /* NSKitMath.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5538FF177D904E004B33D8 /* NSKitMath.m */; };
 		CD553906177D9710004B33D8 /* NSKitMath_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = CD553903177D9618004B33D8 /* NSKitMath_Test.m */; };
 		CD55395B177E1D37004B33D8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD55395A177E1D37004B33D8 /* SystemConfiguration.framework */; };
+		CD842DE41933BA0400AE4CC7 /* NSKitSoundProxy_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = CD842DE31933BA0400AE4CC7 /* NSKitSoundProxy_Test.m */; };
 		CD88570D177F9256007322E8 /* NSKitHeapPriorityQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = CD88570B177F9256007322E8 /* NSKitHeapPriorityQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD88570E177F9256007322E8 /* NSKitHeapPriorityQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = CD88570C177F9256007322E8 /* NSKitHeapPriorityQueue.m */; };
 		CD885711177F97EC007322E8 /* NSKitPriorityQueue_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = CD885710177F97EC007322E8 /* NSKitPriorityQueue_Test.m */; };
@@ -166,6 +167,7 @@
 		CD5538FF177D904E004B33D8 /* NSKitMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSKitMath.m; sourceTree = "<group>"; };
 		CD553903177D9618004B33D8 /* NSKitMath_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSKitMath_Test.m; sourceTree = "<group>"; };
 		CD55395A177E1D37004B33D8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		CD842DE31933BA0400AE4CC7 /* NSKitSoundProxy_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSKitSoundProxy_Test.m; sourceTree = "<group>"; };
 		CD88570B177F9256007322E8 /* NSKitHeapPriorityQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSKitHeapPriorityQueue.h; sourceTree = "<group>"; };
 		CD88570C177F9256007322E8 /* NSKitHeapPriorityQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSKitHeapPriorityQueue.m; sourceTree = "<group>"; };
 		CD885710177F97EC007322E8 /* NSKitPriorityQueue_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSKitPriorityQueue_Test.m; sourceTree = "<group>"; };
@@ -291,6 +293,7 @@
 			children = (
 				CD0258B61778E945006A7C54 /* NSKitUtilities_Test.m */,
 				CD553903177D9618004B33D8 /* NSKitMath_Test.m */,
+				CD842DE31933BA0400AE4CC7 /* NSKitSoundProxy_Test.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -736,6 +739,7 @@
 				CD8AACB51928F5EE005BEFAE /* NSKitHoverView_Test.m in Sources */,
 				13563C8418B93580001A5D4F /* NSKitLRUCache_Test.m in Sources */,
 				13563C8218B93559001A5D4F /* NSKitCacheEntry.m in Sources */,
+				CD842DE41933BA0400AE4CC7 /* NSKitSoundProxy_Test.m in Sources */,
 				13563C8118B93557001A5D4F /* NSKitLRUCache.m in Sources */,
 				CD553906177D9710004B33D8 /* NSKitMath_Test.m in Sources */,
 				CD082B8B17885AE4001C9E5E /* NSKitNode.m in Sources */,
