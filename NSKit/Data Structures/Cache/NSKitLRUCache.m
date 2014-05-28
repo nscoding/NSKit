@@ -129,6 +129,21 @@
 
 
 // ------------------------------------------------------------------------------------------
+#pragma mark - Keyed Subscripting
+// ------------------------------------------------------------------------------------------
+- (id)objectForKeyedSubscript:(id)key
+{
+    return [self objectForKey:key];
+}
+
+
+- (void)setObject:(id)obj forKeyedSubscript:(id <NSCopying>)key
+{
+    [self setObject:obj forKey:key];
+}
+
+
+// ------------------------------------------------------------------------------------------
 #pragma mark - Overrides
 // ------------------------------------------------------------------------------------------
 - (void)setCountLimit:(NSUInteger)countLimit
