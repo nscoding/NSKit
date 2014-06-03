@@ -36,7 +36,6 @@ FOUNDATION_EXPORT BOOL SystemAtLeastMaverics; // set at launch
 #import "NSKitPerformanceTimer.h"
 #import "NSKitMemoryHelper.h"
 #import "NSKitEmailHelper.h"
-#import "NSKitUtilities.h"
 #import "NSKitKeyboardHelper.h"
 
 #import "NSArray+NSKitExtensions.h"
@@ -50,7 +49,6 @@ FOUNDATION_EXPORT BOOL SystemAtLeastMaverics; // set at launch
 #import "NSUserDefaults+NSKitExtensions.h"
 
 #import "NSKitSoundProxy.h"
-#import "NSKitMath.h"
 #import "NSKitHeapPriorityQueue.h"
 #import "NSKitCGContextHelper.h"
 #import "NSKitRateHelper.h"
