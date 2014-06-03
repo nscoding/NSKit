@@ -27,22 +27,22 @@
 import XCTest
 import NSKit
 
-class NSKitUtilities_test : XCTestCase {
-
-    override func setUp() {
+class NSKitUtilities_test : XCTestCase
+{
+    override func setUp()
+    {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    override func tearDown()
+    {
         super.tearDown()
     }
 
     func testFlooredRect()
     {
         var previousRect = NSRect(x : 10.5, y : 5.5, width : 20.7, height : 30.2)
-        var rect = flooredRect(previousRect)
+        var rect = NSKitUtilities.flooredRect(previousRect)
 
         XCTAssertTrue(rect.origin.x == floor(previousRect.origin.x), "Issue found with origin x");
         XCTAssertTrue(rect.origin.y == floor(previousRect.origin.y), "Issue found with origin y");
@@ -53,7 +53,6 @@ class NSKitUtilities_test : XCTestCase {
         XCTAssertTrue(rect.size.width == 20, "Issue found with width");
         XCTAssertTrue(rect.size.height == 30, "Issue found with height");
     }
-
     
     func testValidEmail()
     {
@@ -63,18 +62,10 @@ class NSKitUtilities_test : XCTestCase {
         var email4 = "patrick@@nscoding.co.uk"
         var email5 = "_patrick_test@nscoding.co.uk"
 
-        XCTAssertTrue(isValidEmail(email1), "Email is valid but failed the test");
-        XCTAssertTrue(isValidEmail(email2), "Email is valid but failed the test");
-        XCTAssertFalse(isValidEmail(email3), "Email is not valid but passed the test");
-        XCTAssertFalse(isValidEmail(email4), "Email is not valid but passed the test");
-        XCTAssertTrue(isValidEmail(email5), "Email is valid but failed the test");
+        XCTAssertTrue(NSKitUtilities.isValidEmail(email1), "Email is valid but failed the test");
+        XCTAssertTrue(NSKitUtilities.isValidEmail(email2), "Email is valid but failed the test");
+        XCTAssertFalse(NSKitUtilities.isValidEmail(email3), "Email is not valid but passed the test");
+        XCTAssertFalse(NSKitUtilities.isValidEmail(email4), "Email is not valid but passed the test");
+        XCTAssertTrue(NSKitUtilities.isValidEmail(email5), "Email is valid but failed the test");
     }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock() {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }
