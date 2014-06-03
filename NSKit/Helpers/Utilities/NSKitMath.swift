@@ -76,7 +76,6 @@ class NSKitMath
         }
 
         var value = arc4random_uniform(UInt32(diff))
-        
         return (fromNumber + Int(value))
     }
 
