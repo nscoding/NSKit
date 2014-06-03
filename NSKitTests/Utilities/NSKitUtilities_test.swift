@@ -53,6 +53,21 @@ class NSKitUtilities_test : XCTestCase
         XCTAssertTrue(rect.size.width == 20, "Issue found with width");
         XCTAssertTrue(rect.size.height == 30, "Issue found with height");
     }
+
+    func testCeiledRect()
+    {
+        var previousRect = NSRect(x : 10.5, y : 5.5, width : 20.7, height : 30.2)
+        var rect = NSKitUtilities.ceiledRect(previousRect)
+        
+        XCTAssertTrue(rect.origin.x == ceil(previousRect.origin.x), "Issue found with origin x");
+        XCTAssertTrue(rect.origin.y == ceil(previousRect.origin.y), "Issue found with origin y");
+        XCTAssertTrue(rect.size.width == ceil(previousRect.size.width), "Issue found with width");
+        XCTAssertTrue(rect.size.height == ceil(previousRect.size.height), "Issue found with height");
+        XCTAssertTrue(rect.origin.x == 11, "Issue found with origin x");
+        XCTAssertTrue(rect.origin.y == 6, "Issue found with origin y");
+        XCTAssertTrue(rect.size.width == 21, "Issue found with width");
+        XCTAssertTrue(rect.size.height == 31, "Issue found with height");
+    }
     
     func testValidEmail()
     {
