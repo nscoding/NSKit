@@ -49,7 +49,6 @@ FOUNDATION_EXPORT BOOL SystemAtLeastMaverics; // set at launch
 #import "NSUserDefaults+NSKitExtensions.h"
 
 #import "NSKitSoundProxy.h"
-#import "NSKitMath.h"
 #import "NSKitHeapPriorityQueue.h"
 #import "NSKitCGContextHelper.h"
 #import "NSKitRateHelper.h"
