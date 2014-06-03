@@ -23,6 +23,9 @@
 		13563C8418B93580001A5D4F /* NSKitLRUCache_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 13563C8318B93580001A5D4F /* NSKitLRUCache_Test.m */; };
 		1377C5A3184395BD0003E832 /* NSKitHoverView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1377C5A1184395BD0003E832 /* NSKitHoverView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1377C5A4184395BD0003E832 /* NSKitHoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1377C5A2184395BD0003E832 /* NSKitHoverView.m */; };
+		137F7EB8193D38E0008EBA3C /* NSKitUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137F7EB7193D38E0008EBA3C /* NSKitUtilities.swift */; };
+		137F7EB9193D38E0008EBA3C /* NSKitUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137F7EB7193D38E0008EBA3C /* NSKitUtilities.swift */; };
+		137F7EBD193D3F24008EBA3C /* NSKitUtilities_test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137F7EBC193D3F24008EBA3C /* NSKitUtilities_test.swift */; };
 		13DC0D641913F73500FD02BC /* NSKitNumberFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 13DC0D621913F73500FD02BC /* NSKitNumberFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		13DC0D651913F73500FD02BC /* NSKitNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 13DC0D631913F73500FD02BC /* NSKitNumberFormatter.m */; };
 		13DC0D691913F9C600FD02BC /* NSKitHexValueFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 13DC0D671913F9C600FD02BC /* NSKitHexValueFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -105,6 +108,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		137F7EBA193D3C90008EBA3C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CDB298001777A4A700889B06 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CDB298081777A4A700889B06;
+			remoteInfo = NSKit;
+		};
 		CDB298241777A4A700889B06 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CDB298001777A4A700889B06 /* Project object */;
@@ -128,6 +138,8 @@
 		13563C8318B93580001A5D4F /* NSKitLRUCache_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSKitLRUCache_Test.m; sourceTree = "<group>"; };
 		1377C5A1184395BD0003E832 /* NSKitHoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSKitHoverView.h; sourceTree = "<group>"; };
 		1377C5A2184395BD0003E832 /* NSKitHoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSKitHoverView.m; sourceTree = "<group>"; };
+		137F7EB7193D38E0008EBA3C /* NSKitUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSKitUtilities.swift; sourceTree = "<group>"; };
+		137F7EBC193D3F24008EBA3C /* NSKitUtilities_test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSKitUtilities_test.swift; sourceTree = "<group>"; };
 		13DC0D621913F73500FD02BC /* NSKitNumberFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSKitNumberFormatter.h; sourceTree = "<group>"; };
 		13DC0D631913F73500FD02BC /* NSKitNumberFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSKitNumberFormatter.m; sourceTree = "<group>"; };
 		13DC0D671913F9C600FD02BC /* NSKitHexValueFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSKitHexValueFormatter.h; sourceTree = "<group>"; };
@@ -309,6 +321,7 @@
 				CD0258B61778E945006A7C54 /* NSKitUtilities_Test.m */,
 				CD553903177D9618004B33D8 /* NSKitMath_Test.m */,
 				CD842DE31933BA0400AE4CC7 /* NSKitSoundProxy_Test.m */,
+				137F7EBC193D3F24008EBA3C /* NSKitUtilities_test.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -526,6 +539,7 @@
 				CD5538FF177D904E004B33D8 /* NSKitMath.m */,
 				CD3B0BFF17804D1F00D2B16F /* NSKitSoundProxy.h */,
 				CD3B0C0017804D1F00D2B16F /* NSKitSoundProxy.m */,
+				137F7EB7193D38E0008EBA3C /* NSKitUtilities.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -632,6 +646,7 @@
 			);
 			dependencies = (
 				CDB298251777A4A700889B06 /* PBXTargetDependency */,
+				137F7EBB193D3C90008EBA3C /* PBXTargetDependency */,
 			);
 			name = NSKitTests;
 			productName = NSKitTests;
@@ -730,6 +745,7 @@
 				CDB2985E1777C05700889B06 /* NSArray+NSKitExtensions.m in Sources */,
 				CD0258671777C42D006A7C54 /* NSKitStack.m in Sources */,
 				CDB298441777AFAD00889B06 /* NSView+NSKitExtensions.m in Sources */,
+				137F7EB8193D38E0008EBA3C /* NSKitUtilities.swift in Sources */,
 				CD02588D1778CB0A006A7C54 /* NSMutableAttributedString+NSKitExtensions.m in Sources */,
 				13DC0D6A1913F9C600FD02BC /* NSKitHexValueFormatter.m in Sources */,
 				131B723F182BB6B000B47763 /* NSEvent+NSKitExtensions.m in Sources */,
@@ -754,7 +770,9 @@
 			files = (
 				CDC82B56177F2F7600FCC56B /* NSArray_Test.m in Sources */,
 				CDBE1E76177FAF97002E6F58 /* NSKitQueue_Test.m in Sources */,
+				137F7EB9193D38E0008EBA3C /* NSKitUtilities.swift in Sources */,
 				CDBE1E6F177FAA25002E6F58 /* NSKitStack_Test.m in Sources */,
+				137F7EBD193D3F24008EBA3C /* NSKitUtilities_test.swift in Sources */,
 				131B7240182BB6B000B47763 /* NSEvent+NSKitExtensions.m in Sources */,
 				CD885711177F97EC007322E8 /* NSKitPriorityQueue_Test.m in Sources */,
 				CDC82B59177F2FC000FCC56B /* NSColor_Test.m in Sources */,
@@ -776,6 +794,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		137F7EBB193D3C90008EBA3C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CDB298081777A4A700889B06 /* NSKit */;
+			targetProxy = 137F7EBA193D3C90008EBA3C /* PBXContainerItemProxy */;
+		};
 		CDB298251777A4A700889B06 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = CDB298081777A4A700889B06 /* NSKit */;
@@ -843,10 +866,12 @@
 				CLANG_ANALYZER_OBJC_NSCFERROR = YES;
 				CLANG_ANALYZER_OBJC_RETAIN_COUNT = YES;
 				CLANG_ANALYZER_OBJC_UNUSED_IVARS = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_LINK_OBJC_RUNTIME = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
@@ -858,10 +883,12 @@
 				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
 				INFOPLIST_FILE = "NSKit/NSKit-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.8;
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Development;
@@ -869,7 +896,7 @@
 		CD025928177906A1006A7C54 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NSKit.framework/Versions/A/NSKit";
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -882,8 +909,9 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "NSKitTests/NSKitTests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Development;
@@ -930,10 +958,12 @@
 				CLANG_ANALYZER_OBJC_NSCFERROR = YES;
 				CLANG_ANALYZER_OBJC_RETAIN_COUNT = YES;
 				CLANG_ANALYZER_OBJC_UNUSED_IVARS = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_LINK_OBJC_RUNTIME = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
@@ -945,9 +975,10 @@
 				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
 				INFOPLIST_FILE = "NSKit/NSKit-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.8;
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = framework;
 			};
@@ -956,7 +987,7 @@
 		CD02592B177906A8006A7C54 /* App Store */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NSKit.framework/Versions/A/NSKit";
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -965,8 +996,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSKit/NSKit-Prefix.pch";
 				INFOPLIST_FILE = "NSKitTests/NSKitTests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = "App Store";
