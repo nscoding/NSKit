@@ -67,16 +67,15 @@ class NSKitMath
                         userInfo: nil).raise()
         }
 
-        var diff = abs(fromNumber - toNumber);
+        var diff = abs(fromNumber - toNumber)
         if (diff == 0)
         {
-            return fromNumber;
+            return fromNumber
         }
-        
-        //  var value = arc4random_uniform(diff)
-        //  return (fromNumber + value)
 
-        return 0
+        var value = arc4random_uniform(UInt32(diff))
+        
+        return (fromNumber + Int(value))
     }
 
 }

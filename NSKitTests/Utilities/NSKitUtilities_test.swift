@@ -29,16 +29,6 @@ import NSKit
 
 class NSKitUtilities_test : XCTestCase
 {
-    override func setUp()
-    {
-        super.setUp()
-    }
-    
-    override func tearDown()
-    {
-        super.tearDown()
-    }
-
     func testFlooredRect()
     {
         var previousRect = NSRect(x : 10.5, y : 5.5, width : 20.7, height : 30.2)
@@ -53,7 +43,6 @@ class NSKitUtilities_test : XCTestCase
         XCTAssertTrue(rect.size.width == 20, "Issue found with width");
         XCTAssertTrue(rect.size.height == 30, "Issue found with height");
     }
-    
     
     func testCeiledRect()
     {
