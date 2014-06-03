@@ -74,16 +74,19 @@ class NSKitUtilities_test : XCTestCase
     {
         var email1 = "patrick@nscoding.co.uk"
         var email2 = "patrick_@nscoding.co.uk"
-        var email3 = "patrick @nscoding.co.uk"
-        var email4 = "patrick@@nscoding.co.uk"
-        var email5 = "_patrick_test@nscoding.co.uk"
+        var email3 = "_patrick_test@nscoding.co.uk"
 
-        XCTAssertTrue(false, "TODO");
-// FIXME:
-//        XCTAssertTrue(NSKitUtilities.isValidEmail(email1), "Email is valid but failed the test");
-//        XCTAssertTrue(NSKitUtilities.isValidEmail(email2), "Email is valid but failed the test");
-//        XCTAssertFalse(NSKitUtilities.isValidEmail(email3), "Email is not valid but passed the test");
-//        XCTAssertFalse(NSKitUtilities.isValidEmail(email4), "Email is not valid but passed the test");
-//        XCTAssertTrue(NSKitUtilities.isValidEmail(email5), "Email is valid but failed the test");
+        XCTAssertTrue(NSKitUtilities.isValidEmail(email1), "Email is valid but failed the test");
+        XCTAssertTrue(NSKitUtilities.isValidEmail(email2), "Email is valid but failed the test");
+        XCTAssertTrue(NSKitUtilities.isValidEmail(email3), "Email is valid but failed the test");
+    }
+    
+    func testInvalidEmail()
+    {
+        var email1 = "patrick @nscoding.co.uk"
+        var email2 = "patrick@@nscoding.co.uk"
+        
+        XCTAssertFalse(NSKitUtilities.isValidEmail(email1), "Email is not valid but passed the test");
+        XCTAssertFalse(NSKitUtilities.isValidEmail(email2), "Email is not valid but passed the test");
     }
 }

@@ -98,18 +98,20 @@ class NSKitUtilities
     *
     */
     @objc(isValidEmail:)
-    class func isValidEmail(email: NSString) -> Bool
+    class func isValidEmail(email: String) -> Bool
     {
-        return false
+        var trimmedEmail = email.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+        var regex = "^[A-Za-z0-9._%%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}$"
 
-        /**
-            // FIXME: This is not working as expected.
-            var trimmedEmail = email.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
-            
-            var regex = "^[A-Za-z0-9._%%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}$"
-            var regexEmail = NSPredicate(format: regex, argumentArray: nil)
-            
-            return regexEmail.evaluateWithObject(trimmedEmail)
-        */
+        var regularExpression = NSRegularExpression(pattern: regex, options: NSRegularExpressionOptions(), error: nil)
+
+        var numberOfMatches = regularExpression.numberOfMatchesInString(email, options: NSMatchingOptions(), range: NSMakeRange(0, countElements(trimmedEmail)))
+
+        if (numberOfMatches > 0)
+        {
+            return true
+        }
+        
+        return false
     }
 }
