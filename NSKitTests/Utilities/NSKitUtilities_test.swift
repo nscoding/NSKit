@@ -53,7 +53,8 @@ class NSKitUtilities_test : XCTestCase
         XCTAssertTrue(rect.size.width == 20, "Issue found with width");
         XCTAssertTrue(rect.size.height == 30, "Issue found with height");
     }
-
+    
+    
     func testCeiledRect()
     {
         var previousRect = NSRect(x : 10.5, y : 5.5, width : 20.7, height : 30.2)
@@ -77,10 +78,12 @@ class NSKitUtilities_test : XCTestCase
         var email4 = "patrick@@nscoding.co.uk"
         var email5 = "_patrick_test@nscoding.co.uk"
 
-        XCTAssertTrue(NSKitUtilities.isValidEmail(email1), "Email is valid but failed the test");
-        XCTAssertTrue(NSKitUtilities.isValidEmail(email2), "Email is valid but failed the test");
-        XCTAssertFalse(NSKitUtilities.isValidEmail(email3), "Email is not valid but passed the test");
-        XCTAssertFalse(NSKitUtilities.isValidEmail(email4), "Email is not valid but passed the test");
-        XCTAssertTrue(NSKitUtilities.isValidEmail(email5), "Email is valid but failed the test");
+        XCTAssertTrue(false, "TODO");
+// FIXME:
+//        XCTAssertTrue(NSKitUtilities.isValidEmail(email1), "Email is valid but failed the test");
+//        XCTAssertTrue(NSKitUtilities.isValidEmail(email2), "Email is valid but failed the test");
+//        XCTAssertFalse(NSKitUtilities.isValidEmail(email3), "Email is not valid but passed the test");
+//        XCTAssertFalse(NSKitUtilities.isValidEmail(email4), "Email is not valid but passed the test");
+//        XCTAssertTrue(NSKitUtilities.isValidEmail(email5), "Email is valid but failed the test");
     }
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-
+@objc(NSKitUtilities)
 class NSKitUtilities
 {
     /**
@@ -22,7 +22,8 @@ class NSKitUtilities
     @objc(flooredRect:)
     class func flooredRect(rect: NSRect) -> NSRect
     {
-        return NSRect(x : floor(rect.origin.x), y : floor(rect.origin.y), width : floor(rect.size.width), height : floor(rect.size.height))
+        var flooredRectOrigin = NSKitUtilities.flooredOriginRect(rect);
+        return NSRect(x : flooredRectOrigin.origin.x, y : flooredRectOrigin.origin.y, width : floor(rect.size.width), height : floor(rect.size.height))
     }
     
     /**
@@ -36,7 +37,8 @@ class NSKitUtilities
     @objc(ceiledRect:)
     class func ceiledRect(rect: NSRect) -> NSRect
     {
-        return NSRect(x : ceil(rect.origin.x), y : ceil(rect.origin.y), width : ceil(rect.size.width), height : ceil(rect.size.height))
+        var ceiledRectOrigin = NSKitUtilities.ceiledOriginRect(rect);
+        return NSRect(x : ceiledRectOrigin.origin.x, y : ceiledRectOrigin.origin.y, width : ceil(rect.size.width), height : ceil(rect.size.height))
     }
     
     /**
@@ -78,13 +80,19 @@ class NSKitUtilities
     * @return YES if the email is valid; otherwise, NO.
     *
     */
+    @objc(isValidEmail:)
     class func isValidEmail(email: NSString) -> Bool
     {
-        var trimmedEmail = email.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
-        
-        var regex = "^[A-Za-z0-9._%%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}$"
-        var regexEmail = NSPredicate(format: regex, argumentArray: nil)
-        
-        return regexEmail.evaluateWithObject(trimmedEmail)
+        return false
+
+        /**
+            // FIXME: This is not working as expected.
+            var trimmedEmail = email.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+            
+            var regex = "^[A-Za-z0-9._%%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}$"
+            var regexEmail = NSPredicate(format: regex, argumentArray: nil)
+            
+            return regexEmail.evaluateWithObject(trimmedEmail)
+        */
     }
 }
