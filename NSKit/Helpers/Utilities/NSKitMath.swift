@@ -36,6 +36,7 @@ class NSKitMath
     * @return YES if the number has decimal points; otherwise, NO.
     *
     */
+    @objc(hasDecimalPoints:)
     class func hasDecimalPoints(value: Double) -> Bool
     {
         if (floor(value) != value)
@@ -58,6 +59,7 @@ class NSKitMath
     * @warning *Important:* If the start value is higher than the end value, an exception is raised.
     *
     */
+    @objc(generateRandomFromNumber:ToNumber:)
     class func generateRandomFromNumber(fromNumber: Int, toNumber: Int) -> Int
     {
         if (fromNumber > toNumber)
