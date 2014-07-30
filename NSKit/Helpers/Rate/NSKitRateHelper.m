@@ -255,13 +255,13 @@ NSInteger NSKitRateMinimumSignificantEvents;
 - (void)saveRate
 {
     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:self.rate];
-    [NSUserDefaults setValue:data forKey:@"NSKitApplicationRateMeObject"];
+    [NSUserDefaults nskit_setValue:data forKey:@"NSKitApplicationRateMeObject"];
 }
 
 
 - (void)loadRate
 {
-    NSData *data = [NSUserDefaults valueForKey:@"NSKitApplicationRateMeObject"];
+    NSData *data = [NSUserDefaults nskit_valueForKey:@"NSKitApplicationRateMeObject"];
 
     if (data)
     {

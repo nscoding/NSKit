@@ -106,7 +106,6 @@
          [[color colorSpaceName] isEqualToString:NSCustomColorSpace]) &&
          [color respondsToSelector:@selector(whiteComponent)])
     {
-        
         *red = [color whiteComponent];
         *green = [color whiteComponent];
         *blue = [color whiteComponent];
@@ -121,7 +120,17 @@
     }
     else
     {
-        NSLog(@"Edge case %@", [color colorSpaceName]);
+        color = [color colorUsingColorSpaceName:NSDeviceRGBColorSpace];
+        if ([color respondsToSelector:@selector(redComponent)])
+        {
+            *red = [color redComponent];
+            *green = [color greenComponent];
+            *blue = [color blueComponent];
+        }
+        else
+        {
+            NSAssert1(NO, @"Edge case %@", [color colorSpaceName]);
+        }        
     }
 }
 
