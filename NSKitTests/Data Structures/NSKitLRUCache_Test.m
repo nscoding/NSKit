@@ -60,6 +60,24 @@
 }
 
 
+- (void)testKeyedSubscripting
+{
+    NSString *string1 = @"Test 1";
+    NSString *string2 = @"Test 2";
+
+    NSKitLRUCache *lruCache = [[NSKitLRUCache alloc] initWithCountLimit:4];
+    [lruCache setObject:string1 forKey:string1];
+    [lruCache setObject:string2 forKey:string2];
+
+    XCTAssertTrue((lruCache[@"Test 1"] == string1), @"Object for key was wrong");
+    XCTAssertTrue((lruCache[@"Test 2"] != string1), @"Object for key was wrong");
+    XCTAssertTrue((lruCache[@"Test 2"] == string2), @"Object for key was wrong");
+    
+    lruCache[string2] = string1;
+    XCTAssertTrue((lruCache[@"Test 2"] == string1), @"Object for key was wrong");
+}
+
+
 // ------------------------------------------------------------------------------------------
 #pragma mark - NSKitLRUCacheDelegate
 // ------------------------------------------------------------------------------------------

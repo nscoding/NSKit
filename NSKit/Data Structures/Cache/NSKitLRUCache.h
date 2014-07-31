@@ -58,6 +58,18 @@
 - (void)removeObjectForKey:(id)key;
 
 
+/**
+ * Returns the value associated with a given key with subscript.
+ */
+- (id)objectForKeyedSubscript:(id)key;
+
+
+/**
+ * Sets the value of the specified key in the cache with subscript.
+ */
+- (void)setObject:(id)obj forKeyedSubscript:(id <NSCopying>)key;
+
+
 @end
 
 
