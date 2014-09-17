@@ -27,7 +27,8 @@
 FOUNDATION_EXPORT BOOL SystemAtLeastLion;
 FOUNDATION_EXPORT BOOL SystemAtLeastLionWithRetina;
 FOUNDATION_EXPORT BOOL SystemAtLeastMountainLion;
-FOUNDATION_EXPORT BOOL SystemAtLeastMaverics; // set at launch
+FOUNDATION_EXPORT BOOL SystemAtLeastMaverics;
+FOUNDATION_EXPORT BOOL SystemAtLeastYosemite; // set at launch
 
 #import "NSKitLinkedListProtocol.h"
 #import "NSKitSinglyLinkedList.h"
