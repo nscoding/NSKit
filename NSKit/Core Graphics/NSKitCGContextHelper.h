@@ -27,13 +27,11 @@
 /** CGContext helper */
 @interface NSKitCGContextHelper : NSObject
 
-
 /**
  * Returns the current graphics context.
  * @return The current graphics context.
  */
 CGContextRef NSKitGraphicsGetCurrentContext(void);
-
 
 /**
  * Makes the specified graphics context the current context.
@@ -42,19 +40,13 @@ CGContextRef NSKitGraphicsGetCurrentContext(void);
  */
 void NSKitGraphicsPushContext(CGContextRef context);
 
-
 /**
  * Removes the current graphics context from the top of the stack, restoring the previous context.
  * @discussion Use this function to balance calls to the NSKitGraphicsPushContext function.
  *
  */
 void NSKitGraphicsPopContext(void);
-
-
 void NSKitCGContextAddRoundRect(CGContextRef context, CGRect rect, CGFloat radius);
-
-
 void NSKitCGContextClipToRoundRect(CGContextRef context, CGRect rect, CGFloat radius);
-
 
 @end

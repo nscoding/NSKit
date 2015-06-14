@@ -26,43 +26,28 @@
 
 #import "NSKitMath.h"
 
-
-// ------------------------------------------------------------------------------------------
-
-
 @implementation NSKitMath
 
-
-// ------------------------------------------------------------------------------------------
 #pragma mark - Methods
-// ------------------------------------------------------------------------------------------
+
 + (BOOL)hasDecimalPoints:(CGFloat)value
 {
-    if (floor(value) != value)
-    {
+    if (floor(value) != value){
         return YES;
     }
-    
     return NO;
 }
 
-
-+ (NSInteger)generateRandomFromNumber:(NSInteger)start
-                             toNumber:(NSInteger)end
++ (NSInteger)generateRandomFromNumber:(NSInteger)start toNumber:(NSInteger)end
 {
     NSCKitAssert((start > end), @"Start number cannot be higher than the end number");
     
     int diff = abs((int)start - (int)end);
-    
-    if (diff == 0)
-    {
+    if (diff == 0){
         return start;
     }
-    
     NSUInteger value = arc4random_uniform(diff);
-
     return start + value;
 }
-
 
 @end

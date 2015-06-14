@@ -27,82 +27,57 @@
 
 #import "NSKitView.h"
 
-
-// ------------------------------------------------------------------------------------------
-
-
 @implementation NSKitView
 
-
-// ------------------------------------------------------------------------------------------
 #pragma mark - Initializers
-// ------------------------------------------------------------------------------------------
+
 - (instancetype)init
 {
-    if ((self = [super init]))
-    {
-        [self configureCustomProperties];
-    }
-    
-    return self;
+    return [super initWithFrame:NSZeroRect];
 }
-
 
 - (instancetype)initWithFrame:(NSRect)frameRect
 {
-    if ((self = [super initWithFrame:frameRect]))
-    {
-        [self configureCustomProperties];
+    if (self = [super initWithFrame:frameRect]){
+        [self _setUpCustomProperties];
     }
-    
     return self;
 }
-
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
-    if ((self = [super initWithCoder:aDecoder]))
-    {
-        [self configureCustomProperties];
+    if ((self = [super initWithCoder:aDecoder])){
+        [self _setUpCustomProperties];
     }
-    
     return self;
 }
 
-
-// ------------------------------------------------------------------------------------------
 #pragma mark - Configure Custom Properties
-// ------------------------------------------------------------------------------------------
-- (void)configureCustomProperties
+
+- (void)_setUpCustomProperties
 {
     self.nskit_opaque = NO;
     self.nskit_wantsDefaultClipping = YES;
     self.nskit_ignoreMouseEvents = NO;
 }
 
-
-// ------------------------------------------------------------------------------------------
 #pragma mark - Overrides
-// ------------------------------------------------------------------------------------------
+
 - (BOOL)isOpaque
 {
     return self.nskit_opaque;
 }
-
 
 - (BOOL)wantsDefaultClipping
 {
     return self.nskit_wantsDefaultClipping;
 }
 
-
 - (NSView *)hitTest:(NSPoint)aPoint
 {
-    if (self.nskit_ignoreMouseEvents)
-    {
+    if (self.nskit_ignoreMouseEvents){
         return nil;
     }
-    
     return [super hitTest:aPoint];
 }
 

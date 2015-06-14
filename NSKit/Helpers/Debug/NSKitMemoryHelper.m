@@ -32,74 +32,54 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
-// ------------------------------------------------------------------------------------------
-
-
 @implementation NSKitMemoryHelper
 
-
-// ------------------------------------------------------------------------------------------
 #pragma mark - Methods
-// ------------------------------------------------------------------------------------------
+
 + (NSUInteger)memoryForOption:(NSKitMemoryOption)option
 {
     mach_port_t host_port;
     mach_msg_type_number_t host_size;
     vm_size_t pagesize;
-    
     host_port = mach_host_self();
     host_size = sizeof(vm_statistics_data_t) / sizeof(integer_t);
     host_page_size(host_port, &pagesize);
-	
     vm_statistics_data_t vm_stat;
 	
-    if (host_statistics(host_port, HOST_VM_INFO, (host_info_t)&vm_stat, &host_size) != KERN_SUCCESS)
-    {
+    if (host_statistics(host_port, HOST_VM_INFO, (host_info_t)&vm_stat, &host_size) != KERN_SUCCESS){
         NSLog(@"Failed to fetch vm statistics");
     }
     
     natural_t count;
-    
-    switch (option)
-    {
-        case NSKitMemoryOptionFree:
-        {
+    switch (option){
+        case NSKitMemoryOptionFree:{
             count = vm_stat.free_count;
         }
             break;
-        case NSKitMemoryOptionInactive:
-        {
+        case NSKitMemoryOptionInactive:{
             count = vm_stat.inactive_count;
         }
             break;
-        case NSKitMemoryOptionActive:
-        {
+        case NSKitMemoryOptionActive:{
             count = vm_stat.active_count;
         }
             break;
-        case NSKitMemoryOptionWired:
-        {
+        case NSKitMemoryOptionWired:{
             count = vm_stat.wire_count;
         }
             break;
-        case NSKitMemoryOptionAll:
-        {
+        case NSKitMemoryOptionAll:{
             count = vm_stat.free_count + vm_stat.inactive_count +
             vm_stat.active_count + vm_stat.wire_count;
         }
             break;
     }
-    
 	return ((NSUInteger) count * pagesize);
 }
 
-
 + (NSString *)stringMemoryForOption:(NSKitMemoryOption)option
 {
-    return [NSString stringWithFormat:@"%.2lu MB",
-            [NSKitMemoryHelper memoryForOption:option] / 1024 / 1024];
+    return [NSString stringWithFormat:@"%.2lu MB", [NSKitMemoryHelper memoryForOption:option] / 1024 / 1024];
 }
-
 
 @end

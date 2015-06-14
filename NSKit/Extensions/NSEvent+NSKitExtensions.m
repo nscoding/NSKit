@@ -26,73 +26,52 @@
 
 #import "NSEvent+NSKitExtensions.h"
 
-
-// ------------------------------------------------------------------------------------------
-
-
 @implementation NSEvent (NSKitExtensions)
 
-
-// ------------------------------------------------------------------------------------------
 #pragma mark - Object Methods
-// ------------------------------------------------------------------------------------------
+
 - (BOOL)nskit_isMouseUp
 {
     if (self.type != NSLeftMouseUp &&
         self.type != NSRightMouseUp &&
-        self.type != NSOtherMouseUp)
-    {
+        self.type != NSOtherMouseUp){
         return NO;
     }
-    
     return YES;
 }
-
 
 - (BOOL)nskit_isMouseDown
 {
     if (self.type != NSLeftMouseDown &&
         self.type != NSRightMouseDown &&
-        self.type != NSOtherMouseDown)
-    {
+        self.type != NSOtherMouseDown){
         return NO;
     }
-    
     return YES;
 }
-
 
 - (BOOL)nskit_hasClickCount
 {
-    if ([self respondsToSelector:@selector(clickCount)] == NO)
-    {
+    if ([self respondsToSelector:@selector(clickCount)] == NO){
         return NO;
     }
-    
     return YES;
 }
 
-
 - (BOOL)nskit_isSingleClick
 {
-    if ([self nskit_hasClickCount] == NO)
-    {
+    if ([self nskit_hasClickCount] == NO){
         return NO;
     }
-    
     return (self.clickCount == 1);
 }
 
-
 - (BOOL)nskit_isDoubleClick
 {
-    if ([self nskit_hasClickCount] == NO)
-    {
+    if ([self nskit_hasClickCount] == NO){
         return NO;
     }
-    
     return (self.clickCount == 2);
 }
-
 
 @end

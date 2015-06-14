@@ -27,103 +27,74 @@
 #import "NSKitSinglyLinkedList.h"
 #import "NSKitSinglyLinkedList+Private.h"
 
-
-// ------------------------------------------------------------------------------------------
-
-
 @implementation NSKitSinglyLinkedList
 
-
-// ------------------------------------------------------------------------------------------
 #pragma mark - Methods
-// ------------------------------------------------------------------------------------------
+
 - (NSString *)description
 {
     NSObject<NSKitLinkedListProtocol> *node = first;
     NSInteger count = 0;
-    
-    if (self.count == 0)
-    {
+    if (self.count == 0) {
         return @"Linked list is empty";
     }
     
     NSMutableString *log = [[NSMutableString alloc] init];
     [log appendString:@"-------------"];
     
-    while (node)
-    {
-        if (node)
-        {
+    while (node) {
+        if (node) {
             [log appendString:@" - "];
             [log appendString:node.description];
             [log appendString:@" - "];
-            
             count++;
         }
-        
         node = node.nextLink;
     }
-    
     [log appendString:@"-------------"];
-    
     return log;
 }
 
-
 - (BOOL)insertObject:(id <NSKitLinkedListProtocol>)object
 {
-    return [self insertObject:object
-                      atIndex:self.count];
+    return [self insertObject:object atIndex:self.count];
 }
 
-
-- (BOOL)insertObject:(id <NSKitLinkedListProtocol>)object
-             atIndex:(NSInteger)index
+- (BOOL)insertObject:(id <NSKitLinkedListProtocol>)object atIndex:(NSInteger)index
 {
-    if (object == nil)
-    {
+    if (object == nil) {
         return NO;
     }
     
-    if (index == 0 && first == nil)
-    {
+    if (index == 0 && first == nil) {
         first = object;
-        
         return YES;
     }
     
     NSObject<NSKitLinkedListProtocol> *previousNode = nil;
     NSObject<NSKitLinkedListProtocol> *currentNode = nil;
-    
     [self previousObject:&previousNode
            currentObject:&currentNode
                  atIndex:index];
 
-    if (previousNode)
-    {
+    if (previousNode){
         NSObject<NSKitLinkedListProtocol> *currentNext = previousNode.nextLink;
         previousNode.nextLink = object;
         object.nextLink = currentNext;
-        
         return YES;
     }
-    
-    if (currentNode && currentNode == first)
-    {
+    if (currentNode && currentNode == first){
         NSObject<NSKitLinkedListProtocol> *current = first;
         first = object;
         object.nextLink = current;
         return YES;
     }
-
     return NO;
 }
-
 
 - (id)objectAtIndex:(NSInteger)index
 {
     NSObject<NSKitLinkedListProtocol> *currentNode = nil;
-    
     [self previousObject:nil
            currentObject:&currentNode
                  atIndex:index];
@@ -131,131 +102,96 @@
     return currentNode;
 }
 
-
 - (void)previousObject:(NSObject<NSKitLinkedListProtocol> **)prevObject
          currentObject:(NSObject<NSKitLinkedListProtocol> **)currentObject
                atIndex:(NSInteger)index
 {
     NSObject<NSKitLinkedListProtocol> *objectToReturn = first;
     NSInteger count = 0;
-    
-    while (objectToReturn)
-    {
-        if (count == index - 1 && prevObject)
-        {
+    while (objectToReturn){
+        if (count == index - 1 && prevObject) {
             *prevObject = objectToReturn;
-        }
-        else if (count == index)
-        {
+        } else if (count == index) {
             *currentObject = objectToReturn;
             break;
         }
-        
         count++;
         objectToReturn = objectToReturn.nextLink;
     }
 }
 
-
 - (id)deleObjectAtIndex:(NSInteger)index
 {
     NSObject<NSKitLinkedListProtocol> *previousNode = nil;
     NSObject<NSKitLinkedListProtocol> *nodeToDelete = nil;
-    
     [self previousObject:&previousNode
            currentObject:&nodeToDelete
                  atIndex:index];
     
     previousNode.nextLink = nodeToDelete.nextLink;
-    
-    if (index == 0)
-    {
+    if (index == 0) {
         first = nodeToDelete.nextLink;
     }
-    
     return nodeToDelete;
 }
-
 
 - (id)deleObject:(id <NSKitLinkedListProtocol>)object
 {
     NSInteger index = [self indexOfObject:object];
-
-    if (index != NSNotFound)
-    {
+    if (index != NSNotFound) {
         return [self deleObjectAtIndex:index];
     }
-    
     return nil;
 }
-
 
 - (NSInteger)indexOfObject:(id <NSKitLinkedListProtocol>)object
 {
     NSObject<NSKitLinkedListProtocol> *nodeToSet = first;
     NSUInteger count = 0;
-    
-    while (nodeToSet)
-    {
-        if ([nodeToSet isEqualTo:object])
-        {
+    while (nodeToSet) {
+        if ([nodeToSet isEqualTo:object]) {
             return count;
         }
-        
         count++;
         nodeToSet = nodeToSet.nextLink;
     }
-    
     return NSNotFound;
 }
-
 
 - (BOOL)isEmpty
 {
     return (first == nil);
 }
 
-
 - (NSUInteger)count
 {
-    if (first == nil)
-    {
+    if (first == nil) {
         return 0;
     }
     
     NSObject<NSKitLinkedListProtocol> *node = first;
     NSUInteger count = 0;
-    
-    while (node)
-    {
+    while (node) {
         count++;
         node = node.nextLink;
     }
-    
     return count;
 }
-
 
 - (void)reverseList
 {
     NSObject<NSKitLinkedListProtocol> *previous = nil;
     NSObject<NSKitLinkedListProtocol> *node = first;
-
-    while (node)
-    {
+    while (node) {
         // store next
         NSObject<NSKitLinkedListProtocol> *nextNode = node.nextLink;
         node.nextLink = previous;
         previous = node;
         node = nextNode;
-        
-        if (nextNode)
-        {
+        if (nextNode) {
             first = nextNode;
         }
     }
 }
-
-
 
 @end

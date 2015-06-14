@@ -33,10 +33,8 @@ typedef NS_ENUM(NSUInteger, NSKitMemoryOption)
     NSKitMemoryOptionAll
 };
 
-
 /** Memory helper class */
 @interface NSKitMemoryHelper : NSObject
-
 
 /**
  * Return the bytes for a given memory option.
@@ -48,7 +46,6 @@ typedef NS_ENUM(NSUInteger, NSKitMemoryOption)
  */
 + (NSUInteger)memoryForOption:(NSKitMemoryOption)option;
 
-
 /**
  * Return a string representation for a given memory option.
  *
@@ -58,6 +55,5 @@ typedef NS_ENUM(NSUInteger, NSKitMemoryOption)
  *
  */
 + (NSString *)stringMemoryForOption:(NSKitMemoryOption)option;
-
 
 @end

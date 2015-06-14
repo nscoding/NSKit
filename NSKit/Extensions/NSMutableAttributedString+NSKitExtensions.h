@@ -35,7 +35,6 @@
  */
 - (void)nskit_setColor:(NSColor *)color;
 
-
 /**
  * Set the text color on the attributed string.
  *
@@ -55,7 +54,6 @@
  */
 - (void)nskit_setBackgroundColor:(NSColor *)color;
 
-
 /**
  * Set the background color on the attributed string.
  *
@@ -66,7 +64,6 @@
  */
 - (void)nskit_setBackgroundColor:(NSColor *)color inRange:(NSRange)range;
 
-
 /**
  * Set the font on the attributed string.
  *
@@ -75,7 +72,6 @@
  *
  */
 - (void)nskit_setFont:(NSFont *)font;
-
 
 /**
  * Set the font on the attributed string.
@@ -88,7 +84,6 @@
  */
 - (void)setFont:(NSFont *)font inRange:(NSRange)range;
 
-
 /**
  * Set the line spacing on the attributed string.
  *
@@ -96,7 +91,6 @@
  *
  */
 - (void)nskit_setLineHeight:(CGFloat)height;
-
 
 /**
  * Set the line break on the attributed string.
@@ -106,7 +100,6 @@
  */
 - (void)nskit_setLineBreak:(NSLineBreakMode)breakMode;
 
-
 /**
  * Set the text alignment on the attributed string.
  *
@@ -114,7 +107,6 @@
  *
  */
 - (void)nskit_setAlignment:(NSTextAlignment)alignment;
-
 
 /**
  * Set the text alignment & line break on the attributed string.
@@ -126,7 +118,6 @@
  */
 - (void)nskit_setLineBreak:(NSLineBreakMode)breakMode
               andAlignment:(NSTextAlignment)alignment;
-
 
 /**
  * Set the text alignment & line break on the attributed string.
@@ -141,7 +132,6 @@
 - (void)nskit_setLineBreak:(NSLineBreakMode)breakMode
                 LineHeight:(CGFloat)height
               andAlignment:(NSTextAlignment)alignment;
-
 
 /**
  * Set the shadow on the text

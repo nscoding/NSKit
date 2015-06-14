@@ -26,7 +26,6 @@
 /** Extends the NSUserDefaults with helper methods */
 @interface NSUserDefaults (NSKitExtensions)
 
-
 /**
  * Sets the value of the specified key, relative to the receiver, to the provided value,
  * additionally will syncronize the defaults.
@@ -39,7 +38,6 @@
  */
 + (void)nskit_setValue:(id)value forKey:(NSString *)key;
 
-
 /**
  *
  * @param key The key name to retrieve the object.
@@ -47,6 +45,5 @@
  * @return id The object for a give key.
  */
 + (id)nskit_valueForKey:(NSString *)key;
-
 
 @end

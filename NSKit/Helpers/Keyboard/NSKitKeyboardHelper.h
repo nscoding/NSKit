@@ -26,8 +26,6 @@
 /** Keyboard helper class */
 @interface NSKitKeyboardHelper : NSObject
 
-
-
 /**
  * Check if the "Return" key is pressed for a given event.
  *
@@ -37,7 +35,6 @@
  *
  */
 + (BOOL)returnKeyIsPressedForEvent:(NSEvent *)event;
-
 
 /**
  * Check if the "Delete" key is pressed for a given event.
@@ -49,7 +46,6 @@
  */
 + (BOOL)deleteKeyIsPressedForEvent:(NSEvent *)event;
 
-
 /**
  * Check if the "Space" key is pressed for a given event.
  *
@@ -59,7 +55,6 @@
  *
  */
 + (BOOL)spaceKeyIsPressedForEvent:(NSEvent *)event;
-
 
 /**
  * Check if the "Tab" key is pressed for a given event.
@@ -71,7 +66,6 @@
  */
 + (BOOL)tabKeyIsPressedForEvent:(NSEvent *)event;
 
-
 /**
  * Check if the "Shift" key is pressed for a given event.
  *
@@ -81,7 +75,6 @@
  *
  */
 + (BOOL)shiftKeyIsPressedForEvent:(NSEvent *)event;
-
 
 /**
  * Check if the "Escape" key is pressed for a given event.
@@ -93,7 +86,6 @@
  */
 + (BOOL)escapeKeyIsPressedForEvent:(NSEvent *)event;
 
-
 /**
  * Check if the "Left" key is pressed for a given event.
  *
@@ -103,7 +95,6 @@
  *
  */
 + (BOOL)leftKeyIsPressedForEvent:(NSEvent *)event;
-
 
 /**
  * Check if the "Right" key is pressed for a given event.
@@ -115,7 +106,6 @@
  */
 + (BOOL)rightKeyIsPressedForEvent:(NSEvent *)event;
 
-
 /**
  * Check if the "Up" key is pressed for a given event.
  *
@@ -125,7 +115,6 @@
  *
  */
 + (BOOL)upKeyIsPressedForEvent:(NSEvent *)event;
-
 
 /**
  * Check if the "Down" key is pressed for a given event.
@@ -137,7 +126,6 @@
  */
 + (BOOL)downKeyIsPressedForEvent:(NSEvent *)event;
 
-
 /**
  * Check if the "Control" key is pressed for a given event.
  *
@@ -148,7 +136,6 @@
  */
 + (BOOL)controlKeyIsPressedForEvent:(NSEvent *)event;
 
-
 /**
  * Check if the "Option" key is pressed for a given event.
  *
@@ -158,6 +145,5 @@
  *
  */
 + (BOOL)optionKeyIsPressedForEvent:(NSEvent *)event;
-
 
 @end

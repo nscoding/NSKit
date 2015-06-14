@@ -27,157 +27,120 @@
 #import "NSKitHoverView.h"
 #import "NSEvent+NSKitExtensions.h"
 
-
-// ------------------------------------------------------------------------------------------
-
-
-@interface NSKitHoverView ()
-
-@property (nonatomic, strong) NSTrackingArea *trackingArea;
-@property (nonatomic, strong) NSImageView *imageView;
-
-@end
-
-
-// ------------------------------------------------------------------------------------------
-
-
 @implementation NSKitHoverView
+{
+    NSTrackingArea *_trackingArea;
+    NSImageView *_imageView;
+}
 
-// ------------------------------------------------------------------------------------------
 #pragma mark - Initializer
-// ------------------------------------------------------------------------------------------
+
 - (instancetype)initWithFrame:(NSRect)frame
 {
-    if ((self = [super initWithFrame:frame]))
-    {
-        [self configureLayer];
-        [self buildAndConfigureImageView];
-        [self buildAndConfigureTrackingArea];
+    if (self = [super initWithFrame:frame]){
+        _enabled = YES;
+        [self _setUpLayer];
+        [self _setUpImageView];
+        [self _setUpTrackingArea];
     }
     
     return self;
 }
 
-
-- (void)configureLayer
+#pragma mark - Set Up Methods
+- (void)_setUpLayer
 {
     [self setWantsLayer:YES];
     self.layerContentsRedrawPolicy = NSViewLayerContentsRedrawOnSetNeedsDisplay;
-    self.enabled = YES;
 }
 
-
-- (void)buildAndConfigureImageView
+- (void)_setUpImageView
 {
-    self.imageView = [[NSImageView alloc] initWithFrame:self.bounds];
-    self.imageView.autoresizingMask = NSViewWidthSizable | NSViewHeightSizable;
-    [self addSubview:self.imageView];
+    _imageView = [[NSImageView alloc] initWithFrame:self.bounds];
+    _imageView.autoresizingMask = NSViewWidthSizable | NSViewHeightSizable;
+    [self addSubview:_imageView];
 }
 
-
-- (void)buildAndConfigureTrackingArea
+- (void)_setUpTrackingArea
 {
     NSInteger trackingOptions = (NSTrackingMouseEnteredAndExited | NSTrackingActiveAlways);
-    self.trackingArea = [[NSTrackingArea alloc] initWithRect:self.bounds
-                                                     options:trackingOptions
-                                                       owner:self
-                                                    userInfo:nil];
-    [self addTrackingArea:self.trackingArea];
+    _trackingArea = [[NSTrackingArea alloc] initWithRect:self.bounds
+                                                 options:trackingOptions
+                                                   owner:self
+                                                userInfo:nil];
+    [self addTrackingArea:_trackingArea];
 }
 
-
-- (void)updateTrackingAreas
-{
-    [self removeTrackingArea:self.trackingArea];
-    self.trackingArea = nil;
-    
-    [self buildAndConfigureTrackingArea];
-}
-
-
-// ------------------------------------------------------------------------------------------
 #pragma mark - Overrides
-// ------------------------------------------------------------------------------------------
+
 - (void)setFrame:(NSRect)frameRect
 {
-    if (NSEqualRects(frameRect, self.frame) == NO)
-    {
+    if (NSEqualRects(frameRect, self.frame) == NO){
         [super setFrame:frameRect];
         [self updateTrackingAreas];
     }
 }
 
+- (void)updateTrackingAreas
+{
+    [self removeTrackingArea:_trackingArea];
+    _trackingArea = nil;
+    [self _setUpTrackingArea];
+}
 
 - (void)setNormalImage:(NSImage *)normalImage
 {
     _normalImage = normalImage;
-    
-    if (self.imageView.image == nil)
-    {
-        [self.imageView setImage:_normalImage];
+    if (_imageView.image == nil){
+        [_imageView setImage:_normalImage];
     }
 }
 
-
-// ------------------------------------------------------------------------------------------
 #pragma mark - Mouse events
-// ------------------------------------------------------------------------------------------
+
 - (void)mouseUp:(NSEvent *)event
 {
-    if (self.isHidden || self.alphaValue == 0.0f || self.enabled == NO)
-    {
+    if (self.isHidden || self.alphaValue == 0.0f || _enabled == NO){
         return;
     }
     
-    if ([event nskit_isMouseUp])
-    {
+    if ([event nskit_isMouseUp]){
         NSPoint locationInView = [self.window.contentView convertPoint:event.locationInWindow toView:self];
-        if (NSPointInRect(locationInView, self.bounds))
-        {
-            [self.imageView setImage:self.hoveredImage];
+        if (NSPointInRect(locationInView, self.bounds)) {
+            [_imageView setImage:_hoveredImage];
             [self fireAction];
-        }
-        else
-        {
-            [self.imageView setImage:self.normalImage];
+        } else {
+            [_imageView setImage:_normalImage];
         }
     }
 }
-
 
 - (void)mouseDown:(NSEvent *)event
 {
-    if ([event nskit_isMouseDown])
-    {
-        [self.imageView setImage:self.pressedImage];
+    if ([event nskit_isMouseDown]){
+        [_imageView setImage:_pressedImage];
     }
 }
 
-
 - (void)mouseEntered:(NSEvent *)event
 {
-    [self.imageView setImage:self.hoveredImage];
+    [_imageView setImage:_hoveredImage];
 }
-
 
 - (void)mouseExited:(NSEvent *)event
 {
-    [self.imageView setImage:self.normalImage];
+    [_imageView setImage:_normalImage];
 }
 
-
-// ------------------------------------------------------------------------------------------
 #pragma mark - Action
-// ------------------------------------------------------------------------------------------
+
 - (void)fireAction
 {
-    if (self.target && self.action)
-    {
-        NSMethodSignature *signature = [[self.target class] instanceMethodSignatureForSelector:self.action];
+    if (_target && _action){
+        NSMethodSignature *signature = [[_target class] instanceMethodSignatureForSelector:_action];
         NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
-        [invocation setTarget:self.target];
-        [invocation setSelector:self.action];
+        [invocation setTarget:_target];
+        [invocation setSelector:_action];
         
         /**
          There are always at least 2 arguments, because an NSMethodSignature object
@@ -186,32 +149,26 @@
          */
 
         NSInteger numberOfArguments = [signature numberOfArguments];
-        if (numberOfArguments == 3)
-        {
+        if (numberOfArguments == 3){
             [invocation setArgument:(void *)&self atIndex:2];
         }
 
-        if (numberOfArguments > 3)
-        {
+        if (numberOfArguments > 3){
             @throw [NSException exceptionWithName:@"Invalid Signature"
                                            reason:@"Please make sure that the method signature has 1 or less arguments"
                                          userInfo:nil];
         }
-
         [invocation invoke];
     }
 }
 
-
-// ------------------------------------------------------------------------------------------
 #pragma mark - Dealloc
-// ------------------------------------------------------------------------------------------
+
 - (void)dealloc
 {
-    [self removeTrackingArea:self.trackingArea];
-    self.trackingArea = nil;
-    self.target = nil;
+    [self removeTrackingArea:_trackingArea];
+    _trackingArea = nil;
+    _target = nil;
 }
-
 
 @end

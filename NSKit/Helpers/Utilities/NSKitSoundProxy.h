@@ -37,5 +37,4 @@
  */
 + (void)playSoundAtURL:(NSURL *)soundURL;
 
-
 @end

@@ -32,13 +32,11 @@
  */
 FOUNDATION_EXPORT NSString *NSKitAppStoreURL;
 
-
 /**
  * Holds a reference to the rate title string.
  * e.g. NSLocalizedString(@"Rate and Review Color Picker", @"");
  */
 FOUNDATION_EXPORT NSString *NSKitRateTitleText;
-
 
 /**
  * Holds a reference to the rate description string.
@@ -48,13 +46,11 @@ FOUNDATION_EXPORT NSString *NSKitRateTitleText;
  */
 FOUNDATION_EXPORT NSString *NSKitRateDescriptionText;
 
-
 /**
  * Holds a reference to the rate now button string.
  * e.g. NSLocalizedString(@"Rate Now", @"");
  */
 FOUNDATION_EXPORT NSString *NSKitRateNowButtonText;
-
 
 /**
  * Holds a reference to the rate later button string.
@@ -62,13 +58,11 @@ FOUNDATION_EXPORT NSString *NSKitRateNowButtonText;
  */
 FOUNDATION_EXPORT NSString *NSKitRateLaterButtonText;
 
-
 /**
  * Holds a reference to the rate no thanks button string.
  * e.g. NSLocalizedString(@"No Thanks", @"");
  */
 FOUNDATION_EXPORT NSString *NSKitRateNoThanksButtonText;
-
 
 /**
  * Holds a reference to the minimum number of usages before prompting.
@@ -88,12 +82,10 @@ FOUNDATION_EXPORT NSInteger NSKitRateMinimumDays;
  */
 FOUNDATION_EXPORT NSInteger NSKitRateMinimumSignificantEvents;
 
-
 /**
  * A utility that reminds your users to review the app.
  */
 @interface NSKitRateHelper : NSObject
-
 
 /**
  * NSKit rate object to store the rate information.
@@ -107,7 +99,6 @@ FOUNDATION_EXPORT NSInteger NSKitRateMinimumSignificantEvents;
  */
 @property (nonatomic, strong) NSKitRate *rate;
 
-
 /**
  * Singleton implementation for the rate helper.
  */
@@ -119,13 +110,11 @@ FOUNDATION_EXPORT NSInteger NSKitRateMinimumSignificantEvents;
  */
 - (void)applicationDidFinishLaunch;
 
-
 /**
  * This method should be called when you want to bring the rate me dialog after some
  * significant events. e.g. NSKitRateMinimumSignificantEvents = 10; the user must
  * perform 10 events to get the rate dialog.
  */
 - (void)performedSignigicantEvent;
-
 
 @end

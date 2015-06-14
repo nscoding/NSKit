@@ -26,21 +26,17 @@
 
 #import "NSKitHeapPriorityQueue.h"
 
-
-// ------------------------------------------------------------------------------------------
 #pragma mark - Callbacks
-// ------------------------------------------------------------------------------------------
+
 static const void *NSKitPriorityObjectRetain(CFAllocatorRef allocator, const void *ptr)
 {
     return CFBridgingRetain((__bridge id)(ptr));
 }
 
-
 static void NSKitPriorityObjectRelease(CFAllocatorRef allocator, const void *ptr)
 {
     CFBridgingRelease(ptr);
 }
-
 
 static CFStringRef NSKitPriorityObjectCopyDescription(const void* ptr)
 {
@@ -49,42 +45,24 @@ static CFStringRef NSKitPriorityObjectCopyDescription(const void* ptr)
     return desc;
 }
 
-
 static CFComparisonResult NSKitPriorityObjectCompare(const void *ptr1, const void *ptr2, void *context)
 {
     NSObject *item1 = (__bridge NSObject *)ptr1;
     NSObject *item2 = (__bridge NSObject *)ptr2;
-    
     id<NSKitHeapPriorityQueueComparator> comparator = (__bridge id<NSKitHeapPriorityQueueComparator>)ptr1;
-    
     return (CFComparisonResult)[comparator compare:item1 to:item2];
 }
 
-
-// ------------------------------------------------------------------------------------------
-
-
-@interface NSKitHeapPriorityQueue()
+@implementation NSKitHeapPriorityQueue
 {
     CFBinaryHeapRef _heap;
 }
 
-@end
-
-
-// ------------------------------------------------------------------------------------------
-
-
-@implementation NSKitHeapPriorityQueue
-
-
-// ------------------------------------------------------------------------------------------
 #pragma mark - Initialize
-// ------------------------------------------------------------------------------------------
+
 - (instancetype)init
 {
-    if ((self = [super init]))
-    {
+    if (self = [super init]) {
         CFBinaryHeapCallBacks callbacks;
         callbacks.version = 0;
         
@@ -93,81 +71,63 @@ static CFComparisonResult NSKitPriorityObjectCompare(const void *ptr1, const voi
         callbacks.release = NSKitPriorityObjectRelease;
         callbacks.copyDescription = NSKitPriorityObjectCopyDescription;
         callbacks.compare = NSKitPriorityObjectCompare;
-        
         CFBinaryHeapCompareContext compareContext;
         compareContext.version = 0;
-
         NSUInteger capacity = 0;
         _heap = CFBinaryHeapCreate(kCFAllocatorDefault, capacity, &callbacks, &compareContext);
     }
-    
     return self;
 }
 
-
-// ------------------------------------------------------------------------------------------
 #pragma mark - Methods
-// ------------------------------------------------------------------------------------------
+
 - (NSString *)description
 {
-    return [NSString stringWithFormat:@"Priority Queue: {%@}",
-            (_heap ? [[self allObjects] description] : @"nil")];
+    return [NSString stringWithFormat:@"Priority Queue: {%@}", (_heap ? [[self allObjects] description] : @"nil")];
 }
-
 
 - (NSUInteger)count
 {
     return CFBinaryHeapGetCount(_heap);
 }
 
-
 - (NSArray *)allObjects
 {
     const void **arrayC = calloc(CFBinaryHeapGetCount(_heap), sizeof(void *));
     CFBinaryHeapGetValues(_heap, arrayC);
-    
-    NSArray *array = [NSArray arrayWithObjects:(__unsafe_unretained id *)(void *)arrayC
-                                         count:CFBinaryHeapGetCount(_heap)];
+    NSArray *array = [NSArray arrayWithObjects:(__unsafe_unretained id *)(void *)arrayC count:CFBinaryHeapGetCount(_heap)];
     free(arrayC);
     return array;
 }
-
 
 - (void)addObject:(NSObject *)object
 {
     CFBinaryHeapAddValue(_heap, (__bridge const void *)(object));
 }
 
-
 - (void)removeAllObjects
 {
     CFBinaryHeapRemoveAllValues(_heap);
 }
 
-
 - (NSObject *)nextObject
 {
     NSObject *obj = [self peekObject];
     CFBinaryHeapRemoveMinimumValue(_heap);
-    
     return obj;
 }
-
 
 - (NSObject *)peekObject
 {
     return (NSObject *)CFBinaryHeapGetMinimum(_heap);
 }
 
-
-// ------------------------------------------------------------------------------------------
 #pragma mark - Dealloc
-// ------------------------------------------------------------------------------------------
+
 - (void)dealloc
 {
     CFRelease(_heap);
 }
-
 
 @end
 

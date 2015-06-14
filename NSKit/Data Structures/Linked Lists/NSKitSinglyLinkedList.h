@@ -37,7 +37,6 @@
     NSObject<NSKitLinkedListProtocol> *first;
 }
 
-
 /**
  * Inserts a new object at the end of the chain.
  *
@@ -48,7 +47,6 @@
  */
 - (BOOL)insertObject:(id<NSKitLinkedListProtocol>)object;
 
-
 /**
  * Inserts a new object at a specific index.
  *
@@ -58,9 +56,7 @@
  * @returns YES if the object was successfully added, otherwise NO.
  *
  */
-- (BOOL)insertObject:(id <NSKitLinkedListProtocol>)object
-             atIndex:(NSInteger)index;
-
+- (BOOL)insertObject:(id <NSKitLinkedListProtocol>)object atIndex:(NSInteger)index;
 
 /**
  * Returns an object at a specific index.
@@ -71,7 +67,6 @@
  *
  */
 - (id)objectAtIndex:(NSInteger)index;
-
 
 /**
  * Deletes the object at a specific index.
@@ -84,7 +79,6 @@
  */
 - (id)deleObjectAtIndex:(NSInteger)index;
 
-
 /**
  * Deletes the object that is equat to.
  *
@@ -96,7 +90,6 @@
  */
 - (id)deleObject:(id <NSKitLinkedListProtocol>)object;
 
-
 /**
  * Returns an index for a specific object.
  *
@@ -107,7 +100,6 @@
  */
 - (NSInteger)indexOfObject:(id <NSKitLinkedListProtocol>)object;
 
-
 /**
  * Checks if the chain is empty.
  *
@@ -115,7 +107,6 @@
  *
  */
 - (BOOL)isEmpty;
-
 
 /**
  * Returns the count of the chain.
@@ -125,12 +116,10 @@
  */
 - (NSUInteger)count;
 
-
 /**
  * Method to reverse the chain order.
  *
  */
 - (void)reverseList;
-
 
 @end

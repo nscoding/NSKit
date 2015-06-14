@@ -26,35 +26,24 @@
 
 #import "NSKitSoundProxy.h"
 
-
-// ------------------------------------------------------------------------------------------
-
-
 @implementation NSKitSoundProxy
 
-
-// ------------------------------------------------------------------------------------------
 #pragma mark - Methods
-// ------------------------------------------------------------------------------------------
+
 + (void)playSoundAtURL:(NSURL *)soundURL
 {
     NSAssert(soundURL, @"Sound URL cannot be nil");
-    
-    if (soundURL)
-    {
+    if (soundURL){
         CFURLRef soundURLRef = (__bridge CFURLRef)soundURL;
         SystemSoundID fileObject;
         
         AudioServicesCreateSystemSoundID(soundURLRef, &fileObject);
         AudioServicesPlaySystemSound(fileObject);
-    }
-    else
-    {
+    } else {
         @throw [NSException exceptionWithName:@"Invalid URL"
                                        reason:@"The sound URL cannot be nil!"
                                      userInfo:nil];
     }
 }
-
 
 @end

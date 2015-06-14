@@ -38,7 +38,6 @@
  */
 + (BOOL)isValidEmail:(NSString *)email;
 
-
 /**
  * Receives a rect and floors, x, y, width and height.
  *
@@ -48,7 +47,6 @@
  *
  */
 + (NSRect)flooredRect:(NSRect)rect;
-
 
 /**
  * Receives a rect and floors the origin of the rect, (x and y)
@@ -60,7 +58,6 @@
  */
 + (NSRect)flooredOriginRect:(NSRect)rect;
 
-
 /**
  * Receives a rect and ceils, x, y, width and height.
  *
@@ -70,7 +67,6 @@
  *
  */
 + (NSRect)ceiledRect:(NSRect)rect;
-
 
 /**
  * Receives a rect and ceils the origin of the rect, (x and y)
@@ -82,7 +78,6 @@
  */
 + (NSRect)ceiledOriginRect:(NSRect)rect;
 
-
 /**
  * Returns the screen where the mouse is located
  *
@@ -90,6 +85,5 @@
  *
  */
 + (NSScreen *)screenForMouseLocation;
-
 
 @end

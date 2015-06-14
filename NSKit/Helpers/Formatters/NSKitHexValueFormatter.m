@@ -26,19 +26,13 @@
 
 #import "NSKitHexValueFormatter.h"
 
-
-// ------------------------------------------------------------------------------------------
-
-
 @implementation NSKitHexValueFormatter
-
 
 /// Overrides
 - (NSString *)stringForObjectValue:(id)string
 {
     return string;
 }
-
 
 - (BOOL)getObjectValue:(out __autoreleasing id *)obj
              forString:(NSString *)string
@@ -48,7 +42,6 @@
     return YES;
 }
 
-
 /// Compatibility method
 - (BOOL)isPartialStringValid:(NSString *)partialString
 			newEditingString:(NSString **)newString
@@ -56,17 +49,12 @@
 {
 	NSCharacterSet *disallowedCharacters =
     [[NSCharacterSet characterSetWithCharactersInString:@"0123456789abcdefABCDEF#"] invertedSet];
-	
     NSRange foundRange = [partialString rangeOfCharacterFromSet:disallowedCharacters];
-    
-	if(foundRange.location != NSNotFound)
-	{
+	if(foundRange.location != NSNotFound){
         NSBeep();
         return NO;
 	}
-    
     return YES;
 }
-
 
 @end

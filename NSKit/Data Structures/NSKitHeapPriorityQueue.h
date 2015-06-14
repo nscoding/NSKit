@@ -26,7 +26,6 @@
 
 @protocol NSKitHeapPriorityQueueComparator;
 
-
 /**
  * Priority Queue implementation. A priority queue is a queue that's always kept 
  * sorted in a fast CFBinaryHeapRef implementation.
@@ -36,18 +35,15 @@
  */
 @interface NSKitHeapPriorityQueue : NSObject
 
-
 /**
  * Returns number of items in the queue
  */
 - (NSUInteger)count;
 
-
 /**
  * Returns all (sorted) objects in the queue
  */
 - (NSArray *)allObjects;
-
 
 /**
  * Adds an object to the queue
@@ -55,12 +51,10 @@
  */
 - (void)addObject:(NSObject<NSKitHeapPriorityQueueComparator> *)object;
 
-
 /**
  * Removes all objects from the queue
  */
 - (void)removeAllObjects;
-
 
 /**
  * Removes the "top-most" (as determined by the callback sort function) object from the queue
@@ -68,13 +62,11 @@
  */
 - (NSObject *)nextObject;
 
-
 /**
  * Returns the "top-most" (as determined by the callback sort function) object from the queue
  * without removing it from the queue
  */
 - (NSObject *)peekObject;
-
 
 @end
 
@@ -84,7 +76,6 @@
  * has a comparisson mechanism.
  */
 @protocol NSKitHeapPriorityQueueComparator<NSObject>
-
 
 @required
 

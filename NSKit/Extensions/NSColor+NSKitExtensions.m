@@ -26,34 +26,24 @@
 
 #import "NSColor+NSKitExtensions.h"
 
-
-// ------------------------------------------------------------------------------------------
-
-
 @implementation NSColor (NSKitExtensions)
 
-
-// ------------------------------------------------------------------------------------------
 #pragma mark - Class Methods
-// ------------------------------------------------------------------------------------------
+
 + (NSColor *)nskit_randomColor
 {
     CGFloat red =  (CGFloat)random() / (CGFloat)RAND_MAX;
     CGFloat blue = (CGFloat)random() / (CGFloat)RAND_MAX;
     CGFloat green = (CGFloat)random() / (CGFloat)RAND_MAX;
-    
     return [NSColor colorWithCalibratedRed:red green:green blue:blue alpha:1.0];
 }
-
 
 + (NSColor *)nskit_colorFromHexRGB:(NSString *)colorString
 {
 	NSColor *result;
 	unsigned int colorCode = 0;
 	unsigned char redByte, greenByte, blueByte;
-	
-	if (colorString)
-	{
+	if (colorString){
 		NSScanner *scanner = [NSScanner scannerWithString:colorString];
 		(void) [scanner scanHexInt:&colorCode];
 	}
@@ -61,102 +51,79 @@
 	redByte		= (unsigned char) (colorCode >> 16);
 	greenByte	= (unsigned char) (colorCode >> 8);
 	blueByte	= (unsigned char) (colorCode);
-    
 	result = [NSColor colorWithCalibratedRed:(float)redByte	/ 0xff
                                        green:(float)greenByte/ 0xff
                                         blue:(float)blueByte	/ 0xff
                                        alpha:1.0];
-    
 	return result;
 }
-
 
 + (NSString *)nskit_hexCodeWithColor:(NSColor *)color
 {
     CGFloat r, g, b;
     [NSColor nskit_adjustRed:&r green:&g blue:&b color:color];
-    
     return [NSString stringWithFormat:@"%0.2X%0.2X%0.2X",
             (int)(r * 255),
             (int)(g * 255),
             (int)(b * 255)];
 }
 
-
 + (NSString *)nskit_RGBWithColor:(NSColor *)color
 {
     CGFloat r, g, b;
     [NSColor nskit_adjustRed:&r green:&g blue:&b color:color];
-    
     return [NSString stringWithFormat:@"%.0f, %.0f, %.0f",
             (r * 255),
             (g * 255),
             (b * 255)];
 }
 
-
 + (void)nskit_adjustRed:(CGFloat *)red
                   green:(CGFloat *)green
                    blue:(CGFloat *)blue
                   color:(NSColor *)color
 {
-    
     if (([[color colorSpaceName] isEqualToString:NSCalibratedWhiteColorSpace] ||
          [[color colorSpaceName] isEqualToString:NSDeviceWhiteColorSpace] ||
          [[color colorSpaceName] isEqualToString:NSCustomColorSpace]) &&
-         [color respondsToSelector:@selector(whiteComponent)])
-    {
+         [color respondsToSelector:@selector(whiteComponent)]){
         *red = [color whiteComponent];
         *green = [color whiteComponent];
         *blue = [color whiteComponent];
-    }
-    else if (([[color colorSpaceName] isEqualToString:NSCalibratedRGBColorSpace] ||
-              [[color colorSpaceName] isEqualToString:NSDeviceRGBColorSpace]) &&
-              [color respondsToSelector:@selector(redComponent)])
-    {
+    } else if (([[color colorSpaceName] isEqualToString:NSCalibratedRGBColorSpace] ||
+                [[color colorSpaceName] isEqualToString:NSDeviceRGBColorSpace]) &&
+                [color respondsToSelector:@selector(redComponent)]) {
         *red = [color redComponent];
         *green = [color greenComponent];
         *blue = [color blueComponent];
-    }
-    else
-    {
+    } else {
         color = [color colorUsingColorSpaceName:NSDeviceRGBColorSpace];
-        if ([color respondsToSelector:@selector(redComponent)])
-        {
+        if ([color respondsToSelector:@selector(redComponent)]) {
             *red = [color redComponent];
             *green = [color greenComponent];
             *blue = [color blueComponent];
-        }
-        else
-        {
+        } else {
             NSAssert1(NO, @"Edge case %@", [color colorSpaceName]);
         }        
     }
 }
 
-
-// ------------------------------------------------------------------------------------------
 #pragma mark - Object Methods
-// ------------------------------------------------------------------------------------------
+
 - (CGColorRef)nskit_CGColor
 {
-    if ([self respondsToSelector:@selector(CGColor)])
-    {
+    if ([self respondsToSelector:@selector(CGColor)]) {
         return self.CGColor;
     }
-    
     NSColorSpace *colorSpace = [NSColorSpace genericRGBColorSpace];
     NSColor *color = [self colorUsingColorSpace:colorSpace];
-    
     NSInteger count = [color numberOfComponents];
     CGFloat components[count];
     [color getComponents:components];
-    
     CGColorSpaceRef colorSpaceRef = colorSpace.CGColorSpace;
     CGColorRef result = CGColorCreate(colorSpaceRef, components);
-    
+    // TODO: This is leaking :(
     return (CGColorRef)result;
 }
-
 
 @end

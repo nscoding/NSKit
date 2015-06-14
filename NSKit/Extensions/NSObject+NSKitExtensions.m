@@ -25,16 +25,10 @@
 
 #import "NSObject+NSKitExtensions.h"
 
-
-// ------------------------------------------------------------------------------------------
-
-
 @implementation NSObject (NSKitExtensions)
 
-
-// ------------------------------------------------------------------------------------------
 #pragma mark - Exposed Methods
-// ------------------------------------------------------------------------------------------
+
 - (void)nskit_debugProperty:(NSString *)property
 {
     NSLog(@"%@", [self valueForKey:property]);

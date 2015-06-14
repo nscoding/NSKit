@@ -23,95 +23,65 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-
 #import "NSKitQueue.h"
 #import "NSMutableArray+NSKitExtensions.h"
 
-
-// ------------------------------------------------------------------------------------------
-
-
-@interface NSKitQueue()
-
-@property (nonatomic, strong) NSMutableArray *backingStore;
-
-@end
-
-
-// ------------------------------------------------------------------------------------------
-
-
 @implementation NSKitQueue
+{
+    NSMutableArray *_backingStore;
+}
 
-
-// ------------------------------------------------------------------------------------------
 #pragma mark - Overrides
-// ------------------------------------------------------------------------------------------
+
 - (NSMutableArray *)backingStore
 {
-    if (_backingStore == nil)
-    {
+    if (_backingStore == nil) {
         _backingStore = [NSMutableArray array];
     }
-    
     return _backingStore;
 }
 
-
-// ------------------------------------------------------------------------------------------
 #pragma mark - Methods
-// ------------------------------------------------------------------------------------------
+
 - (void)add:(id)objectToAdd
 {
-    if (objectToAdd)
-    {
-        [self.backingStore addObject:objectToAdd];
+    if (objectToAdd) {
+        [_backingStore addObject:objectToAdd];
     }
 }
-
 
 - (id)remove
 {
-    if (self.isEmpty)
-    {
+    if (self.isEmpty) {
         return nil;
     }
-    
-    id objToRemove = [self.backingStore nskit_firstObject];
-
-    [self.backingStore nskit_removeFirstObject];
-    
+    id objToRemove = [_backingStore nskit_firstObject];
+    [_backingStore nskit_removeFirstObject];
     return objToRemove;
 }
 
-
 - (id)first
 {
-    if (self.isEmpty)
-    {
+    if (self.isEmpty) {
         return nil;
     }
     
-    return [self.backingStore nskit_firstObject];
+    return [_backingStore nskit_firstObject];
 }
-
 
 - (id)last
 {
-    return [self.backingStore lastObject];
+    return [_backingStore lastObject];
 }
-
 
 - (BOOL)isEmpty
 {
     return (self.count == 0);
 }
 
-
 - (NSUInteger)count
 {
-    return self.backingStore.count;
+    return _backingStore.count;
 }
-
 
 @end

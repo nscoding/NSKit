@@ -26,11 +26,9 @@
 /** Extends the NSArray class */
 @interface NSArray (NSKitExtensions)
 
-
 /**
  * @return an NSArray where the items are in reversed order.
  */
 - (NSArray *)nskit_reversedArray;
-
 
 @end

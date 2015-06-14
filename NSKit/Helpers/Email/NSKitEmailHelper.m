@@ -27,36 +27,21 @@
 #import "NSKitEmailHelper.h"
 #import "NSKitUtilities.h"
 
-
-// ------------------------------------------------------------------------------------------
-
-
 @implementation NSKitEmailHelper
 
-
-// ------------------------------------------------------------------------------------------
 #pragma mark - Methods
-// ------------------------------------------------------------------------------------------
+
 + (void)sendEmailTo:(NSString *)email
             subject:(NSString *)subject
                body:(NSString *)body
 {
-    if ([NSKitUtilities isValidEmail:email] == NO)
-    {
+    if ([NSKitUtilities isValidEmail:email] == NO){
         return;
     }
-
-    NSString *encodedSubject = [NSString stringWithFormat:@"subject=%@",
-                                [subject stringByUrlEncoding]];
-    
-    NSString *encodedBody = [NSString stringWithFormat:@"body=%@",
-                             [body stringByUrlEncoding]];
-    
+    NSString *encodedSubject = [NSString stringWithFormat:@"subject=%@", [subject stringByUrlEncoding]];
+    NSString *encodedBody = [NSString stringWithFormat:@"body=%@", [body stringByUrlEncoding]];
     NSString *encodedURLString = [NSString stringWithFormat:@"mailto:%@?%@&%@", email, encodedSubject, encodedBody];
-    
-    [[NSWorkspace sharedWorkspace] openURL:[[NSURL alloc]
-                                            initWithString:[NSString stringWithFormat:@"%@",encodedURLString]]];
+    [[NSWorkspace sharedWorkspace] openURL:[[NSURL alloc] initWithString:[NSString stringWithFormat:@"%@",encodedURLString]]];
 }
-
 
 @end

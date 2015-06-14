@@ -26,55 +26,38 @@
 
 #import "NSString+NSKitExtensions.h"
 
-
-// ------------------------------------------------------------------------------------------
-
-
 @implementation NSString (NSKitExtensions)
 
-
-// ------------------------------------------------------------------------------------------
 #pragma mark - Methods
-// ------------------------------------------------------------------------------------------
+
 - (NSString *)nskit_stringByTrimmingNewLines
 {
     NSString *trimmedString = [self copy];
-    
     trimmedString = [trimmedString stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];
     trimmedString = [trimmedString stringByReplacingOccurrencesOfString:@"\n" withString:@""];
     trimmedString = [trimmedString nskit_stringByTrimmingPrefixSpaces];
     trimmedString = [trimmedString nskit_stringByTrimmingSuffixSpaces];
-    
     return trimmedString;
 }
-
 
 - (NSString *)nskit_stringByTrimmingPrefixSpaces
 {
     NSString *trimmedString = [self copy];
-    
-    while ([trimmedString hasPrefix:@" "] == YES)
-    {
+    while ([trimmedString hasPrefix:@" "] == YES) {
         trimmedString = [trimmedString stringByReplacingCharactersInRange:NSMakeRange(0, 1) withString:@""];
     }
-    
     return trimmedString;
 }
-
 
 - (NSString *)nskit_stringByTrimmingSuffixSpaces
 {
     NSString *trimmedString = [self copy];
-    
-    while ([trimmedString hasSuffix:@" "] == YES)
-    {
+    while ([trimmedString hasSuffix:@" "] == YES) {
         trimmedString = [trimmedString stringByReplacingCharactersInRange:NSMakeRange(trimmedString.length - 1, 1)
                                                                withString:@""];
     }
-    
     return trimmedString;
 }
-
 
 - (NSString *)nskit_stringByTrimmingPrefixNewLines
 {
@@ -84,12 +67,10 @@
     return [trimmedString stringByReplacingCharactersInRange:range withString:@""];
 }
 
-
 - (NSString *)nskit_stringByTrimmingSuffixNewLines
 {
     NSString *trimmedString = [self copy];
     NSRange range = [trimmedString rangeOfString:@"\\s*$" options:NSRegularExpressionSearch];
-    
     return [trimmedString stringByReplacingCharactersInRange:range withString:@""];
 }
 
@@ -97,10 +78,8 @@
 - (NSString *)nskit_stringByUrlEncoding
 {
     static NSString * const kAFLegalCharactersToBeEscaped = @"?!@#$^&%*+=,:;'\"`<>()[]{}/\\|~ ";
-    
     return (__bridge NSString *)CFURLCreateStringByAddingPercentEscapes
         (NULL, (CFStringRef)self,  NULL,  (CFStringRef)kAFLegalCharactersToBeEscaped,  kCFStringEncodingUTF8);
 }
-
 
 @end

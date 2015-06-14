@@ -26,51 +26,41 @@
 
 #import "NSKitRate.h"
 
-
-// ------------------------------------------------------------------------------------------
-
-
 @implementation NSKitRate
 
-
-// ------------------------------------------------------------------------------------------
 #pragma mark - Decoder, Encoder
-// ------------------------------------------------------------------------------------------
--(id)initWithCoder:(NSCoder*)decoder
+
+- (instancetype)initWithCoder:(NSCoder*)decoder
 {
-    if ((self = [super init]))
+    if (self = [super init])
     {
-        self.majorBundleVerion = [decoder decodeObjectForKey:@"NSKitMajorBundleVerion"];
-        self.lastDateAsked = [decoder decodeObjectForKey:@"NSKitLastDateAsked"];
-        self.doneAlready = [((NSNumber*)[decoder decodeObjectForKey:@"NSKitDoneAlready"]) integerValue];
-        self.significantEvents = [((NSNumber*)[decoder decodeObjectForKey:@"NSKitSignificantEvents"]) integerValue];
-        self.numberOfUsages = [((NSNumber*)[decoder decodeObjectForKey:@"NSKitNumberOfUsages"]) integerValue];
+        _majorBundleVerion = [decoder decodeObjectForKey:@"NSKitMajorBundleVerion"];
+        _lastDateAsked = [decoder decodeObjectForKey:@"NSKitLastDateAsked"];
+        _doneAlready = [((NSNumber*)[decoder decodeObjectForKey:@"NSKitDoneAlready"]) integerValue];
+        _significantEvents = [((NSNumber*)[decoder decodeObjectForKey:@"NSKitSignificantEvents"]) integerValue];
+        _numberOfUsages = [((NSNumber*)[decoder decodeObjectForKey:@"NSKitNumberOfUsages"]) integerValue];
     }
     
     return self;
 }
 
-
--(void)encodeWithCoder:(NSCoder*)encoder
+- (void)encodeWithCoder:(NSCoder*)encoder
 {
-    [encoder encodeObject:self.majorBundleVerion forKey:@"NSKitMajorBundleVerion"];
-    [encoder encodeObject:self.lastDateAsked forKey:@"NSKitLastDateAsked"];
-    [encoder encodeObject:[NSNumber numberWithInteger:self.doneAlready] forKey:@"NSKitDoneAlready"];
-    [encoder encodeObject:[NSNumber numberWithInteger:self.significantEvents] forKey:@"NSKitSignificantEvents"];
-    [encoder encodeObject:[NSNumber numberWithInteger:self.numberOfUsages] forKey:@"NSKitNumberOfUsages"];
+    [encoder encodeObject:_majorBundleVerion forKey:@"NSKitMajorBundleVerion"];
+    [encoder encodeObject:_lastDateAsked forKey:@"NSKitLastDateAsked"];
+    [encoder encodeObject:[NSNumber numberWithInteger:_doneAlready] forKey:@"NSKitDoneAlready"];
+    [encoder encodeObject:[NSNumber numberWithInteger:_significantEvents] forKey:@"NSKitSignificantEvents"];
+    [encoder encodeObject:[NSNumber numberWithInteger:_numberOfUsages] forKey:@"NSKitNumberOfUsages"];
 }
 
-
-// ------------------------------------------------------------------------------------------
 #pragma mark - Helpers
-// ------------------------------------------------------------------------------------------
-- (NSString *)description;
+
+- (NSString *)description
 {
     return [NSString stringWithFormat:@"Version: %@\nLast dete asked: %@\nDone:%i\n"
             "Number of events: %li\nNumber of usages: %li\n",
-            self.majorBundleVerion , self.lastDateAsked, self.doneAlready,
-            self.significantEvents, self.numberOfUsages];
+            _majorBundleVerion , _lastDateAsked, _doneAlready,
+            _significantEvents, _numberOfUsages];
 }
-
 
 @end

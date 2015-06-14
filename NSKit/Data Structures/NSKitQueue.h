@@ -23,8 +23,6 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-
-
 /**
  A queue is a special case of linear list where insertions and deletions take place at different ends.
  - Last: end at which a new element is added.
@@ -34,7 +32,6 @@
  */
 @interface NSKitQueue : NSObject
 
-
 /**
  * Add an element to the queue.
  *
@@ -42,7 +39,6 @@
  *
  */
 - (void)add:(id)objectToAdd;
-
 
 /**
  * Delete the front element of the queue.
@@ -52,7 +48,6 @@
  */
 - (id)remove;
 
-
 /**
  * Return the first element of the queue.
  *
@@ -61,7 +56,6 @@
  */
 - (id)first;
 
-
 /**
  * Return the last element of the queue.
  *
@@ -69,7 +63,6 @@
  *
  */
 - (id)last;
-
 
 /**
  * Checks if the queue is empty.
@@ -80,7 +73,6 @@
  */
 - (BOOL)isEmpty;
 
-
 /**
  * The number of objects in the queue.
  *
@@ -88,6 +80,5 @@
  *
  */
 - (NSUInteger)count;
-
 
 @end

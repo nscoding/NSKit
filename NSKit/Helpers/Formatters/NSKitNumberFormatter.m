@@ -26,12 +26,7 @@
 
 #import "NSKitNumberFormatter.h"
 
-
-// ------------------------------------------------------------------------------------------
-
-
 @implementation NSKitNumberFormatter
-
 
 /// Compatibility method
 - (BOOL)isPartialStringValid:(NSString *)partialString
@@ -39,29 +34,17 @@
             errorDescription:(NSString **)error
 {
     NSNumber *number = [self numberFromString:partialString];
-    
-    if ([number integerValue] > self.maximumValue)
-    {
+    if ([number integerValue] > self.maximumValue){
         NSBeep();
-        
         return NO;
     }
-    
-	NSRange foundRange;
-	
     // allow numbers, decimal point
-	NSCharacterSet *disallowedCharacters =
-    [[NSCharacterSet characterSetWithCharactersInString:@"0123456789"] invertedSet];
-	
-    foundRange = [partialString rangeOfCharacterFromSet:disallowedCharacters];
-    
-	if (foundRange.location != NSNotFound)
-	{
+	NSCharacterSet *disallowedCharacters = [[NSCharacterSet characterSetWithCharactersInString:@"0123456789"] invertedSet];
+    NSRange foundRange = [partialString rangeOfCharacterFromSet:disallowedCharacters];
+	if (foundRange.location != NSNotFound){
         NSBeep();
-        
         return NO;
 	}
-    
     return YES;
 }
 

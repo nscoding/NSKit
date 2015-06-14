@@ -26,19 +26,13 @@
 
 #import "NSView+NSKitExtensions.h"
 
-
-// ------------------------------------------------------------------------------------------
-
-
 @implementation NSView (NSKitExtensions)
 
 @dynamic center;
 @dynamic centerOnFrame;
 
-
-// ------------------------------------------------------------------------------------------
 #pragma mark - Object Methods
-// ------------------------------------------------------------------------------------------
+
 - (void)setCenter:(NSPoint)center
 {
     [self setFrameOrigin:NSMakePoint(floorf(center.x - (NSWidth(self.bounds)) / 2),
@@ -84,20 +78,16 @@
     ((NSView *)self.animator).alphaValue = 0.0f;
 }
 
-
-// ------------------------------------------------------------------------------------------
 #pragma mark - Class Methods
-// ------------------------------------------------------------------------------------------
+
 + (void)animateWithDuration:(NSTimeInterval)duration
                  animations:(void (^)(void))animations
 {
     NSCKitAssert(animations, @"Animations parameter must not be NULL");
-    
     [NSView animateWithDuration:duration
                      animations:animations
                      completion:NULL];
 }
-
 
 + (void)animateWithDuration:(NSTimeInterval)duration
                  animations:(void (^)(void))animations
@@ -105,34 +95,23 @@
 {
     NSCKitAssert(animations, @"Animations parameter must not be NULL");
     
-    if (SystemAtLeastLion)
-    {
-        [NSAnimationContext runAnimationGroup:^(NSAnimationContext *context)
-        {
+    if (SystemAtLeastLion) {
+        [NSAnimationContext runAnimationGroup:^(NSAnimationContext *context){
             animations();
-        }
-        completionHandler:^
-        {
-            if (completion)
-            {
+        } completionHandler:^{
+            if (completion){
                 completion(YES);
             }
         }];
-    }
-    else
-    {
+    } else {
         [NSAnimationContext beginGrouping];
         [[NSAnimationContext currentContext] setDuration:duration];
         animations();
         [NSAnimationContext endGrouping];
-        
-        if (completion)
-        {
-            dispatch_block_t completionBlock = ^
-            {
+        if (completion){
+            dispatch_block_t completionBlock = ^{
                 completion(YES);
             };
-            
             dispatch_time_t popTime = dispatch_time( DISPATCH_TIME_NOW, (double)duration * NSEC_PER_SEC);
             dispatch_after(popTime, dispatch_get_main_queue(), completionBlock);
         }

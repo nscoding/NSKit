@@ -28,57 +28,37 @@
 #include <mach/mach.h>
 #include <mach/mach_time.h>
 
-
-// ------------------------------------------------------------------------------------------
-
-
-@interface NSKitPerformanceTimer()
+@implementation NSKitPerformanceTimer
 {
-	double timer;
-    uint64_t startTime;
+    double _timer;
+    uint64_t _startTime;
 }
 
-@end
-
-
-// ------------------------------------------------------------------------------------------
-
-
-@implementation NSKitPerformanceTimer
-
-
-// ------------------------------------------------------------------------------------------
 #pragma mark - Constructor
-// ------------------------------------------------------------------------------------------
+
 - (instancetype)init
 {
 	if ((self = [super init]))
 	{		
 		mach_timebase_info_data_t info;
 		mach_timebase_info(&info);
-		timer = (double)info.numer / ((double)info.denom * 1000000.0);
+		_timer = (double)info.numer / ((double)info.denom * 1000000.0);
     }
-    
     return self;
 }
 
-
-// ------------------------------------------------------------------------------------------
 #pragma mark - Methods
-// ------------------------------------------------------------------------------------------
+
 - (void)fire
 {
-    startTime = mach_absolute_time();
+    _startTime = mach_absolute_time();
 }
-
 
 - (void)logResult
 {
     double milliseconds = (mach_absolute_time() - startTime) * timer;
     NSString *loggedResult = [NSString stringWithFormat:@"Time: %.1f milliseconds", milliseconds];
-   
     NSLog(@"%@",loggedResult);
 }
-
 
 @end

@@ -26,16 +26,10 @@
 
 #import "NSMutableArray+NSKitExtensions.h"
 
-
-// ------------------------------------------------------------------------------------------
-
-
 @implementation NSMutableArray (NSKitExtensions)
 
-
-// ------------------------------------------------------------------------------------------
 #pragma mark - Methods
-// ------------------------------------------------------------------------------------------
+
 - (void)nskit_reverse
 {
     NSUInteger i = 0;
@@ -44,31 +38,24 @@
     {
         [self exchangeObjectAtIndex:i
                   withObjectAtIndex:j];
-        
         i++;
         j--;
     }
 }
 
-
 - (id)nskit_firstObject
 {
-    if (self.count > 0)
-    {
+    if (self.count > 0){
         return [self objectAtIndex:0];
     }
-    
     return nil;
 }
 
-
 - (void)nskit_removeFirstObject
 {
-    if (self.count > 0)
-    {
+    if (self.count > 0){
         [self removeObjectAtIndex:0];
     }
 }
-
 
 @end

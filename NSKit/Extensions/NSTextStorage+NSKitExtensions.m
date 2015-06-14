@@ -25,34 +25,20 @@
 
 #import "NSTextStorage+NSKitExtensions.h"
 
-
-// ------------------------------------------------------------------------------------------
-
-
 NSColor *NSKitTextStorageColor;
 NSColor *NSKitTextStorageLinkColor;
 
-
-// ------------------------------------------------------------------------------------------
-
-
 @implementation NSTextStorage (NSKitExtensions)
 
-
-// ------------------------------------------------------------------------------------------
 #pragma mark - Methods
-// ------------------------------------------------------------------------------------------
+
 - (void)nskit_scanForLinks
 {
     [self beginEditing];
-    
     NSUInteger stringLength = self.string.length;
-    
-    // Finally, apply those attributes to the URL in the text
     [self removeAttribute:NSLinkAttributeName range:NSMakeRange(0, stringLength)];
     [self removeAttribute:NSUnderlineStyleAttributeName range:NSMakeRange(0, stringLength)];
     [self removeAttribute:NSForegroundColorAttributeName range:NSMakeRange(0, stringLength)];
-    
     [self addAttribute:NSForegroundColorAttributeName
                  value:NSKitTextStorageColor
                  range:NSMakeRange(0, stringLength)];
@@ -63,10 +49,8 @@ NSColor *NSKitTextStorageLinkColor;
     NSArray *matches = [linkDetector matchesInString:self.string
                                              options:0
                                                range:NSMakeRange(0, stringLength)];
-    for (NSTextCheckingResult *match in matches)
-    {
-        if ([match resultType] == NSTextCheckingTypeLink)
-        {
+    for (NSTextCheckingResult *match in matches){
+        if ([match resultType] == NSTextCheckingTypeLink){
             NSDictionary *linkAttributes;
             NSURL *url = [NSURL URLWithString:[self.string substringWithRange:match.range]];
             
@@ -77,9 +61,7 @@ NSColor *NSKitTextStorageLinkColor;
             [self addAttributes:linkAttributes range:match.range];
         }
     }
-    
     [self endEditing];
 }
-
 
 @end

@@ -32,17 +32,14 @@
  */
 - (void)nskit_reverse;
 
-
 /**
  * @return id The first object in the array, nil if the array is empty.
  */
 - (id)nskit_firstObject;
 
-
 /**
  * Removes the first object of the array, nothing happens if the array is empty.
  */
 - (void)nskit_removeFirstObject;
-
 
 @end

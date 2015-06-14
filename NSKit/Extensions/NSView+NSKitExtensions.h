@@ -35,7 +35,6 @@
  */
 @property (nonatomic, assign, setter = setCenter:) NSPoint center;
 
-
 /**
  * The center of the view in with respect to the frame.
  * @discussion
@@ -44,12 +43,10 @@
  */
 @property (nonatomic, assign, readonly) NSPoint centerOnFrame;
 
-
 /**
  * Sets the center position with animation if specified.
  */
 - (void)setCenter:(NSPoint)center animated:(BOOL)animate;
-
 
 /**
  * Sets the alpha value of the view to 0 animated.
@@ -61,7 +58,6 @@
  * Sets the alpha value of the view to 1 animated.
  */
 - (void)nskit_fadeOutAnimated;
-
 
 /**
  * Animate changes to one or more views using the specified duration.

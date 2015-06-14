@@ -26,35 +26,23 @@
 
 #import "NSUserDefaults+NSKitExtensions.h"
 
-
-// ------------------------------------------------------------------------------------------
-
-
 @implementation NSUserDefaults (NSKitExtensions)
 
-
-// ------------------------------------------------------------------------------------------
 #pragma mark - Class Methods
-// ------------------------------------------------------------------------------------------
+
 + (void)nskit_setValue:(id)value forKey:(NSString *)key
 {
-    if (value)
-    {
+    if (value){
         [[NSUserDefaults standardUserDefaults] setObject:value forKey:key];
-    }
-    else
-    {
+    } else {
         [[NSUserDefaults standardUserDefaults] removeObjectForKey:key];
     }
-    
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
-
 
 + (id)nskit_valueForKey:(NSString *)key
 {
     return [[NSUserDefaults standardUserDefaults] objectForKey:key];
 }
-
 
 @end

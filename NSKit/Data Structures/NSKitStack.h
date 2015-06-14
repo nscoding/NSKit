@@ -32,14 +32,12 @@
  */
 @interface NSKitStack : NSObject
 
-
 /**
  * Add an element to the stack.
  *
  * @param objToPush the object to be added to the stack.
  */
 - (void)push:(id)objToPush;
-
 
 /**
  * Delete top element from stack.
@@ -49,7 +47,6 @@
  */
 - (id)pop;
 
-
 /**
  * Returns top element from stack.
  *
@@ -57,7 +54,6 @@
  *
  */
 - (id)top;
-
 
 /**
  * Checks if the stack is empty.
@@ -67,7 +63,6 @@
  */
 - (BOOL)isEmpty;
 
-
 /**
  * The number of objects in the stack.
  *
@@ -75,6 +70,5 @@
  *
  */
 - (NSUInteger)count;
-
 
 @end

@@ -26,20 +26,15 @@
 
 #import "NSKitCGContextHelper.h"
 
-
-// ------------------------------------------------------------------------------------------
-
-
 @implementation NSKitCGContextHelper
 
-// ------------------------------------------------------------------------------------------
+
 #pragma mark - Methods
-// ------------------------------------------------------------------------------------------
+
 CGContextRef NSKitGraphicsGetCurrentContext(void)
 {
 	return (CGContextRef)[[NSGraphicsContext currentContext] graphicsPort];
 }
-
 
 void NSKitGraphicsPushContext(CGContextRef context)
 {
@@ -48,12 +43,10 @@ void NSKitGraphicsPushContext(CGContextRef context)
 	[NSGraphicsContext setCurrentContext:c];
 }
 
-
 void NSKitGraphicsPopContext(void)
 {
 	[NSGraphicsContext restoreGraphicsState];
 }
-
 
 void NSKitCGContextAddRoundRect(CGContextRef context, CGRect rect, CGFloat radius)
 {
@@ -72,7 +65,6 @@ void NSKitCGContextAddRoundRect(CGContextRef context, CGRect rect, CGFloat radiu
 	CGContextAddArc(context, rect.origin.x + radius, rect.origin.y + radius, radius, -M_PI / 2, M_PI, 1);
 }
 
-
 void NSKitCGContextClipToRoundRect(CGContextRef context, CGRect rect, CGFloat radius)
 {
 	CGContextBeginPath(context);
@@ -80,6 +72,5 @@ void NSKitCGContextClipToRoundRect(CGContextRef context, CGRect rect, CGFloat ra
 	CGContextClosePath(context);
 	CGContextClip(context);
 }
-
 
 @end

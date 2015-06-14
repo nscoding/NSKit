@@ -33,14 +33,12 @@
  */
 - (BOOL)nskit_isMouseUp;
 
-
 /**
  * Check if the event is of any mouse down type.
  *
  * @return YES if is NSLeftMouseDown or NSRightMouseDown or NSOtherMouseDown otherwise, NO.
  */
 - (BOOL)nskit_isMouseDown;
-
 
 /**
  * Check if the event responds to click count method.
@@ -49,14 +47,12 @@
  */
 - (BOOL)nskit_hasClickCount;
 
-
 /**
  * Check if the event is a single click.
  *
  * @return YES if it is single click, otherwise NO.
  */
 - (BOOL)nskit_isSingleClick;
-
 
 /**
  * Check if the event is a double click.

@@ -23,84 +23,57 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-
 #import "NSKitDoubleLinkedList.h"
 #import "NSKitSinglyLinkedList+Private.h"
 
-
-
-// ------------------------------------------------------------------------------------------
-
-
 @implementation NSKitDoubleLinkedList
 
-
-- (BOOL)insertObject:(id <NSKitLinkedListProtocol>)object
-             atIndex:(NSInteger)index
+- (BOOL)insertObject:(id <NSKitLinkedListProtocol>)object atIndex:(NSInteger)index
 {
-    if (object == nil)
-    {
+    if (object == nil) {
         return NO;
     }
     
-    if (index == 0 && first == nil)
-    {
+    if (index == 0 && first == nil) {
         first = object;
-        
         return YES;
     }
     
     NSObject<NSKitLinkedListProtocol> *previousNode = nil;
     NSObject<NSKitLinkedListProtocol> *currentNode = nil;
-    
     [self previousObject:&previousNode
            currentObject:&currentNode
                  atIndex:index];
 
-    if (previousNode)
-    {
+    if (previousNode) {
         NSObject<NSKitLinkedListProtocol> *currentNext = previousNode.nextLink;
-        
         previousNode.nextLink = object;
         object.previousLink = previousNode;
-
         object.nextLink = currentNext;
         currentNext.previousLink = object;
-        
         return YES;
     }
-    
-    if (currentNode && currentNode == first)
-    {
+    if (currentNode && currentNode == first) {
         NSObject<NSKitLinkedListProtocol> *current = first;
         first = object;
-       
         object.nextLink = current;
         current.previousLink = object;
-        
         return YES;
     }
-    
     return NO;
 }
-
 
 - (id)deleObjectAtIndex:(NSInteger)index
 {
     NSObject<NSKitLinkedListProtocol> *nodeToDelete = [self objectAtIndex:index];
     NSObject<NSKitLinkedListProtocol> *previousNode = nodeToDelete.previousLink;
     NSObject<NSKitLinkedListProtocol> *nextNode = nodeToDelete.nextLink;
-
     previousNode.nextLink = nextNode;
     nextNode.previousLink = previousNode;
-
-    if (index == 0)
-    {
+    if (index == 0) {
         first = nodeToDelete.nextLink;
     }
-    
     return nodeToDelete;
 }
-
 
 @end

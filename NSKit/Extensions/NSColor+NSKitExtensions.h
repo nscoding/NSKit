@@ -26,7 +26,6 @@
 /** Extends the NSColor class */
 @interface NSColor (NSKitExtensions)
 
-
 /**
  * Creates a random color, usefull for debugging.
  *
@@ -34,7 +33,6 @@
  *
  */
 + (NSColor *)nskit_randomColor;
-
 
 /**
  * Coverts a HEX color (e.g. #A3A3A3) from a string.
@@ -46,7 +44,6 @@
  */
 + (NSColor *)nskit_colorFromHexRGB:(NSString *)colorString;
 
-
 /**
  * Hex string from NSColor.
  *
@@ -57,7 +54,6 @@
  */
 + (NSString *)nskit_hexCodeWithColor:(NSColor *)color;
 
-
 /**
  * RGB string from NSColor.
  *
@@ -67,7 +63,6 @@
  *
  */
 + (NSString *)nskit_RGBWithColor:(NSColor *)color;
-
 
 /**
  * Adjust the float pointers based on the given color
@@ -83,14 +78,12 @@
                    blue:(CGFloat *)blue
                   color:(NSColor *)color;
 
-
 /**
- * CGColorRef implmentation for to support < 10.8
+ * CGColorRef implementation for to support < 10.8
  *
  * @return CGColorRef
  *
  */
 - (CGColorRef)nskit_CGColor;
-
 
 @end

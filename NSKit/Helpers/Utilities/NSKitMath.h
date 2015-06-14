@@ -23,10 +23,8 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-
 /** Math helpers */
 @interface NSKitMath : NSObject
-
 
 /**
  * Checks if the float has decimal points.
@@ -37,7 +35,6 @@
  *
  */
 + (BOOL)hasDecimalPoints:(CGFloat)value;
-
 
 /**
  * Generates a random number from a start to end.
@@ -50,8 +47,6 @@
  * @warning *Important:* If the start value is higher than the end value, an exception is raised.
  *
  */
-+ (NSInteger)generateRandomFromNumber:(NSInteger)start
-                             toNumber:(NSInteger)end;
-
++ (NSInteger)generateRandomFromNumber:(NSInteger)start toNumber:(NSInteger)end;
 
 @end

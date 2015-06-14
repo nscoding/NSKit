@@ -26,30 +26,20 @@
 
 #import "NSKitUtilities.h"
 
-
-// ------------------------------------------------------------------------------------------
-
-
 @implementation NSKitUtilities
 
-
-// ------------------------------------------------------------------------------------------
 #pragma mark - Email
-// ------------------------------------------------------------------------------------------
+
 + (BOOL)isValidEmail:(NSString *)email
 {
     email = [email stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-    
     NSString *regex = @"^[A-Za-z0-9._%%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}$";
     NSPredicate *regexEmail = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
-    
     return [regexEmail evaluateWithObject:email];
 }
 
-
-// ------------------------------------------------------------------------------------------
 #pragma mark - Rects
-// ------------------------------------------------------------------------------------------
+
 + (NSRect)flooredRect:(NSRect)rect
 {
     return CGRectMake(floorf(rect.origin.x),
@@ -57,7 +47,6 @@
                       floorf(rect.size.width),
                       floorf(rect.size.height));
 }
-
 
 + (NSRect)flooredOriginRect:(NSRect)rect
 {
@@ -67,7 +56,6 @@
                       (rect.size.height));
 }
 
-
 + (NSRect)ceiledRect:(NSRect)rect
 {
     return CGRectMake(ceilf(rect.origin.x),
@@ -75,7 +63,6 @@
                       ceilf(rect.size.width),
                       ceilf(rect.size.height));
 }
-
 
 + (NSRect)ceiledOriginRect:(NSRect)rect
 {
@@ -85,20 +72,15 @@
                       (rect.size.height));
 }
 
-
-// ------------------------------------------------------------------------------------------
 #pragma mark - Screen
-// ------------------------------------------------------------------------------------------
+
 + (NSScreen *)screenForMouseLocation
 {
     NSPoint mouseLoc = [NSEvent mouseLocation];
     NSEnumerator *screenEnum = [[NSScreen screens] objectEnumerator];
     NSScreen *screen;
-    
     while ((screen = [screenEnum nextObject]) && NSMouseInRect(mouseLoc, [screen frame], NO) == NO);
-    
     return screen;
 }
-
 
 @end

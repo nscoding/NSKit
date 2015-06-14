@@ -27,17 +27,14 @@
 /** Permormance timer helper class */
 @interface NSKitPerformanceTimer : NSObject
 
-
 /**
  * Fire the perfomance timer.
  */
 - (void)fire;
 
-
 /**
  * Logs the time in milliseconds since fire was invoked.
  */
 - (void)logResult;
-
 
 @end

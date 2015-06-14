@@ -35,7 +35,6 @@
  */
 - (NSString *)nskit_stringByTrimmingNewLines;
 
-
 /**
  * Removes all prefix whitespaces from a string.
  *
@@ -44,7 +43,6 @@
  */
 - (NSString *)nskit_stringByTrimmingPrefixSpaces;
 
-
 /**
  * Removes all suffix whitespaces from a string.
  *
@@ -52,7 +50,6 @@
  *
  */
 - (NSString *)nskit_stringByTrimmingSuffixSpaces;
-
 
 /**
  * Removes all prefix new lines from a string.
@@ -69,7 +66,6 @@
  *
  */
 - (NSString *)nskit_stringByTrimmingSuffixNewLines;
-
 
 /**
  * URL encoding for a string.

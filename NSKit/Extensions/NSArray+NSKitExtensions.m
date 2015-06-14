@@ -23,31 +23,20 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-
 #import "NSArray+NSKitExtensions.h"
-
-
-// ------------------------------------------------------------------------------------------
-
 
 @implementation NSArray (NSKitExtensions)
 
-
-// ------------------------------------------------------------------------------------------
 #pragma mark - Methods
-// ------------------------------------------------------------------------------------------
+
 - (NSArray *)nskit_reversedArray
 {
     NSMutableArray *array = [NSMutableArray arrayWithCapacity:self.count];
     NSEnumerator *enumerator = [self reverseObjectEnumerator];
-    
-    for (id element in enumerator)
-    {
+    for (id element in enumerator){
         [array addObject:element];
     }
-    
     return array;
 }
-
 
 @end

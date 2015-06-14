@@ -29,9 +29,6 @@
 #import <QuartzCore/QuartzCore.h>
 
 
-// ------------------------------------------------------------------------------------------
-
-
 @interface NSKitProgressView()
 
 @property (nonatomic, assign) CGFloat currentProgress;
@@ -40,90 +37,56 @@
 
 @end
 
-
-// ------------------------------------------------------------------------------------------
-
-
 @implementation NSKitProgressView
 
-
-// ------------------------------------------------------------------------------------------
 #pragma mark - Initializers
-// ------------------------------------------------------------------------------------------
+
 - (instancetype)initWithFrame:(CGRect)frame
 {
-    if ((self = [super initWithFrame:frame]))
-    {
-        [self configure];
+    if (self = [super initWithFrame:frame]){
+        [self _setUpProperties];
+        [self _setUpLayers];
     }
-    
     return self;
 }
 
 
-- (id)initWithCoder:(NSCoder *)aDecoder
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
-    if ((self = [super initWithCoder:aDecoder]))
-    {
-        [self configure];
+    if (self = [super initWithCoder:aDecoder]){
+        [self _setUpProperties];
+        [self _setUpLayers];
     }
-    
     return self;
 }
 
-
-// ------------------------------------------------------------------------------------------
 #pragma mark - Configure
-// ------------------------------------------------------------------------------------------
-- (void)configure
+
+- (void)_setUpProperties
+{
+    _currentProgress = 0.0f;
+    _duration = 0.4f;
+    _progressLineWidth = 3.0f;
+    _progressLineColor = [NSColor lightGrayColor];
+    _backgroundLineWidth = 6.0f;
+    _backgroundLineColor = [NSColor darkGrayColor];
+}
+
+- (void)_setUpLayers
 {
     self.wantsLayer = YES;
-    self.currentProgress = 0.0f;
-    self.duration = 0.4f;
-    
-    self.progressLineWidth = 3.0f;
-    self.progressLineColor = [NSColor lightGrayColor];
-    
-    self.backgroundLineWidth = 6.0f;
-    self.backgroundLineColor = [NSColor darkGrayColor];
+    _backgroundLineLayer = [CAShapeLayer layer];
+    [self.layer addSublayer:_backgroundLineLayer];
+    _progressLineLayer = [CAShapeLayer layer];
+    [self.layer addSublayer:_progressLineLayer];
 }
 
-
-// ------------------------------------------------------------------------------------------
-#pragma mark - Getters
-// ------------------------------------------------------------------------------------------
-- (CAShapeLayer *)backgroundLineLayer
-{
-    if (_backgroundLineLayer == nil)
-    {
-        _backgroundLineLayer = [CAShapeLayer layer];
-        [self.layer addSublayer:_backgroundLineLayer];
-    }
-    
-    return _backgroundLineLayer;
-}
-
-
-- (CAShapeLayer *)progressLineLayer
-{
-    if (_progressLineLayer == nil)
-    {
-        _progressLineLayer = [CAShapeLayer layer];
-        [self.layer addSublayer:_progressLineLayer];
-    }
-    
-    return _progressLineLayer;
-}
-
-
-// ------------------------------------------------------------------------------------------
 #pragma mark - Setters
-// ------------------------------------------------------------------------------------------
+
 - (void)setProgress:(CGFloat)progress
 {
     [self setProgress:progress animated:NO];
 }
-
 
 - (void)setProgress:(CGFloat)progress animated:(BOOL)animated
 {
@@ -133,61 +96,51 @@
     
     _progress = progress;
     
-    CGFloat borderWidth = MAX(self.progressLineWidth, self.backgroundLineWidth);
+    CGFloat borderWidth = MAX(_progressLineWidth, _backgroundLineWidth);
     CGFloat radius = (MIN(self.frame.size.width, self.frame.size.height) / 2.0f) - borderWidth;
     CGFloat diameter = (radius * 2.0f);
     CGRect cirlceRect = CGRectMake(NSMidX(self.bounds) - radius, NSMidY(self.bounds) - radius, diameter, diameter);
     
-    CGPathRef path = [self createCirclePathRefForRect:cirlceRect];
+    CGPathRef path = [self _createCirclePathRefForRect:cirlceRect];
+    _backgroundLineLayer.path = path;
+    _backgroundLineLayer.fillColor = [NSColor clearColor].CGColor;
+    _backgroundLineLayer.strokeColor = _backgroundLineColor.CGColor;
+    _backgroundLineLayer.lineWidth = _backgroundLineWidth;
+    _progressLineLayer.path = _backgroundLineLayer.path;
+    _progressLineLayer.fillColor = [NSColor clearColor].CGColor;
+    _progressLineLayer.strokeColor = _progressLineColor.CGColor;
+    _progressLineLayer.lineWidth = _progressLineWidth;
     
-    self.backgroundLineLayer.path = path;
-    self.backgroundLineLayer.fillColor = [NSColor clearColor].CGColor;
-    self.backgroundLineLayer.strokeColor = self.backgroundLineColor.CGColor;
-    self.backgroundLineLayer.lineWidth = self.backgroundLineWidth;
-    
-    self.progressLineLayer.path = self.backgroundLineLayer.path;
-    self.progressLineLayer.fillColor = [NSColor clearColor].CGColor;
-    self.progressLineLayer.strokeColor = self.progressLineColor.CGColor;
-    self.progressLineLayer.lineWidth = self.progressLineWidth;
-    
-    CFTimeInterval animationDuration = (animated ? self.duration : 0.0f);
-    [self.progressLineLayer addAnimation:[self fillAnimationWithDuration:animationDuration]
-                                  forKey:@"strokeEnd"];
-    
-    self.currentProgress = _progress;
-    
+    CFTimeInterval animationDuration = (animated ? _duration : 0.0f);
+    [_progressLineLayer addAnimation:[self _fillAnimationWithDuration:animationDuration] forKey:@"strokeEnd"];
+    _currentProgress = _progress;
     CGPathRelease(path);
 }
 
-
-// ------------------------------------------------------------------------------------------
 #pragma mark - Animation helper
-// ------------------------------------------------------------------------------------------
-- (CABasicAnimation *)fillAnimationWithDuration:(CFTimeInterval)duration
+
+- (CABasicAnimation *)_fillAnimationWithDuration:(CFTimeInterval)duration
 {
     CABasicAnimation *fillAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
     fillAnimation.duration = duration;
     fillAnimation.removedOnCompletion = NO;
     fillAnimation.fillMode = kCAFillModeBoth;
-    fillAnimation.fromValue = @(self.currentProgress);
+    fillAnimation.fromValue = @(_currentProgress);
     fillAnimation.toValue = @(self.progress);
     fillAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     
     return fillAnimation;
 }
 
-
-// ------------------------------------------------------------------------------------------
 #pragma mark - CGPath helper
-// ------------------------------------------------------------------------------------------
-- (CGPathRef)createCirclePathRefForRect:(CGRect)rect
+
+- (CGPathRef)_createCirclePathRefForRect:(CGRect)rect
 {
     /**
      CGPathAddEllipseInRect creates the path in an anticlockwise direction and
      the "strokeEnd" values/animation is reverted. By creating the path ourselfs we ensure
      that the direction is clockwise and the animation direction is correct.
      */
-    
     CGFloat cornerRadius = (rect.size.width / 2.0f);
     CGFloat minx = CGRectGetMinX(rect), midx = CGRectGetMidX(rect), maxx = CGRectGetMaxX(rect);
     CGFloat miny = CGRectGetMinY(rect), midy = CGRectGetMidY(rect), maxy = CGRectGetMaxY(rect);
@@ -199,10 +152,7 @@
     CGPathAddArcToPoint(path, NULL, minx + 0.5f, miny + 0.5f, minx + 0.5f, midy + 0.5f, cornerRadius);
     CGPathAddArcToPoint(path, NULL, minx + 0.5f, maxy + 0.5f, midx + 0.5f, maxy + 0.5f, cornerRadius);
     CGPathCloseSubpath(path);
-    
     return path;
 }
 
-
 @end
-

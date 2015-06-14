@@ -26,51 +26,34 @@
 
 #import "NSWindow+NSKitExtensions.h"
 
-
-// ------------------------------------------------------------------------------------------
-
-
 @implementation NSWindow (NSKitExtensions)
 
-
-// ------------------------------------------------------------------------------------------
 #pragma mark - Object methods
-// ------------------------------------------------------------------------------------------
+
 - (void)nskit_centerHorizontallyAndVerticallyOnScreen:(NSScreen *)screen
 {
     NSRect box = self.frame;
-    
     NSRect screenBox;
-    
-    if (screen)
-    {
+    if (screen){
         screenBox = screen.visibleFrame;
-    }
-    else
-    {
+    } else {
         screenBox = [NSScreen mainScreen].visibleFrame;
     }
-    
     box.origin.y = screenBox.origin.y + truncf((screenBox.size.height -box.size.height) /2);
     box.origin.x = screenBox.origin.x + truncf((screenBox.size.width -box.size.width) /2);
-    
     [self setFrame:box display:NO];
 }
-
 
 - (void)nskit_centerHorizontallyAndVertically
 {
     [self nskit_centerHorizontallyAndVerticallyOnScreen:self.screen];
 }
 
-
 - (BOOL)nskit_isFullScreen
 {
-    if (SystemAtLeastLion)
-    {
+    if (SystemAtLeastLion){
         return (([self styleMask] & NSFullScreenWindowMask) == NSFullScreenWindowMask);
     }
-    
     return NO;
 }
 

@@ -26,16 +26,10 @@
 
 #import "NSImage+NSKitExtensions.h"
 
-
-// ------------------------------------------------------------------------------------------
-
-
 @implementation NSImage (NSKitExtensions)
 
-
-// ------------------------------------------------------------------------------------------
 #pragma mark - Class Methods
-// ------------------------------------------------------------------------------------------
+
 + (NSImage *)nskit_stretchableImageWithLeftWidth:(CGFloat)leftWidth
                                      middleWidth:(CGFloat)patternWidth
                                       rightWidth:(CGFloat)rightWidth
@@ -54,14 +48,12 @@
     
     [leftImage drawInRect:leftCorner fromRect:NSZeroRect operation:NSCompositeCopy fraction:1.0];
     
-    for (CGFloat step = leftWidth; step < centerArea.size.width; step += patternWidth)
-    {
+    for (CGFloat step = leftWidth; step < centerArea.size.width; step += patternWidth){
         [middleImage drawInRect:NSMakeRect(step, 0, patternWidth, destinationSize.height)
                        fromRect:NSZeroRect
                       operation:NSCompositeCopy
                        fraction:1.0];
     }
-    
     [rightImage drawInRect:rightArea fromRect:NSZeroRect operation:NSCompositeCopy fraction:1.0];
     [destinationImage unlockFocus];
     
@@ -74,23 +66,19 @@
                                      middleWidth:(CGFloat)patternWidth
                                       rightWidth:(CGFloat)rightWidth
                                           toSize:(NSSize)destinationSize
-                                       fromImage:(NSImage *)sourceImage
-{
+                                       fromImage:(NSImage *)sourceImage{
     NSImage *destinationImage = [[NSImage alloc] initWithSize:destinationSize];
     
     // get the left corner
     NSRect leftCorner = NSMakeRect(0, 0, leftWidth, destinationSize.height);
-    
-    // get the patter area
+    // get the pattern area
     NSRect patternArea = NSMakeRect(leftWidth, 0, patternWidth, destinationSize.height);
-    
     // calculate the center area
     NSRect centerArea = NSMakeRect(leftWidth, 0, destinationSize.width - rightWidth, destinationSize.height);
     
     
     NSRect rightCorner = NSMakeRect(sourceImage.size.width - rightWidth, 0, rightWidth, destinationSize.height);
     NSRect rightArea = NSMakeRect(destinationSize.width - rightWidth, 0, rightWidth, destinationSize.height);
-    
     [NSGraphicsContext saveGraphicsState];
     [destinationImage lockFocus];
     
@@ -98,27 +86,21 @@
     [sourceImage drawInRect:leftCorner fromRect:leftCorner operation:NSCompositeCopy fraction:1.0];
     
     // draw the pattern in the middle
-    for (CGFloat step = leftWidth; step < centerArea.size.width; step += patternWidth)
-    {
+    for (CGFloat step = leftWidth; step < centerArea.size.width; step += patternWidth){
         [sourceImage drawInRect:NSMakeRect(step, 0, patternWidth, destinationSize.height)
                        fromRect:patternArea
                       operation:NSCompositeCopy
                        fraction:1.0];
     }
-    
     // draw the right image
     [sourceImage drawInRect:rightArea
                    fromRect:rightCorner
                   operation:NSCompositeCopy
                    fraction:1.0];
-    
-    
     [destinationImage unlockFocus];
-    
     [NSGraphicsContext restoreGraphicsState];
     return destinationImage;
 }
-
 
 + (NSImage *)nskit_stretchableImageWithTopWidth:(CGFloat)topheight
                                     middleWidth:(CGFloat)patternHeight
@@ -127,10 +109,8 @@
                                       fromImage:(NSImage *)sourceImage
 {
     NSImage *destinationImage = [[NSImage alloc] initWithSize:destinationSize];
-    
     NSRect bottomCorner = NSMakeRect(0, 0, destinationSize.width, bottomHeight);
     NSRect bottomArea = NSMakeRect(0, 0, destinationSize.width, bottomHeight);
-    
     
     // get the top corner
     NSRect topCorner = NSMakeRect(0, bottomHeight + patternHeight, destinationSize.width, topheight);
@@ -139,7 +119,7 @@
     [NSGraphicsContext saveGraphicsState];
     [destinationImage lockFocus];
     
-    // get the patter area
+    // get the pattern area
     NSRect patternArea = NSMakeRect(0, bottomHeight, destinationSize.width, patternHeight);
     
     CGFloat spaceLeftHeight = 0;
@@ -156,53 +136,39 @@
     }
     
     patternArea = NSMakeRect(0, bottomHeight, destinationSize.width, spaceLeftHeight);
-    
     [sourceImage drawInRect:NSMakeRect(0, destinationSize.height - topheight - spaceLeftHeight,
                                        destinationSize.width, spaceLeftHeight)
                    fromRect:patternArea
                   operation:NSCompositeCopy
                    fraction:1.0];
-    
-    
     // draw the botttom image
     [sourceImage drawInRect:bottomArea
                    fromRect:bottomCorner
                   operation:NSCompositeCopy
                    fraction:1.0];
-    
     // draw the top image
     [sourceImage drawInRect:topArea
                    fromRect:topCorner
                   operation:NSCompositeCopy
                    fraction:1.0];
-    
-    
     [destinationImage unlockFocus];
-    
     [NSGraphicsContext restoreGraphicsState];
     return destinationImage;
 }
 
+#pragma mark - Methods
 
-// ------------------------------------------------------------------------------------------
-#pragma mark - methods
-// ------------------------------------------------------------------------------------------
 - (instancetype)initWithHiResContentsOfURL:(NSURL *)url
 {
-    if ((self = [self initWithContentsOfURL:url]))
-    {
+    if (self = [self initWithContentsOfURL:url]){
         NSURL *strippedURL = url.URLByDeletingLastPathComponent;
         NSString *strippedName = url.lastPathComponent.stringByDeletingPathExtension;
         NSString *ext = url.lastPathComponent.pathExtension;
         NSString *hiResStrippedName = [NSString stringWithFormat:@"%@@2x", strippedName];
-        NSURL *hiResURL = [strippedURL URLByAppendingPathComponent:
-                           [hiResStrippedName stringByAppendingPathExtension:ext]];
-        
-        if([hiResURL checkResourceIsReachableAndReturnError:NULL] == YES)
-        {
+        NSURL *hiResURL = [strippedURL URLByAppendingPathComponent:[hiResStrippedName stringByAppendingPathExtension:ext]];
+        if ([hiResURL checkResourceIsReachableAndReturnError:NULL] == YES) {
             NSData *imgData = [[NSData alloc] initWithContentsOfURL:hiResURL];
             NSBitmapImageRep *imgRep = [[NSBitmapImageRep alloc] initWithData:imgData];
-            
             imgRep.size = self.size;
             [self addRepresentation:imgRep];
         }
@@ -210,23 +176,17 @@
     return self;
 }
 
-
 - (instancetype)initWithHiResContentsOfFile:(NSString *)fileName
 {
-    if ((self = [self initWithContentsOfFile:fileName]))
-    {
+    if (self = [self initWithContentsOfFile:fileName]) {
         NSString *strippedPath = fileName.stringByDeletingLastPathComponent;
         NSString *strippedName = fileName.lastPathComponent.stringByDeletingPathExtension;
         NSString *ext = fileName.lastPathComponent.pathExtension;
         NSString *hiResStrippedName = [NSString stringWithFormat:@"%@@2x", strippedName];
-        NSString *hiResPath = [strippedPath stringByAppendingPathComponent:
-                               [hiResStrippedName stringByAppendingPathExtension:ext]];
-        
-        if ([[NSFileManager defaultManager] fileExistsAtPath:hiResPath] == YES)
-        {
+        NSString *hiResPath = [strippedPath stringByAppendingPathComponent:[hiResStrippedName stringByAppendingPathExtension:ext]];
+        if ([[NSFileManager defaultManager] fileExistsAtPath:hiResPath] == YES) {
             NSData *imgData = [[NSData alloc] initWithContentsOfFile:hiResPath];
             NSBitmapImageRep *imgRep = [[NSBitmapImageRep alloc] initWithData:imgData];
-            
             imgRep.size = self.size;
             [self addRepresentation:imgRep];
         }
