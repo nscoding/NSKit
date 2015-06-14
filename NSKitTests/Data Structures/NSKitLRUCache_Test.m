@@ -11,20 +11,16 @@
 #import "NSKitCacheEntry.h"
 #import "NSKitLRUCache.h"
 
-
 @interface NSKitLRUCache_Test : XCTestCase <NSKitLRUCacheDelegate>
-
-@property (nonatomic, assign) BOOL delegateShouldBeCalled;
-
 @end
 
-
 @implementation NSKitLRUCache_Test
+{
+    BOOL _delegateShouldBeCalled;
+}
 
-
-// ------------------------------------------------------------------------------------------
 #pragma mark - Tests
-// ------------------------------------------------------------------------------------------
+
 - (void)testInsert
 {
     NSKitLRUCache *lruCache = [[NSKitLRUCache alloc] initWithCountLimit:4];
@@ -44,21 +40,20 @@
     [lruCache setObject:string4 forKey:string4];
     [lruCache setObject:string2 forKey:string2];
 
-    self.delegateShouldBeCalled = YES;
+    _delegateShouldBeCalled = YES;
     [lruCache setObject:string5 forKey:string6];
     [lruCache setObject:string6 forKey:string6];
 
     lruCache.countLimit = 6;
-    self.delegateShouldBeCalled = NO;
+    _delegateShouldBeCalled = NO;
 
     [lruCache setObject:string7 forKey:string7];
     [lruCache setObject:string1 forKey:string1];
     
-    self.delegateShouldBeCalled = YES;
+    _delegateShouldBeCalled = YES;
     [lruCache setObject:string6 forKey:string6];
     [lruCache setObject:string3 forKey:string3];
 }
-
 
 - (void)testKeyedSubscripting
 {
@@ -68,7 +63,6 @@
     NSKitLRUCache *lruCache = [[NSKitLRUCache alloc] initWithCountLimit:4];
     [lruCache setObject:string1 forKey:string1];
     [lruCache setObject:string2 forKey:string2];
-
     XCTAssertTrue((lruCache[@"Test 1"] == string1), @"Object for key was wrong");
     XCTAssertTrue((lruCache[@"Test 2"] != string1), @"Object for key was wrong");
     XCTAssertTrue((lruCache[@"Test 2"] == string2), @"Object for key was wrong");
@@ -77,15 +71,12 @@
     XCTAssertTrue((lruCache[@"Test 2"] == string1), @"Object for key was wrong");
 }
 
-
-// ------------------------------------------------------------------------------------------
 #pragma mark - NSKitLRUCacheDelegate
-// ------------------------------------------------------------------------------------------
+
 - (void)leastRecentlyUsedCache:(NSKitLRUCache *)cache willEvictObject:(id)obj;
 {
     XCTAssertTrue((obj != nil), @"Object evicted cannot be nil");
-    XCTAssertTrue((self.delegateShouldBeCalled == YES), @"Will evict should not be called");
+    XCTAssertTrue((_delegateShouldBeCalled == YES), @"Will evict should not be called");
 }
-
 
 @end

@@ -27,71 +27,48 @@
 #import <XCTest/XCTest.h>
 #import "NSKitHeapPriorityQueue.h"
 
-
-// ------------------------------------------------------------------------------------------
-
-
 @interface NSKitPriorityNode : NSObject <NSKitHeapPriorityQueueComparator>
 
-@property (nonatomic, assign) NSInteger priority;
+@property (nonatomic, assign, readwrite) NSInteger priority;
 
-- (instancetype)initWithPriority:(NSInteger)pr;
+- (instancetype)initWithPriority:(NSInteger)priority;
 
 @end
 
-
-// ------------------------------------------------------------------------------------------
-
-
 @implementation NSKitPriorityNode
-
-
-// ------------------------------------------------------------------------------------------
-#pragma mark - Tests
-// ------------------------------------------------------------------------------------------
-- (instancetype)initWithPriority:(NSInteger)pr
 {
-    if ((self = [super init]))
-    {
-        self.priority = pr;
+    NSInteger _priority;
+}
+
+#pragma mark - Tests
+
+- (instancetype)initWithPriority:(NSInteger)priority
+{
+    if (self = [super init]) {
+        _priority = priority;
     }
-    
     return self;
 }
 
-
 - (NSString *)description
 {
-    return [NSString stringWithFormat:@"--- %lu ---",self.priority];
+    return [NSString stringWithFormat:@"--- %lu ---", _priority];
 }
-
 
 - (NSComparisonResult)compare:(id)obj1 to:(id)obj2
 {
     NSKitPriorityNode *node1 = (NSKitPriorityNode *)obj1;
     NSKitPriorityNode *node2 = (NSKitPriorityNode *)obj2;
-    
-    if (node1.priority <= node2.priority)
-    {
+    if (node1.priority <= node2.priority) {
         return NSOrderedAscending;
-        
     }
-    
     return NSOrderedDescending;
 }
 
 
 @end
 
-
-// ------------------------------------------------------------------------------------------
-
-
 @interface NSKitHeapPriorityQueue_Test : XCTestCase @end
-
-
-// ------------------------------------------------------------------------------------------
-
 
 @implementation NSKitHeapPriorityQueue_Test
 
@@ -99,12 +76,10 @@
 - (void)testPriorityQueue
 {
     NSKitHeapPriorityQueue *priorityQueue = [[NSKitHeapPriorityQueue alloc] init];
-    
     NSKitPriorityNode *node1 = [[NSKitPriorityNode alloc] initWithPriority:0];
     NSKitPriorityNode *node2 = [[NSKitPriorityNode alloc] initWithPriority:1];
     NSKitPriorityNode *node3 = [[NSKitPriorityNode alloc] initWithPriority:2];
     NSKitPriorityNode *node4 = [[NSKitPriorityNode alloc] initWithPriority:3];
-
     [priorityQueue addObject:node4];
     [priorityQueue addObject:node2];
     [priorityQueue addObject:node3];
@@ -119,7 +94,7 @@
     [priorityQueue removeAllObjects];
     XCTAssertTrue(priorityQueue.count == 0, @"Count should be equal");
 
-    // adjusting the date of node 3
+    // adjusting the priority of node 3
     node3.priority = 6;
     [priorityQueue addObject:node3];
     [priorityQueue addObject:node4];

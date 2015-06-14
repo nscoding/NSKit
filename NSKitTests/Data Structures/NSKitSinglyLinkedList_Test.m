@@ -29,21 +29,12 @@
 #import "NSKitSinglyLinkedList.h"
 #import "NSKitNode.h"
 
-
-// ------------------------------------------------------------------------------------------
-
-
 @interface NSKitSinglyLinkedList_Test : XCTestCase @end
-
-
-// ------------------------------------------------------------------------------------------
-
 
 @implementation NSKitSinglyLinkedList_Test
 
-// ------------------------------------------------------------------------------------------
 #pragma mark - Tests
-// ------------------------------------------------------------------------------------------
+
 - (void)testInsert
 {
     NSKitSinglyLinkedList *linkedList = [[NSKitSinglyLinkedList alloc] init];
@@ -67,61 +58,43 @@
     XCTAssertTrue(linkedList.count == count, @"Count is not the same");
 
     NSInteger previousCount = linkedList.count;
-    if ([linkedList deleObjectAtIndex:random])
-    {
+    if ([linkedList deleObjectAtIndex:random]) {
         XCTAssertTrue(linkedList.count == previousCount - 1, @"Count is not the same");
-    }
-    else
-    {
+    } else {
         XCTAssertTrue(linkedList.count == previousCount, @"Count is not the same");
     }
     
     previousCount = linkedList.count;
     random = arc4random() % 3;
-    if ([linkedList deleObjectAtIndex:random])
-    {
+    if ([linkedList deleObjectAtIndex:random]) {
         XCTAssertTrue(linkedList.count == previousCount - 1, @"Count is not the same");
-    }
-    else
-    {
+    } else {
         XCTAssertTrue(linkedList.count == previousCount, @"Count is not the same");
     }
  
     previousCount = linkedList.count;
     random = arc4random() % 3;
-    if ([linkedList deleObjectAtIndex:random])
-    {
+    if ([linkedList deleObjectAtIndex:random]) {
         XCTAssertTrue(linkedList.count == previousCount - 1, @"Count is not the same");
-    }
-    else
-    {
+    } else {
         XCTAssertTrue(linkedList.count == previousCount, @"Count is not the same");
     }
 
     previousCount = linkedList.count;
     random = arc4random() % 3;
-    if ([linkedList deleObject:node2])
-    {
+    if ([linkedList deleObject:node2]) {
         XCTAssertTrue(linkedList.count == previousCount - 1, @"Count is not the same");
-    }
-    else
-    {
+    } else {
         XCTAssertTrue(linkedList.count == previousCount, @"Count is not the same");
     }
     
     BOOL isEmpty = linkedList.isEmpty;
-
-    if (isEmpty)
-    {
+    if (isEmpty) {
         XCTAssertTrue(linkedList.count == 0, @"Count is not the same");
-    }
-    else
-    {
+    } else {
         XCTAssertFalse(linkedList.count == 0, @"Count is not the same");
     }
 }
-
-
 
 - (void)testReverse
 {
@@ -137,20 +110,16 @@
     [linkedList insertObject:node3];
     [linkedList insertObject:node4];
     [linkedList insertObject:node5];
-
     [linkedList reverseList];
-    
     XCTAssertTrue([linkedList objectAtIndex:0] == node5, @"Wrong object");
     XCTAssertTrue([linkedList objectAtIndex:1] == node4, @"Wrong object");
     XCTAssertTrue([linkedList objectAtIndex:2] == node3, @"Wrong object");
     XCTAssertTrue([linkedList objectAtIndex:3] == node2, @"Wrong object");
     XCTAssertTrue([linkedList objectAtIndex:4] == node1, @"Wrong object");
 
-    
     NSKitNode *node6 = [[NSKitNode alloc] init];
     [linkedList insertObject:node6 atIndex:0];
     [linkedList reverseList];
-    
     XCTAssertTrue([linkedList objectAtIndex:0] == node1, @"Wrong object");
     XCTAssertTrue([linkedList objectAtIndex:1] == node2, @"Wrong object");
     XCTAssertTrue([linkedList objectAtIndex:2] == node3, @"Wrong object");
@@ -158,6 +127,5 @@
     XCTAssertTrue([linkedList objectAtIndex:4] == node5, @"Wrong object");
     XCTAssertTrue([linkedList objectAtIndex:5] == node6, @"Wrong object");
 }
-
 
 @end

@@ -27,40 +27,27 @@
 #import <XCTest/XCTest.h>
 #import "NSKitQueue.h"
 
-
-// ------------------------------------------------------------------------------------------
-
-
 @interface NSKitQueue_Test : XCTestCase @end
-
-
-// ------------------------------------------------------------------------------------------
-
 
 @implementation NSKitQueue_Test
 
-// ------------------------------------------------------------------------------------------
 #pragma mark - Tests
-// ------------------------------------------------------------------------------------------
+
 - (void)testAdd
 {
     NSKitQueue *queue = [[NSKitQueue alloc] init];
     NSNumber *node1 = @(1);
     NSNumber *node2 = @(2);
-    
     XCTAssertTrue(queue.isEmpty == YES, @"Queue should be empty");
-    
+
     [queue add:node1];
-    
     XCTAssertTrue(queue.count == 1, @"Count should be 1");
     XCTAssertTrue([[queue remove] isEqual:node1], @"Removed object is not the right object");
     XCTAssertTrue(queue.isEmpty == YES, @"Queue should be empty");
-    
+
     [queue add:node2];
-    
     XCTAssertTrue(queue.isEmpty == NO, @"Queue should not be empty");
 }
-
 
 - (void)testRemove
 {
@@ -82,12 +69,10 @@
     XCTAssertTrue(queue.isEmpty == YES, @"Queue should be empty");
 }
 
-
 - (void)testIsEmpty
 {
     NSKitQueue *queue = [[NSKitQueue alloc] init];
     NSNumber *node1 = @(1);
-    
     XCTAssertTrue(queue.isEmpty == YES, @"Queue should be empty");
     
     [queue add:node1];
@@ -96,7 +81,6 @@
     [queue remove];
     XCTAssertTrue(queue.isEmpty == YES, @"Queue should be empty");
 }
-
 
 - (void)testQueue
 {
@@ -113,9 +97,7 @@
 
     [queue add:node3];
     XCTAssertTrue(queue.count == 3, @"Count is not the same");
-
     XCTAssertTrue(queue.isEmpty == NO, @"Queue is not empty");
-
     XCTAssertTrue([queue first] == node1, @"Node is wrong");
     XCTAssertTrue([queue last] == node3, @"Node is wrong");
     
