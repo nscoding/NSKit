@@ -23,8 +23,9 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-
 #import "NSView+NSKitExtensions.h"
+
+#import "tgmath.h"
 
 @implementation NSView (NSKitExtensions)
 
@@ -35,21 +36,21 @@
 
 - (void)setCenter:(NSPoint)center
 {
-    [self setFrameOrigin:NSMakePoint(floorf(center.x - (NSWidth(self.bounds)) / 2),
-                                     floorf(center.y - (NSHeight(self.bounds)) / 2))];
+    [self setFrameOrigin:NSMakePoint(floor(center.x - (NSWidth(self.bounds)) / 2),
+                                     floor(center.y - (NSHeight(self.bounds)) / 2))];
 }
 
 - (NSPoint)center
 {
-    return NSMakePoint(floorf(self.bounds.origin.x + (self.bounds.size.width / 2)),
-                       floorf(self.bounds.origin.y + (self.bounds.size.height / 2)));
+    return NSMakePoint(floor(self.bounds.origin.x + (self.bounds.size.width / 2)),
+                       floor(self.bounds.origin.y + (self.bounds.size.height / 2)));
 }
 
 
 - (NSPoint)centerOnFrame
 {
-    return NSMakePoint(floorf(self.frame.origin.x + (self.frame.size.width / 2)),
-                       floorf(self.frame.origin.y + (self.frame.size.height / 2)));
+    return NSMakePoint(floor(self.frame.origin.x + (self.frame.size.width / 2)),
+                       floor(self.frame.origin.y + (self.frame.size.height / 2)));
 }
 
 
@@ -57,8 +58,8 @@
 {
     if (animate)
     {
-        [[self animator] setFrameOrigin:NSMakePoint(floorf(center.x - (NSWidth([self bounds])) / 2),
-                                                    floorf(center.y - (NSHeight([self bounds])) / 2))];
+        [[self animator] setFrameOrigin:NSMakePoint(floor(center.x - (NSWidth([self bounds])) / 2),
+                                                    floor(center.y - (NSHeight([self bounds])) / 2))];
     }
     else
     {

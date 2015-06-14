@@ -23,8 +23,9 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-
 #import "NSImage+NSKitExtensions.h"
+
+#import "tgmath.h"
 
 @implementation NSImage (NSKitExtensions)
 
@@ -42,7 +43,7 @@
     NSImage *destinationImage = [[NSImage alloc] initWithSize:destinationSize];
     NSRect leftCorner = NSMakeRect(0, 0, leftWidth, destinationSize.height);
     NSRect centerArea = NSMakeRect(leftWidth, 0, destinationSize.width - rightWidth, destinationSize.height);
-    NSRect rightArea = NSMakeRect(ceilf(destinationSize.width - rightWidth), 0, rightWidth, destinationSize.height);
+    NSRect rightArea = NSMakeRect(ceil(destinationSize.width - rightWidth), 0, rightWidth, destinationSize.height);
     [NSGraphicsContext saveGraphicsState];
     [destinationImage lockFocus];
     

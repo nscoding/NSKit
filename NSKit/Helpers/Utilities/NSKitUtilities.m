@@ -23,6 +23,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#import "tgmath.h"
 
 #import "NSKitUtilities.h"
 
@@ -32,42 +33,42 @@
 
 + (BOOL)isValidEmail:(NSString *)email
 {
-    email = [email stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    NSString *trimmedEmail = [email stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     NSString *regex = @"^[A-Za-z0-9._%%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}$";
     NSPredicate *regexEmail = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
-    return [regexEmail evaluateWithObject:email];
+    return [regexEmail evaluateWithObject:trimmedEmail];
 }
 
 #pragma mark - Rects
 
 + (NSRect)flooredRect:(NSRect)rect
 {
-    return CGRectMake(floorf(rect.origin.x),
-                      floorf(rect.origin.y),
-                      floorf(rect.size.width),
-                      floorf(rect.size.height));
+    return CGRectMake(floor(rect.origin.x),
+                      floor(rect.origin.y),
+                      floor(rect.size.width),
+                      floor(rect.size.height));
 }
 
 + (NSRect)flooredOriginRect:(NSRect)rect
 {
-    return CGRectMake(floorf(rect.origin.x),
-                      floorf(rect.origin.y),
+    return CGRectMake(floor(rect.origin.x),
+                      floor(rect.origin.y),
                       (rect.size.width),
                       (rect.size.height));
 }
 
 + (NSRect)ceiledRect:(NSRect)rect
 {
-    return CGRectMake(ceilf(rect.origin.x),
-                      ceilf(rect.origin.y),
-                      ceilf(rect.size.width),
-                      ceilf(rect.size.height));
+    return CGRectMake(ceil(rect.origin.x),
+                      ceil(rect.origin.y),
+                      ceil(rect.size.width),
+                      ceil(rect.size.height));
 }
 
 + (NSRect)ceiledOriginRect:(NSRect)rect
 {
-    return CGRectMake(ceilf(rect.origin.x),
-                      ceilf(rect.origin.y),
+    return CGRectMake(ceil(rect.origin.x),
+                      ceil(rect.origin.y),
                       (rect.size.width),
                       (rect.size.height));
 }

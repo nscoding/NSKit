@@ -26,7 +26,6 @@
 /** Extends the NSWindow class */
 @interface NSWindow (NSKitExtensions)
 
-
 /**
  * Moves the window in the center of the given screen.
  *
@@ -35,12 +34,10 @@
  */
 - (void)nskit_centerHorizontallyAndVerticallyOnScreen:(NSScreen *)screen;
 
-
 /**
  * Moves the window in the center of the window screen.
  */
 - (void)nskit_centerHorizontallyAndVertically;
-
 
 /**
  * Check if the window is Fullscreen mode.
@@ -48,6 +45,5 @@
  * @return YES if the window is in Fullscreen; otherwise, NO.
  */
 - (BOOL)nskit_isFullScreen;
-
 
 @end
