@@ -31,6 +31,7 @@ BOOL SystemAtLeastLionWithRetina = NO;
 BOOL SystemAtLeastMountainLion = NO;
 BOOL SystemAtLeastMaverics = NO;
 BOOL SystemAtLeastYosemite = NO;
+BOOL SystemAtLeastElCapitan = NO;
 
 @implementation NSKit
 
