@@ -52,7 +52,6 @@ Is a collection of well-documented __Data Structures__, __Helpers__ and __Catego
 - NSKitHoverView
 - NSKitProgressView
 
-
 ###Documentation
 
 You can generate documentation with [appledocs](https://github.com/tomaz/appledoc). You should install it to build the framework or disable the build script.

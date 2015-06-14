@@ -3,7 +3,7 @@
 //  NSKit
 //
 //  Created by Patrick Chamelo on 6/23/13.
-//  Copyright (c) 2013 Patrick Chamelo. All rights reserved.
+//  Copyright (c) 2015 Patrick Chamelo. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
