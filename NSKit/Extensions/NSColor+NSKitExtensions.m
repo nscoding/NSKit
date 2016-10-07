@@ -83,28 +83,24 @@
                    blue:(CGFloat *)blue
                   color:(NSColor *)color
 {
-    if (([[color colorSpaceName] isEqualToString:NSCalibratedWhiteColorSpace] ||
-         [[color colorSpaceName] isEqualToString:NSDeviceWhiteColorSpace] ||
-         [[color colorSpaceName] isEqualToString:NSCustomColorSpace]) &&
+    NSString *colorSpaceName = [color colorSpaceName];
+    if (([colorSpaceName isEqualToString:NSCalibratedWhiteColorSpace] ||
+         [colorSpaceName isEqualToString:NSDeviceWhiteColorSpace]) &&
          [color respondsToSelector:@selector(whiteComponent)]){
         *red = [color whiteComponent];
         *green = [color whiteComponent];
         *blue = [color whiteComponent];
-    } else if (([[color colorSpaceName] isEqualToString:NSCalibratedRGBColorSpace] ||
-                [[color colorSpaceName] isEqualToString:NSDeviceRGBColorSpace]) &&
+    } else if (([colorSpaceName isEqualToString:NSCalibratedRGBColorSpace] ||
+                [colorSpaceName isEqualToString:NSDeviceRGBColorSpace]) &&
                 [color respondsToSelector:@selector(redComponent)]) {
         *red = [color redComponent];
         *green = [color greenComponent];
         *blue = [color blueComponent];
     } else {
-        color = [color colorUsingColorSpaceName:NSDeviceRGBColorSpace];
-        if ([color respondsToSelector:@selector(redComponent)]) {
-            *red = [color redComponent];
-            *green = [color greenComponent];
-            *blue = [color blueComponent];
-        } else {
-            NSAssert1(NO, @"Edge case %@", [color colorSpaceName]);
-        }        
+        NSColor *rgbColor = [color colorUsingColorSpaceName:NSDeviceRGBColorSpace];
+        *red = [rgbColor redComponent];
+        *green = [rgbColor greenComponent];
+        *blue = [rgbColor blueComponent];
     }
 }
 
