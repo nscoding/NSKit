@@ -3,7 +3,7 @@ NSKit Framework
 
 Is a collection of well-documented __Data Structures__, __Helpers__ and __Categories__ to simplify and solve common problems when you develop your cocoa application. 
 
-###Data Structures
+### Data Structures
 - Linked Lists
 	- NSKitSinglyLinkedList
 	- NSKitDoubleLinkedList
@@ -12,7 +12,7 @@ Is a collection of well-documented __Data Structures__, __Helpers__ and __Catego
 - NSKitQueue
 - NSKitStack
 
-###Categories
+### Categories
 - NSArray(NSKitExtensions)
 - NSColor(NSKitExtensions)
 - NSEvent(NSKitExtensions)
@@ -26,7 +26,7 @@ Is a collection of well-documented __Data Structures__, __Helpers__ and __Catego
 - NSView(NSKitExtensions)
 - NSWindow(NSKitExtensions)
 
-###Helpers
+### Helpers
 - Core Graphics
 	- NSKitCGContextHelper
 - Debug
@@ -52,7 +52,7 @@ Is a collection of well-documented __Data Structures__, __Helpers__ and __Catego
 - NSKitHoverView
 - NSKitProgressView
 
-###Documentation
+### Documentation
 
 You can generate documentation with [appledocs](https://github.com/tomaz/appledoc). You should install it to build the framework or disable the build script.
 
@@ -62,16 +62,16 @@ You can generate documentation with [appledocs](https://github.com/tomaz/appledo
 
 Note, documentation is a work in progress.
 
-###Feedback And Questions
+### Feedback And Questions
 
 Found a bug or missing a feature? Don't hesitate to create a new issue here on GitHub.
 
-###Contact
+### Contact
 
 [Patrick Chamelo](https://github.com/nscoding)<br />
 [@nscoding](https://twitter.com/nscoding)
 
-###License
+### License
 
 NSKit is available under the MIT license. See the LICENSE file for details.
 
