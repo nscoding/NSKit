@@ -650,9 +650,6 @@
 					CDB298081777A4A700889B06 = {
 						DevelopmentTeam = HPSF3D2F4U;
 					};
-					CDB2981F1777A4A700889B06 = {
-						TestTargetID = CDB298081777A4A700889B06;
-					};
 				};
 			};
 			buildConfigurationList = CDB298031777A4A700889B06 /* Build configuration list for PBXProject "NSKit" */;
@@ -869,7 +866,6 @@
 		CD025928177906A1006A7C54 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NSKit.framework/Versions/A/NSKit";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -883,7 +879,6 @@
 				);
 				INFOPLIST_FILE = "NSKitTests/NSKitTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Development;
@@ -956,7 +951,6 @@
 		CD02592B177906A8006A7C54 /* App Store */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NSKit.framework/Versions/A/NSKit";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -966,7 +960,6 @@
 				GCC_PREFIX_HEADER = "NSKit/NSKit-Prefix.pch";
 				INFOPLIST_FILE = "NSKitTests/NSKitTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = "App Store";
