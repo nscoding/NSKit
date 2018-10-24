@@ -32,11 +32,16 @@
 
 #pragma mark - Overrides
 
-- (NSMutableArray *)backingStore
+- (instancetype)init
 {
-    if (_backingStore == nil) {
+    if (self = [super init]) {
         _backingStore = [NSMutableArray array];
     }
+    return self;
+}
+
+- (NSMutableArray *)backingStore
+{
     return _backingStore;
 }
 
